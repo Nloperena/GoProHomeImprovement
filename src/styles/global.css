@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
+  }
+  
+  .btn-secondary {
+    @apply bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
+  }
+}

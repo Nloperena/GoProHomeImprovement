@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Home Theater Installation in Central Florida"
+  description="Home theater design & installation in Kissimmee, Orlando & Central Florida. Full room builds, AV setup, acoustic panels, seating. 15+ years experience."
+  ogImage="/images/movie-room.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/movie-rooms/#service",
+        "serviceType": "Home Theater Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Complete home theater design and installation including AV equipment, acoustic panels, custom seating, and themed decor."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/movie-rooms/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Home Theaters",
+            "item": "https://goprohomeimprovements.com/services/movie-rooms"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/movie-rooms/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a home theater cost in Central Florida?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on room size and equipment. A basic setup with painting, trim work, and mid-range AV starts around $5,000-$10,000. Full custom builds with acoustic panels, tiered seating, and high-end equipment run $15,000-$50,000+. We provide free consultations and itemized quotes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle the AV equipment or just the room build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both. We build the room (paint, trim, lighting, acoustic panels) and coordinate AV installation. We work with your preferred AV integrator, or source and install equipment ourselves if you prefer a single point of contact."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a home theater installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A simple room refresh with paint and trim takes 3-7 days. Full custom builds with framing, acoustic treatment, tiered floors, and custom millwork take 2-6 weeks depending on scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you do themed rooms like Star Wars or Disney?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We've built Star Wars theaters, Disney princess rooms, and custom themes. We handle murals, custom trim, themed lighting, and color schemes that match your vision."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Home Theaters</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Home Theater Installation in Central Florida</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Full room builds—paint, trim, acoustic panels, AV setup, themed decor. Turn a spare room into a real theater.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/movie-room.jpg" alt="Custom home theater installation in Central Florida" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            A real home theater isn't just a TV on the wall—it's dark walls, controlled lighting, good acoustics, comfortable seating, and AV equipment that actually works together. We've built dozens of home theaters across <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>, from simple bonus-room setups to full custom installs with tiered floors and themed trim.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you want a Star Wars-themed media room for the kids or a clean, modern theater for movie nights, we handle the full build—<a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a>, <a href="/services/trim-crown-molding" class="text-gopro-orange hover:underline">trim work</a>, acoustic panels, lighting, wiring, and AV coordination. You get one point of contact and a finished room ready to use.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Why Build a Home Theater in Florida?</h2>
+          <p class="text-gray-700 font-sans">
+            Central Florida's year-round heat makes indoor entertainment valuable. A dedicated theater gives your family a comfortable escape from summer sun, adds resale value, and creates a space that actually gets used—especially during hurricane season when you're stuck inside.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Build</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Room design & layout planning</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Dark paint, custom trim, accent walls</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Acoustic panels & sound treatment</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">LED lighting & dimmer controls</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Projector & screen installation</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Surround sound speaker placement</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Tiered seating platforms (if space allows)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Themed murals & custom decor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a home theater cost in Central Florida?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on room size and equipment. A basic setup with painting, trim work, and mid-range AV starts around $5,000-$10,000. Full custom builds with acoustic panels, tiered seating, and high-end equipment run $15,000-$50,000+. We provide free consultations and itemized quotes.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you handle the AV equipment or just the room build?</h3>
+              <p class="text-gray-700 font-sans">
+                Both. We build the room (paint, trim, lighting, acoustic panels) and coordinate AV installation. We work with your preferred AV integrator, or source and install equipment ourselves if you prefer a single point of contact.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a home theater installation take?</h3>
+              <p class="text-gray-700 font-sans">
+                A simple room refresh with paint and trim takes 3-7 days. Full custom builds with framing, acoustic treatment, tiered floors, and custom millwork take 2-6 weeks depending on scope.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you do themed rooms like Star Wars or Disney?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We've built Star Wars theaters, Disney princess rooms, and custom themes. We handle <a href="/services/murals" class="text-gopro-orange hover:underline">murals</a>, custom trim, themed lighting, and color schemes that match your vision.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to build your dream home theater?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Consultation
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Build a Real Home Theater"
+    description="Full room builds with paint, trim, acoustics, AV & seating. Serving Kissimmee, Orlando & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,242 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTASection from '../components/CTASection.astro';
+
+const services = [
+  {
+    name: 'Power Washing',
+    href: '/services/power-washing',
+    description: 'Professional pressure washing for homes, driveways, and commercial properties.'
+  },
+  {
+    name: 'Interior & Exterior Painting',
+    href: '/services/interior-exterior-painting',
+    description: 'Expert painting services to refresh and protect your property.'
+  },
+  {
+    name: 'Demolition',
+    href: '/services/demolition',
+    description: 'Safe and efficient demolition for remodeling projects.'
+  },
+  {
+    name: 'Trim & Crown Molding',
+    href: '/services/trim-crown-molding',
+    description: 'Custom trim work and crown molding installation for elegant finishes.'
+  },
+  {
+    name: 'Wallpaper',
+    href: '/services/wallpaper',
+    description: 'Professional wallpaper installation and removal services.'
+  },
+  {
+    name: 'Murals',
+    href: '/services/murals',
+    description: 'Custom mural design and installation for unique spaces.'
+  },
+  {
+    name: 'TV Mounting',
+    href: '/services/tv-mounting',
+    description: 'Professional TV mounting and wire concealment.'
+  },
+  {
+    name: 'Movie Rooms',
+    href: '/services/movie-rooms',
+    description: 'Complete home theater design and installation.'
+  },
+  {
+    name: 'Drywall',
+    href: '/services/drywall',
+    description: 'Drywall installation, repair, and texture services.'
+  }
+];
+
+const whyChooseUs = [
+  {
+    title: 'Owner-Operated',
+    description: 'Direct communication with the owner ensures quality control and personalized service on every project.'
+  },
+  {
+    title: '15+ Years Experience',
+    description: 'Over a decade and a half of proven expertise in home improvement across Central Florida.'
+  },
+  {
+    title: 'Quality Workmanship',
+    description: 'We stand behind our work with attention to detail and a commitment to excellence.'
+  },
+  {
+    title: 'Fair Pricing',
+    description: 'Transparent, competitive pricing with no hidden fees. You get quality without overpaying.'
+  }
+];
+---
+
+<BaseLayout
+  title="Home Improvement in Kissimmee & Central Florida | Go Pro"
+  description="Owner-operated contractor serving Kissimmee, Orlando & Central Florida for 15+ years. Home theaters, murals, painting, power washing, trim, drywall & more."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative h-[600px] md:h-[700px] overflow-hidden">
+    <img 
+      src="/images/trim-navy-wall.jpg" 
+      alt="Professional home improvement work" 
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+    <div class="relative h-full container-custom flex items-center">
+      <div class="max-w-2xl">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-black uppercase mb-6 text-white leading-none tracking-tight">
+          Home Improvement in Kissimmee & Central Florida
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-white/95 font-sans">
+          Owner-operated for 15+ years. Home theaters, custom murals, painting, power washing, trim & drywall. Serving Kissimmee, Orlando, St. Cloud, Celebration & Poinciana with quality work & fair pricing.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-6">
+          <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block text-center shadow-lg tracking-wide">
+            Get Free Estimate
+          </a>
+          <a href="tel:4072446873" class="bg-gopro-charcoal/80 backdrop-blur-sm hover:bg-gopro-charcoal text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block text-center border-2 border-gopro-orange tracking-wide">
+            (407) 244-6873
+          </a>
+        </div>
+        <p class="text-white/80 text-sm">Serving Kissimmee, Orlando & Central Florida</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-6 tracking-tight">Why Go Pro</h2>
+        <p class="text-2xl text-gopro-charcoal max-w-3xl mx-auto font-sans font-semibold">
+          Owner-operated. No salespeople. Fair prices. Quality work.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {whyChooseUs.map((item) => (
+          <div>
+            <h3 class="text-xl font-display font-bold uppercase mb-3 text-gopro-orange tracking-wide">{item.title}</h3>
+            <p class="text-gray-700 leading-relaxed font-sans">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Our Services</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto font-sans">
+          15+ years doing it all—painting, remodeling, theaters, power washing & more
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/services/power-washing" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/power-washing.jpg" alt="Power Washing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Power Washing</h3>
+            <p class="text-white/90 text-sm font-sans">Driveways, pool decks, siding</p>
+          </div>
+        </a>
+        
+        <a href="/services/interior-exterior-painting" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/bedroom-paint.jpg" alt="Interior & Exterior Painting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Painting</h3>
+            <p class="text-white/90 text-sm font-sans">Interior & exterior</p>
+          </div>
+        </a>
+        
+        <a href="/services/trim-crown-molding" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/trim-navy-wall.jpg" alt="Trim & Crown Molding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Trim & Molding</h3>
+            <p class="text-white/90 text-sm font-sans">Crown, baseboards, paneling</p>
+          </div>
+        </a>
+        
+        <a href="/services/movie-rooms" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/movie-room.jpg" alt="Home Theater Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Home Theaters</h3>
+            <p class="text-white/90 text-sm font-sans">Full room designs & installs</p>
+          </div>
+        </a>
+        
+        <a href="/services/murals" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/nemo-mural.jpg" alt="Custom Murals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Custom Murals</h3>
+            <p class="text-white/90 text-sm font-sans">Kids rooms, feature walls</p>
+          </div>
+        </a>
+        
+        <a href="/services/drywall" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/drywall.jpg" alt="Drywall Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Drywall</h3>
+            <p class="text-white/90 text-sm font-sans">Repair, install, texture match</p>
+          </div>
+        </a>
+      </div>
+      <div class="text-center mt-12">
+        <a href="/services" class="bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block shadow-lg tracking-wide border-2 border-gopro-orange">
+          View All Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Showcase -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Our Work</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto font-sans">
+          Real jobs, real results—see what we've built for Central Florida homeowners
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/images/trim-navy-wall.jpg" alt="Navy paneled TV wall" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/images/movie-room.jpg" alt="Home theater installation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/images/nemo-mural.jpg" alt="Finding Nemo custom mural" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/images/wood-accent-wall.jpg" alt="Wood accent wall" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/images/star-wars-theater.jpg" alt="Star Wars home theater" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/images/bedroom-paint.jpg" alt="Professional painting" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="/work" class="bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block shadow-lg tracking-wide border-2 border-gopro-orange">
+          View Full Gallery
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,100 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/work', label: 'Our Work' },
+  { href: '/about', label: 'About' },
+  { href: '/areas', label: 'Areas' },
+  { href: '/reviews', label: 'Reviews' },
+];
+---
+
+<header class="bg-gopro-charcoal sticky top-0 z-50 border-b-4 border-gopro-orange shadow-lg">
+  <div class="container-custom">
+    <div class="flex items-center justify-between py-3">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img src="/images/logo.png" alt="Go Pro Home Improvements" class="h-14 md:h-16 w-auto" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-6">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`font-display font-bold uppercase text-sm tracking-wide transition-colors ${
+              currentPath === item.href || currentPath.startsWith(item.href + '/')
+                ? 'text-gopro-orange'
+                : 'text-white hover:text-gopro-orange'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+        <a href="tel:4072446873" class="text-white hover:text-gopro-orange transition-colors font-sans font-semibold border-l-2 border-white/20 pl-6">
+          (407) 244-6873
+        </a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:block">
+        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
+          Free Estimate
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="lg:hidden p-2 text-white hover:text-gopro-orange"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20 bg-gopro-black">
+    <nav class="container-custom py-4 flex flex-col space-y-4">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={`font-display font-bold uppercase text-sm tracking-wide ${
+            currentPath === item.href || currentPath.startsWith(item.href + '/')
+              ? 'text-gopro-orange'
+              : 'text-white'
+          }`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="tel:4072446873" class="text-white font-sans font-semibold">
+        (407) 244-6873
+      </a>
+      <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors text-center tracking-wide">
+        Free Estimate
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Sticky Mobile CTA -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-orange shadow-2xl z-40 p-3 border-t-2 border-gopro-black">
+  <a href="tel:4072446873" class="bg-gopro-black text-white hover:bg-gopro-charcoal font-display font-bold uppercase py-4 text-center block rounded transition-colors text-lg tracking-wide">
+    Call (407) 244-6873
+  </a>
+</div>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

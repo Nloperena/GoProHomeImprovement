@@ -1,0 +1,114 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: object;
+}
+
+const { title, description, canonical, ogImage, schema } = Astro.props;
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const defaultOgImage = new URL('/images/trim-navy-wall.jpg', Astro.site);
+const ogImageURL = ogImage ? new URL(ogImage, Astro.site) : defaultOgImage;
+
+const defaultSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://goprohomeimprovements.com/#business",
+      "name": "Go Pro Home Improvements",
+      "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+      "url": "https://goprohomeimprovements.com",
+      "telephone": "(407) 244-6873",
+      "email": "gopro4good@gmail.com",
+      "foundingDate": "2014",
+      "image": "https://goprohomeimprovements.com/images/logo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://goprohomeimprovements.com/images/logo.png"
+      },
+      "priceRange": "$$",
+      "areaServed": [
+        { "@type": "City", "name": "Kissimmee" },
+        { "@type": "City", "name": "Orlando" },
+        { "@type": "City", "name": "St. Cloud" },
+        { "@type": "City", "name": "Celebration" },
+        { "@type": "City", "name": "Poinciana" },
+        { "@type": "City", "name": "Davenport" },
+        { "@type": "AdministrativeArea", "name": "Osceola County" },
+        { "@type": "AdministrativeArea", "name": "Orange County" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "17:00"
+        }
+      ],
+      "knowsAbout": [
+        "Power Washing",
+        "Interior Painting",
+        "Exterior Painting",
+        "Demolition",
+        "Trim Installation",
+        "Crown Molding",
+        "Wallpaper Installation",
+        "Custom Murals",
+        "TV Mounting",
+        "Home Theater Installation",
+        "Drywall Installation",
+        "Drywall Repair"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/gopro4good/",
+        "https://share.google/mxf7aR650uFCQUTab",
+        "https://www.google.com/maps?cid=11832173553199565594"
+      ]
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalURL}>
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={ogImageURL}>
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Go Pro Home Improvements">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImageURL}>
+  
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#FF5C28">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchema)} />
+</head>
+<body>
+  <slot />
+</body>
+</html>

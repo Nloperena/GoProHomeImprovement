@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Our Work | Go Pro Home Improvements"
+  description="View our portfolio of completed home improvement projects in Central Florida. Real photos from actual job sites showcasing our quality workmanship."
+>
+  <Header />
+
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Work</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        See the quality and craftsmanship we bring to every project. These are real photos from actual job sites across Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="mb-12 text-center">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We stand behind our work with a portfolio of completed projects. Every photo represents a satisfied customer and a job done right.
+        </p>
+      </div>
+
+      <!-- Photo Gallery -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/trim-navy-wall.jpg" alt="Navy paneled TV wall with trim work" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Trim & Crown Molding</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/movie-room.jpg" alt="Home theater with theater seating" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Movie Room</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/star-wars-theater.jpg" alt="Star Wars themed home theater" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Home Theater</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/plank-tv-wall.jpg" alt="Wood plank TV accent wall" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">TV Wall Design</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/wood-accent-wall.jpg" alt="Wood accent wall in living room" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Accent Wall</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/nemo-mural.jpg" alt="Finding Nemo themed mural" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Custom Mural</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/harry-potter-room.jpg" alt="Harry Potter themed kids room" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Themed Room</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/bedroom-paint.jpg" alt="Professionally painted bedroom" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Interior Painting</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/power-washing.jpg" alt="Power washing services" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Power Washing</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/wood-floor.jpg" alt="Wood-look flooring installation" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Flooring</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/drywall.jpg" alt="Professional drywall work" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Drywall</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/wall-mount.jpg" alt="Professional TV wall mounting" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">TV Mounting</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/wallpaper.jpg" alt="Wallpaper installation" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Wallpaper</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/finished-shower.jpg" alt="Finished shower renovation" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Bathroom Renovation</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/crew-branded-shirt.jpg" alt="Go Pro crew member at work" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Professional Team</span>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+          <img src="/images/demolition.jpg" alt="Professional demolition work" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-semibold">Demolition</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-gray-50 rounded-lg p-8">
+        <p class="text-gray-600 mb-6">
+          See more of our recent work on Instagram or request a free estimate to discuss your project.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://www.instagram.com/gopro4good/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-secondary"
+          >
+            View Instagram
+          </a>
+          <a href="/estimate" class="btn-primary">
+            Get Free Estimate
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="text-4xl font-bold text-gopro-orange mb-2">15+</div>
+          <div class="text-gray-600">Years of Experience</div>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-4xl font-bold text-gopro-orange mb-2">100%</div>
+          <div class="text-gray-600">Quality Workmanship</div>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-4xl font-bold text-gopro-orange mb-2">All</div>
+          <div class="text-gray-600">of Central Florida</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>
