@@ -22,6 +22,24 @@ export async function GET() {
     'areas/celebration',
     'areas/poinciana',
     'areas/central-florida',
+    'guides',
+    'guides/power-washing-before-painting-florida',
+    'guides/kissimmee-vacation-rental-refresh',
+    'guides/tv-mounting-vs-home-theater',
+    'guides/how-much-does-painting-cost-kissimmee',
+    'guides/choosing-a-home-improvement-contractor-kissimmee',
+    'guides/stucco-and-humidity-central-florida',
+    'guides/hiding-tv-wires-without-cutting-drywall',
+    'guides/kids-room-mural-ideas-kissimmee',
+    'guides/hoa-and-exterior-paint-osceola',
+    'guides/pressure-washing-cost-kissimmee',
+    'guides/soft-wash-vs-pressure-wash-kissimmee',
+    'guides/fireplace-tv-mounting-orlando',
+    'guides/tv-mounting-cost-orlando',
+    'guides/popcorn-ceiling-removal-kissimmee',
+    'guides/cabinet-painting-vs-replacement-kissimmee',
+    'guides/roof-black-streaks-osceola',
+    'guides/kitchen-bathroom-demo-kissimmee',
   ];
 
   const lastmod = new Date().toISOString().split('T')[0];
@@ -34,7 +52,7 @@ ${pages
     <loc>https://goprohomeimprovements.com/${page}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>${page === '' ? '1.0' : page.startsWith('services/') || page.startsWith('areas/') ? '0.8' : '0.9'}</priority>
+    <priority>${page === '' ? '1.0' : page.startsWith('services/') || page.startsWith('areas/') || page.startsWith('guides/') ? '0.8' : '0.9'}</priority>
   </url>`
   )
   .join('\n')}

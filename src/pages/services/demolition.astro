@@ -6,23 +6,141 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Demolition Services | Go Pro Home Improvements"
-  description="Professional demolition services for residential and commercial remodeling projects in Central Florida. Safe, efficient interior and structural demolition."
+  title="Demolition Services in Kissimmee & Orlando | Interior Demo"
+  description="Safe, efficient demolition in Kissimmee, Orlando & Central Florida. Kitchen tear-outs, wall removal, bathroom demo. 15+ years. Free estimates."
+  ogImage="/images/demolition.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "foundingDate": "2014",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/demolition/#service",
+        "serviceType": "Demolition Services",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Professional interior demolition for residential and commercial remodeling projects. Safe, efficient, and clean."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/demolition/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Demolition",
+            "item": "https://goprohomeimprovements.com/services/demolition"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/demolition/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does demolition cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Demolition costs depend on scope and disposal needs. Kitchen or bathroom tear-out typically runs $500-$2,000, interior wall removal $200-$800 per wall. Dumpster rental adds $300-$600. We provide free estimates with labor, disposal, and cleanup itemized."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you haul away demolition debris?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We bring a dumpster, load all debris, and haul it away. You don't lift a finger. Disposal fees are included in the estimate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you remove a wall without damaging the rest of the house?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We protect floors, contain dust, identify load-bearing walls (which need proper support before removal), and demo carefully so adjacent rooms stay intact. 15+ years of experience means we know how to tear down without tearing up."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does interior demolition take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most interior demo jobs finish in 1-3 days. A single wall removal or cabinet tear-out takes a few hours. Full kitchen or bathroom gut jobs take 1-2 days. We schedule so your remodel starts on time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a permit for demolition in Florida?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior demo (non-structural) usually doesn't require a permit in most Central Florida cities. Removing load-bearing walls does. We advise on permit needs and can pull permits when required."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Demolition</span>
+        <span class="text-white">Demolition</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Demolition Services</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Safe and efficient demolition for your remodeling and renovation projects.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Demolition Services in Kissimmee & Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Safe interior demo for remodels. Kitchens, bathrooms, walls. Clean, fast, debris removal included.
       </p>
     </div>
   </section>
@@ -37,102 +155,129 @@ import CTASection from '../../components/CTASection.astro';
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            Every successful renovation starts with proper demolition. Whether you're opening up walls, gutting a kitchen, or removing outdated features, Go Pro handles demolition work with precision and care to set the stage for your transformation.
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Demolition is the first step of every renovation—and doing it right protects the rest of your house. We tear out kitchens, remove walls for open floor plans, gut bathrooms, strip old tile and cabinets, and haul everything away so your space is ready for <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a>, <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>, or new finishes.
           </p>
-          <p class="text-lg text-gray-600 mb-8">
-            We understand that demolition isn't just about tearing things down—it's about doing so safely, efficiently, and in a way that protects the rest of your property while preparing for what comes next.
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're remodeling a <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> vacation rental, opening up a <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> kitchen, or prepping a space for a <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we handle demo carefully, contain the mess, and load the dumpster across <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> and Central Florida.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Vacation Rental Turnover</h2>
+          <p class="text-gray-700 font-sans">
+            Many <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> and <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> investment property owners refresh rentals every few years to stay competitive near Disney. We demo fast—old tile, cabinets, worn finishes—so the remodel starts on schedule and the rental doesn't sit vacant longer than necessary.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">Demolition Services</h2>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li class="flex items-start">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Demo</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Interior Wall Removal</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Kitchen & Bathroom Tear-Outs</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Kitchen & Bathroom Tear-Outs</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Interior Wall Removal (load-bearing identified)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Flooring Removal</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Flooring Removal (tile, carpet, vinyl, laminate)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Cabinet & Fixture Removal</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Cabinet & Fixture Removal</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Drywall & Ceiling Removal</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Drywall & Ceiling Removal</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Trim & Molding Removal</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Trim & Molding Removal</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Debris Removal & Cleanup</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Debris Removal & Cleanup</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Commercial Interior Demo</span>
-            </li>
-          </ul>
+              <span class="text-gray-700 font-sans">Commercial Interior Demo</span>
+            </div>
+          </div>
         </div>
 
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does demolition cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Demolition costs depend on scope and disposal needs. Kitchen or bathroom tear-out typically runs $500-$2,000, interior wall removal $200-$800 per wall. Dumpster rental adds $300-$600. We provide free estimates with labor, disposal, and cleanup itemized.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you haul away demolition debris?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We bring a dumpster, load all debris, and haul it away. You don't lift a finger. Disposal fees are included in the estimate.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you remove a wall without damaging the rest of the house?</h3>
+              <p class="text-gray-700 font-sans">
+                Absolutely. We protect floors, contain dust, identify load-bearing walls (which need proper support before removal), and demo carefully so adjacent rooms stay intact. 15+ years of experience means we know how to tear down without tearing up.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does interior demolition take?</h3>
+              <p class="text-gray-700 font-sans">
+                Most interior demo jobs finish in 1-3 days. A single wall removal or cabinet tear-out takes a few hours. Full kitchen or bathroom gut jobs take 1-2 days. We schedule so your remodel starts on time.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do I need a permit for demolition in Florida?</h3>
+              <p class="text-gray-700 font-sans">
+                Interior demo (non-structural) usually doesn't require a permit in most Central Florida cities. Removing load-bearing walls does. We advise on permit needs and can pull permits when required.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to start your renovation with professional demo?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <CTASection
-    title="Ready to Start Your Project?"
-    description="Professional demolition services to prepare your space for transformation. Get your free estimate today."
+    title="Professional Demolition Services"
+    description="Safe, efficient interior demo. Debris removal included. Serving Kissimmee, Orlando & Central Florida."
   />
 
   <Footer />
