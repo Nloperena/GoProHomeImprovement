@@ -32,6 +32,14 @@ export async function GET() {
     'guides/hiding-tv-wires-without-cutting-drywall',
     'guides/kids-room-mural-ideas-kissimmee',
     'guides/hoa-and-exterior-paint-osceola',
+    'guides/pressure-washing-cost-kissimmee',
+    'guides/soft-wash-vs-pressure-wash-kissimmee',
+    'guides/fireplace-tv-mounting-orlando',
+    'guides/tv-mounting-cost-orlando',
+    'guides/popcorn-ceiling-removal-kissimmee',
+    'guides/cabinet-painting-vs-replacement-kissimmee',
+    'guides/roof-black-streaks-osceola',
+    'guides/kitchen-bathroom-demo-kissimmee',
   ];
 
   const lastmod = new Date().toISOString().split('T')[0];
