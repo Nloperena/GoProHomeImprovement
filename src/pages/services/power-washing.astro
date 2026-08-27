@@ -6,24 +6,132 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Power Washing Services | Go Pro Home Improvements"
-  description="Professional power washing and pressure washing in Central Florida. House washing, driveway cleaning, pool deck cleaning, and commercial property washing."
+  title="Power Washing in Kissimmee, FL | Driveways, Houses, Patios"
+  description="Power washing in Kissimmee, Orlando & Central Florida. Driveways, pool decks, siding, patios. Remove algae & mildew. Owner-operated, 15+ years."
+  ogImage="/images/power-washing.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/power-washing/#service",
+        "serviceType": "Power Washing",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Professional power washing for driveways, houses, pool decks, patios, and more in Central Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/power-washing/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Power Washing",
+            "item": "https://goprohomeimprovements.com/services/power-washing"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/power-washing/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does power washing cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on square footage and surface type. Driveways typically range $100-$300, full house exteriors $200-$600. We provide free estimates so you know the exact price before we start."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will power washing damage my siding or driveway?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not when done correctly. We adjust pressure and technique for each surface—soft wash for vinyl siding, higher pressure for concrete. 15+ years of experience means we know how to clean safely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I power wash my home in Florida?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Florida's humidity and sun cause algae and mildew to grow faster. Most homes benefit from power washing every 12-18 months. Driveways and pool decks may need it more often depending on use and tree coverage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you power wash before painting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, absolutely. We power wash exterior surfaces before any painting project to remove dirt, mildew, and loose paint. It's essential for paint adhesion and long-lasting results."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
   <!-- Hero -->
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Power Washing</span>
+        <span class="text-white">Power Washing</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Power Washing</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Professional pressure washing services to restore and protect your property's appearance.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Power Washing in Kissimmee, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Driveways, pool decks, siding, patios. Remove algae, mildew & grime. Serving Kissimmee, Orlando & Central Florida.
       </p>
     </div>
   </section>
@@ -47,9 +155,17 @@ import CTASection from '../../components/CTASection.astro';
           </p>
         </div>
 
+        <!-- Florida Context -->
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Florida Humidity & Algae</h2>
+          <p class="text-gray-700 font-sans">
+            Florida's climate makes algae, mildew, and mold grow fast on driveways, siding, and pool decks. Regular power washing removes buildup before it stains permanently, protects your investment, and keeps your home looking sharp. Many <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> and <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> homeowners schedule annual washes to stay ahead of the green.
+          </p>
+        </div>
+
         <!-- Services List -->
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">What We Wash</h2>
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Wash</h2>
           <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <li class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
@@ -102,33 +218,47 @@ import CTASection from '../../components/CTASection.astro';
           </ul>
         </div>
 
-        <!-- Our Promise -->
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+        <!-- FAQ -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does power washing cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on square footage and surface type. Driveways typically range $100-$300, full house exteriors $200-$600. We provide free estimates so you know the exact price before we start.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Will power washing damage my siding or driveway?</h3>
+              <p class="text-gray-700 font-sans">
+                Not when done correctly. We adjust pressure and technique for each surface—soft wash for vinyl siding, higher pressure for concrete. 15+ years of experience means we know how to clean safely.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How often should I power wash my home in Florida?</h3>
+              <p class="text-gray-700 font-sans">
+                Florida's humidity and sun cause algae and mildew to grow faster. Most homes benefit from power washing every 12-18 months. Driveways and pool decks may need it more often depending on use and tree coverage.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you power wash before painting?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, absolutely. We <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">power wash exterior surfaces</a> before any painting project to remove dirt, mildew, and loose paint. It's essential for paint adhesion and long-lasting results.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready for a cleaner driveway, house, or pool deck?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>

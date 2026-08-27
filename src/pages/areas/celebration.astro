@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Celebration Home Improvement Contractor | Go Pro"
+  description="Home improvement in Celebration, FL. Painting, murals, trim work, TV mounting & more. Owner-operated contractor serving Disney-area homes for 15+ years."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Celebration", "containedIn": "Florida" }
+        ],
+        "knowsAbout": [
+          "Interior Painting",
+          "Custom Murals",
+          "Trim Installation",
+          "Crown Molding",
+          "TV Mounting",
+          "Drywall Repair"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/areas/celebration/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Service Areas",
+            "item": "https://goprohomeimprovements.com/areas"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Celebration",
+            "item": "https://goprohomeimprovements.com/areas/celebration"
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/areas" class="text-gray-400 hover:text-gopro-orange transition-colors">Service Areas</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Celebration</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Celebration Home Improvement Contractor</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Serving Celebration homes with quality painting, trim work, custom murals & upgrades. Owner-operated since 2009.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Celebration is a master-planned community near Walt Disney World with a distinct architectural style and tight HOA standards. Go Pro works with Celebration homeowners who need <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a>, <a href="/services/trim-crown-molding" class="text-gopro-orange hover:underline">trim carpentry</a>, and interior finishes that match the community's quality expectations.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're refreshing a kids' room with a <a href="/services/murals" class="text-gopro-orange hover:underline">custom mural</a>, mounting TVs with hidden wires, or upgrading trim and crown molding, we understand the care Celebration residents expect—and we deliver it without the big-company markup.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Services for Celebration Homes</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="/services/interior-exterior-painting" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-sans">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Interior & Exterior Painting</span>
+            </a>
+            <a href="/services/murals" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-sans">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Custom Murals (kids rooms, nurseries)</span>
+            </a>
+            <a href="/services/trim-crown-molding" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-sans">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Trim, Crown Molding & Wainscoting</span>
+            </a>
+            <a href="/services/tv-mounting" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-sans">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>TV Mounting & Wire Concealment</span>
+            </a>
+            <a href="/services/drywall" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-sans">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Drywall Repair & Patching</span>
+            </a>
+            <a href="/services" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-sans font-semibold">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>View All Services</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h3 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Familiar with Celebration Standards</h3>
+          <p class="text-gray-700 font-sans">
+            We know Celebration's HOA guidelines matter. Whether it's matching approved exterior colors or keeping work sites tidy in a close-knit neighborhood, we respect the standards that make Celebration what it is.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">
+            Ready for a free estimate on your Celebration home?
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

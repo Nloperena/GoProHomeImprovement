@@ -1,0 +1,64 @@
+{
+  "redirects": [
+    {
+      "source": "/about/:path*",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/our-work/:path*",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/contact/:path*",
+      "destination": "/estimate",
+      "permanent": true
+    },
+    {
+      "source": "/service/power-washing/:path*",
+      "destination": "/services/power-washing",
+      "permanent": true
+    },
+    {
+      "source": "/service/interior-exterior-painting/:path*",
+      "destination": "/services/interior-exterior-painting",
+      "permanent": true
+    },
+    {
+      "source": "/service/demolition-work/:path*",
+      "destination": "/services/demolition",
+      "permanent": true
+    },
+    {
+      "source": "/service/trim-crown-molding/:path*",
+      "destination": "/services/trim-crown-molding",
+      "permanent": true
+    },
+    {
+      "source": "/service/wallpaper/:path*",
+      "destination": "/services/wallpaper",
+      "permanent": true
+    },
+    {
+      "source": "/service/murals/:path*",
+      "destination": "/services/murals",
+      "permanent": true
+    },
+    {
+      "source": "/service/wall-mount-tv-installations/:path*",
+      "destination": "/services/tv-mounting",
+      "permanent": true
+    },
+    {
+      "source": "/service/movie-room-designs-installations/:path*",
+      "destination": "/services/movie-rooms",
+      "permanent": true
+    },
+    {
+      "source": "/service/drywall-texture-install/:path*",
+      "destination": "/services/drywall",
+      "permanent": true
+    }
+  ]
+}
