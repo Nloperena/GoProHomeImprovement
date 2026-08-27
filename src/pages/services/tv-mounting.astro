@@ -6,30 +6,137 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="TV Mounting Services | Go Pro Home Improvements"
-  description="Professional TV mounting and installation in Central Florida. Secure mounting with wire concealment and optimal viewing angles for any TV size."
+  title="TV Mounting in Kissimmee & Orlando | Hidden Wires"
+  description="Professional TV mounting in Kissimmee, Orlando & Central Florida. Wall mount TVs with hidden wires. Owner-operated, 15+ years experience."
+  ogImage="/images/wall-mount.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting/#service",
+        "serviceType": "TV Mounting and Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Professional TV mounting with concealed wiring for clean, modern installations in Central Florida homes."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TV Mounting",
+            "item": "https://goprohomeimprovements.com/services/tv-mounting"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does TV mounting cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Basic wall mounting with visible wires typically runs $100-$200. Concealing wires inside the wall adds $100-$200 depending on wall access and cable length. We provide free quotes after seeing the space."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you hide the wires in the wall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We run cables through the wall between the TV and outlet for a clean look. If the wall has blocking or you need power behind the TV, we install an outlet so everything is hidden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide the mount?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We can use a mount you already purchased, or source one for you. Full-motion mounts let you angle the TV; fixed mounts sit flush. Let us know your preference when you request an estimate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does TV mounting take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A basic mount with wires exposed takes 45-90 minutes. Concealing wires inside the wall adds 1-2 hours. Most jobs are done in a single visit."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>TV Mounting</span>
+        <span class="text-white">TV Mounting</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">TV Mounting</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Professional TV mounting services with secure installation and clean wire concealment.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">TV Mounting in Kissimmee & Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Wall-mount your TV with hidden wires for a clean, modern look. Serving Central Florida homes.
       </p>
     </div>
   </section>
 
-  <!-- Hero Image -->
   <section class="relative h-96 overflow-hidden">
-    <img src="/images/wall-mount.jpg" alt="Professional TV mounting services" class="w-full h-full object-cover" />
+    <img src="/images/wall-mount.jpg" alt="Professional TV mounting with concealed wires in Central Florida" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
   </section>
 
@@ -37,115 +144,104 @@ import CTASection from '../../components/CTASection.astro';
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            A professionally mounted TV not only saves space and looks modern, it also provides the optimal viewing experience. Go Pro specializes in secure TV mounting that's done right—properly anchored, perfectly level, and with all wires concealed for a clean, finished look.
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Wall mounting a TV opens up floor space, improves viewing angles, and gives your room a clean, finished look. The difference between a pro install and a DIY disaster is finding studs correctly, concealing wires properly, and making sure the mount is level and secure.
           </p>
-          <p class="text-lg text-gray-600 mb-8">
-            Whether you're mounting a TV in your living room, bedroom, office, or commercial space, we handle installations of all sizes and types. From basic fixed mounts to full-motion articulating brackets, we ensure your TV is secure and positioned exactly where you want it.
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            We've mounted hundreds of TVs across <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>—from bedrooms to full <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theaters</a>. Whether you want wires hidden in the wall or need an outlet installed behind the TV, we handle it cleanly and quickly.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">TV Mounting Services</h2>
-          <ul class="space-y-4">
-            <li class="flex items-start">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What's Included</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Wall Mounting</h3>
-                <p class="text-gray-600">Secure mounting to studs or with proper anchors for any wall type.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Stud-finder location & secure mounting</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Wire Concealment</h3>
-                <p class="text-gray-600">Hide all cables in-wall or with cable management solutions.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Concealed wiring (run through wall)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Articulating Mounts</h3>
-                <p class="text-gray-600">Full-motion mounts for flexible viewing angles.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Level installation & cable management</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Sound Bar Installation</h3>
-                <p class="text-gray-600">Mount and connect sound bars for enhanced audio.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Outlet installation behind TV (if needed)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Component Integration</h3>
-                <p class="text-gray-600">Connect cable boxes, streaming devices, and gaming consoles.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Fixed or full-motion mounts</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Commercial Installations</h3>
-                <p class="text-gray-600">Multiple TV setups for businesses and waiting areas.</p>
-              </div>
-            </li>
-          </ul>
+              <span class="text-gray-700 font-sans">All sizes (32" up to 75"+)</span>
+            </div>
+          </div>
         </div>
 
-        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-bold mb-3">Safe & Secure Installation</h3>
-          <p class="text-gray-700">
-            We take TV mounting seriously. Every installation is anchored to wall studs whenever possible, and we use the right hardware for your wall type (drywall, concrete, brick, or tile). The result? A secure, level mount that looks professional and gives you peace of mind. We handle TVs of all sizes and weights safely.
-          </p>
-        </div>
-
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does TV mounting cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Basic wall mounting with visible wires typically runs $100-$200. Concealing wires inside the wall adds $100-$200 depending on wall access and cable length. We provide free quotes after seeing the space.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you hide the wires in the wall?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We run cables through the wall between the TV and outlet for a clean look. If the wall has blocking or you need power behind the TV, we install an outlet so everything is hidden.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you provide the mount?</h3>
+              <p class="text-gray-700 font-sans">
+                We can use a mount you already purchased, or source one for you. Full-motion mounts let you angle the TV; fixed mounts sit flush. Let us know your preference when you request an estimate.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does TV mounting take?</h3>
+              <p class="text-gray-700 font-sans">
+                A basic mount with wires exposed takes 45-90 minutes. Concealing wires inside the wall adds 1-2 hours. Most jobs are done in a single visit.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready for a cleaner, better-looking TV setup?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <CTASection
-    title="Ready for a Professional TV Mount?"
-    description="Secure, clean TV mounting with proper wire concealment. Get your free estimate today."
+    title="Professional TV Mounting with Hidden Wires"
+    description="Clean, modern installations. Level, secure, and done right. Serving Kissimmee, Orlando & Central Florida."
   />
 
   <Footer />

@@ -6,30 +6,145 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Interior & Exterior Painting Services | Go Pro Home Improvements"
-  description="Professional residential and commercial painting services in Central Florida. Expert interior and exterior painting with premium paints and supplies."
+  title="Interior & Exterior Painting in Kissimmee & Orlando"
+  description="Professional painting in Kissimmee, Orlando & Central Florida. Interior rooms, exterior siding, cabinets, trim. 15+ years. Owner-operated."
+  ogImage="/images/bedroom-paint.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/interior-exterior-painting/#service",
+        "serviceType": "Interior and Exterior Painting",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Professional residential and commercial painting services for interior rooms, exterior siding, cabinets, and trim in Central Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/interior-exterior-painting/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Interior & Exterior Painting",
+            "item": "https://goprohomeimprovements.com/services/interior-exterior-painting"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/interior-exterior-painting/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does interior painting cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior painting costs depend on square footage, ceiling height, and surface condition. A typical bedroom ranges $300-$600, living rooms $400-$900. We provide free estimates so you know the exact cost upfront."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does exterior paint last in Florida?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Florida sun and humidity are hard on exterior paint. Quality paint with proper prep typically lasts 5-7 years. Regular power washing and touch-ups can extend that. We use paints rated for Florida's climate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you move furniture when painting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We move small furniture away from walls and cover it with drop cloths. Heavy furniture (beds, large dressers) we work around carefully. Let us know if you need help moving big pieces before the job starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you match my existing paint color?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We can color-match from a sample chip or an existing painted surface. Many touch-up and single-room jobs need matching, and we do it routinely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint cabinets and trim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We paint kitchen cabinets, bathroom vanities, baseboards, and crown molding. Cabinet painting requires careful prep and the right primer—we've done hundreds in Central Florida."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Interior & Exterior Painting</span>
+        <span class="text-white">Painting</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Interior & Exterior Painting</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Professional painting services to refresh, protect, and transform your property.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Interior & Exterior Painting in Kissimmee & Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Rooms, siding, cabinets, trim. Quality prep, quality paint. Serving Central Florida homes for 15+ years.
       </p>
     </div>
   </section>
 
-  <!-- Hero Image -->
   <section class="relative h-96 overflow-hidden">
-    <img src="/images/bedroom-paint.jpg" alt="Professional painting services" class="w-full h-full object-cover" />
+    <img src="/images/bedroom-paint.jpg" alt="Professional interior painting in Central Florida" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
   </section>
 
@@ -37,129 +152,129 @@ import CTASection from '../../components/CTASection.astro';
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            Go Pro has the skill and expertise to provide the right painting solutions for your home or office. You spend a great deal of time in your space—a high-quality paint job contributes to a bright, vibrant atmosphere that you'll enjoy every day.
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Painting is one of the fastest ways to refresh a home—and one of the easiest to mess up if you rush the prep. We <a href="/services/power-washing" class="text-gopro-orange hover:underline">power wash</a> exteriors before painting, patch and sand drywall, prime stains, and use quality paint that holds up in Florida's sun and humidity.
           </p>
-          <p class="text-lg text-gray-600 mb-8">
-            Whether you want to freshen up a single room or repaint your entire property inside and out, we deliver outstanding results on time and on budget. We've served thousands of proud residential and commercial customers across Central Florida.
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're repainting a bedroom, freshening curb appeal before selling, or updating kitchen cabinets, we work clean, on schedule, and stand behind the finished job. Based in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, serving <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>, and Central Florida.
           </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <div class="bg-gray-50 rounded-lg p-8">
-            <h2 class="text-2xl font-bold mb-4">Interior Painting</h2>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Living rooms, bedrooms, and common areas</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Kitchens and bathrooms</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Ceilings and trim work</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Accent walls and color consultation</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Commercial office spaces</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bg-gray-50 rounded-lg p-8">
-            <h2 class="text-2xl font-bold mb-4">Exterior Painting</h2>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>House siding and stucco</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Trim, shutters, and doors</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Fences and decks</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Garages and sheds</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Commercial storefronts</span>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-bold mb-3">Premium Materials</h3>
-          <p class="text-gray-700">
-            We use only premium paints and supplies to ensure success and a quality painting experience. Your satisfaction is our goal, and we stand behind our workmanship.
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Florida Sun & Mildew</h2>
+          <p class="text-gray-700 font-sans">
+            Central Florida's UV rays fade exterior paint faster than cooler climates, and humidity feeds mildew on north-facing walls. We use paints with mildewcide and UV resistance, and we prep surfaces so paint bonds properly—not just covers the problem for six months.
           </p>
         </div>
 
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Paint</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Interior Rooms (bedrooms, living rooms, hallways)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Exterior Siding (vinyl, stucco, wood, Hardie)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Kitchen Cabinets & Vanities</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Trim, Baseboards, Crown Molding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Ceilings (flat, textured)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Doors & Window Frames</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Accent Walls</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Commercial Spaces</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does interior painting cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Interior painting costs depend on square footage, ceiling height, and surface condition. A typical bedroom ranges $300-$600, living rooms $400-$900. We provide free estimates so you know the exact cost upfront.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does exterior paint last in Florida?</h3>
+              <p class="text-gray-700 font-sans">
+                Florida sun and humidity are hard on exterior paint. Quality paint with proper prep typically lasts 5-7 years. Regular <a href="/services/power-washing" class="text-gopro-orange hover:underline">power washing</a> and touch-ups can extend that. We use paints rated for Florida's climate.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you move furniture when painting?</h3>
+              <p class="text-gray-700 font-sans">
+                We move small furniture away from walls and cover it with drop cloths. Heavy furniture (beds, large dressers) we work around carefully. Let us know if you need help moving big pieces before the job starts.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you match my existing paint color?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We can color-match from a sample chip or an existing painted surface. Many touch-up and single-room jobs need matching, and we do it routinely.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint cabinets and trim?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We paint kitchen cabinets, bathroom vanities, baseboards, and crown molding. Cabinet painting requires careful prep and the right primer—we've done hundreds in Central Florida.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to refresh your home with quality painting?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <CTASection
-    title="Ready to Refresh Your Space?"
-    description="Contact us for a free painting estimate. Transform your property with professional, high-quality painting services."
+    title="Transform Your Space with Professional Painting"
+    description="Quality prep, quality paint, and owner-operated care. Serving Kissimmee, Orlando & Central Florida."
   />
 
   <Footer />
