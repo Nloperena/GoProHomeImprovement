@@ -28,6 +28,10 @@ export async function GET() {
     'guides/tv-mounting-vs-home-theater',
     'guides/how-much-does-painting-cost-kissimmee',
     'guides/choosing-a-home-improvement-contractor-kissimmee',
+    'guides/stucco-and-humidity-central-florida',
+    'guides/hiding-tv-wires-without-cutting-drywall',
+    'guides/kids-room-mural-ideas-kissimmee',
+    'guides/hoa-and-exterior-paint-osceola',
   ];
 
   const lastmod = new Date().toISOString().split('T')[0];
