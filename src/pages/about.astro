@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="About Us | Go Pro Home Improvements"
+  description="Learn about Go Pro Home Improvements, an owner-operated home improvement contractor with 15+ years of experience serving Central Florida."
+>
+  <Header />
+
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">About Go Pro</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Owner-operated. Experienced. Reliable. Serving Central Florida for over 15 years.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6">
+            Go Pro Home Improvements is an owner-operated company with over 15 years of experience serving Central Florida. What started as a commitment to quality craftsmanship has grown into a trusted name for home improvement services across the region.
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            We provide comprehensive home improvement solutions including painting, power washing, trim and molding, wallpaper installation, demolition, drywall work, TV mounting, home theater design, and more. Whether it's a single-room refresh or a complete renovation, we handle projects of all sizes with the same attention to detail and professionalism.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-xl font-bold mb-4 text-gopro-orange">Our Mission</h2>
+            <p class="text-gray-700">
+              To understand our clients' needs and collaborate on solutions that bring the best improvements to their homes and businesses.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-xl font-bold mb-4 text-gopro-orange">Our Vision</h2>
+            <p class="text-gray-700">
+              To be recognized for excellence and quality in home improvement services, known regionally for our trusted reputation and results.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h2 class="text-xl font-bold mb-4 text-gopro-orange">Our Goal</h2>
+            <p class="text-gray-700">
+              To complete every task with our best effort, upholding high standards and exceeding the expectations of every client.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gopro-orange text-white rounded-lg p-12 mb-16">
+          <h2 class="text-3xl font-bold mb-6 text-center">Why Choose Go Pro</h2>
+          <p class="text-xl text-center mb-8 text-white/90">
+            Simple: you want the best quality of service, and we deliver it.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white/10 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-3">Always Available</h3>
+              <p class="text-white/90">
+                We're here to answer your questions about pricing, estimates, or project options. Whether you need guidance or have concerns, we're available to help.
+              </p>
+            </div>
+            <div class="bg-white/10 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-3">Experienced Team</h3>
+              <p class="text-white/90">
+                Our team is knowledgeable and skilled at their craft. With over 15 years in the industry, we've handled nearly every type of home improvement challenge.
+              </p>
+            </div>
+            <div class="bg-white/10 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-3">Fair Pricing</h3>
+              <p class="text-white/90">
+                Our prices are fair and competitive. We provide transparent estimates and guarantee our workmanship to your satisfaction.
+              </p>
+            </div>
+            <div class="bg-white/10 rounded-lg p-6">
+              <h3 class="text-xl font-bold mb-3">Quality Materials</h3>
+              <p class="text-white/90">
+                We use premium materials and trusted suppliers to ensure lasting results. Your investment deserves quality that stands the test of time.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
+          <h2 class="text-2xl font-bold mb-4">Our Commitment</h2>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              We provide complete, accurate, up-front estimates—no surprises
+            </li>
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              We work efficiently while accommodating your schedule
+            </li>
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              We treat your property with the utmost care and respect
+            </li>
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              We stand behind our work and do the job right
+            </li>
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              Owner-operated means you get direct communication and accountability
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6">
+            Ready to work with a contractor you can trust?
+          </p>
+          <a href="/estimate" class="btn-primary">
+            Get Free Estimate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

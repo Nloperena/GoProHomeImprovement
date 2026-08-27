@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Our Work | Go Pro Home Improvements"
+  description="View our portfolio of completed home improvement projects in Central Florida. Real photos from actual job sites showcasing our quality workmanship."
+>
+  <Header />
+
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Work</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        See the quality and craftsmanship we bring to every project. These are real photos from actual job sites across Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="mb-12 text-center">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We stand behind our work with a portfolio of completed projects. Every photo represents a satisfied customer and a job done right.
+        </p>
+      </div>
+
+      <!-- Note: In production, real project photos would be pulled from the live site and organized here -->
+      <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-12 text-center">
+        <div class="max-w-2xl mx-auto">
+          <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <h2 class="text-2xl font-bold mb-4">Gallery Photos Coming Soon</h2>
+          <p class="text-gray-600 mb-6">
+            We're currently organizing our project photos for display here. In the meantime, you can view our recent work on Instagram or give us a call to discuss your project and see examples relevant to what you need.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.instagram.com/gopro4good/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              View Instagram
+            </a>
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="text-4xl font-bold text-gopro-orange mb-2">15+</div>
+          <div class="text-gray-600">Years of Experience</div>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-4xl font-bold text-gopro-orange mb-2">100%</div>
+          <div class="text-gray-600">Quality Workmanship</div>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-4xl font-bold text-gopro-orange mb-2">All</div>
+          <div class="text-gray-600">of Central Florida</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

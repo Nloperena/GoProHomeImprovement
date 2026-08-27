@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Get Free Estimate | Go Pro Home Improvements"
+  description="Request a free, no-obligation estimate for your home improvement project. We'll contact you to discuss your needs and provide an accurate quote."
+>
+  <Header />
+
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Get Your Free Estimate</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Tell us about your project and we'll get back to you with a detailed, accurate estimate.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+          <form id="estimate-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Full Name <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                  placeholder="John Smith"
+                />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Phone Number <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                  placeholder="(407) 555-1234"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                Email Address <span class="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                placeholder="john@example.com"
+              />
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Service Type <span class="text-red-500">*</span>
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                >
+                  <option value="">Select a service...</option>
+                  <option value="power-washing">Power Washing</option>
+                  <option value="interior-exterior-painting">Interior & Exterior Painting</option>
+                  <option value="demolition">Demolition</option>
+                  <option value="trim-crown-molding">Trim & Crown Molding</option>
+                  <option value="wallpaper">Wallpaper</option>
+                  <option value="murals">Murals</option>
+                  <option value="tv-mounting">TV Mounting</option>
+                  <option value="movie-rooms">Movie Rooms</option>
+                  <option value="drywall">Drywall</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="city" class="block text-sm font-semibold text-gray-700 mb-2">
+                  City <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                  placeholder="Kissimmee"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                Project Details <span class="text-red-500">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="6"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                placeholder="Please describe your project in detail..."
+              ></textarea>
+              <p class="text-sm text-gray-500 mt-2">
+                Optional: You can also text photos of the project area to <a href="tel:4072446873" class="text-gopro-orange hover:underline">(407) 244-6873</a>
+              </p>
+            </div>
+
+            <div class="pt-4">
+              <button
+                type="submit"
+                class="w-full btn-primary text-lg py-4 hover:shadow-lg"
+              >
+                Submit Estimate Request
+              </button>
+            </div>
+          </form>
+
+          <div id="form-success" class="hidden">
+            <div class="text-center py-12">
+              <svg class="w-20 h-20 text-green-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
+              <p class="text-lg text-gray-600 mb-8">
+                We've received your estimate request and will contact you shortly to discuss your project.
+              </p>
+              <div class="space-y-3 text-gray-600">
+                <p>Questions in the meantime?</p>
+                <p class="font-semibold">
+                  Call us at <a href="tel:4072446873" class="text-gopro-orange hover:underline">(407) 244-6873</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="form-error" class="hidden">
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded">
+              <p class="text-red-800 font-semibold mb-2">Submission Error</p>
+              <p class="text-red-600">
+                There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="text-red-800 underline">(407) 244-6873</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-xl font-bold mb-4">What Happens Next?</h3>
+            <ol class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="font-bold text-gopro-orange mr-3">1.</span>
+                <span>We'll review your project details</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-bold text-gopro-orange mr-3">2.</span>
+                <span>We'll call you to discuss specifics and schedule a site visit if needed</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-bold text-gopro-orange mr-3">3.</span>
+                <span>You'll receive a detailed, accurate estimate</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-bold text-gopro-orange mr-3">4.</span>
+                <span>Once approved, we'll schedule your project</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="bg-gopro-orange text-white rounded-lg p-8">
+            <h3 class="text-xl font-bold mb-4">Prefer to Call?</h3>
+            <p class="mb-6">
+              We're always available to discuss your project over the phone. Call us directly for immediate assistance.
+            </p>
+            <a href="tel:4072446873" class="bg-white text-gopro-orange hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 inline-block">
+              Call (407) 244-6873
+            </a>
+            <div class="mt-6 pt-6 border-t border-white/20">
+              <p class="text-sm text-white/90">
+                Email: <a href="mailto:gopro4good@gmail.com" class="underline">gopro4good@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <script>
+    const form = document.getElementById('estimate-form') as HTMLFormElement;
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch('/api/estimate', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          form.classList.add('hidden');
+          formSuccess?.classList.remove('hidden');
+          formError?.classList.add('hidden');
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        formError?.classList.remove('hidden');
+      }
+    });
+  </script>
+</BaseLayout>

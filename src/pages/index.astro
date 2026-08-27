@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTASection from '../components/CTASection.astro';
+
+const services = [
+  {
+    name: 'Power Washing',
+    href: '/services/power-washing',
+    description: 'Professional pressure washing for homes, driveways, and commercial properties.'
+  },
+  {
+    name: 'Interior & Exterior Painting',
+    href: '/services/interior-exterior-painting',
+    description: 'Expert painting services to refresh and protect your property.'
+  },
+  {
+    name: 'Demolition',
+    href: '/services/demolition',
+    description: 'Safe and efficient demolition for remodeling projects.'
+  },
+  {
+    name: 'Trim & Crown Molding',
+    href: '/services/trim-crown-molding',
+    description: 'Custom trim work and crown molding installation for elegant finishes.'
+  },
+  {
+    name: 'Wallpaper',
+    href: '/services/wallpaper',
+    description: 'Professional wallpaper installation and removal services.'
+  },
+  {
+    name: 'Murals',
+    href: '/services/murals',
+    description: 'Custom mural design and installation for unique spaces.'
+  },
+  {
+    name: 'TV Mounting',
+    href: '/services/tv-mounting',
+    description: 'Professional TV mounting and wire concealment.'
+  },
+  {
+    name: 'Movie Rooms',
+    href: '/services/movie-rooms',
+    description: 'Complete home theater design and installation.'
+  },
+  {
+    name: 'Drywall',
+    href: '/services/drywall',
+    description: 'Drywall installation, repair, and texture services.'
+  }
+];
+
+const whyChooseUs = [
+  {
+    title: 'Owner-Operated',
+    description: 'Direct communication with the owner ensures quality control and personalized service on every project.'
+  },
+  {
+    title: '15+ Years Experience',
+    description: 'Over a decade and a half of proven expertise in home improvement across Central Florida.'
+  },
+  {
+    title: 'Quality Workmanship',
+    description: 'We stand behind our work with attention to detail and a commitment to excellence.'
+  },
+  {
+    title: 'Fair Pricing',
+    description: 'Transparent, competitive pricing with no hidden fees. You get quality without overpaying.'
+  }
+];
+---
+
+<BaseLayout
+  title="Go Pro Home Improvements | Professional Home Services in Central Florida"
+  description="Owner-operated home improvement contractor serving Kissimmee, Orlando, and Central Florida. 15+ years experience in painting, remodeling, power washing, and more."
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-gopro-black to-gray-900 text-white">
+    <div class="container-custom section-padding">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          Professional Home Improvement You Can Trust
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          Owner-operated with 15+ years of experience serving Central Florida. Quality workmanship, fair pricing, and reliable service.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/estimate" class="btn-primary text-center">
+            Get Free Estimate
+          </a>
+          <a href="/work" class="btn-secondary text-center">
+            View Our Work
+          </a>
+        </div>
+        <div class="mt-8 flex items-center space-x-4">
+          <a href="tel:4072446873" class="text-lg hover:text-gopro-orange transition-colors">
+            (407) 244-6873
+          </a>
+          <span class="text-gray-500">|</span>
+          <span class="text-gray-400">Serving All of Central Florida</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Go Pro</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Simple: you want the best quality of service, and we deliver it.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {whyChooseUs.map((item) => (
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-xl font-bold mb-3 text-gopro-orange">{item.title}</h3>
+            <p class="text-gray-600">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          From painting to power washing, we handle all your home improvement needs with professional expertise.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <a
+            href={service.href}
+            class="group bg-white border-2 border-gray-200 hover:border-gopro-orange p-6 rounded-lg transition-all hover:shadow-lg"
+          >
+            <h3 class="text-xl font-bold mb-2 group-hover:text-gopro-orange transition-colors">
+              {service.name}
+            </h3>
+            <p class="text-gray-600 mb-4">{service.description}</p>
+            <span class="text-gopro-orange font-semibold group-hover:underline">
+              Learn More →
+            </span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-12">
+        <a href="/services" class="btn-primary">
+          View All Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Proudly Serving Central Florida</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Based in Kissimmee and serving Orlando, Osceola County, and the surrounding Central Florida region.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/areas/kissimmee" class="px-6 py-3 bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg font-semibold transition-all">
+          Kissimmee
+        </a>
+        <a href="/areas/orlando" class="px-6 py-3 bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg font-semibold transition-all">
+          Orlando
+        </a>
+        <a href="/areas/central-florida" class="px-6 py-3 bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg font-semibold transition-all">
+          Central Florida
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

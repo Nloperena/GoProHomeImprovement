@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Home Improvement Services in Kissimmee, FL | Go Pro"
+  description="Professional home improvement contractor serving Kissimmee and Osceola County. Painting, power washing, remodeling, and more. Local, owner-operated, 15+ years experience."
+>
+  <Header />
+
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <nav class="text-sm mb-6">
+        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/areas" class="text-gray-400 hover:text-white">Service Areas</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span>Kissimmee</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Home Improvement Services in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl">
+        Your local Kissimmee home improvement contractor. Owner-operated with 15+ years serving Osceola County.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6">
+            Go Pro Home Improvements is proud to call Kissimmee home. Based right here in Osceola County, we've been serving our neighbors with reliable, professional home improvement services for over 15 years.
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            As a local, owner-operated business, we understand Kissimmee homes—from the humid Florida climate to the common maintenance challenges homeowners face. Whether you need exterior painting to refresh your curb appeal, power washing to remove algae buildup, or interior renovations to modernize your space, we're here to help.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-bold mb-6">Services in Kissimmee</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="/services/power-washing" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Power Washing
+            </a>
+            <a href="/services/interior-exterior-painting" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Interior & Exterior Painting
+            </a>
+            <a href="/services/drywall" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Drywall Repair
+            </a>
+            <a href="/services/trim-crown-molding" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Trim & Crown Molding
+            </a>
+            <a href="/services/wallpaper" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Wallpaper
+            </a>
+            <a href="/services/tv-mounting" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              TV Mounting
+            </a>
+            <a href="/services/movie-rooms" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              Home Theaters
+            </a>
+            <a href="/services" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-semibold">
+              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              View All Services
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h3 class="text-xl font-bold mb-3">Local Knowledge, Professional Results</h3>
+          <p class="text-gray-700">
+            Being based in Kissimmee means we're never far away. We know the neighborhoods, we understand local building practices, and we're invested in our community's success. When you hire Go Pro, you're hiring neighbors who care about the quality of their work because our reputation lives here.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6">
+            Ready to get started on your Kissimmee home improvement project?
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

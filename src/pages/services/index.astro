@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const services = [
+  {
+    name: 'Power Washing',
+    href: '/services/power-washing',
+    description: 'Professional pressure washing for homes, driveways, sidewalks, pool areas, and commercial properties. Remove algae, dirt, and stains to restore your property\'s appearance.'
+  },
+  {
+    name: 'Interior & Exterior Painting',
+    href: '/services/interior-exterior-painting',
+    description: 'Expert painting services using premium paints and supplies. Whether refreshing one room or painting your entire property, we deliver outstanding results on time and on budget.'
+  },
+  {
+    name: 'Demolition',
+    href: '/services/demolition',
+    description: 'Safe and efficient demolition services for residential and commercial remodeling projects. From walls to complete interior tear-outs, we handle it all.'
+  },
+  {
+    name: 'Trim & Crown Molding',
+    href: '/services/trim-crown-molding',
+    description: 'Custom trim work, baseboards, and crown molding installation. Add elegant architectural details and finishing touches to your rooms.'
+  },
+  {
+    name: 'Wallpaper',
+    href: '/services/wallpaper',
+    description: 'Professional wallpaper installation, removal, and repair. Transform your space with patterns and textures that paint alone cannot achieve.'
+  },
+  {
+    name: 'Murals',
+    href: '/services/murals',
+    description: 'Custom mural design and installation for residential and commercial spaces. Create unique, artistic focal points that express your style.'
+  },
+  {
+    name: 'TV Mounting',
+    href: '/services/tv-mounting',
+    description: 'Professional TV mounting with proper wire concealment and optimal viewing angles. Clean, secure installations for any size television.'
+  },
+  {
+    name: 'Movie Rooms',
+    href: '/services/movie-rooms',
+    description: 'Complete home theater design and installation. From projector mounting to acoustic treatment and lighting, we create the ultimate movie-watching experience.'
+  },
+  {
+    name: 'Drywall',
+    href: '/services/drywall',
+    description: 'Drywall installation, repair, patching, and texture matching. Whether new construction or fixing damaged walls, we ensure smooth, flawless results.'
+  }
+];
+---
+
+<BaseLayout
+  title="Home Improvement Services | Go Pro Home Improvements"
+  description="Professional home improvement services in Central Florida: painting, power washing, demolition, trim & molding, wallpaper, murals, TV mounting, home theaters, and drywall."
+>
+  <Header />
+
+  <!-- Services Hero -->
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Comprehensive home improvement solutions for residential and commercial properties in Central Florida. Quality workmanship backed by 15+ years of experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services List -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => (
+          <a
+            href={service.href}
+            class="group bg-white border-2 border-gray-200 hover:border-gopro-orange p-8 rounded-lg transition-all hover:shadow-xl"
+          >
+            <h2 class="text-2xl font-bold mb-4 group-hover:text-gopro-orange transition-colors">
+              {service.name}
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+            <span class="text-gopro-orange font-semibold group-hover:underline inline-flex items-center">
+              Learn More
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Services Note -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold mb-4">And Much More</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+        We also provide lighting installation, flooring, remodeling, repairs, and general handyman services. If you don't see what you need listed, just ask—we likely do it.
+      </p>
+      <a href="/estimate" class="btn-primary">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

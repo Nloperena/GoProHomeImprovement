@@ -1,0 +1,97 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/work', label: 'Our Work' },
+  { href: '/about', label: 'About' },
+  { href: '/areas', label: 'Areas' },
+  { href: '/reviews', label: 'Reviews' },
+];
+---
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container-custom">
+    <div class="flex items-center justify-between py-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <div class="font-bold text-2xl">
+          <span class="text-gopro-orange">GO</span>
+          <span class="text-gopro-black">PRO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`font-semibold transition-colors ${
+              currentPath === item.href || currentPath.startsWith(item.href + '/')
+                ? 'text-gopro-orange'
+                : 'text-gray-700 hover:text-gopro-orange'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:block">
+        <a href="/estimate" class="btn-primary">
+          Get Free Estimate
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="lg:hidden p-2 text-gray-700 hover:text-gopro-orange"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t">
+    <nav class="container-custom py-4 flex flex-col space-y-4">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={`font-semibold ${
+            currentPath === item.href || currentPath.startsWith(item.href + '/')
+              ? 'text-gopro-orange'
+              : 'text-gray-700'
+          }`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/estimate" class="btn-primary text-center">
+        Get Free Estimate
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Sticky Mobile CTA -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t z-40 p-4">
+  <a href="tel:4072446873" class="btn-primary w-full text-center block">
+    Call (407) 244-6873
+  </a>
+</div>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

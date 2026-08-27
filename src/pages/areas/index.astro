@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Service Areas | Go Pro Home Improvements"
+  description="Go Pro Home Improvements proudly serves Kissimmee, Orlando, and all of Central Florida with professional home improvement services."
+>
+  <Header />
+
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Service Areas</h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Proudly serving Central Florida with professional home improvement services.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto mb-16">
+        <p class="text-xl text-gray-700 text-center leading-relaxed mb-6">
+          Based in Kissimmee, Go Pro Home Improvements serves residential and commercial clients throughout Central Florida. With over 15 years of local experience, we know the region and are ready to bring quality craftsmanship to your property.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <a href="/areas/kissimmee" class="group bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg p-8 transition-all hover:shadow-xl">
+          <h2 class="text-2xl font-bold mb-4 group-hover:text-gopro-orange transition-colors">
+            Kissimmee
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Our home base. Serving Kissimmee and Osceola County with reliable, local home improvement services.
+          </p>
+          <span class="text-gopro-orange font-semibold group-hover:underline inline-flex items-center">
+            Learn More
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </a>
+
+        <a href="/areas/orlando" class="group bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg p-8 transition-all hover:shadow-xl">
+          <h2 class="text-2xl font-bold mb-4 group-hover:text-gopro-orange transition-colors">
+            Orlando
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Professional home improvement services throughout Orlando and Orange County.
+          </p>
+          <span class="text-gopro-orange font-semibold group-hover:underline inline-flex items-center">
+            Learn More
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </a>
+
+        <a href="/areas/central-florida" class="group bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg p-8 transition-all hover:shadow-xl">
+          <h2 class="text-2xl font-bold mb-4 group-hover:text-gopro-orange transition-colors">
+            Central Florida
+          </h2>
+          <p class="text-gray-600 mb-4">
+            We serve the broader Central Florida region. Contact us to confirm service in your area.
+          </p>
+          <span class="text-gopro-orange font-semibold group-hover:underline inline-flex items-center">
+            Learn More
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="bg-gray-50 rounded-lg p-8 text-center">
+        <h2 class="text-2xl font-bold mb-4">Not Sure If We Serve Your Area?</h2>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          We're continually expanding our service area. If you're in Central Florida and need home improvement services, give us a call. We'll let you know if we can help.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:4072446873" class="btn-secondary">
+            Call (407) 244-6873
+          </a>
+          <a href="/estimate" class="btn-primary">
+            Request Estimate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+
+  <Footer />
+</BaseLayout>

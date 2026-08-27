@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Power Washing Services | Go Pro Home Improvements"
+  description="Professional power washing and pressure washing in Central Florida. House washing, driveway cleaning, pool deck cleaning, and commercial property washing."
+>
+  <Header />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+    <div class="container-custom">
+      <nav class="text-sm mb-6">
+        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span>Power Washing</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Power Washing</h1>
+      <p class="text-xl text-gray-300 max-w-3xl">
+        Professional pressure washing services to restore and protect your property's appearance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6">
+            There are many reasons power washing is essential for your property. Green algae growing on your home's exterior? Trying to sell and need maximum curb appeal? Pool area looking grimy after winter? Sidewalks and driveways turning black with buildup?
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            Whatever the reason, professional power washing can transform your property's appearance and protect your investment. We have the equipment, experience, and technique to safely clean all exterior surfaces without damage.
+          </p>
+        </div>
+
+        <!-- Services List -->
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-bold mb-6">What We Wash</h2>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">House Exterior & Siding</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Driveways & Sidewalks</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Pool Decks & Patios</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Fences & Decks</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Parking Lots</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Commercial Buildings</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Outdoor Furniture</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">And More</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Our Promise -->
+        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
+          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              Complete, accurate, rock-solid up-front estimates
+            </li>
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              Quick, careful work that accommodates your schedule
+            </li>
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              Treat your property and belongings with utmost care and respect
+            </li>
+            <li class="flex items-start">
+              <span class="text-gopro-orange mr-2">•</span>
+              Do the job right—it's as simple as that
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <a href="/estimate" class="btn-primary">
+            Get Free Estimate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Ready for a Cleaner Property?"
+    description="Call us today for a free estimate. Transform your property's appearance with professional power washing."
+  />
+
+  <Footer />
+</BaseLayout>
