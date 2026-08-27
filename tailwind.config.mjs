@@ -4,11 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'gopro-orange': '#FF6B35',
+        'gopro-orange': '#FF5C28',
+        'gopro-charcoal': '#2B2B2B',
         'gopro-black': '#1A1A1A',
+        'gopro-gray': '#6B7280',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Barlow Condensed', 'Oswald', 'Impact', 'sans-serif'],
+        sans: ['Open Sans', 'system-ui', 'sans-serif'],
       },
     },
   },

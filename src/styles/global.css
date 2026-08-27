@@ -14,11 +14,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gopro-orange hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 inline-block shadow-lg hover:shadow-xl;
+    @apply bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
   }
   
   .btn-secondary {
-    @apply bg-gopro-black hover:bg-gray-800 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 inline-block shadow-lg hover:shadow-xl;
+    @apply bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
   }
   
   .section-padding {

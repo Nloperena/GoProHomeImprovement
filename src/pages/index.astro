@@ -88,17 +88,17 @@ const whyChooseUs = [
     <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
     <div class="relative h-full container-custom flex items-center">
       <div class="max-w-2xl">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-          Professional Home Improvement You Can Trust
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-black uppercase mb-6 text-white leading-none tracking-tight">
+          15 Years of Home Improvement in Central Florida
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-white/95">
-          Owner-operated. 15+ years serving Central Florida. Quality workmanship, fair pricing, reliable service.
+        <p class="text-xl md:text-2xl mb-8 text-white/95 font-sans">
+          From movie rooms to power washing—owner-operated, fair pricing, quality work you can count on.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 mb-6">
-          <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-bold px-8 py-4 rounded text-lg transition-colors inline-block text-center shadow-lg">
+          <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block text-center shadow-lg tracking-wide">
             Get Free Estimate
           </a>
-          <a href="tel:4072446873" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold px-8 py-4 rounded text-lg transition-colors inline-block text-center border-2 border-white/30">
+          <a href="tel:4072446873" class="bg-gopro-charcoal/80 backdrop-blur-sm hover:bg-gopro-charcoal text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block text-center border-2 border-gopro-orange tracking-wide">
             (407) 244-6873
           </a>
         </div>
@@ -111,19 +111,16 @@ const whyChooseUs = [
   <section class="section-padding bg-white">
     <div class="container-custom">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Choose Go Pro</h2>
-        <p class="text-2xl text-gray-600 max-w-3xl mx-auto font-medium">
-          You want the best quality of service. We deliver it.
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-6 tracking-tight">Why Go Pro</h2>
+        <p class="text-2xl text-gopro-charcoal max-w-3xl mx-auto font-sans font-semibold">
+          Owner-operated. No salespeople. Fair prices. Quality work.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {whyChooseUs.map((item) => (
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gopro-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <div class="w-8 h-8 bg-gopro-orange rounded-full"></div>
-            </div>
-            <h3 class="text-xl font-bold mb-3">{item.title}</h3>
-            <p class="text-gray-600 leading-relaxed">{item.description}</p>
+          <div>
+            <h3 class="text-xl font-display font-bold uppercase mb-3 text-gopro-orange tracking-wide">{item.title}</h3>
+            <p class="text-gray-700 leading-relaxed font-sans">{item.description}</p>
           </div>
         ))}
       </div>
@@ -134,9 +131,9 @@ const whyChooseUs = [
   <section class="section-padding bg-white">
     <div class="container-custom">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Professional home improvement services backed by 15+ years of experience
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Our Services</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto font-sans">
+          15+ years doing it all—painting, remodeling, theaters, power washing & more
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -144,8 +141,8 @@ const whyChooseUs = [
           <img src="/images/power-washing.jpg" alt="Power Washing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-bold mb-2">Power Washing</h3>
-            <p class="text-white/90 text-sm">Restore your property's appearance</p>
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Power Washing</h3>
+            <p class="text-white/90 text-sm font-sans">Driveways, pool decks, siding</p>
           </div>
         </a>
         
@@ -153,8 +150,8 @@ const whyChooseUs = [
           <img src="/images/bedroom-paint.jpg" alt="Interior & Exterior Painting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-bold mb-2">Painting</h3>
-            <p class="text-white/90 text-sm">Interior & exterior excellence</p>
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Painting</h3>
+            <p class="text-white/90 text-sm font-sans">Interior & exterior</p>
           </div>
         </a>
         
@@ -162,8 +159,8 @@ const whyChooseUs = [
           <img src="/images/trim-navy-wall.jpg" alt="Trim & Crown Molding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-bold mb-2">Trim & Molding</h3>
-            <p class="text-white/90 text-sm">Elegant architectural details</p>
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Trim & Molding</h3>
+            <p class="text-white/90 text-sm font-sans">Crown, baseboards, paneling</p>
           </div>
         </a>
         
@@ -171,8 +168,8 @@ const whyChooseUs = [
           <img src="/images/movie-room.jpg" alt="Home Theater Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-bold mb-2">Home Theaters</h3>
-            <p class="text-white/90 text-sm">Complete entertainment rooms</p>
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Home Theaters</h3>
+            <p class="text-white/90 text-sm font-sans">Full room designs & installs</p>
           </div>
         </a>
         
@@ -180,8 +177,8 @@ const whyChooseUs = [
           <img src="/images/nemo-mural.jpg" alt="Custom Murals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-bold mb-2">Custom Murals</h3>
-            <p class="text-white/90 text-sm">Unique artistic installations</p>
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Custom Murals</h3>
+            <p class="text-white/90 text-sm font-sans">Kids rooms, feature walls</p>
           </div>
         </a>
         
@@ -189,13 +186,13 @@ const whyChooseUs = [
           <img src="/images/drywall.jpg" alt="Drywall Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-bold mb-2">Drywall</h3>
-            <p class="text-white/90 text-sm">Installation, repair & finishing</p>
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Drywall</h3>
+            <p class="text-white/90 text-sm font-sans">Repair, install, texture match</p>
           </div>
         </a>
       </div>
       <div class="text-center mt-12">
-        <a href="/services" class="bg-gopro-orange hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors inline-block shadow-lg">
+        <a href="/services" class="bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block shadow-lg tracking-wide border-2 border-gopro-orange">
           View All Services
         </a>
       </div>
@@ -206,9 +203,9 @@ const whyChooseUs = [
   <section class="section-padding bg-gray-50">
     <div class="container-custom">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Work</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          Real projects. Real results. See the quality and craftsmanship we bring to every job.
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Our Work</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto font-sans">
+          Real jobs, real results—see what we've built for Central Florida homeowners
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
@@ -232,7 +229,7 @@ const whyChooseUs = [
         </div>
       </div>
       <div class="text-center mt-12">
-        <a href="/work" class="bg-gopro-black hover:bg-gray-800 text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors inline-block shadow-lg">
+        <a href="/work" class="bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block shadow-lg tracking-wide border-2 border-gopro-orange">
           View Full Gallery
         </a>
       </div>

@@ -11,7 +11,7 @@ const navItems = [
 ];
 ---
 
-<header class="bg-white shadow-sm sticky top-0 z-50 border-b-2 border-gopro-orange/20">
+<header class="bg-gopro-charcoal sticky top-0 z-50 border-b-4 border-gopro-orange shadow-lg">
   <div class="container-custom">
     <div class="flex items-center justify-between py-3">
       <!-- Logo -->
@@ -20,32 +20,35 @@ const navItems = [
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-8">
+      <nav class="hidden lg:flex items-center space-x-6">
         {navItems.map((item) => (
           <a
             href={item.href}
-            class={`font-semibold transition-colors ${
+            class={`font-display font-bold uppercase text-sm tracking-wide transition-colors ${
               currentPath === item.href || currentPath.startsWith(item.href + '/')
                 ? 'text-gopro-orange'
-                : 'text-gray-700 hover:text-gopro-orange'
+                : 'text-white hover:text-gopro-orange'
             }`}
           >
             {item.label}
           </a>
         ))}
+        <a href="tel:4072446873" class="text-white hover:text-gopro-orange transition-colors font-sans font-semibold border-l-2 border-white/20 pl-6">
+          (407) 244-6873
+        </a>
       </nav>
 
       <!-- CTA Button -->
       <div class="hidden lg:block">
-        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg transition-colors inline-block">
-          Get Free Estimate
+        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
+          Free Estimate
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="lg:hidden p-2 text-gray-700 hover:text-gopro-orange"
+        class="lg:hidden p-2 text-white hover:text-gopro-orange"
         aria-label="Toggle menu"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,30 +59,33 @@ const navItems = [
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20 bg-gopro-black">
     <nav class="container-custom py-4 flex flex-col space-y-4">
       {navItems.map((item) => (
         <a
           href={item.href}
-          class={`font-semibold ${
+          class={`font-display font-bold uppercase text-sm tracking-wide ${
             currentPath === item.href || currentPath.startsWith(item.href + '/')
               ? 'text-gopro-orange'
-              : 'text-gray-700'
+              : 'text-white'
           }`}
         >
           {item.label}
         </a>
       ))}
-      <a href="/estimate" class="btn-primary text-center">
-        Get Free Estimate
+      <a href="tel:4072446873" class="text-white font-sans font-semibold">
+        (407) 244-6873
+      </a>
+      <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors text-center tracking-wide">
+        Free Estimate
       </a>
     </nav>
   </div>
 </header>
 
 <!-- Sticky Mobile CTA -->
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gradient-to-r from-gopro-orange to-orange-600 shadow-2xl z-40 p-3">
-  <a href="tel:4072446873" class="bg-white text-gopro-orange hover:bg-gray-100 font-bold py-4 text-center block rounded-lg transition-colors text-lg shadow-lg">
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-orange shadow-2xl z-40 p-3 border-t-2 border-gopro-black">
+  <a href="tel:4072446873" class="bg-gopro-black text-white hover:bg-gopro-charcoal font-display font-bold uppercase py-4 text-center block rounded transition-colors text-lg tracking-wide">
     Call (407) 244-6873
   </a>
 </div>

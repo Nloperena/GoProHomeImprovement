@@ -14,18 +14,15 @@ const {
 } = Astro.props;
 ---
 
-<section class="bg-gradient-to-br from-gopro-orange to-orange-600 text-white section-padding relative overflow-hidden">
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-  </div>
+<section class="bg-gopro-orange text-white section-padding relative overflow-hidden border-y-4 border-gopro-black">
   <div class="container-custom text-center relative">
-    <h2 class="text-4xl md:text-5xl font-bold mb-6">{title}</h2>
-    <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">{description}</p>
+    <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-6 tracking-tight">{title}</h2>
+    <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-sans">{description}</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href={buttonHref} class="bg-gopro-black hover:bg-gray-900 text-white font-bold px-10 py-5 rounded-lg transition-all inline-block text-lg shadow-2xl hover:shadow-xl">
+      <a href={buttonHref} class="bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-10 py-5 rounded transition-all inline-block text-lg shadow-2xl hover:shadow-xl tracking-wide">
         {buttonText}
       </a>
-      <a href="tel:4072446873" class="bg-white text-gopro-orange hover:bg-gray-100 font-bold px-10 py-5 rounded-lg transition-all inline-block text-lg shadow-2xl hover:shadow-xl">
+      <a href="tel:4072446873" class="bg-white text-gopro-charcoal hover:bg-gray-100 font-display font-bold uppercase px-10 py-5 rounded transition-all inline-block text-lg shadow-2xl hover:shadow-xl tracking-wide">
         Call (407) 244-6873
       </a>
     </div>
