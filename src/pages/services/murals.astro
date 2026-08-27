@@ -6,144 +6,249 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Custom Mural Design & Installation | Go Pro Home Improvements"
-  description="Professional custom mural design and installation in Central Florida. Create unique artistic focal points for your home or business."
+  title="Custom Wall Murals in Kissimmee | Kids Rooms & Theaters"
+  description="Custom murals in Kissimmee, Orlando & Central Florida. Kids rooms, nurseries, home theaters, feature walls. Hand-painted designs, 15+ years experience."
+  ogImage="/images/nemo-mural.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/murals/#service",
+        "serviceType": "Custom Wall Murals",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Hand-painted custom murals for kids rooms, nurseries, home theaters, and feature walls in Central Florida homes."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/murals/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Custom Murals",
+            "item": "https://goprohomeimprovements.com/services/murals"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/murals/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a custom mural cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on size, design complexity, and surface condition. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or detailed character scenes cost more. We provide free quotes after seeing the space and design."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you paint Disney characters or licensed themes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for personal home use. We've painted Finding Nemo, Star Wars, Disney princesses, Marvel heroes, and more. Murals are for your private home, not for commercial spaces or resale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a mural take to complete?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A simple mural takes 1-2 days. Complex designs with multiple characters or full-room scenes take 3-5 days. We prep, sketch, paint, and seal all in one visit or consecutive days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I paint over a mural later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Murals are regular wall paint, so they cover the same as any other painted surface. When your kid outgrows the Finding Nemo theme, we can repaint it solid or start a new design."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Murals</span>
+        <span class="text-white">Custom Murals</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Custom Murals</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Transform your space with custom mural design and installation that expresses your unique style.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Custom Wall Murals in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Hand-painted murals for kids rooms, nurseries, home theaters & feature walls. Serving Central Florida families.
       </p>
     </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/nemo-mural.jpg" alt="Finding Nemo custom mural in Central Florida kids room" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
   </section>
 
   <section class="section-padding">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            A custom mural can transform an ordinary wall into a stunning focal point that defines your space. Whether you envision a bold artistic statement, a branded environment for your business, or a playful scene for a child's room, Go Pro brings your vision to life.
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            A custom mural turns a plain bedroom into a themed space your kid will love. We've painted Finding Nemo ocean scenes, Star Wars battles, Disney princess castles, Marvel heroes, and jungle animals across <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> homes.
           </p>
-          <p class="text-lg text-gray-600 mb-8">
-            From large-scale wallpaper murals to hand-painted designs, we have the skill and experience to install artwork that makes an impact. Our work ranges from photographic prints to artistic illustrations, tailored to your exact specifications.
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether it's a nursery accent wall, a full kids room wrap, or a themed <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we sketch the design, paint by hand, and seal it so it lasts years. You bring the theme, we bring the skill and the steady hand.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Popular in Central Florida Homes</h2>
+          <p class="text-gray-700 font-sans">
+            Many Disney-area families (<a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>) choose Disney or Pixar themes. Others go with sports teams, jungle scenes, outer space, or princess castles. We've done them all.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">Mural Applications</h2>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li class="flex items-start">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Paint</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Residential Feature Walls</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Kids Rooms (Disney, Marvel, Star Wars)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Children's Rooms</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Nursery Accent Walls</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Commercial Branding</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Home Theater Themed Walls</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Office Spaces</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Sports & Team Logos</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Restaurants & Retail</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Jungle, Ocean & Nature Scenes</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Educational Facilities</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span class="text-gray-700">Hospitality Venues</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span class="text-gray-700">Home Theaters</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-bold mb-3">Bring Your Vision to Life</h3>
-          <p class="text-gray-700 mb-3">
-            Whether you have a specific design in mind or need help conceptualizing the perfect mural for your space, we're here to help. We work with your ideas, photos, or artwork to create installations that are truly one-of-a-kind.
-          </p>
-          <p class="text-gray-700">
-            Our process ensures accurate color reproduction, proper scaling, and seamless installation for a finished product that exceeds expectations.
-          </p>
-        </div>
-
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+              <span class="text-gray-700 font-sans">Custom Designs (your idea)</span>
+            </div>
+          </div>
         </div>
 
         <div class="mb-12">
-          <div class="grid md:grid-cols-2 gap-6">
-            <img src="/images/nemo-mural.jpg" alt="Finding Nemo custom mural for kids room" class="w-full rounded-lg shadow-lg" />
-            <img src="/images/harry-potter-room.jpg" alt="Harry Potter themed custom mural" class="w-full rounded-lg shadow-lg" />
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a custom mural cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on size, design complexity, and surface condition. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or detailed character scenes cost more. We provide free quotes after seeing the space and design.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you paint Disney characters or licensed themes?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, for personal home use. We've painted Finding Nemo, Star Wars, Disney princesses, Marvel heroes, and more. Murals are for your private home, not for commercial spaces or resale.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a mural take to complete?</h3>
+              <p class="text-gray-700 font-sans">
+                A simple mural takes 1-2 days. Complex designs with multiple characters or full-room scenes take 3-5 days. We prep, sketch, paint, and seal all in one visit or consecutive days.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can I paint over a mural later?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Murals are regular wall paint, so they cover the same as any other painted surface. When your kid outgrows the Finding Nemo theme, we can <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">repaint it solid</a> or start a new design.
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to create a custom mural for your home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Quote
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <CTASection
-    title="Ready to Create Something Unique?"
-    description="Custom murals that transform your space. Contact us to discuss your vision and get a free estimate."
+    title="Turn a Plain Wall into Something Special"
+    description="Custom murals for kids rooms, nurseries & theaters. Serving Kissimmee, Orlando & Central Florida."
   />
 
   <Footer />
