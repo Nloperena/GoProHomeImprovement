@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const guides = [
+  {
+    href: '/guides/power-washing-before-painting-florida',
+    title: 'Power Washing Before Painting in Florida',
+    description: 'Why Central Florida exteriors need a thorough wash and dry time before paint. Sun, mildew, and stucco prep explained.',
+    icon: '🏠'
+  },
+  {
+    href: '/guides/kissimmee-vacation-rental-refresh',
+    title: 'Kissimmee Vacation Rental Refresh Guide',
+    description: 'Paint, trim, TV mounting, and murals for short-term rentals near Disney. What a refresh actually includes.',
+    icon: '🏖️'
+  },
+  {
+    href: '/guides/tv-mounting-vs-home-theater',
+    title: 'TV Mounting vs. Full Home Theater',
+    description: 'When a simple wall mount is enough versus building a dedicated theater room. Budget and space considerations.',
+    icon: '📺'
+  },
+  {
+    href: '/guides/how-much-does-painting-cost-kissimmee',
+    title: 'How Much Does Painting Cost in Kissimmee?',
+    description: 'Honest ranges for interior and exterior painting. What drives price, what to expect, and how to get an accurate estimate.',
+    icon: '🎨'
+  },
+  {
+    href: '/guides/choosing-a-home-improvement-contractor-kissimmee',
+    title: 'Choosing a Home Improvement Contractor in Kissimmee',
+    description: 'Owner-operated vs. franchise. Questions to ask, red flags to avoid, and what matters when hiring for your home.',
+    icon: '🔨'
+  }
+];
+---
+
+<BaseLayout
+  title="Home Improvement Guides | Go Pro Home Improvements"
+  description="Practical guides for Central Florida homeowners. Painting, power washing, vacation rentals, home theaters, contractor selection, and more."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "foundingDate": "2014",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/guides/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://goprohomeimprovements.com/guides"
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Guides</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Home Improvement Guides</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Practical advice from 15+ years of work in Central Florida homes. Real projects, honest guidance.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            These guides explain what we've learned working on hundreds of Kissimmee, Orlando, and Central Florida homes since 2014. No marketing fluff—just honest answers to common questions about painting, power washing, vacation rentals, home theaters, and hiring contractors.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {guides.map((guide) => (
+            <a href={guide.href} class="block bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg p-6 transition-all duration-200 hover:shadow-lg group">
+              <div class="flex items-start gap-4">
+                <div class="text-4xl flex-shrink-0">{guide.icon}</div>
+                <div>
+                  <h2 class="text-xl font-display font-bold uppercase mb-2 tracking-wide group-hover:text-gopro-orange transition-colors">
+                    {guide.title}
+                  </h2>
+                  <p class="text-gray-600 font-sans">
+                    {guide.description}
+                  </p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Need Help with Your Project?</h2>
+          <p class="text-gray-700 font-sans mb-4">
+            We're an owner-operated contractor serving Kissimmee, Orlando, St. Cloud, Celebration, Poinciana, and Central Florida. If you have questions about your specific project, call or request a free estimate.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/estimate" class="btn-primary inline-block">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary inline-block">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Ready to Start Your Home Improvement Project?"
+    description="From painting to power washing, TV mounting to full renovations. Serving Central Florida since 2014."
+  />
+
+  <Footer />
+</BaseLayout>

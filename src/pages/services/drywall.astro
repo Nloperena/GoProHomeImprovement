@@ -6,23 +6,141 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Drywall Installation & Repair | Go Pro Home Improvements"
-  description="Professional drywall installation, repair, patching, and texture services in Central Florida. Smooth, flawless walls for new construction and repairs."
+  title="Drywall Installation & Repair in Kissimmee & Orlando, FL"
+  description="Professional drywall installation, repair, patching & texture matching in Kissimmee, Orlando & Central Florida. 15+ years. Free estimates."
+  ogImage="/images/drywall.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "foundingDate": "2014",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/drywall/#service",
+        "serviceType": "Drywall Installation and Repair",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Professional drywall installation, repair, patching, texture matching, and finishing for residential and commercial properties in Central Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/drywall/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Drywall",
+            "item": "https://goprohomeimprovements.com/services/drywall"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/drywall/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does drywall repair cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Drywall repair costs depend on damage size and complexity. Small patches (under 6 inches) typically run $75-$150, larger holes $150-$400. Full room drywall runs $1.50-$3 per square foot installed. We provide free estimates so you know the exact cost upfront."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you match existing wall texture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We match knockdown, orange peel, skip trowel, and other common Central Florida textures. Matching texture is critical for repairs to blend invisibly with the rest of the wall."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does drywall take to dry before painting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Joint compound typically dries in 24 hours between coats in Florida's humidity. Full curing before painting takes 48-72 hours. We schedule jobs so you're not waiting—mudding one day, sanding the next, priming and painting after that."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you repair water-damaged drywall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We cut out water-damaged sections, let the framing dry, install new drywall, tape, mud, texture, and paint to match. Important: fix the leak first, or the repair won't last."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What causes drywall cracks in Florida homes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most cracks in Central Florida come from settling, temperature swings, or poor initial taping. Some older homes near Kissimmee have minor foundation movement from sandy soil. We assess the cause, repair the crack properly, and recommend fixes if it's structural."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Drywall</span>
+        <span class="text-white">Drywall</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Drywall Services</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Professional drywall installation, repair, and finishing for smooth, flawless walls and ceilings.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Drywall Installation & Repair in Kissimmee & Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        New installation, patching, texture matching. Clean work, smooth finish. Serving Central Florida for 15+ years.
       </p>
     </div>
   </section>
@@ -37,115 +155,129 @@ import CTASection from '../../components/CTASection.astro';
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            Quality drywall work is the foundation of any well-finished interior. Whether you're dealing with new construction, remodeling, or simply need to repair damaged walls, Go Pro delivers smooth, professional drywall installation and finishing.
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Drywall work—hanging, taping, mudding, sanding, texture—is the foundation of every finished room. We install new drywall for additions and remodels, patch holes from <a href="/services/demolition" class="text-gopro-orange hover:underline">demolition</a> or accidents, match textures so repairs disappear, and prep walls smooth and ready for <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>.
           </p>
-          <p class="text-lg text-gray-600 mb-8">
-            From hanging new sheets to patching holes and matching existing textures, our skilled team ensures your walls and ceilings look perfect. We understand that proper mudding, taping, sanding, and finishing make all the difference between a DIY look and a professional result.
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're finishing a garage, repairing water damage, or need full-room drywall for a <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> vacation rental, we handle it across <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>, <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a>, and Central Florida.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Florida Humidity & Drying Time</h2>
+          <p class="text-gray-700 font-sans">
+            Central Florida's humidity slows joint compound drying, especially in summer. We schedule jobs so each coat has time to cure fully before the next—mudding one day, sanding the next, texture and prime after that. Rushing drywall guarantees cracks and poor adhesion.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">Drywall Services</h2>
-          <ul class="space-y-4">
-            <li class="flex items-start">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Do</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">New Drywall Installation</h3>
-                <p class="text-gray-600">Complete hanging, taping, mudding, and finishing for new construction and additions.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">New Drywall Installation (rooms, garages, additions)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Drywall Repair & Patching</h3>
-                <p class="text-gray-600">Fix holes, cracks, water damage, and other wall imperfections.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Drywall Repair & Patching (holes, cracks, dents)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Texture Matching</h3>
-                <p class="text-gray-600">Match existing wall textures seamlessly—knockdown, orange peel, or smooth.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Texture Matching (knockdown, orange peel, smooth)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Ceiling Repair & Texture</h3>
-                <p class="text-gray-600">Fix sagging, cracked, or water-damaged ceilings and reapply texture.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Water Damage Repair</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Skim Coating</h3>
-                <p class="text-gray-600">Apply thin finishing layers for smooth, paint-ready surfaces.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Ceiling Repair & Texture</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Commercial Drywall</h3>
-                <p class="text-gray-600">Office build-outs, retail spaces, and commercial renovations.</p>
-              </div>
-            </li>
-          </ul>
+              <span class="text-gray-700 font-sans">Skim Coating (smooth finish over textured walls)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Taping, Mudding & Sanding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Commercial Drywall</span>
+            </div>
+          </div>
         </div>
 
-        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-bold mb-3">Smooth Finishes, Lasting Results</h3>
-          <p class="text-gray-700">
-            Professional drywall work requires the right techniques, tools, and patience. We take the time to properly tape seams, apply multiple coats of joint compound, sand smooth, and match textures precisely. The result is walls and ceilings that look factory-smooth and ready for paint—no visible seams, bumps, or imperfections.
-          </p>
-        </div>
-
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does drywall repair cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Drywall repair costs depend on damage size and complexity. Small patches (under 6 inches) typically run $75-$150, larger holes $150-$400. Full room drywall runs $1.50-$3 per square foot installed. We provide free estimates so you know the exact cost upfront.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you match existing wall texture?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We match knockdown, orange peel, skip trowel, and other common Central Florida textures. Matching texture is critical for repairs to blend invisibly with the rest of the wall.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does drywall take to dry before painting?</h3>
+              <p class="text-gray-700 font-sans">
+                Joint compound typically dries in 24 hours between coats in Florida's humidity. Full curing before <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a> takes 48-72 hours. We schedule jobs so you're not waiting—mudding one day, sanding the next, priming and painting after that.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you repair water-damaged drywall?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We cut out water-damaged sections, let the framing dry, install new drywall, tape, mud, texture, and paint to match. Important: fix the leak first, or the repair won't last.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">What causes drywall cracks in Florida homes?</h3>
+              <p class="text-gray-700 font-sans">
+                Most cracks in Central Florida come from settling, temperature swings, or poor initial taping. Some older homes near <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> have minor foundation movement from sandy soil. We assess the cause, repair the crack properly, and recommend fixes if it's structural.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Need drywall installation or repair?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <CTASection
-    title="Need Drywall Work?"
-    description="Professional drywall installation and repair for smooth, flawless results. Get your free estimate today."
+    title="Professional Drywall Installation & Repair"
+    description="Smooth walls, invisible repairs, expert texture matching. Serving Kissimmee, Orlando & Central Florida."
   />
 
   <Footer />

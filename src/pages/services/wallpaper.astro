@@ -6,23 +6,141 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Wallpaper Installation & Removal | Go Pro Home Improvements"
-  description="Professional wallpaper installation, removal, and repair services in Central Florida. Expert craftsmanship for residential and commercial spaces."
+  title="Wallpaper Installation & Removal in Kissimmee & Orlando"
+  description="Professional wallpaper installation, removal & repair in Kissimmee, Orlando & Central Florida. Precise pattern matching. 15+ years."
+  ogImage="/images/wallpaper.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "foundingDate": "2014",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/wallpaper/#service",
+        "serviceType": "Wallpaper Installation and Removal",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Professional wallpaper installation, removal, and repair with precise pattern matching and seam alignment."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/wallpaper/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Wallpaper",
+            "item": "https://goprohomeimprovements.com/services/wallpaper"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/wallpaper/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does wallpaper installation cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wallpaper installation costs depend on pattern complexity and wall prep. Basic patterns typically run $3-$7 per square foot installed, complex patterns or textured wallcoverings $8-$12. We provide free estimates including material recommendations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you remove old wallpaper?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We strip old wallpaper, scrape adhesive residue, repair and smooth the drywall underneath, then prime so the surface is ready for new wallpaper or paint. Removal alone typically runs $1-$3 per square foot depending on how stubborn the old paper is."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can wallpaper handle Florida humidity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Modern wallpapers hold up well in Central Florida if installed correctly. We use mildew-resistant adhesives and prep walls properly to prevent bubbling or peeling. Avoid wallpaper in steamy bathrooms without good ventilation—paint is usually smarter there."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does wallpaper installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A typical room (200-300 square feet of wall) takes 1-2 days—one day for wall prep and priming, one day for installation. Complex patterns with lots of matching take longer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is wallpaper hard to remove later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not if it's installed right. Modern peel-and-stick or pre-pasted wallpapers remove easier than old vinyl or fabric-backed types. We install wallpaper so it looks great now and comes off cleanly if you change your mind later."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Wallpaper</span>
+        <span class="text-white">Wallpaper</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Wallpaper Services</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Professional wallpaper installation, removal, and repair for stunning wall transformations.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Wallpaper Installation & Removal in Kissimmee & Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional wallpaper hanging, removal, and repair. Precise pattern matching, invisible seams.
       </p>
     </div>
   </section>
@@ -37,97 +155,129 @@ import CTASection from '../../components/CTASection.astro';
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            Go Pro has you covered for all your wallpapering needs. When it comes to superior craftsmanship and professional, premium wallpaper installation and removal, we provide top-of-the-line service to make your home or business stand out.
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Wallpaper is back—bold prints, textured grasscloth, modern geometrics—and doing it right takes patience and precision. We hang wallpaper so patterns align perfectly, seams disappear, and corners sit tight. We also strip old wallpaper, repair the walls underneath, and prep them smooth for <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> or new paper.
           </p>
-          <p class="text-lg text-gray-600 mb-8">
-            From removing old wallpaper and repairing drywall to installing intricate patterns or large-scale murals, we have the experience and skill to craft exactly the look you've been dreaming of. With competitive prices and superior service, there's no reason to trust your wallpaper needs to anyone else.
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're adding an accent wall to a <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> vacation rental, papering a <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> dining room, or removing decades-old wallpaper in an <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> home, we handle it across <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a>, <a href="/areas/poinciana" class="text-gopro-orange hover:underline">Poinciana</a>, and Central Florida.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Vacation Rental Impact</h2>
+          <p class="text-gray-700 font-sans">
+            A statement wallpaper wall—kids' room with Disney prints, modern geometric in the living room—gives <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> vacation rentals personality that stands out in listing photos. We see it boost bookings when done tastefully. Avoid bathrooms with poor ventilation—Florida humidity and steam are hard on wallpaper there.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">Wallpaper Services</h2>
-          <ul class="space-y-4">
-            <li class="flex items-start">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Do</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Wallpaper Installation</h3>
-                <p class="text-gray-600">Professional hanging with precise pattern matching and seam alignment.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Wallpaper Installation (precise pattern matching)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Wallpaper Removal</h3>
-                <p class="text-gray-600">Safe removal of old wallpaper without damaging your walls.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Wallpaper Removal (safe, clean stripping)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Wallpaper Repair</h3>
-                <p class="text-gray-600">Fix tears, bubbles, and peeling sections to restore your walls.</p>
-              </div>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Wallpaper Repair (tears, bubbles, seams)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <div>
-                <h3 class="font-bold text-gray-900">Wall Preparation</h3>
-                <p class="text-gray-600">Proper surface prep and priming for flawless installation.</p>
-              </div>
-            </li>
-          </ul>
+              <span class="text-gray-700 font-sans">Wall Preparation & Priming</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Accent Walls & Feature Walls</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Textured Wallcoverings</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Peel-and-Stick Wallpaper</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Commercial Wallcoverings</span>
+            </div>
+          </div>
         </div>
 
-        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-bold mb-3">Expert Craftsmanship</h3>
-          <p class="text-gray-700">
-            Wallpaper installation is both an art and a science. It requires precision, patience, and an eye for detail to ensure patterns align perfectly and seams are invisible. Our experienced team handles everything from traditional prints to modern textured wallcoverings, delivering results that look professionally perfect.
-          </p>
-        </div>
-
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does wallpaper installation cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Wallpaper installation costs depend on pattern complexity and wall prep. Basic patterns typically run $3-$7 per square foot installed, complex patterns or textured wallcoverings $8-$12. We provide free estimates including material recommendations.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you remove old wallpaper?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We strip old wallpaper, scrape adhesive residue, repair and smooth the <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a> underneath, then prime so the surface is ready for new wallpaper or <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>. Removal alone typically runs $1-$3 per square foot depending on how stubborn the old paper is.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can wallpaper handle Florida humidity?</h3>
+              <p class="text-gray-700 font-sans">
+                Modern wallpapers hold up well in Central Florida if installed correctly. We use mildew-resistant adhesives and prep walls properly to prevent bubbling or peeling. Avoid wallpaper in steamy bathrooms without good ventilation—paint is usually smarter there.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does wallpaper installation take?</h3>
+              <p class="text-gray-700 font-sans">
+                A typical room (200-300 square feet of wall) takes 1-2 days—one day for wall prep and priming, one day for installation. Complex patterns with lots of matching take longer.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Is wallpaper hard to remove later?</h3>
+              <p class="text-gray-700 font-sans">
+                Not if it's installed right. Modern peel-and-stick or pre-pasted wallpapers remove easier than old vinyl or fabric-backed types. We install wallpaper so it looks great now and comes off cleanly if you change your mind later.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready for professional wallpaper installation or removal?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <CTASection
-    title="Ready to Transform Your Walls?"
-    description="Professional wallpaper services to create the space you've envisioned. Get your free estimate today."
+    title="Professional Wallpaper Installation & Removal"
+    description="Precise pattern matching, invisible seams. Serving Kissimmee, Orlando & Central Florida."
   />
 
   <Footer />
