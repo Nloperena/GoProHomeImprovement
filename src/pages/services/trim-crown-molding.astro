@@ -6,129 +6,263 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Trim & Crown Molding Installation | Go Pro Home Improvements"
-  description="Professional trim work, baseboards, and crown molding installation in Central Florida. Add elegant finishing touches to your home."
+  title="Trim & Crown Molding in Kissimmee & Orlando"
+  description="Trim, crown molding, baseboards & wainscoting in Kissimmee, Orlando & Central Florida. Custom millwork, paneling & feature walls. 15+ years."
+  ogImage="/images/trim-navy-wall.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "foundingDate": "2014",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding/#service",
+        "serviceType": "Trim and Crown Molding Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" },
+          { "@type": "City", "name": "Orlando" },
+          { "@type": "City", "name": "St. Cloud" },
+          { "@type": "City", "name": "Celebration" },
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "description": "Custom trim work, crown molding, baseboards, wainscoting, and decorative paneling for Central Florida homes."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Trim & Crown Molding",
+            "item": "https://goprohomeimprovements.com/services/trim-crown-molding"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does crown molding cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Crown molding typically costs $3-$8 per linear foot installed, depending on profile complexity and room size. A typical living room runs $400-$1,200. We provide free estimates with itemized material and labor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you match existing trim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We measure existing profiles and source matching stock, or mill custom pieces if the original is discontinued. Common for additions or single-room updates where trim needs to blend with the rest of the house."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint or stain trim after installation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We install trim, caulk seams, fill nail holes, sand, prime, and paint or stain as requested. Most trim is painted to match walls or ceilings, but we also do stained hardwood for a natural look."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between MDF and wood trim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MDF (medium-density fiberboard) is cheaper, takes paint well, and won't split. Solid wood (pine, poplar, oak) is stronger, can be stained, but costs more. For painted crown and baseboards in Florida homes, MDF is standard and holds up fine."
+            }
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-white">Services</a>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Trim & Crown Molding</span>
+        <span class="text-white">Trim & Crown Molding</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Trim & Crown Molding</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Add architectural elegance and refined finishing touches to your home.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Trim & Crown Molding in Kissimmee & Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Crown molding, baseboards, wainscoting, paneling. Finish carpentry that gives rooms a polished, custom look.
       </p>
     </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/trim-navy-wall.jpg" alt="Custom trim work and paneling in Central Florida home" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
   </section>
 
   <section class="section-padding">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            The difference between a good room and a great room often comes down to the details. Crown molding, baseboards, and custom trim work add a level of sophistication and completeness that elevates your entire space.
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Trim work—crown molding, baseboards, chair rail, wainscoting, paneled feature walls—transforms a plain room into something finished and intentional. We measure, cut, install, caulk, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> trim so it looks built-in, not added on.
           </p>
-          <p class="text-lg text-gray-600 mb-8">
-            Go Pro specializes in precise trim carpentry that transforms ordinary rooms into polished, finished spaces. From classic crown molding to custom trim packages, we bring craftsmanship and attention to detail to every installation.
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're upgrading a living room with crown molding, adding wainscoting to a dining room, or building a paneled accent wall for a <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we handle the full install across <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Why Add Trim in Florida?</h2>
+          <p class="text-gray-700 font-sans">
+            Many Central Florida homes (especially tract builds) come with minimal trim—flat baseboards, no crown, plain door casings. Adding custom millwork elevates the space, increases resale value, and gives rooms architectural character they didn't have before.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">Trim Services</h2>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li class="flex items-start">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Install</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Crown Molding Installation</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Crown Molding (ceiling trim)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Baseboards & Shoe Molding</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Baseboards (floor trim)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Door & Window Casing</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Wainscoting (lower wall panels)</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Chair Rails & Wainscoting</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Chair Rail & Picture Rail</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Picture Frame Molding</span>
-            </li>
-            <li class="flex items-start">
+              <span class="text-gray-700 font-sans">Door & Window Casings</span>
+            </div>
+            <div class="flex items-start">
               <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              <span class="text-gray-700">Custom Trim Packages</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-bold mb-3">Precision Craftsmanship</h3>
-          <p class="text-gray-700">
-            Perfect trim work requires meticulous measuring, cutting, and fitting. Our experienced craftsmen ensure tight joints, smooth finishes, and installations that last. Whether you're upgrading builder-grade trim or adding architectural character, we deliver quality that shows in every detail.
-          </p>
-        </div>
-
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Service Promise</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Complete, accurate, rock-solid up-front estimates
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Quick, careful work that accommodates your schedule
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Treat your property and belongings with utmost care and respect
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              Do the job right—it's as simple as that
-            </li>
-          </ul>
+              <span class="text-gray-700 font-sans">Decorative Paneling & Feature Walls</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Custom Built-Ins & Shelving Trim</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Coffered Ceilings</span>
+            </div>
+          </div>
         </div>
 
         <div class="mb-12">
-          <div class="grid md:grid-cols-2 gap-6">
-            <img src="/images/trim-navy-wall.jpg" alt="Navy paneled TV wall with trim and crown molding" class="w-full rounded-lg shadow-lg" />
-            <img src="/images/wood-accent-wall.jpg" alt="Wood accent wall with trim work" class="w-full rounded-lg shadow-lg" />
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does crown molding cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Crown molding typically costs $3-$8 per linear foot installed, depending on profile complexity and room size. A typical living room runs $400-$1,200. We provide free estimates with itemized material and labor.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you match existing trim?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We measure existing profiles and source matching stock, or mill custom pieces if the original is discontinued. Common for additions or single-room updates where trim needs to blend with the rest of the house.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint or stain trim after installation?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We install trim, caulk seams, fill nail holes, sand, prime, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> or stain as requested. Most trim is painted to match walls or ceilings, but we also do stained hardwood for a natural look.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">What's the difference between MDF and wood trim?</h3>
+              <p class="text-gray-700 font-sans">
+                MDF (medium-density fiberboard) is cheaper, takes paint well, and won't split. Solid wood (pine, poplar, oak) is stronger, can be stained, but costs more. For painted crown and baseboards in Florida homes, MDF is standard and holds up fine.
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="text-center">
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to upgrade your home with custom trim work?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <CTASection
-    title="Ready to Add Elegant Details?"
-    description="Professional trim and molding installation to elevate your home. Get your free estimate today."
+    title="Professional Trim Work & Custom Millwork"
+    description="Crown molding, baseboards, wainscoting & paneling. Serving Kissimmee, Orlando & Central Florida."
   />
 
   <Footer />
