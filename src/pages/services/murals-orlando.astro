@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Custom Wall Murals in Orlando, FL | Kids Rooms & Feature Walls"
+  description="Custom murals in Orlando, FL. Themed kids rooms, nurseries, home theaters. Hand-painted designs, 15+ years experience."
+  ogImage="/images/nemo-mural.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Orlando" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/murals-orlando/#service",
+        "serviceType": "Custom Wall Murals",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "Orlando" },
+        "description": "Hand-painted custom murals for kids rooms, nurseries, home theaters, and feature walls in Orlando, FL homes."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/murals-orlando/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Murals Orlando",
+            "item": "https://goprohomeimprovements.com/services/murals-orlando"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/murals-orlando/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a custom mural cost in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on size, design complexity, and surface prep. A single-wall kids room mural typically runs $400-$1,200. Full room wraps or highly detailed character scenes cost more. We provide free quotes after seeing the space and discussing your design vision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you paint murals on textured walls?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Most Orlando homes have orange peel or knockdown texture. We prep textured walls with primer so paint flows smoothly. Heavy texture shows through slightly—which adds character—or we can skim coat for a smoother finish if preferred."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a mural take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A simple mural takes 1-2 days. Complex designs with multiple characters or full-room scenes take 3-5 days. We prep, sketch, paint, and seal in one visit or consecutive days to minimize disruption."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint licensed characters like Disney or Marvel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for personal home use. We've painted Marvel heroes, Disney princesses, Star Wars, Harry Potter, and other themes. These are for your private home, not commercial use or resale."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Murals in Orlando</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Custom Wall Murals in Orlando, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Hand-painted murals for kids rooms, nurseries, home theaters & feature walls. Serving Orlando families.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/nemo-mural.jpg" alt="Custom mural in Orlando home" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            A custom <a href="/services/murals" class="text-gopro-orange hover:underline">mural</a> transforms a plain bedroom into a space your child will love. We've painted Disney characters, Marvel superheroes, space scenes, jungle animals, and more across <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> homes—from Lake Nona to Winter Park to Metrowest.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're creating a nursery, themed playroom, or <a href="/services/movie-rooms-orlando" class="text-gopro-orange hover:underline">movie room</a> feature wall, we sketch, paint, and seal for a lasting finish. We handle textured walls (orange peel, knockdown) common in Orlando homes. Based in Kissimmee, serving <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Murals on Textured Drywall</h2>
+          <p class="text-gray-700 font-sans">
+            Most Orlando homes have orange peel or knockdown texture. We prep textured walls with primer so paint flows smoothly. Heavy texture shows through slightly—which adds character to hand-painted murals—or we can skim coat for a smoother finish if you prefer. Read our <a href="/guides/mural-prep-textured-drywall-florida" class="text-gopro-orange hover:underline">mural prep guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Popular Mural Themes in Orlando</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Marvel & DC Superheroes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Disney Characters (Frozen, Nemo, Toy Story)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Star Wars & Space Themes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Jungle, Safari & Animals</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Harry Potter & Fantasy</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Nursery Themes (clouds, trees, animals)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a custom mural cost in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on size, design complexity, and surface prep. A single-wall kids room mural typically runs $400-$1,200. Full room wraps or highly detailed character scenes cost more. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free quotes</a> after seeing the space and discussing your design vision. See our <a href="/guides/kids-room-mural-ideas-kissimmee" class="text-gopro-orange hover:underline">mural ideas guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you paint murals on textured walls?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Most Orlando homes have orange peel or knockdown texture. We prep textured walls with primer so paint flows smoothly. Heavy texture shows through slightly—which adds character—or we can skim coat for a smoother finish if preferred.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a mural take?</h3>
+              <p class="text-gray-700 font-sans">
+                A simple mural takes 1-2 days. Complex designs with multiple characters or full-room scenes take 3-5 days. We prep, sketch, paint, and seal in one visit or consecutive days to minimize disruption.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint licensed characters like Disney or Marvel?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, for personal home use. We've painted Marvel heroes, Disney princesses, Star Wars, Harry Potter, and other themes. These are for your private home, not commercial use or resale. Murals are regular wall <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>, so you can cover them later when kids outgrow the theme.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to create a custom mural for your Orlando home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Transform Kids Rooms with Custom Murals"
+    description="Hand-painted designs that bring imagination to life. Serving Orlando and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

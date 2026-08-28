@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Custom Wall Murals in Celebration, FL | Themed Kids Rooms"
+  description="Custom murals in Celebration, FL. Hand-painted kids rooms, nurseries, feature walls. Serving Celebration & Disney-area homes."
+  ogImage="/images/nemo-mural.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Celebration" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/murals-celebration/#service",
+        "serviceType": "Custom Wall Murals",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "Celebration" },
+        "description": "Hand-painted custom murals for kids rooms, nurseries, and feature walls in Celebration, FL homes."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/murals-celebration/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Murals Celebration",
+            "item": "https://goprohomeimprovements.com/services/murals-celebration"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/murals-celebration/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a custom mural cost in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A simple kids room mural (one wall) typically runs $400-$1,200. Complex full-room designs cost more. We provide free quotes after seeing the space and discussing your vision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Celebration HOA allow murals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior murals are fine—HOA rules apply to exteriors, not what you paint inside your home. If you're planning exterior work, check your HOA guidelines first."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a mural take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simple murals take 1-2 days. Detailed designs with multiple characters or full-room scenes take 3-5 days. We sketch, paint, and seal in consecutive days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you paint Disney characters?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for personal home use. We've painted Disney, Marvel, Star Wars, and other licensed themes for private homes. Not for commercial spaces or resale."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Murals in Celebration</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Custom Wall Murals in Celebration, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Hand-painted murals for kids rooms, nurseries & feature walls. Serving Celebration families.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/nemo-mural.jpg" alt="Custom mural in Celebration home" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            A custom <a href="/services/murals" class="text-gopro-orange hover:underline">mural</a> transforms a kids room into a themed space. We've painted Disney characters, Marvel heroes, space scenes, and nursery themes across <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> homes—just minutes from Disney parks.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're decorating a nursery, playroom, or feature wall, we sketch, paint, and seal for a lasting finish. We handle prep on textured drywall common in Central Florida homes. Based in Kissimmee, serving Celebration and <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Murals Near Disney</h2>
+          <p class="text-gray-700 font-sans">
+            Celebration families love Disney-themed murals—Finding Nemo, Frozen, Toy Story, Star Wars. We paint licensed characters for personal home use (not commercial). Interior murals don't require HOA approval—rules apply to exteriors, not what you paint inside your home. For exterior updates, see our <a href="/guides/celebration-hoa-paint-guide" class="text-gopro-orange hover:underline">Celebration HOA guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Popular Mural Themes in Celebration</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Disney Characters (Nemo, Frozen, Moana, Toy Story)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Marvel & DC Superheroes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Star Wars & Space</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Harry Potter Themes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Jungle & Safari Animals</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Nursery Themes (clouds, trees, animals)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a custom mural cost in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                A simple kids room mural (one wall) typically runs $400-$1,200. Complex full-room designs cost more. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free quotes</a> after seeing the space and discussing your vision. See our <a href="/guides/kids-room-mural-ideas-kissimmee" class="text-gopro-orange hover:underline">mural ideas guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Does Celebration HOA allow murals?</h3>
+              <p class="text-gray-700 font-sans">
+                Interior murals are fine—HOA rules apply to exteriors, not what you paint inside your home. If you're planning exterior work, check your HOA guidelines first. See our <a href="/guides/celebration-hoa-paint-guide" class="text-gopro-orange hover:underline">Celebration HOA guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a mural take?</h3>
+              <p class="text-gray-700 font-sans">
+                Simple murals take 1-2 days. Detailed designs with multiple characters or full-room scenes take 3-5 days. We sketch, paint, and seal in consecutive days.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you paint Disney characters?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, for personal home use. We've painted Disney, Marvel, Star Wars, and other licensed themes for private homes. Not for commercial spaces or resale. Murals are regular wall <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>, so you can cover them when kids outgrow the theme.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to create a custom mural for your Celebration home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Transform Kids Rooms with Custom Murals"
+    description="Hand-painted designs for Celebration homes. Disney-area families, themed playrooms, nurseries."
+  />
+
+  <Footer />
+</BaseLayout>

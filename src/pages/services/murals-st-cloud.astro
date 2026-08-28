@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Custom Wall Murals in St. Cloud, FL | Kids Rooms & Nurseries"
+  description="Custom murals in St. Cloud, FL. Hand-painted kids rooms, nurseries, themed walls. 15+ years experience serving Osceola County."
+  ogImage="/images/nemo-mural.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "St. Cloud" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/murals-st-cloud/#service",
+        "serviceType": "Custom Wall Murals",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "St. Cloud" },
+        "description": "Hand-painted custom murals for kids rooms, nurseries, and feature walls in St. Cloud, FL homes."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/murals-st-cloud/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Murals St. Cloud",
+            "item": "https://goprohomeimprovements.com/services/murals-st-cloud"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/murals-st-cloud/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a mural cost in St. Cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on size and design. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or complex character scenes cost more. We provide free quotes after seeing the space."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you paint murals on textured drywall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We prep textured walls with primer so paint flows smoothly. Heavy orange peel or knockdown texture shows through slightly, or we can skim coat smooth if preferred."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a mural installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simple murals take 1-2 days. Complex designs with multiple characters take 3-5 days. We sketch, paint, and seal in one visit or consecutive days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint Disney or Marvel characters?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for personal home use. We've painted Disney princesses, Marvel heroes, Star Wars, and other licensed characters. Murals are for your private home, not commercial spaces."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Murals in St. Cloud</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Custom Wall Murals in St. Cloud, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Hand-painted murals for kids rooms, nurseries & feature walls. Serving St. Cloud families.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/nemo-mural.jpg" alt="Custom mural in St. Cloud home" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            A custom <a href="/services/murals" class="text-gopro-orange hover:underline">mural</a> turns a plain bedroom into a themed space. We've painted Disney characters, jungle animals, space scenes, Marvel heroes, and nursery themes across <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a> homes—from established neighborhoods to newer developments near Nolte Road and Narcoossee.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're decorating a nursery, kids playroom, or feature wall, we handle prep, sketching, painting, and sealing. We work on textured walls common in St. Cloud homes. Based in Kissimmee, serving <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Murals for St. Cloud Homes</h2>
+          <p class="text-gray-700 font-sans">
+            St. Cloud homes range from 1980s-era established neighborhoods to newer construction. We prep textured drywall with primer for smooth paint application. Heavy texture shows through slightly—adding character to hand-painted murals—or we can skim coat for a smoother look. Read our <a href="/guides/mural-prep-textured-drywall-florida" class="text-gopro-orange hover:underline">mural prep guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Popular Mural Themes in St. Cloud</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Disney Characters (Nemo, Frozen, Moana)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Marvel & DC Superheroes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Jungle & Safari Animals</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Space, Planets & Astronauts</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Star Wars Scenes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Nursery Themes (clouds, trees, animals)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a mural cost in St. Cloud?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on size and design. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or complex character scenes cost more. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free quotes</a> after seeing the space. See our <a href="/guides/kids-room-mural-ideas-kissimmee" class="text-gopro-orange hover:underline">mural ideas guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you paint murals on textured drywall?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We prep textured walls with primer so paint flows smoothly. Heavy orange peel or knockdown texture shows through slightly, or we can skim coat smooth if preferred.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a mural installation take?</h3>
+              <p class="text-gray-700 font-sans">
+                Simple murals take 1-2 days. Complex designs with multiple characters take 3-5 days. We sketch, paint, and seal in one visit or consecutive days.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint Disney or Marvel characters?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, for personal home use. We've painted Disney princesses, Marvel heroes, Star Wars, and other licensed characters. Murals are for your private home, not commercial spaces. They're regular wall <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>, so you can cover them later when kids outgrow the theme.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to create a custom mural for your St. Cloud home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Transform Kids Rooms with Custom Murals"
+    description="Hand-painted designs that bring imagination to life. Serving St. Cloud and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>
