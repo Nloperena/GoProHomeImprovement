@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Drywall Repair in Orlando | Holes, Cracks, Water Damage | Go Pro"
+  description="Professional drywall repair in Orlando. Holes, cracks, water damage, texture matching. Residential & commercial. Owner-operated. 15+ years Central Florida."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Orlando", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-orlando/#service",
+        "serviceType": "Drywall Repair",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Orlando",
+          "containedIn": "Florida"
+        },
+        "description": "Professional drywall repair services for holes, cracks, water damage, and texture matching in Orlando, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-orlando/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Drywall Repair in Orlando",
+            "item": "https://goprohomeimprovements.com/services/drywall-repair-orlando"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-orlando/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does drywall repair cost in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Small holes $75-$150, large holes $150-$300, water damage $200-$600+, commercial repairs $150-$500+. Pricing depends on damage extent, texture matching, and whether painting is included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you repair drywall in Orlando commercial buildings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We repair drywall in offices, retail stores, restaurants, and medical suites. We work evenings or weekends to avoid disrupting business operations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does drywall repair take in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Small patches (1-2 holes) done same day. Larger repairs or multiple holes take 1-2 days including drying time for mud and paint. Water damage repairs take longer depending on extent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you repair plaster walls in older Orlando homes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Some older Orlando homes have plaster instead of drywall. We patch plaster cracks and holes using proper plaster techniques so repairs stay solid and don't crack again."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Drywall Repair in Orlando</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Drywall Repair in Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Fix holes, cracks & water damage. Residential & commercial. Texture matching. Repairs that blend seamlessly.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall repair</a> in <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> for homes and businesses. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we've been fixing walls and ceilings in Central Florida for over 15 years—patching holes, filling cracks, repairing water damage, matching texture, and painting so the repair disappears.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether it's a small doorknob hole, settling cracks, water damage from a roof or AC leak, or commercial wall damage in an office or retail space, we handle the full repair—cut out damage, install new drywall, tape, mud, sand, texture-match, prime, and paint.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Commercial Drywall Repair in Orlando</h2>
+          <p class="text-gray-700 font-sans">
+            Orlando businesses need fast drywall repair—offices (moving desks, shelving damage), retail stores (fixture installations gone wrong), restaurants (kitchen equipment, water leaks), and medical offices (cart dings). We schedule repairs during off-hours—evenings, weekends, or before opening—so your business stays operational.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Drywall Repairs in Orlando</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Small & Large Holes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Cracks & Settling Damage</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Water Damage (leaks, floods)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Texture Matching</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Ceiling Repairs</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Nail Pops & Screw Pops</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Commercial Wall Damage</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Plaster Repair (older homes)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does drywall repair cost in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Small holes $75-$150, large holes $150-$300, water damage $200-$600+, commercial repairs $150-$500+. Pricing depends on damage extent, texture matching, and whether <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a> is included.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you repair drywall in Orlando commercial buildings?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We repair drywall in offices, retail stores, restaurants, and medical suites. We work evenings or weekends to avoid disrupting business operations.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does drywall repair take in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Small patches (1-2 holes) done same day. Larger repairs or multiple holes take 1-2 days including drying time for mud and paint. Water damage repairs take longer depending on extent.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you repair plaster walls in older Orlando homes?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Some older Orlando homes have plaster instead of drywall. We patch plaster cracks and holes using proper plaster techniques so repairs stay solid and don't crack again.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Need drywall repair in Orlando?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Drywall Repair in Orlando"
+    description="Residential & commercial. Fast repairs. Texture matching. Serving Orlando & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

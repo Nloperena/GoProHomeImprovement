@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Interior & Exterior Painting in Kissimmee | Go Pro"
+  description="Professional painting contractor in Kissimmee. Owner-operated. Interior rooms, exterior stucco & siding, cabinets. 15+ years in Osceola County. Free estimates."
+  ogImage="/images/bedroom-paint.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/painting-kissimmee/#service",
+        "serviceType": "Interior and Exterior Painting",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Kissimmee",
+          "containedIn": "Florida"
+        },
+        "description": "Professional residential and commercial painting services for interior rooms, exterior stucco and siding, cabinets, and trim in Kissimmee, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/painting-kissimmee/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Painting in Kissimmee",
+            "item": "https://goprohomeimprovements.com/services/painting-kissimmee"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/painting-kissimmee/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does painting cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior rooms range $300-$900 depending on size. Whole house interiors $2,500-$10,000. Exterior painting $2,500-$12,000 based on square footage and condition. We provide free estimates with all costs itemized."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do Kissimmee vacation rentals need special paint?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vacation rentals near Disney get heavy guest turnover. We use durable, washable paint in high-traffic areas and neutral colors that photograph well. Many Kissimmee rental owners refresh paint every 2-3 years."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does exterior paint last in Kissimmee humidity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kissimmee's heat and humidity are tough on paint. Quality exterior paint with proper prep lasts 5-7 years. We use mildew-resistant formulas and power wash before painting so paint bonds properly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need HOA approval to paint my house in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many Osceola County HOAs require pre-approval for exterior paint colors. Check your HOA guidelines before starting. We're familiar with local HOA processes and can help you select compliant colors."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Painting in Kissimmee</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Interior & Exterior Painting in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Based right here in Kissimmee. Professional painting for homes, vacation rentals & commercial spaces in Osceola County.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/bedroom-paint.jpg" alt="Professional painting in Kissimmee homes" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements is proud to be based in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>. We've been painting Osceola County homes—and vacation rentals near Disney—for over 15 years. We know how Kissimmee's heat, humidity, and afternoon thunderstorms affect both <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">interior and exterior paint</a>.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're refreshing a bedroom, updating a vacation rental between guests, or repainting stucco siding, we handle the prep work that makes paint last. That means <a href="/services/power-washing" class="text-gopro-orange hover:underline">power washing</a> exteriors, patching <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a>, priming water stains, and using paints rated for Florida's UV and mildew.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Kissimmee Vacation Rentals & Short-Term Stays</h2>
+          <p class="text-gray-700 font-sans">
+            Kissimmee is vacation rental central—close to Disney, Universal, and the attractions. Rental properties get heavy guest turnover, which means scuffs, crayon marks, and wear. We use durable, washable interior paint and neutral colors that photograph well on Airbnb and VRBO. Many Kissimmee rental owners <a href="/guides/kissimmee-vacation-rental-refresh" class="text-gopro-orange hover:underline">refresh paint every 2-3 years</a> to keep reviews strong.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Painting Services in Kissimmee</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Interior Rooms (bedrooms, living rooms, kitchens, bathrooms)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Exterior Stucco & Siding (vinyl, wood, Hardie)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Kitchen Cabinets & Vanities</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Trim, Baseboards, Crown Molding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Doors, Window Frames & Shutters</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Accent Walls & Feature Walls</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Commercial & Small Business Spaces</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">HOA-Compliant Exterior Colors</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-6 tracking-tight">Why Kissimmee Exteriors Need Extra Prep</h2>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            Osceola County homes face intense UV, high humidity, afternoon rain, and mildew growth—especially on north-facing walls. Cheap paint or skipped prep means peeling and fading within two years.
+          </p>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            Our exterior painting process in Kissimmee:
+          </p>
+          <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700 font-sans">
+            <li><a href="/services/power-washing" class="text-gopro-orange hover:underline">Power wash</a> to remove dirt, mildew, and loose paint</li>
+            <li>Let surfaces dry fully (critical in humid weather)</li>
+            <li>Scrape and sand any remaining loose or peeling areas</li>
+            <li>Prime bare wood, stucco cracks, and water-stained areas</li>
+            <li>Apply two coats of exterior paint with UV and mildew resistance</li>
+          </ul>
+          <p class="text-lg text-gray-700 mb-6 font-sans">
+            Stucco is the most common siding in Kissimmee. It holds moisture if not sealed properly, and cracks develop from settling. We patch cracks, prime them, and use elastomeric or masonry-rated paint so the finish flexes with the substrate. Learn more in our <a href="/guides/stucco-and-humidity-central-florida" class="text-gopro-orange hover:underline">guide to stucco and humidity</a>.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does painting cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Interior rooms range $300-$900 depending on size. Whole house interiors $2,500-$10,000. Exterior painting $2,500-$12,000 based on square footage and condition. We provide free estimates with all costs itemized. See <a href="/guides/how-much-does-painting-cost-kissimmee" class="text-gopro-orange hover:underline">full pricing guide here</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do Kissimmee vacation rentals need special paint?</h3>
+              <p class="text-gray-700 font-sans">
+                Vacation rentals near Disney get heavy guest turnover. We use durable, washable paint in high-traffic areas and neutral colors that photograph well. Many Kissimmee rental owners refresh paint every 2-3 years.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does exterior paint last in Kissimmee humidity?</h3>
+              <p class="text-gray-700 font-sans">
+                Kissimmee's heat and humidity are tough on paint. Quality exterior paint with proper prep lasts 5-7 years. We use mildew-resistant formulas and power wash before painting so paint bonds properly.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do I need HOA approval to paint my house in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Many Osceola County HOAs require pre-approval for exterior paint colors. Check your HOA guidelines before starting. We're familiar with local <a href="/guides/hoa-and-exterior-paint-osceola" class="text-gopro-orange hover:underline">HOA processes</a> and can help you select compliant colors.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to paint your Kissimmee home or rental property?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Painting in Kissimmee"
+    description="Owner-operated. Based right here in Osceola County. Quality prep, quality paint, lasting results."
+  />
+
+  <Footer />
+</BaseLayout>
