@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Wallpaper Installation & Removal in St. Cloud, FL"
+  description="Professional wallpaper installation, removal & repair in St. Cloud, FL. Pattern matching, textured walls. 15+ years serving Osceola County."
+  ogImage="/images/wallpaper.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "St. Cloud" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/wallpaper-st-cloud/#service",
+        "serviceType": "Wallpaper Installation and Removal",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "St. Cloud" },
+        "description": "Professional wallpaper installation, removal, and repair with precise pattern matching in St. Cloud, FL."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/wallpaper-st-cloud/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Wallpaper St. Cloud",
+            "item": "https://goprohomeimprovements.com/services/wallpaper-st-cloud"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/wallpaper-st-cloud/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does wallpaper installation cost in St. Cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Basic patterns typically run $3-$7 per square foot installed, complex patterns $8-$12. Cost depends on pattern complexity and wall prep. We provide free estimates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you remove old wallpaper?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We strip old wallpaper, scrape adhesive, repair drywall, and prime. Removal typically runs $1-$3 per square foot."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can wallpaper handle Florida humidity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, if installed correctly. We use mildew-resistant adhesives and prep walls properly to prevent bubbling or peeling in Central Florida humidity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A typical room takes 1-2 days—one day for prep and priming, one day for installation. Complex patterns take longer."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Wallpaper in St. Cloud</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Wallpaper Installation & Removal in St. Cloud, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional wallpaper hanging, removal, and repair. Pattern matching, invisible seams.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/wallpaper.jpg" alt="Professional wallpaper installation in St. Cloud" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            <a href="/services/wallpaper" class="text-gopro-orange hover:underline">Wallpaper</a> adds texture, pattern, and personality to <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a> homes—when installed right. We handle precise pattern matching, invisible seams, and proper wall prep so your wallpaper looks crisp and stays put.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're installing new wallpaper, removing old layers, or repairing damaged sections, we work clean and efficient. Based in Kissimmee, serving St. Cloud and <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Wallpaper & Florida Humidity</h2>
+          <p class="text-gray-700 font-sans">
+            Central Florida humidity can cause poorly installed wallpaper to bubble or peel. We use mildew-resistant adhesives, prep walls properly, and match seams tight so wallpaper lasts. Avoid wallpaper in steamy bathrooms—<a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> is usually smarter for high-moisture areas.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Wallpaper Services in St. Cloud</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Wallpaper Installation (new)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Wallpaper Removal & Stripping</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Pattern Matching & Seam Alignment</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Wall Prep & Repair</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Wallpaper Repair (tears, bubbles)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Accent Walls</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does wallpaper installation cost in St. Cloud?</h3>
+              <p class="text-gray-700 font-sans">
+                Basic patterns typically run $3-$7 per square foot installed, complex patterns $8-$12. Cost depends on pattern complexity and wall prep. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free estimates</a>. See our <a href="/guides/wallpaper-installation-cost-kissimmee" class="text-gopro-orange hover:underline">wallpaper cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you remove old wallpaper?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We strip old wallpaper, scrape adhesive, repair <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a>, and prime. Removal typically runs $1-$3 per square foot.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can wallpaper handle Florida humidity?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, if installed correctly. We use mildew-resistant adhesives and prep walls properly to prevent bubbling or peeling in Central Florida humidity.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does installation take?</h3>
+              <p class="text-gray-700 font-sans">
+                A typical room takes 1-2 days—one day for prep and priming, one day for installation. Complex patterns take longer.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to install or remove wallpaper in your St. Cloud home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Wallpaper for St. Cloud Homes"
+    description="Precise pattern matching, invisible seams, quality installation. Serving St. Cloud and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>
