@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Trim & Crown Molding Installation in Orlando, FL | Go Pro Home Improvements"
+  description="Trim & crown molding installation in Orlando, FL. Baseboards, chair rail, window trim. Professional finish carpentry, 15+ years experience."
+  ogImage="/images/trim-crown.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Orlando" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-orlando/#service",
+        "serviceType": "Trim and Crown Molding Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "Orlando" },
+        "description": "Professional trim and crown molding installation including baseboards, chair rail, and window trim in Orlando, FL."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-orlando/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Trim & Crown Molding Orlando",
+            "item": "https://goprohomeimprovements.com/services/trim-crown-molding-orlando"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-orlando/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does crown molding cost in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Crown molding installation typically runs $3-$8 per linear foot including materials and labor. A standard living room (60-80 feet) costs $300-$800. Simple profiles cost less, ornate designs cost more. We provide free estimates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you install baseboards and trim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We install baseboards, door casing, window trim, chair rail, and crown molding. We also replace damaged trim and match existing profiles if you're adding to what's already installed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you paint the trim after installation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We prime, caulk seams, and paint all trim work to match your walls or a crisp white finish. Proper caulking and paint make the difference between trim that looks good and trim that looks professional."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does trim installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A single room typically takes 1-2 days including install, caulking, and painting. Whole-house trim projects take 3-7 days depending on square footage and detail level."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Trim & Crown Molding in Orlando</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Trim & Crown Molding in Orlando, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Baseboards, crown molding, chair rail, window trim. Crisp miters, clean caulk lines. Serving Orlando and Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/trim-crown.jpg" alt="Professional trim and crown molding in Orlando, FL" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Trim and crown molding add finish and character to <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> homes. We cut clean miters, caulk seams tight, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> for a crisp, professional look. Whether you're adding crown to a living room or replacing baseboards after flooring, we work precise and clean.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Based in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, serving Orlando and <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Miters & Caulking</h2>
+          <p class="text-gray-700 font-sans">
+            Good trim work shows in the miters—inside and outside corners need to fit tight, with no gaps. We measure twice, cut once, and caulk seams properly so paint covers smooth and joints stay sealed as the home settles.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Trim Services in Orlando</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Crown Molding (ceiling trim)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Baseboards & Shoe Molding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Door & Window Casing</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Chair Rail</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Trim Replacement & Repair</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Painting & Finish Work</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does crown molding cost in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Crown molding installation typically runs $3-$8 per linear foot including materials and labor. A standard living room (60-80 feet) costs $300-$800. Simple profiles cost less, ornate designs cost more. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free estimates</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you install baseboards and trim?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We install baseboards, door casing, window trim, chair rail, and crown molding. We also replace damaged trim and match existing profiles if you're adding to what's already installed.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you paint the trim after installation?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We prime, caulk seams, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> all trim work to match your walls or a crisp white finish. Proper caulking and paint make the difference between trim that looks good and trim that looks professional.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does trim installation take?</h3>
+              <p class="text-gray-700 font-sans">
+                A single room typically takes 1-2 days including install, caulking, and painting. Whole-house trim projects take 3-7 days depending on square footage and detail level.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to add trim or crown molding to your Orlando home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Trim & Crown Molding for Orlando Homes"
+    description="Crisp miters, clean caulk lines, quality finish work. Serving Orlando and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

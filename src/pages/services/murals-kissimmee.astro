@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Custom Wall Murals in Kissimmee, FL | Kids Rooms & Theaters"
+  description="Custom murals in Kissimmee, FL. Kids rooms, nurseries, home theaters, feature walls. Hand-painted designs, 15+ years experience."
+  ogImage="/images/nemo-mural.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/murals-kissimmee/#service",
+        "serviceType": "Custom Wall Murals",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "Kissimmee" },
+        "description": "Hand-painted custom murals for kids rooms, nurseries, home theaters, and feature walls in Kissimmee, FL homes."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/murals-kissimmee/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Murals Kissimmee",
+            "item": "https://goprohomeimprovements.com/services/murals-kissimmee"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/murals-kissimmee/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a custom mural cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on size, design complexity, and surface condition. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or detailed character scenes cost more. We provide free quotes after seeing the space and design."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you paint Disney characters or licensed themes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for personal home use. We've painted Finding Nemo, Star Wars, Disney princesses, Marvel heroes, and more. Murals are for your private home, not for commercial spaces or resale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a mural take to complete?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A simple mural takes 1-2 days. Complex designs with multiple characters or full-room scenes take 3-5 days. We prep, sketch, paint, and seal all in one visit or consecutive days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I paint over a mural later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Murals are regular wall paint, so they cover the same as any other painted surface. When your kid outgrows the Finding Nemo theme, we can repaint it solid or start a new design."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Murals in Kissimmee</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Custom Wall Murals in Kissimmee, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Hand-painted murals for kids rooms, nurseries, home theaters & feature walls. Serving Kissimmee families.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/nemo-mural.jpg" alt="Finding Nemo custom mural in Kissimmee kids room" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            A custom mural turns a plain bedroom into a themed space your kid will love. We've painted Finding Nemo ocean scenes, Star Wars battles, Disney princess castles, Marvel heroes, and jungle animals across <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> homes—especially near Disney.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're transforming a nursery, creating a <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">movie room</a>, or adding a feature wall, we sketch, paint, and seal for a finish that lasts. Based in Kissimmee, serving <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Murals Near Disney</h2>
+          <p class="text-gray-700 font-sans">
+            Kissimmee families near Disney love themed murals. Finding Nemo, Toy Story, Frozen, Marvel, and Star Wars are popular. We paint for personal home use (not commercial), so you can have the characters your kid loves without worrying about licensing.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Popular Mural Themes in Kissimmee</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Disney Characters (Finding Nemo, Frozen, Toy Story)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Marvel & DC Superheroes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Star Wars Scenes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Jungle & Safari Animals</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Space & Planets</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Nursery Themes (clouds, trees, animals)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a custom mural cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on size, design complexity, and surface condition. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or detailed character scenes cost more. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free quotes</a> after seeing the space and design. Read our <a href="/guides/kids-room-mural-ideas-kissimmee" class="text-gopro-orange hover:underline">kids room mural ideas guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you paint Disney characters or licensed themes?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, for personal home use. We've painted Finding Nemo, Star Wars, Disney princesses, Marvel heroes, and more. Murals are for your private home, not for commercial spaces or resale.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a mural take to complete?</h3>
+              <p class="text-gray-700 font-sans">
+                A simple mural takes 1-2 days. Complex designs with multiple characters or full-room scenes take 3-5 days. We prep, sketch, paint, and seal all in one visit or consecutive days.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can I paint over a mural later?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Murals are regular wall <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>, so they cover the same as any other painted surface. When your kid outgrows the Finding Nemo theme, we can repaint it solid or start a new design.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to create a custom mural for your Kissimmee home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Transform Kids Rooms with Custom Murals"
+    description="Hand-painted designs that bring imagination to life. Serving Kissimmee families."
+  />
+
+  <Footer />
+</BaseLayout>

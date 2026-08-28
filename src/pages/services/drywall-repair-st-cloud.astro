@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Drywall Repair in St. Cloud, FL | Holes, Cracks, Water Damage"
+  description="Professional drywall repair in St. Cloud, FL. Holes, cracks, water damage, ceiling repair. Texture matching, fast turnaround."
+  ogImage="/images/bedroom-paint.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "St. Cloud" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-st-cloud/#service",
+        "serviceType": "Drywall Repair",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "St. Cloud" },
+        "description": "Professional drywall repair for holes, cracks, water damage, and ceiling repair in St. Cloud, FL."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-st-cloud/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Drywall Repair St. Cloud",
+            "item": "https://goprohomeimprovements.com/services/drywall-repair-st-cloud"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-st-cloud/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does drywall repair cost in St. Cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Small patches and nail pops typically cost $75-$200. Larger repairs, ceiling damage, or water damage can run $200-$800 depending on scope. We provide free estimates so you know the cost before we start."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you match popcorn ceiling texture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We match existing textures—orange peel, knockdown, smooth, and popcorn. After patching we texture and paint to blend seamlessly with the surrounding surface."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a drywall repair take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Small repairs take a few hours. Larger repairs or multiple patches take 1-2 days including drying time, sanding, and painting. We communicate timing upfront so you know what to expect."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you repair water-damaged drywall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We cut out water-damaged sections, check for mold, replace with new drywall, and patch seamlessly. Water damage needs to be fixed at the source first—we can help identify and advise on repairs."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Drywall Repair in St. Cloud</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Drywall Repair in St. Cloud, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Holes, cracks, water damage, ceiling repair. Texture matching, fast turnaround. Serving St. Cloud and Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/bedroom-paint.jpg" alt="Professional drywall repair in St. Cloud, FL" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Drywall damage happens. Door handles punch holes, moving furniture leaves dents, Florida storms cause leaks, and cracks appear as homes settle. We patch it, match the texture, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> it so it disappears.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether it's a single nail pop or water-damaged ceiling sections in your <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a> home, we work clean, fast, and stand behind the repair. Based in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, serving St. Cloud and <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Water Damage in St. Cloud</h2>
+          <p class="text-gray-700 font-sans">
+            St. Cloud's summer storms and humidity mean roof leaks and plumbing leaks are common. Water-damaged drywall needs to be cut out and replaced—patching over it just hides the problem until mold appears. We address the damage properly the first time.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Common Drywall Repairs in St. Cloud</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Holes from Door Handles, Moving</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Cracks from Settling or Foundation Shifts</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Water Damage from Leaks or Storms</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Ceiling Repairs (popcorn, smooth, textured)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Nail Pops & Screw Pops</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans"><a href="/services/tv-mounting" class="text-gopro-orange hover:underline">TV Mount Removal</a> Patching</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does drywall repair cost in St. Cloud?</h3>
+              <p class="text-gray-700 font-sans">
+                Small patches and nail pops typically cost $75-$200. Larger repairs, ceiling damage, or water damage can run $200-$800 depending on scope. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free estimates</a> so you know the cost before we start.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you match popcorn ceiling texture?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We match existing textures—orange peel, knockdown, smooth, and popcorn. After patching we texture and paint to blend seamlessly with the surrounding surface. Learn more about <a href="/guides/popcorn-ceiling-removal-kissimmee" class="text-gopro-orange hover:underline">popcorn ceiling removal</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a drywall repair take?</h3>
+              <p class="text-gray-700 font-sans">
+                Small repairs take a few hours. Larger repairs or multiple patches take 1-2 days including drying time, sanding, and painting. We communicate timing upfront so you know what to expect.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you repair water-damaged drywall?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We cut out water-damaged sections, check for mold, replace with new drywall, and patch seamlessly. Water damage needs to be fixed at the source first—we can help identify and advise on repairs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to fix your drywall damage?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Drywall Repair for St. Cloud Homes"
+    description="Holes, cracks, water damage—patched right the first time. Serving St. Cloud and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>
