@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="TV Mounting in Orlando | Professional Installation | Go Pro"
+  description="Professional TV mounting in Orlando. Flat, tilting & full-motion mounts. Wire concealment. Homes & businesses. Owner-operated. 15+ years Central Florida."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Orlando", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-orlando/#service",
+        "serviceType": "TV Mounting and Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Orlando",
+          "containedIn": "Florida"
+        },
+        "description": "Professional TV mounting and installation services for homes and businesses in Orlando, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-orlando/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TV Mounting in Orlando",
+            "item": "https://goprohomeimprovements.com/services/tv-mounting-orlando"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-orlando/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does TV mounting cost in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Basic flat mount $150-$250, tilting mount $200-$300, full-motion mount $250-$400. Wire concealment $75-$200 extra. Pricing depends on TV size, mount type, and wall surface."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you mount TVs in Orlando businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We mount TVs in offices, waiting rooms, restaurants, bars, retail stores, and gyms. We can schedule installation during off-hours to avoid disrupting your business."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between flat and full-motion mounts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Flat mounts sit flush against the wall—cheapest and sleekest. Tilting mounts angle down (good for mounting above eye level). Full-motion mounts extend, swivel, and tilt—most expensive but most flexible."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you remove old TV mounts in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We remove old mounts, patch drywall holes, and paint over them if needed. Then we install the new TV in the same spot or a new location."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">TV Mounting in Orlando</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">TV Mounting in Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional TV installation in Orlando homes & businesses. Secure mounting, clean wiring. 15+ years in Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/tv-mounting" class="text-gopro-orange hover:underline">TV mounting</a> in <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> for homes and businesses. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we've been installing TVs in Central Florida for over 15 years—finding studs, mounting securely, hiding wires, and making sure everything works before we leave.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're mounting a single TV in a living room, installing multiple screens in an office or restaurant, or building a <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we handle the full installation—mount selection, wire concealment, device hookup, and testing.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Commercial TV Installation in Orlando</h2>
+          <p class="text-gray-700 font-sans">
+            We mount TVs in Orlando businesses: offices (conference rooms, lobbies), restaurants and bars (dining rooms, patios), medical offices (waiting rooms), retail stores, and gyms. We schedule installations during off-hours—evenings, weekends, or before opening—to avoid disrupting customers or operations. Fast, clean, professional.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">TV Mounting Services in Orlando</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Flat, Tilting & Full-Motion Mounts</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">In-Wall Wire Concealment</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Stud Mounting (any wall type)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Above-Fireplace Installations</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Corner & Angled Mounts</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Soundbar & Device Mounting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Multi-TV Commercial Installations</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Old Mount Removal & Patching</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does TV mounting cost in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Basic flat mount $150-$250, tilting mount $200-$300, full-motion mount $250-$400. Wire concealment $75-$200 extra. Pricing depends on TV size, mount type, and wall surface. See <a href="/guides/tv-mounting-cost-orlando" class="text-gopro-orange hover:underline">full cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you mount TVs in Orlando businesses?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We mount TVs in offices, waiting rooms, restaurants, bars, retail stores, and gyms. We can schedule installation during off-hours to avoid disrupting your business.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">What's the difference between flat and full-motion mounts?</h3>
+              <p class="text-gray-700 font-sans">
+                Flat mounts sit flush against the wall—cheapest and sleekest. Tilting mounts angle down (good for mounting above eye level). Full-motion mounts extend, swivel, and tilt—most expensive but most flexible.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you remove old TV mounts in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We remove old mounts, patch <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a> holes, and paint over them if needed. Then we install the new TV in the same spot or a new location.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to mount your TV in Orlando?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional TV Mounting in Orlando"
+    description="Residential & commercial. Secure mounting, clean wiring. Serving Orlando & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

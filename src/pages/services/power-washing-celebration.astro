@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Power Washing & Soft Wash in Celebration | Go Pro"
+  description="Professional power washing in Celebration FL. HOA-approved cleaning for driveways, siding, roofs. Soft wash specialists. Owner-operated. 15+ years Central Florida."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Celebration", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-celebration/#service",
+        "serviceType": "Power Washing and Soft Washing",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Celebration",
+          "containedIn": "Florida"
+        },
+        "description": "Professional power washing and soft wash services for driveways, houses, roofs, and patios in Celebration, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-celebration/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Power Washing in Celebration",
+            "item": "https://goprohomeimprovements.com/services/power-washing-celebration"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-celebration/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does power washing cost in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Driveways $75-$200, house exteriors $200-$500, roofs $250-$600. Pricing depends on size and surface condition. Free estimates in Celebration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need HOA approval to power wash in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Power washing typically doesn't require HOA approval since it's maintenance, not a modification. However, check your Celebration HOA guidelines. Some require advance notice for contractor access."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can power washing damage stucco homes in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if done incorrectly. We use soft wash (low pressure + cleaning solution) on Celebration's stucco homes. High pressure can damage stucco, but soft wash removes algae and mildew safely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should Celebration homes be power washed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Annually is typical for Celebration homes. The planned community's aesthetic standards and proximity to water features mean algae and mildew grow quickly. Regular washing maintains curb appeal and property value."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Power Washing in Celebration</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Power Washing & Soft Wash in Celebration</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Clean driveways, siding, roofs & patios in Celebration FL. HOA-friendly service. Soft wash specialists for stucco & painted surfaces.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides <a href="/services/power-washing" class="text-gopro-orange hover:underline">power washing and soft wash</a> services to <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> homeowners. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we've been cleaning Central Florida homes for over 15 years—removing algae, mildew, and dirt that builds up fast in Florida's climate.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Celebration is a planned community with high aesthetic standards. Clean exteriors, driveways, and roofs aren't just about curb appeal—they maintain property values and meet the community's expectations. We use soft wash for delicate surfaces like stucco and painted siding, and pressure wash for concrete driveways and patios.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Celebration's Community Standards</h2>
+          <p class="text-gray-700 font-sans">
+            Celebration homes are known for their well-maintained appearance. The community's proximity to lakes, ponds, and water features means extra humidity and faster algae growth. Regular power washing keeps homes looking fresh, prevents mildew damage, and aligns with Celebration's high standards. Power washing is maintenance, not modification, so it typically doesn't require HOA approval—but check your specific guidelines.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Clean in Celebration</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Driveways & Sidewalks</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Stucco & Painted Siding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Roofs (shingle, tile)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Patios & Lanais</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Front Porches & Walkways</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Fences & Privacy Screens</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Garage Doors & Floors</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Pool Decks (concrete, pavers)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does power washing cost in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Driveways $75-$200, house exteriors $200-$500, roofs $250-$600. Pricing depends on size and surface condition. Free estimates in Celebration.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do I need HOA approval to power wash in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Power washing typically doesn't require HOA approval since it's maintenance, not a modification. However, check your Celebration HOA guidelines. Some require advance notice for contractor access.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can power washing damage stucco homes in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Only if done incorrectly. We use <a href="/guides/soft-wash-vs-pressure-wash-kissimmee" class="text-gopro-orange hover:underline">soft wash</a> (low pressure + cleaning solution) on Celebration's stucco homes. High pressure can damage stucco, but soft wash removes algae and mildew safely.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How often should Celebration homes be power washed?</h3>
+              <p class="text-gray-700 font-sans">
+                Annually is typical for Celebration homes. The planned community's aesthetic standards and proximity to water features mean algae and mildew grow quickly. Regular washing maintains curb appeal and property value.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to clean your Celebration home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Power Washing in Celebration"
+    description="Soft wash specialists. HOA-friendly service. Maintain your home's curb appeal & property value."
+  />
+
+  <Footer />
+</BaseLayout>

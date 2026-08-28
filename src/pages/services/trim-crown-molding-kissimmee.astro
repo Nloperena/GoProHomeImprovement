@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Crown Molding & Trim Installation in Kissimmee | Go Pro"
+  description="Professional crown molding, baseboard & trim installation in Kissimmee. Custom carpentry. Owner-operated. 15+ years in Osceola County. Free estimates."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-kissimmee/#service",
+        "serviceType": "Crown Molding and Trim Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Kissimmee",
+          "containedIn": "Florida"
+        },
+        "description": "Professional crown molding, baseboard, and trim installation services in Kissimmee, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-kissimmee/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Crown Molding in Kissimmee",
+            "item": "https://goprohomeimprovements.com/services/trim-crown-molding-kissimmee"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-kissimmee/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does crown molding cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Crown molding $3-$8 per linear foot installed (materials + labor). A typical 12x14 room costs $300-$600. Pricing depends on molding style, room size, and ceiling height. Free estimates in Kissimmee."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you install crown molding in rooms with vaulted ceilings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Vaulted or cathedral ceilings require angled cuts and careful measuring. Many Kissimmee homes have vaulted ceilings in living rooms and main bedrooms, and we handle the carpentry."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint the trim after installing it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We caulk gaps, prime, and paint the trim to match your walls or in a custom color. Most Kissimmee homeowners choose white or off-white trim."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you replace old, damaged baseboards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We remove old baseboards, patch drywall or wall damage if needed, install new baseboards, caulk, and paint. Common after floor replacements or water damage."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Crown Molding in Kissimmee</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Crown Molding & Trim Installation in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional carpentry. Crown molding, baseboards, door & window trim. Add detail & value to your Osceola County home.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements installs <a href="/services/trim-crown-molding" class="text-gopro-orange hover:underline">crown molding, baseboards, and trim</a> in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> homes. Based right here in Osceola County, we've been adding architectural detail to Central Florida homes for over 15 years—precise cuts, tight joints, clean caulking, and professional <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a> so the finished trim looks built-in, not added later.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're adding crown molding to dress up a living room, replacing old baseboards after a floor replacement, or installing trim around new doors and windows, we handle the full carpentry and finishing work. Custom cuts for vaulted ceilings, angled walls, and tight corners.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Kissimmee Vacation Rentals</h2>
+          <p class="text-gray-700 font-sans">
+            Crown molding and trim add upscale detail to vacation rental photos—important for competing in Kissimmee's Disney-area rental market. Clean, painted trim makes rooms look finished and well-maintained. Many rental owners add crown molding to living rooms and main bedrooms to boost visual appeal and justify higher nightly rates. See our <a href="/guides/kissimmee-vacation-rental-refresh" class="text-gopro-orange hover:underline">vacation rental refresh guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Trim & Molding Services in Kissimmee</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Crown Molding Installation</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Baseboard Replacement & Installation</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Door & Window Trim (casing)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Chair Rail & Wainscoting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Ceiling Beams (decorative)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Vaulted Ceiling Trim</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Caulking, Priming & Painting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Custom Carpentry & Trim Work</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does crown molding cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Crown molding $3-$8 per linear foot installed (materials + labor). A typical 12x14 room costs $300-$600. Pricing depends on molding style, room size, and ceiling height. Free estimates in Kissimmee.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you install crown molding in rooms with vaulted ceilings?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Vaulted or cathedral ceilings require angled cuts and careful measuring. Many Kissimmee homes have vaulted ceilings in living rooms and main bedrooms, and we handle the carpentry.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint the trim after installing it?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We caulk gaps, prime, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> the trim to match your walls or in a custom color. Most Kissimmee homeowners choose white or off-white trim.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you replace old, damaged baseboards?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We remove old baseboards, patch <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a> or wall damage if needed, install new baseboards, caulk, and paint. Common after floor replacements or water damage.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to add crown molding or trim to your Kissimmee home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Trim & Crown Molding in Kissimmee"
+    description="Custom carpentry. Precise cuts, clean finish. Add detail & value to your home."
+  />
+
+  <Footer />
+</BaseLayout>

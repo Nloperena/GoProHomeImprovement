@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Interior & Exterior Painting in St. Cloud | Go Pro"
+  description="Professional painting contractor serving St. Cloud FL. Interior, exterior, stucco prep. 15+ years in Osceola County. Owner-operated. Free estimates."
+  ogImage="/images/bedroom-paint.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "St. Cloud", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/painting-st-cloud/#service",
+        "serviceType": "Interior and Exterior Painting",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "St. Cloud",
+          "containedIn": "Florida"
+        },
+        "description": "Professional residential painting services for interior rooms, exterior stucco and siding, cabinets, and trim in St. Cloud, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/painting-st-cloud/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Painting in St. Cloud",
+            "item": "https://goprohomeimprovements.com/services/painting-st-cloud"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/painting-st-cloud/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does painting cost in St. Cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior rooms $300-$900, full house interiors $2,500-$10,000. Exterior painting $2,500-$12,000 depending on size and surface condition. We provide free estimates in St. Cloud and Osceola County."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint older St. Cloud homes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many St. Cloud homes were built in the 1980s-90s and need updated paint and drywall repairs. We handle prep work—patching, sanding, priming—so the finish lasts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you match existing paint colors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We can color-match from a paint chip or existing wall. Helpful for touch-ups, single-room updates, or matching trim and walls across a home."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint lake-facing homes in St. Cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. St. Cloud's lakefront properties face extra humidity and sun exposure. We use exterior paints with mildew resistance and UV protection rated for Florida waterfront conditions."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Painting in St. Cloud</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Interior & Exterior Painting in St. Cloud</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Serving St. Cloud homes with professional painting. Quality prep for lasting results. Owner-operated contractor.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/bedroom-paint.jpg" alt="Professional painting in St. Cloud homes" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements serves <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a> homeowners with <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">interior and exterior painting</a>. We're based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> and have been painting Osceola County homes for over 15 years—rooms, cabinets, siding, trim, and everything in between.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            St. Cloud has a mix of older homes built in the 80s and 90s, plus newer lakefront communities. Many need updated paint, <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall repairs</a>, or fresh exterior finishes after years of Florida sun and humidity. We handle the prep—<a href="/services/power-washing" class="text-gopro-orange hover:underline">power washing</a>, patching, sanding, priming—so paint bonds properly and lasts.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">St. Cloud's Lakefront Homes</h2>
+          <p class="text-gray-700 font-sans">
+            St. Cloud sits on East Lake Tohopekaliga, and many homes face the water. Lakefront properties get extra humidity, sun exposure, and mildew on exterior walls. We use paints with mildew resistance and UV protection, and we power wash before painting so the surface is clean and ready for coating.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Paint in St. Cloud</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Interior Rooms (bedrooms, living rooms, kitchens)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Exterior Stucco & Siding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Kitchen Cabinets & Bathroom Vanities</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Trim, Baseboards, Crown Molding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Doors, Window Frames, Shutters</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Garages & Outbuildings</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Ceilings (flat, vaulted, textured)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Accent Walls</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-6 tracking-tight">Painting Older Homes in St. Cloud</h2>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            Many St. Cloud homes were built in the 1980s and 1990s, and after 30+ years, they need more than just paint. Walls have nail pops, cracks, water stains, or textured finishes that need smoothing. Exterior stucco may have cracks from settling or wood trim that's rotted in spots.
+          </p>
+          <p class="text-lg text-gray-700 mb-6 font-sans">
+            We handle all the prep before painting: patch drywall holes, sand rough spots, caulk gaps, scrape loose exterior paint, prime bare wood and stucco. Prep takes time, but it's what separates a paint job that lasts from one that fails in two years. See our guide on <a href="/guides/how-much-does-painting-cost-kissimmee" class="text-gopro-orange hover:underline">what drives painting cost</a>.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does painting cost in St. Cloud?</h3>
+              <p class="text-gray-700 font-sans">
+                Interior rooms $300-$900, full house interiors $2,500-$10,000. Exterior painting $2,500-$12,000 depending on size and surface condition. We provide free estimates in St. Cloud and Osceola County.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint older St. Cloud homes?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Many St. Cloud homes were built in the 1980s-90s and need updated paint and <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall repairs</a>. We handle prep work—patching, sanding, priming—so the finish lasts.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you match existing paint colors?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We can color-match from a paint chip or existing wall. Helpful for touch-ups, single-room updates, or matching trim and walls across a home.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint lake-facing homes in St. Cloud?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. St. Cloud's lakefront properties face extra humidity and sun exposure. We use exterior paints with mildew resistance and UV protection rated for Florida waterfront conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to paint your St. Cloud home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Painting in St. Cloud"
+    description="Quality prep, quality paint, lasting results. Serving St. Cloud & Osceola County."
+  />
+
+  <Footer />
+</BaseLayout>

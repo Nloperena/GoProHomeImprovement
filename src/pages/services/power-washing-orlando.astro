@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Power Washing & Soft Wash in Orlando | Go Pro"
+  description="Professional power washing in Orlando. Driveways, houses, roofs, patios. Soft wash for stucco & siding. Commercial & residential. 15+ years in Central Florida."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Orlando", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-orlando/#service",
+        "serviceType": "Power Washing and Soft Washing",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Orlando",
+          "containedIn": "Florida"
+        },
+        "description": "Professional power washing and soft wash services for driveways, houses, commercial buildings, roofs, and patios in Orlando, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-orlando/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Power Washing in Orlando",
+            "item": "https://goprohomeimprovements.com/services/power-washing-orlando"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-orlando/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does power washing cost in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Driveways $75-$250, house exteriors $200-$600, commercial buildings $300-$1,000+. Pricing depends on square footage, surface type, and buildup. Free estimates in Orlando and Orange County."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you power wash commercial buildings in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We clean storefronts, office buildings, restaurants, medical suites, and warehouses. We can schedule work during off-hours to avoid disrupting your business."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to power wash before painting in Orlando?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Orlando's humidity, dirt, and mildew prevent paint from bonding properly. Power washing removes contaminants so paint adheres and lasts. We wash, let surfaces dry fully, then paint."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should Orlando homes be power washed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Annual power washing is typical in Orlando. Homes near lakes, with heavy tree cover, or facing north (more shade, more mildew) may need washing twice a year."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Power Washing in Orlando</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Power Washing & Soft Wash in Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Remove dirt, algae & mildew from Orlando homes & businesses. Driveways, buildings, roofs, patios. Commercial & residential.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides <a href="/services/power-washing" class="text-gopro-orange hover:underline">power washing and soft wash</a> services to <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a> homeowners and businesses. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we've been cleaning Central Florida properties for over 15 years—removing algae, mildew, dirt, and grime that builds up fast in Orlando's subtropical climate.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Orlando's humidity, afternoon rain, and tree cover create perfect conditions for mold, algae, and black streaks. Regular power washing protects surfaces, improves curb appeal, and is essential before <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">exterior painting</a>. We use the right pressure for each surface—soft wash for delicate siding and roofs, high pressure for concrete.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Power Washing Before Painting</h2>
+          <p class="text-gray-700 font-sans">
+            Planning to paint your Orlando home or business? Power washing is the first step. Dirt, mildew, and chalky oxidation prevent paint from bonding properly. We wash the surface, let it dry fully (critical in humid Orlando weather), then paint. Skipping the wash means paint peels early. Learn more in our <a href="/guides/power-washing-before-painting-florida" class="text-gopro-orange hover:underline">power washing before painting guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Clean in Orlando</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Residential Driveways & Sidewalks</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">House Exteriors (stucco, vinyl, wood)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Roofs (shingle, tile, metal)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Pool Decks & Patios</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Commercial Storefronts & Buildings</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Parking Lots & Walkways</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Fences & Decks</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Dumpster Pads & Loading Docks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-6 tracking-tight">Commercial Power Washing in Orlando</h2>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            We power wash commercial properties in Orlando: storefronts, office buildings, restaurants, medical offices, small warehouses, and parking lots. Clean exteriors improve curb appeal, meet health code requirements (for restaurants), and maintain property value.
+          </p>
+          <p class="text-lg text-gray-700 mb-6 font-sans">
+            We schedule work during off-hours—evenings, weekends, or before business opens—to avoid disrupting customers or operations. Fast, professional, and mindful of your business needs.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does power washing cost in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Driveways $75-$250, house exteriors $200-$600, commercial buildings $300-$1,000+. Pricing depends on square footage, surface type, and buildup. Free estimates in Orlando and Orange County.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you power wash commercial buildings in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We clean storefronts, office buildings, restaurants, medical suites, and warehouses. We can schedule work during off-hours to avoid disrupting your business.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do I need to power wash before painting in Orlando?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Orlando's humidity, dirt, and mildew prevent paint from bonding properly. Power washing removes contaminants so paint adheres and lasts. We wash, let surfaces dry fully, then <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How often should Orlando homes be power washed?</h3>
+              <p class="text-gray-700 font-sans">
+                Annual power washing is typical in Orlando. Homes near lakes, with heavy tree cover, or facing north (more shade, more mildew) may need washing twice a year.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to clean your Orlando home or business?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Power Washing in Orlando"
+    description="Residential & commercial. Fast service, clean results. Serving Orlando & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>
