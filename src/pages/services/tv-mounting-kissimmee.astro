@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="TV Mounting in Kissimmee | Professional Installation | Go Pro"
+  description="Professional TV mounting in Kissimmee. Flat, tilting & full-motion mounts. Wire concealment. Stucco, drywall, brick. Owner-operated. 15+ years in Osceola County."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-kissimmee/#service",
+        "serviceType": "TV Mounting and Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Kissimmee",
+          "containedIn": "Florida"
+        },
+        "description": "Professional TV mounting and installation services for homes and vacation rentals in Kissimmee, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-kissimmee/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TV Mounting in Kissimmee",
+            "item": "https://goprohomeimprovements.com/services/tv-mounting-kissimmee"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-kissimmee/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does TV mounting cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Basic flat mount $150-$250, tilting mount $200-$300, full-motion mount $250-$400. Wire concealment adds $75-$200. Price depends on TV size, mount type, and wall surface."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you mount TVs in Kissimmee vacation rentals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We mount TVs in vacation rental homes near Disney all the time. Guests expect wall-mounted TVs, and we install them safely with proper anchors so they stay secure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you hide TV wires in Kissimmee homes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We run wires inside walls (in-wall) or use paintable cable channels if cutting drywall isn't an option. Most Kissimmee homes have drywall or stucco, and we handle both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you mount TVs above fireplaces in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, when safe. We check heat levels, viewing height, and whether the fireplace is wood-burning or gas. Many Kissimmee homes have gas fireplaces that don't produce damaging heat."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">TV Mounting in Kissimmee</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">TV Mounting in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional TV installation. Flat, tilting & full-motion mounts. Wire concealment. Homes & vacation rentals in Osceola County.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/tv-mounting" class="text-gopro-orange hover:underline">TV mounting</a> in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>. Based right here in Osceola County, we mount TVs in homes, vacation rentals near Disney, and small businesses. We find studs, use proper anchors, hide wires, and make sure your TV stays securely on the wall.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're mounting a 55-inch TV in a bedroom, installing multiple screens in a vacation rental, or building a <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we handle the whole job—mount selection, wire concealment, device hookup, and testing.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Vacation Rentals in Kissimmee</h2>
+          <p class="text-gray-700 font-sans">
+            Kissimmee is vacation rental central near Disney. Guests expect wall-mounted TVs in bedrooms and living rooms. We mount TVs in rental homes all the time—secure installation so guests don't knock them loose, clean wire hiding for professional photos, and fast turnaround between bookings. See our <a href="/guides/kissimmee-vacation-rental-refresh" class="text-gopro-orange hover:underline">vacation rental refresh guide</a> for more.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">TV Mounting Services in Kissimmee</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Flat, Tilting & Full-Motion Mounts</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Wire Concealment (in-wall or cable channels)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Stud Mounting (drywall, stucco, brick)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Above-Fireplace Mounting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Corner & Angled Installations</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Soundbar & Device Mounting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Multi-TV Installations (vacation rentals)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Outdoor TV Mounting (lanais, patios)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does TV mounting cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Basic flat mount $150-$250, tilting mount $200-$300, full-motion mount $250-$400. Wire concealment adds $75-$200. Price depends on TV size, mount type, and wall surface. See <a href="/guides/tv-mounting-cost-orlando" class="text-gopro-orange hover:underline">full TV mounting cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you mount TVs in Kissimmee vacation rentals?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We mount TVs in vacation rental homes near Disney all the time. Guests expect wall-mounted TVs, and we install them safely with proper anchors so they stay secure.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you hide TV wires in Kissimmee homes?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We run wires inside walls (in-wall) or use paintable cable channels if cutting <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a> isn't an option. Most Kissimmee homes have drywall or stucco, and we handle both. See our <a href="/guides/hiding-tv-wires-without-cutting-drywall" class="text-gopro-orange hover:underline">guide to hiding TV wires</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you mount TVs above fireplaces in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, when safe. We check heat levels, viewing height, and whether the fireplace is wood-burning or gas. Many Kissimmee homes have gas fireplaces that don't produce damaging heat. See <a href="/guides/fireplace-tv-mounting-orlando" class="text-gopro-orange hover:underline">fireplace TV mounting guide</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to mount your TV in Kissimmee?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional TV Mounting in Kissimmee"
+    description="Secure installation. Clean wire hiding. Homes & vacation rentals. Based in Osceola County."
+  />
+
+  <Footer />
+</BaseLayout>

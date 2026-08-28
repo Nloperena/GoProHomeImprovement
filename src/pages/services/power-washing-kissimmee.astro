@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Power Washing & Soft Wash in Kissimmee | Go Pro"
+  description="Professional power washing in Kissimmee. Driveways, stucco, roofs, pool decks. Soft wash for algae & mildew. Owner-operated. 15+ years in Osceola County."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-kissimmee/#service",
+        "serviceType": "Power Washing and Soft Washing",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Kissimmee",
+          "containedIn": "Florida"
+        },
+        "description": "Professional power washing and soft wash services for driveways, houses, roofs, pool decks, and patios in Kissimmee, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-kissimmee/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Power Washing in Kissimmee",
+            "item": "https://goprohomeimprovements.com/services/power-washing-kissimmee"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-kissimmee/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does power washing cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Driveways $75-$200, full house exterior $200-$500, pool decks $100-$300, roofs $250-$600. Pricing depends on square footage and surface condition. Free estimates in Kissimmee and Osceola County."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I use soft wash or pressure wash on my Kissimmee home?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Soft wash for stucco, painted surfaces, roofs, and vinyl siding—it removes algae and mildew without damage. Pressure wash for concrete driveways, sidewalks, and pool decks. We choose the right method for each surface."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I power wash in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kissimmee's humidity breeds algae and mildew fast. Most homeowners power wash annually. Vacation rental owners near Disney often wash every 6 months to keep curb appeal strong."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can power washing remove roof black streaks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Black streaks on Kissimmee roofs are algae (Gloeocapsa magma). Soft wash with the right solution removes them safely without damaging shingles or tile."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Power Washing in Kissimmee</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Power Washing & Soft Wash in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Remove algae, mildew, dirt & grime from Kissimmee homes. Driveways, stucco, roofs, pool decks. Based in Osceola County.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/power-washing" class="text-gopro-orange hover:underline">power washing and soft wash</a> services in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>. We're based right here in Osceola County, and we know how fast algae, mildew, and black streaks grow on homes near Disney, I-192, and the Poinciana corridor.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Kissimmee's heat and humidity create perfect conditions for algae, mold, and dirt buildup. Regular power washing keeps your home looking clean, protects surfaces from damage, and is essential before <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting exteriors</a>. We use the right pressure and cleaning solutions for each surface—soft wash for stucco and roofs, pressure wash for concrete.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Soft Wash vs Pressure Wash</h2>
+          <p class="text-gray-700 font-sans">
+            Not all surfaces can handle high pressure. Soft wash uses low pressure + cleaning solution to kill algae and mildew on stucco, painted siding, roofs, and vinyl. Pressure wash uses high pressure for concrete driveways, sidewalks, and pool decks. Using the wrong method damages surfaces. We choose the right approach for each job. Learn more in our <a href="/guides/soft-wash-vs-pressure-wash-kissimmee" class="text-gopro-orange hover:underline">soft wash vs pressure wash guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Clean in Kissimmee</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Driveways & Sidewalks</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Stucco & Painted Siding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Roofs (shingle, tile, metal)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Pool Decks & Patios</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Vinyl Siding & Trim</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Fences & Deck Boards</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Garages & Lanais</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Vacation Rental Exteriors</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-6 tracking-tight">Kissimmee Vacation Rentals</h2>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            Kissimmee is vacation rental central—Disney, Universal, and attractions nearby. Rental properties need to look clean in listing photos and when guests arrive. Algae-covered driveways, black-streaked roofs, and mildewed walls hurt reviews and bookings.
+          </p>
+          <p class="text-lg text-gray-700 mb-6 font-sans">
+            Many Kissimmee rental owners power wash every 6 months to keep curb appeal strong. We work fast, schedule around guest check-ins, and leave the property looking fresh. See our <a href="/guides/kissimmee-vacation-rental-refresh" class="text-gopro-orange hover:underline">vacation rental refresh guide</a> for more.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does power washing cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Driveways $75-$200, full house exterior $200-$500, pool decks $100-$300, roofs $250-$600. Pricing depends on square footage and surface condition. Free estimates in Kissimmee and Osceola County. See full <a href="/guides/pressure-washing-cost-kissimmee" class="text-gopro-orange hover:underline">pricing guide here</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Should I use soft wash or pressure wash on my Kissimmee home?</h3>
+              <p class="text-gray-700 font-sans">
+                Soft wash for stucco, painted surfaces, roofs, and vinyl siding—it removes algae and mildew without damage. Pressure wash for concrete driveways, sidewalks, and pool decks. We choose the right method for each surface.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How often should I power wash in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Kissimmee's humidity breeds algae and mildew fast. Most homeowners power wash annually. Vacation rental owners near Disney often wash every 6 months to keep curb appeal strong.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can power washing remove roof black streaks?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Black streaks on Kissimmee roofs are algae (Gloeocapsa magma). Soft wash with the right solution removes them safely without damaging shingles or tile. Learn more in our <a href="/guides/roof-black-streaks-osceola" class="text-gopro-orange hover:underline">roof black streaks guide</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to clean your Kissimmee home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Power Washing in Kissimmee"
+    description="Remove algae, mildew & dirt. Based in Osceola County. Owner-operated. Fast service."
+  />
+
+  <Footer />
+</BaseLayout>
