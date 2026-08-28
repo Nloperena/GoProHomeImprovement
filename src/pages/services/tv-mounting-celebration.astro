@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="TV Mounting in Celebration | Professional Installation | Go Pro"
+  description="Professional TV mounting in Celebration, FL. Flat, tilting & full-motion mounts. Wire concealment. Homes & vacation rentals. 15+ years."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Celebration", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-celebration/#service",
+        "serviceType": "TV Mounting and Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Celebration",
+          "containedIn": "Florida"
+        },
+        "description": "Professional TV mounting and installation services for homes and vacation rentals in Celebration, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-celebration/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TV Mounting in Celebration",
+            "item": "https://goprohomeimprovements.com/services/tv-mounting-celebration"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/tv-mounting-celebration/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does TV mounting cost in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Basic flat mount $150-$250, tilting mount $200-$300, full-motion mount $250-$400. Wire concealment $75-$200 extra. Pricing depends on TV size, mount type, and wall surface."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you mount TVs in Celebration vacation rentals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Celebration vacation rental owners upgrade TVs to attract guests. We mount TVs quickly to minimize rental downtime and can install multiple TVs in one visit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between flat and full-motion mounts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Flat mounts sit flush against the wall—cheapest and sleekest. Tilting mounts angle down (good for mounting above eye level). Full-motion mounts extend, swivel, and tilt—most expensive but most flexible."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you remove old TV mounts in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We remove old mounts, patch drywall holes, and paint over them if needed. Then we install the new TV in the same spot or a new location."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">TV Mounting in Celebration</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">TV Mounting in Celebration</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional TV installation in Celebration homes & vacation rentals. Secure mounting, clean wiring. Serving Celebration & Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/tv-mounting" class="text-gopro-orange hover:underline">TV mounting</a> in <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> for homes and vacation rentals. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we've been installing TVs in Central Florida for over 15 years—finding studs, mounting securely, hiding wires, and making sure everything works before we leave.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're mounting a single TV in a primary residence, upgrading multiple TVs in a Disney-area vacation rental, or building a <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we handle the full installation—mount selection, wire concealment, device hookup, and testing.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">TV Mounting for Celebration Vacation Rentals</h2>
+          <p class="text-gray-700 font-sans">
+            Many Celebration homes operate as vacation rentals near Disney World. Property owners upgrade TVs and entertainment setups to attract guests and justify higher nightly rates. We mount TVs quickly to minimize rental downtime, install multiple TVs in one visit (living room, bedrooms, outdoor patios), and handle wire concealment so the installation looks professional in listing photos. See our <a href="/guides/tv-mounting-vs-home-theater" class="text-gopro-orange hover:underline">TV mounting vs. home theater guide</a> and <a href="/guides/kissimmee-vacation-rental-refresh" class="text-gopro-orange hover:underline">vacation rental refresh guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">TV Mounting Services in Celebration</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Flat, Tilting & Full-Motion Mounts</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">In-Wall Wire Concealment</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Stud Mounting (any wall type)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Above-Fireplace Installations</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Outdoor Patio TV Mounting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Soundbar & Device Mounting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Multi-TV Vacation Rental Installs</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Old Mount Removal & Patching</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does TV mounting cost in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Basic flat mount $150-$250, tilting mount $200-$300, full-motion mount $250-$400. Wire concealment $75-$200 extra. Pricing depends on TV size, mount type, and wall surface. See <a href="/guides/tv-mounting-cost-orlando" class="text-gopro-orange hover:underline">full cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you mount TVs in Celebration vacation rentals?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Many Celebration vacation rental owners upgrade TVs to attract guests. We mount TVs quickly to minimize rental downtime and can install multiple TVs in one visit.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">What's the difference between flat and full-motion mounts?</h3>
+              <p class="text-gray-700 font-sans">
+                Flat mounts sit flush against the wall—cheapest and sleekest. Tilting mounts angle down (good for mounting above eye level). Full-motion mounts extend, swivel, and tilt—most expensive but most flexible.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you remove old TV mounts in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We remove old mounts, patch <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall</a> holes, and paint over them if needed. Then we install the new TV in the same spot or a new location.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to mount your TV in Celebration?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional TV Mounting in Celebration"
+    description="Homes & vacation rentals. Secure mounting, clean wiring. Serving Celebration & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

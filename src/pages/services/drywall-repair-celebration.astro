@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Drywall Repair in Celebration | Holes, Cracks, Water Damage | Go Pro"
+  description="Professional drywall repair in Celebration, FL. Holes, cracks, water damage, texture matching. Owner-operated. 15+ years in Central Florida. Free estimates."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Celebration", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-celebration/#service",
+        "serviceType": "Drywall Repair",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Celebration",
+          "containedIn": "Florida"
+        },
+        "description": "Professional drywall repair services for holes, cracks, water damage, and texture matching in Celebration, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-celebration/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Drywall Repair in Celebration",
+            "item": "https://goprohomeimprovements.com/services/drywall-repair-celebration"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/drywall-repair-celebration/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does drywall repair cost in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Small holes (doorknob-size) $75-$150, large holes (fist-size+) $150-$300, water damage repair $200-$600+. Pricing depends on damage size, texture matching, and whether painting is included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with HOA requirements in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Celebration HOAs sometimes require approval for exterior repairs or changes to rental properties. We handle interior drywall repairs (walls, ceilings) which typically don't need HOA approval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you repair water-damaged drywall?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, after the leak is fixed. We cut out wet or moldy drywall, let the area dry, install new drywall, tape, mud, sand, texture, and paint. Water damage must be addressed fast in Central Florida to prevent mold."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can drywall repairs be painted to match?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We can paint just the repaired area or the full wall/room depending on your preference. Color-matching existing paint works best for small touch-ups."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Drywall Repair in Celebration</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Drywall Repair in Celebration</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Fix holes, cracks & water damage. Texture matching. Professional repairs that disappear. Serving Celebration & Osceola County.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/drywall" class="text-gopro-orange hover:underline">drywall repair</a> in <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we fix holes, cracks, nail pops, and water damage in Celebration homes and vacation rentals. We patch, tape, mud, sand, texture-match, and paint so the repair blends seamlessly with the rest of the wall.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether it's a doorknob hole from moving furniture, cracks from settling, or water damage from AC condensation or roof leaks, we handle the full repair—often same-day for small jobs. Celebration homes typically have textured walls or ceilings, and we match that texture so you can't tell where the repair was done.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Celebration Vacation Rental Repairs</h2>
+          <p class="text-gray-700 font-sans">
+            Many Celebration homes near Disney operate as short-term vacation rentals. Guests occasionally damage walls (moving luggage, kids playing, accidental doorknob hits). Fast drywall repair gets the rental back online quickly. We patch holes, match texture, and paint in a day or two so you don't lose bookings. Celebration HOAs sometimes have specific exterior requirements—interior drywall repairs usually don't need HOA approval, but we're familiar with local guidelines.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Drywall Repairs in Celebration</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Small & Large Holes</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Cracks & Nail Pops</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Water Damage Repair</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Texture Matching (orange peel, knockdown)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Ceiling Repairs</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Skim Coating (smoothing rough walls)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Patch & Paint (color matching)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Settling Crack Repair</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does drywall repair cost in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Small holes (doorknob-size) $75-$150, large holes (fist-size+) $150-$300, water damage repair $200-$600+. Pricing depends on damage size, texture matching, and whether <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a> is included. See our <a href="/guides/drywall-repair-cost-kissimmee" class="text-gopro-orange hover:underline">drywall repair cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you work with HOA requirements in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Celebration HOAs sometimes require approval for exterior repairs or changes to rental properties. We handle interior drywall repairs (walls, ceilings) which typically don't need HOA approval.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you repair water-damaged drywall?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes, after the leak is fixed. We cut out wet or moldy drywall, let the area dry, install new drywall, tape, mud, sand, texture, and paint. Water damage must be addressed fast in Central Florida to prevent mold.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can drywall repairs be painted to match?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We can paint just the repaired area or the full wall/room depending on your preference. Color-matching existing paint works best for small touch-ups.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Need drywall repair in Celebration?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Drywall Repair in Celebration"
+    description="Fast repairs. Texture matching. Paint included. Serving Celebration & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

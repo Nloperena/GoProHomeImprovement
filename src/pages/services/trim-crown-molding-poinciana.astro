@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Crown Molding & Trim Installation in Poinciana | Go Pro"
+  description="Professional crown molding, baseboard & trim installation in Poinciana, FL. Custom carpentry. Owner-operated. 15+ years in Central Florida. Free estimates."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Poinciana", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-poinciana/#service",
+        "serviceType": "Crown Molding and Trim Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Poinciana",
+          "containedIn": "Florida"
+        },
+        "description": "Professional crown molding, baseboard, and trim installation services in Poinciana, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-poinciana/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Crown Molding in Poinciana",
+            "item": "https://goprohomeimprovements.com/services/trim-crown-molding-poinciana"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-poinciana/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does crown molding cost in Poinciana?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Crown molding $3-$8 per linear foot installed (materials + labor). A typical 12x14 room costs $300-$600. Pricing depends on molding style, room size, and ceiling height. Free estimates in Poinciana."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you install crown molding in rooms with vaulted ceilings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Vaulted or cathedral ceilings require angled cuts and careful measuring. Many Poinciana homes have vaulted ceilings in living rooms and main bedrooms, and we handle the carpentry."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint the trim after installing it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We caulk gaps, prime, and paint the trim to match your walls or in a custom color. Most Poinciana homeowners choose white or off-white trim."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does crown molding increase home value?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Crown molding increases perceived value. Homes with crown molding feel more finished and upscale. It helps homes sell faster and look better in listing photos."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Crown Molding in Poinciana</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Crown Molding & Trim in Poinciana</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional crown molding, baseboards & trim installation. Custom carpentry. Quality finish. Serving Poinciana & Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/trim-crown-molding" class="text-gopro-orange hover:underline">crown molding and trim installation</a> in <a href="/areas/poinciana" class="text-gopro-orange hover:underline">Poinciana</a>. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we install crown molding, baseboards, door and window casing, and custom trim in Poinciana homes. Precise carpentry, tight corners, clean paint finish.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Crown molding adds architectural detail to ceilings and makes rooms feel taller and more finished. Many Poinciana homeowners add crown molding to living rooms and bedrooms to increase home value and improve the look of their interiors before selling.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Moisture-Resistant Molding for Central Florida</h2>
+          <p class="text-gray-700 font-sans">
+            Central Florida humidity can warp or sag traditional MDF crown molding over time. We recommend polyurethane (foam) crown molding for Poinciana homes—it's lightweight, moisture-resistant, and looks like real wood once primed and painted. It won't swell, warp, or drop like MDF, even in humid summers. See our <a href="/guides/crown-molding-cost-kissimmee" class="text-gopro-orange hover:underline">crown molding cost guide</a> for pricing details.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Trim & Molding Services in Poinciana</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Crown Molding Installation</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Baseboard Installation & Replacement</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Door & Window Casing</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Chair Rail & Wainscoting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Quarter Round & Shoe Molding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Custom Trim Carpentry</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does crown molding cost in Poinciana?</h3>
+              <p class="text-gray-700 font-sans">
+                Crown molding $3-$8 per linear foot installed (materials + labor). A typical 12x14 room costs $300-$600. Pricing depends on molding style, room size, and ceiling height. Free estimates in Poinciana. See our <a href="/guides/crown-molding-cost-kissimmee" class="text-gopro-orange hover:underline">crown molding cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you install crown molding in rooms with vaulted ceilings?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Vaulted or cathedral ceilings require angled cuts and careful measuring. Many Poinciana homes have vaulted ceilings in living rooms and main bedrooms, and we handle the carpentry.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint the trim after installing it?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We caulk gaps, prime, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> the trim to match your walls or in a custom color. Most Poinciana homeowners choose white or off-white trim.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Does crown molding increase home value?</h3>
+              <p class="text-gray-700 font-sans">
+                Crown molding increases perceived value. Homes with crown molding feel more finished and upscale. It helps homes sell faster and look better in listing photos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to add crown molding or trim to your Poinciana home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Crown Molding & Trim in Poinciana"
+    description="Add detail & value. Quality carpentry, clean finish. Serving Poinciana & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>
