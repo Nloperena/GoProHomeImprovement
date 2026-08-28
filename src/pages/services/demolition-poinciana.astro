@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Demolition Services in Poinciana, FL | Interior Demo & Tear-Out"
+  description="Safe, efficient demolition in Poinciana, FL. Kitchen tear-outs, wall removal, bathroom demo. 15+ years. Free estimates."
+  ogImage="/images/demolition.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "legalName": "GO PRO HOME IMPROVEMENTS INC.",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Poinciana" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/demolition-poinciana/#service",
+        "serviceType": "Demolition Services",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "Poinciana" },
+        "description": "Professional interior demolition for residential and commercial remodeling projects in Poinciana, FL. Safe, efficient, and clean."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/demolition-poinciana/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Demolition Poinciana",
+            "item": "https://goprohomeimprovements.com/services/demolition-poinciana"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/demolition-poinciana/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does demolition cost in Poinciana?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Demolition costs depend on scope and disposal needs. Kitchen or bathroom tear-out typically runs $500-$2,000, interior wall removal $200-$800 per wall. Dumpster rental adds $300-$600. We provide free estimates with labor, disposal, and cleanup itemized."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you haul away demolition debris?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We bring a dumpster, load all debris, and haul it away. You don't lift a finger. Disposal fees are included in the estimate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you remove a wall without damaging the rest of the house?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We protect floors, contain dust, identify load-bearing walls (which need proper support before removal), and demo carefully so adjacent rooms stay intact. 15+ years of experience means we know how to tear down without tearing up."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a permit for demolition in Poinciana?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior demo (non-structural) usually doesn't require a permit in Poinciana. Removing load-bearing walls does. We advise on permit needs and can pull permits when required."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Demolition in Poinciana</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Demolition Services in Poinciana, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Safe interior demo for remodels. Kitchens, bathrooms, walls. Clean, fast, debris removal included.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/demolition.jpg" alt="Professional demolition services in Poinciana" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Demolition is the first step in any remodel—and how you demo matters. Careful tear-out protects floors, contains dust, and leaves surfaces ready for the next phase. We handle <a href="/areas/poinciana" class="text-gopro-orange hover:underline">Poinciana</a> kitchen and bathroom tear-outs, wall removal, and interior demo for residential and commercial remodels.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            We bring the dumpster, load all debris, and haul it away. You don't lift a finger. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, serving <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a> for 15+ years.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Kitchen & Bathroom Remodels in Poinciana</h2>
+          <p class="text-gray-700 font-sans">
+            Many Poinciana homeowners update kitchens and bathrooms to increase home value and modernize aging finishes. Demo is the messy part—removing old cabinets, tile, vanities, and flooring—and we handle it carefully so plumbing and electrical stay intact. We protect your home, contain dust, haul debris, and leave a clean workspace for the next contractor or for us to continue the remodel. See our <a href="/guides/kitchen-bathroom-demo-kissimmee" class="text-gopro-orange hover:underline">kitchen & bathroom demo guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Common Demolition Projects in Poinciana</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Kitchen Tear-Outs (cabinets, counters, flooring)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Bathroom Demo (tile, fixtures, vanities)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Interior Wall Removal</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Flooring Tear-Out (tile, carpet, hardwood)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Cabinet & Vanity Removal</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Drywall & Ceiling Removal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does demolition cost in Poinciana?</h3>
+              <p class="text-gray-700 font-sans">
+                Demolition costs depend on scope and disposal needs. Kitchen or bathroom tear-out typically runs $500-$2,000, interior wall removal $200-$800 per wall. Dumpster rental adds $300-$600. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free estimates</a> with labor, disposal, and cleanup itemized.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you haul away demolition debris?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We bring a dumpster, load all debris, and haul it away. You don't lift a finger. Disposal fees are included in the estimate.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you remove a wall without damaging the rest of the house?</h3>
+              <p class="text-gray-700 font-sans">
+                Absolutely. We protect floors, contain dust, identify load-bearing walls (which need proper support before removal), and demo carefully so adjacent rooms stay intact. 15+ years of experience means we know how to tear down without tearing up.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do I need a permit for demolition in Poinciana?</h3>
+              <p class="text-gray-700 font-sans">
+                Interior demo (non-structural) usually doesn't require a permit in Poinciana. Removing load-bearing walls does. We advise on permit needs and can pull permits when required.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to start your Poinciana remodel with professional demo?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Safe, Efficient Demolition for Poinciana Remodels"
+    description="Clean tear-out, debris removal included. Serving Poinciana and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

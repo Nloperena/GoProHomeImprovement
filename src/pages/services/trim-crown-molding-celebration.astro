@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Crown Molding & Trim Installation in Celebration | Go Pro"
+  description="Professional crown molding, baseboard & trim installation in Celebration, FL. Custom carpentry. Owner-operated. 15+ years. Free estimates."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Celebration", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-celebration/#service",
+        "serviceType": "Crown Molding and Trim Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Celebration",
+          "containedIn": "Florida"
+        },
+        "description": "Professional crown molding, baseboard, and trim installation services in Celebration, Florida."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-celebration/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Crown Molding in Celebration",
+            "item": "https://goprohomeimprovements.com/services/trim-crown-molding-celebration"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/trim-crown-molding-celebration/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does crown molding cost in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Crown molding $3-$8 per linear foot installed (materials + labor). A typical 12x14 room costs $300-$600. Pricing depends on molding style, room size, and ceiling height. Free estimates in Celebration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you install crown molding in vacation rentals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Celebration vacation rental owners add crown molding to main living areas and bedrooms to increase perceived value and improve listing photos. Crown molding helps rentals stand out in the competitive Disney-area market."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint the trim after installing it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We caulk gaps, prime, and paint the trim to match your walls or in a custom color. Most Celebration homeowners choose white or off-white trim."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does crown molding work with Celebration's humid climate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes—we use polyurethane (foam) crown molding in most Central Florida homes. It doesn't warp or sag in humidity like MDF or wood. Looks like real wood once primed and painted."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Crown Molding in Celebration</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Crown Molding & Trim in Celebration</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Professional crown molding, baseboards & trim installation. Custom carpentry. Quality finish. Serving Celebration & Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements provides professional <a href="/services/trim-crown-molding" class="text-gopro-orange hover:underline">crown molding and trim installation</a> in <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>. Based in nearby <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, we install crown molding, baseboards, door and window casing, and custom trim in homes and vacation rentals. Precise carpentry, tight corners, clean paint finish.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Crown molding adds architectural detail to ceilings and makes rooms feel taller and more finished. Many Celebration vacation rental owners add crown molding to living rooms and main bedrooms because it photographs well and helps properties compete in the Disney-area rental market.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Crown Molding for Celebration Vacation Rentals</h2>
+          <p class="text-gray-700 font-sans">
+            Celebration is a popular vacation rental market near Disney World, and property owners invest in details that elevate their rentals. Crown molding makes rooms look more upscale in listing photos and helps justify higher nightly rates. We work quickly to minimize rental downtime—often installing crown molding in one or two days for a full home. See our <a href="/guides/crown-molding-cost-kissimmee" class="text-gopro-orange hover:underline">crown molding cost guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Trim & Molding Services in Celebration</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Crown Molding Installation</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Baseboard Installation & Replacement</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Door & Window Casing</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Chair Rail & Wainscoting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Quarter Round & Shoe Molding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Custom Trim Carpentry</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does crown molding cost in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Crown molding $3-$8 per linear foot installed (materials + labor). A typical 12x14 room costs $300-$600. Pricing depends on molding style, room size, and ceiling height. Free estimates in Celebration. See our <a href="/guides/crown-molding-cost-kissimmee" class="text-gopro-orange hover:underline">crown molding cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you install crown molding in vacation rentals?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Many Celebration vacation rental owners add crown molding to main living areas and bedrooms to increase perceived value and improve listing photos. Crown molding helps rentals stand out in the competitive Disney-area market.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint the trim after installing it?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We caulk gaps, prime, and <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint</a> the trim to match your walls or in a custom color. Most Celebration homeowners choose white or off-white trim.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Does crown molding work with Celebration's humid climate?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes—we use polyurethane (foam) crown molding in most Central Florida homes. It doesn't warp or sag in humidity like MDF or wood. Looks like real wood once primed and painted.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to add crown molding or trim to your Celebration home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Crown Molding & Trim in Celebration"
+    description="Add detail & value. Quality carpentry, clean finish. Serving Celebration & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

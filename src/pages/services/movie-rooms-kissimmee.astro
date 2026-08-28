@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Home Theater Installation in Kissimmee | Movie Rooms | Go Pro"
+  description="Home theater design & installation in Kissimmee, FL. Full room builds, AV setup, acoustic panels, seating. Owner-operated. 15+ years experience."
+  ogImage="/images/movie-room.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Kissimmee", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/movie-rooms-kissimmee/#service",
+        "serviceType": "Home Theater Installation",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Kissimmee",
+          "containedIn": "Florida"
+        },
+        "description": "Complete home theater design and installation in Kissimmee including AV equipment, acoustic panels, custom seating, and themed decor."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/movie-rooms-kissimmee/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Movie Rooms in Kissimmee",
+            "item": "https://goprohomeimprovements.com/services/movie-rooms-kissimmee"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/movie-rooms-kissimmee/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a home theater cost in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on room size and equipment. A basic setup with painting, trim work, and mid-range AV starts around $5,000-$10,000. Full custom builds with acoustic panels, tiered seating, and high-end equipment run $15,000-$50,000+. We provide free consultations and itemized quotes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build home theaters in Kissimmee vacation rentals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Kissimmee vacation rental owners add home theaters (or upgraded movie rooms) to attract guests and increase booking rates. A dedicated theater space with themed decor makes listing photos stand out in the competitive Disney-area rental market."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you convert a spare room into a home theater?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Most home theaters in Kissimmee are converted spare bedrooms or bonus rooms. We paint walls dark, install acoustic panels, mount the screen or TV, wire surround sound, add seating, and control lighting. No structural changes needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between a movie room and a home theater?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A movie room is a regular room with a mounted TV and soundbar—simple, affordable. A home theater is a dedicated space with a projector or large screen, surround sound, acoustic treatment, tiered seating, and ambient lighting—more immersive, more expensive."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Movie Rooms in Kissimmee</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Home Theater Installation in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Complete home theater design & installation. Room build-outs, AV setup, acoustic panels, seating. Serving Kissimmee & Osceola County.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/movie-room.jpg" alt="Home theater installation in Kissimmee" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro Home Improvements designs and builds <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theaters</a> in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> homes and vacation rentals. We handle the full build—room design, painting, trim work, <a href="/services/tv-mounting" class="text-gopro-orange hover:underline">TV or projector mounting</a>, acoustic panels, lighting, seating—and coordinate AV equipment installation. Whether you want a simple movie room or a full luxury theater, we build it right.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Most Kissimmee home theaters are converted spare bedrooms or bonus rooms. We paint walls dark, install sound-absorbing panels, mount screens, wire surround sound, add dimmable lighting, and source seating. Some vacation rental owners add themed decor (Star Wars, Harry Potter, classic cinema) to make the theater a booking highlight. Based in Kissimmee, serving Central Florida.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Home Theaters for Kissimmee Vacation Rentals</h2>
+          <p class="text-gray-700 font-sans">
+            Many Kissimmee vacation rental owners near Disney add home theaters to attract families and increase booking rates. A dedicated theater with tiered seating, a big screen, and themed decor stands out in listing photos and justifies higher nightly rates. We work quickly to minimize rental downtime and design theaters that photograph well. See our <a href="/guides/kissimmee-vacation-rental-refresh" class="text-gopro-orange hover:underline">vacation rental refresh guide</a> and <a href="/guides/movie-room-setup-cost-orlando" class="text-gopro-orange hover:underline">home theater cost guide</a>.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Home Theater Services in Kissimmee</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Room Design & Consultation</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Painting & Trim Work</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Projector or TV Mounting</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Acoustic Panels & Soundproofing</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Lighting Design & Installation</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Seating & Furniture</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">AV Equipment Coordination</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Themed Decor & Murals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a home theater cost in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on room size and equipment. A basic setup with painting, trim work, and mid-range AV starts around $5,000-$10,000. Full custom builds with acoustic panels, tiered seating, and high-end equipment run $15,000-$50,000+. We provide free consultations and itemized quotes. See our <a href="/guides/movie-room-setup-cost-orlando" class="text-gopro-orange hover:underline">home theater cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you build home theaters in Kissimmee vacation rentals?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Many Kissimmee vacation rental owners add home theaters (or upgraded movie rooms) to attract guests and increase booking rates. A dedicated theater space with themed decor makes listing photos stand out in the competitive Disney-area rental market.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you convert a spare room into a home theater?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Most home theaters in Kissimmee are converted spare bedrooms or bonus rooms. We paint walls dark, install acoustic panels, mount the screen or TV, wire surround sound, add seating, and control lighting. No structural changes needed.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">What's the difference between a movie room and a home theater?</h3>
+              <p class="text-gray-700 font-sans">
+                A movie room is a regular room with a mounted TV and soundbar—simple, affordable. A home theater is a dedicated space with a projector or large screen, surround sound, acoustic treatment, tiered seating, and ambient lighting—more immersive, more expensive. See our <a href="/guides/tv-mounting-vs-home-theater" class="text-gopro-orange hover:underline">TV mounting vs. home theater guide</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to build a home theater in your Kissimmee home?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Consultation
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Custom Home Theaters in Kissimmee"
+    description="From simple movie rooms to luxury theaters. Room design, AV setup, acoustic panels, seating. Serving Kissimmee & Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>
