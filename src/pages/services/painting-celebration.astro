@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Interior & Exterior Painting in Celebration, FL | Go Pro Home Improvements"
+  description="Professional painting in Celebration, FL. Interior rooms, exterior siding, cabinets, trim. 15+ years. Owner-operated. Free estimates."
+  ogImage="/images/bedroom-paint.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Celebration" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/painting-celebration/#service",
+        "serviceType": "Interior and Exterior Painting",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "Celebration" },
+        "description": "Professional residential painting services for interior rooms, exterior siding, cabinets, and trim in Celebration, FL."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/painting-celebration/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Painting Celebration",
+            "item": "https://goprohomeimprovements.com/services/painting-celebration"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/painting-celebration/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you follow Celebration HOA paint guidelines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Celebration has strict HOA color requirements. We help you choose approved colors, submit architectural review requests if needed, and keep the job clean and on schedule. We've painted dozens of Celebration homes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does interior painting cost in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interior painting costs depend on square footage, ceiling height, and surface condition. A typical bedroom ranges $300-$600, living rooms $400-$900. We provide free estimates so you know the exact cost upfront."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a painting job take in Celebration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A single room typically takes 1-2 days including prep. Full interior repaints take 3-5 days. Exterior painting depends on home size—most take 3-7 days including power washing, prep, and two coats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you paint cabinets and trim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We paint kitchen cabinets, bathroom vanities, baseboards, and crown molding. Cabinet painting requires careful prep and the right primer—we've done hundreds in Central Florida."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Painting in Celebration</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Interior & Exterior Painting in Celebration, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Quality painting for Celebration homes. Interior rooms, exterior siding, cabinets. HOA-compliant, owner-operated.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/bedroom-paint.jpg" alt="Professional interior painting in Celebration, FL" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Painting a <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> home means working within HOA guidelines, respecting neighborhood standards, and delivering results that hold up in Florida's climate. We <a href="/services/power-washing" class="text-gopro-orange hover:underline">power wash</a> exteriors before painting, patch and sand drywall, prime stains, and use quality paint rated for sun and humidity.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Whether you're refreshing a bedroom, updating kitchen cabinets, or repainting your exterior for curb appeal, we work clean, on schedule, and stand behind the finished job. Based in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, serving Celebration and <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Celebration HOA Guidelines</h2>
+          <p class="text-gray-700 font-sans">
+            Celebration has architectural review requirements for exterior paint. We help you navigate color approval, submit documentation if needed, and keep your project HOA-compliant from start to finish. We've painted dozens of Celebration homes and know the process.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Painting Services in Celebration</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Interior Rooms (bedrooms, living rooms, hallways)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Exterior Siding (vinyl, stucco, Hardie)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Kitchen Cabinets & Vanities</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans"><a href="/services/trim-crown-molding" class="text-gopro-orange hover:underline">Trim, Baseboards, Crown Molding</a></span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Doors & Window Frames</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Accent Walls</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you follow Celebration HOA paint guidelines?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. Celebration has strict HOA color requirements. We help you choose approved colors, submit architectural review requests if needed, and keep the job clean and on schedule. We've painted dozens of Celebration homes.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does interior painting cost in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                Interior painting costs depend on square footage, ceiling height, and surface condition. A typical bedroom ranges $300-$600, living rooms $400-$900. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free estimates</a> so you know the exact cost upfront.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does a painting job take in Celebration?</h3>
+              <p class="text-gray-700 font-sans">
+                A single room typically takes 1-2 days including prep. Full interior repaints take 3-5 days. Exterior painting depends on home size—most take 3-7 days including <a href="/services/power-washing" class="text-gopro-orange hover:underline">power washing</a>, prep, and two coats.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint cabinets and trim?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We paint kitchen cabinets, bathroom vanities, baseboards, and crown molding. Cabinet painting requires careful prep and the right primer—we've done hundreds in Central Florida. Learn more about <a href="/guides/cabinet-painting-vs-replacement-kissimmee" class="text-gopro-orange hover:underline">cabinet painting vs replacement</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to refresh your Celebration home with quality painting?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Transform Your Celebration Home with Professional Painting"
+    description="Quality prep, quality paint, and owner-operated care. Serving Celebration and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

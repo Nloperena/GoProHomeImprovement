@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Power Washing in St. Cloud, FL | Driveways, Houses, Patios"
+  description="Power washing in St. Cloud, FL. Driveways, pool decks, siding, patios. Remove algae & mildew. Owner-operated, 15+ years experience."
+  ogImage="/images/power-washing.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "St. Cloud" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-st-cloud/#service",
+        "serviceType": "Power Washing",
+        "provider": {
+          "@id": "https://goprohomeimprovements.com/#business"
+        },
+        "areaServed": { "@type": "City", "name": "St. Cloud" },
+        "description": "Professional power washing for driveways, houses, pool decks, patios, and more in St. Cloud, FL."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-st-cloud/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://goprohomeimprovements.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Power Washing St. Cloud",
+            "item": "https://goprohomeimprovements.com/services/power-washing-st-cloud"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/services/power-washing-st-cloud/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does power washing cost in St. Cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost depends on square footage and surface type. Driveways typically range $100-$300, full house exteriors $200-$600. We provide free estimates so you know the exact price before we start."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will power washing damage my siding or driveway?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not when done correctly. We adjust pressure and technique for each surface—soft wash for vinyl siding, higher pressure for concrete. 15+ years of experience means we know how to clean safely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I power wash my St. Cloud home?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Florida's humidity and sun cause algae and mildew to grow faster. Most St. Cloud homes benefit from power washing every 12-18 months. Driveways and pool decks may need it more often depending on use and tree coverage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you use soft wash or high pressure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both, depending on the surface. We soft wash roofs, vinyl siding, and painted surfaces to avoid damage. We use higher pressure for concrete driveways, patios, and pool decks. We match the method to the job."
+            }
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Power Washing in St. Cloud</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Power Washing in St. Cloud, FL</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Driveways, pool decks, siding, patios. Remove algae, mildew & grime. Serving St. Cloud and Central Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative h-96 overflow-hidden">
+    <img src="/images/power-washing.jpg" alt="Professional power washing services in St. Cloud" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a> driveways, patios, and home exteriors collect algae, mildew, and dirt from Florida's humidity and frequent rain. We remove it with the right pressure and technique—soft wash for delicate surfaces, high pressure for concrete and pavers.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 font-sans">
+            Power washing refreshes curb appeal, preps surfaces for <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a>, and prevents mildew from spreading. Based in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, serving St. Cloud and <a href="/areas/central-florida" class="text-gopro-orange hover:underline">Central Florida</a>.
+          </p>
+        </div>
+
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">St. Cloud Humidity & Algae</h2>
+          <p class="text-gray-700 font-sans">
+            St. Cloud's proximity to lakes means more moisture, faster algae growth, and stubborn green stains on driveways and north-facing walls. We adjust our technique and cleaning solutions for local conditions—not just blast everything with the same pressure.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What We Power Wash in St. Cloud</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Driveways & Walkways</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Pool Decks & Patios</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Vinyl & Stucco Siding</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Roofs (soft wash)</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Fences & Decks</span>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gopro-orange mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700 font-sans">Gutters & Soffits</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does power washing cost in St. Cloud?</h3>
+              <p class="text-gray-700 font-sans">
+                Cost depends on square footage and surface type. Driveways typically range $100-$300, full house exteriors $200-$600. We provide <a href="/estimate" class="text-gopro-orange hover:underline">free estimates</a> so you know the exact price before we start. Read our detailed <a href="/guides/pressure-washing-cost-kissimmee" class="text-gopro-orange hover:underline">pressure washing cost guide</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Will power washing damage my siding or driveway?</h3>
+              <p class="text-gray-700 font-sans">
+                Not when done correctly. We adjust pressure and technique for each surface—soft wash for vinyl siding, higher pressure for concrete. 15+ years of experience means we know how to clean safely. Learn more about <a href="/guides/soft-wash-vs-pressure-wash-kissimmee" class="text-gopro-orange hover:underline">soft wash vs pressure wash</a>.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How often should I power wash my St. Cloud home?</h3>
+              <p class="text-gray-700 font-sans">
+                Florida's humidity and sun cause algae and mildew to grow faster. Most St. Cloud homes benefit from power washing every 12-18 months. Driveways and pool decks may need it more often depending on use and tree coverage.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you use soft wash or high pressure?</h3>
+              <p class="text-gray-700 font-sans">
+                Both, depending on the surface. We soft wash roofs, vinyl siding, and painted surfaces to avoid damage. We use higher pressure for concrete driveways, patios, and pool decks. We match the method to the job.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6 font-sans">Ready to clean your St. Cloud property?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/estimate" class="btn-primary">
+              Get Free Estimate
+            </a>
+            <a href="tel:4072446873" class="btn-secondary">
+              Call (407) 244-6873
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Professional Power Washing for St. Cloud Homes"
+    description="Remove algae, mildew, and grime with the right pressure. Serving St. Cloud and Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>
