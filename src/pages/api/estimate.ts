@@ -1,5 +1,7 @@
 import type { APIRoute } from 'astro';
 
+export const prerender = false;
+
 const NEXRENA_API_URL = 'https://api.nexrena.com/api/forms/submit';
 const SITE_KEY = 'gopro';
 
