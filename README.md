@@ -16,6 +16,20 @@ Production-quality marketing website for Go Pro Home Improvements, a home improv
 npm install
 ```
 
+### Environment Variables
+
+Copy `.env.example` to `.env` and configure the required variables:
+
+```bash
+cp .env.example .env
+```
+
+**Required for production:**
+
+- `GOPRO_FORM_SECRET` - Nexrena form API secret key (same value as `GOPRO_FORM_SECRET` on nexrena-api Heroku environment)
+
+**Note:** The estimate form will work in local development without this variable (submissions are logged to console but not sent to Nexrena). In production, the form will return a 503 error if this variable is not configured.
+
 ### Development Server
 
 ```bash
@@ -52,7 +66,7 @@ npm run preview
 
 ### API Routes
 
-- `/api/estimate` - Form submission endpoint (currently logs to console in dev)
+- `/api/estimate` - Form submission endpoint (forwards to Nexrena portal with siteKey `gopro`)
 
 ## Brand
 
@@ -74,11 +88,10 @@ These items are not included in the build and should be provided by the client:
 8. **Google Reviews Integration** (need to set up Google My Business API)
 9. **Job Photos** (need to download from current site and add to gallery)
 10. **Logo Files** (download from current site for higher quality version)
-11. **Form Backend** (currently just logs to console - needs email service or CRM integration)
 
 ## Production Deployment Checklist
 
-- [ ] Set up form submission backend (email service, database, or CRM)
+- [ ] Configure `GOPRO_FORM_SECRET` environment variable in Vercel (same value as nexrena-api Heroku)
 - [ ] Add real job photos to gallery
 - [ ] Download and optimize logo files
 - [ ] Set up Google Analytics or other analytics
