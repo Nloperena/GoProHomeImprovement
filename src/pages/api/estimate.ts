@@ -117,8 +117,8 @@ function validateCity(city: string): string | null {
     return 'Please enter a valid city name (2-60 characters).';
   }
   
-  if (!/^[a-zA-Z\s\-']+$/.test(trimmed)) {
-    return 'City name should only contain letters, spaces, hyphens, and apostrophes.';
+  if (!/^[a-zA-Z\s\-'.]+$/.test(trimmed)) {
+    return 'City name should only contain letters, spaces, hyphens, apostrophes, and periods.';
   }
   
   if (!hasVowel(trimmed)) {
