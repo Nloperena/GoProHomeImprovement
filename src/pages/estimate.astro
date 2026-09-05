@@ -125,6 +125,18 @@ import Footer from '../components/Footer.astro';
               </p>
             </div>
 
+            <!-- Honeypot field - hidden from humans, visible to bots -->
+            <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+              <label for="website">Website</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
             <div class="pt-4">
               <button
                 type="submit"
@@ -212,11 +224,18 @@ import Footer from '../components/Footer.astro';
     const formSuccess = document.getElementById('form-success');
     const formError = document.getElementById('form-error');
 
+    // Record when the form loaded (timing gate)
+    const formStartedAt = Date.now();
+
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
+
+      // Add timing gate and honeypot data
+      (data as any).formStartedAt = formStartedAt;
+      (data as any).website = (data as any).website || '';
 
       try {
         const response = await fetch('/api/estimate', {
@@ -227,12 +246,28 @@ import Footer from '../components/Footer.astro';
           body: JSON.stringify(data),
         });
 
+        // Treat 200 as success (even if silent-dropped)
         if (response.ok) {
           form.classList.add('hidden');
           formSuccess?.classList.remove('hidden');
           formError?.classList.add('hidden');
         } else {
-          throw new Error('Submission failed');
+          // Try to get error message from response
+          let errorMessage = 'There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="text-red-800 underline">(407) 244-6873</a>.';
+          try {
+            const errorData = await response.json();
+            if (errorData.error) {
+              errorMessage = errorData.error;
+            }
+          } catch {
+            // Use default message if JSON parsing fails
+          }
+          
+          const errorElement = formError?.querySelector('.text-red-600');
+          if (errorElement) {
+            errorElement.innerHTML = errorMessage;
+          }
+          formError?.classList.remove('hidden');
         }
       } catch (error) {
         console.error('Form submission error:', error);
