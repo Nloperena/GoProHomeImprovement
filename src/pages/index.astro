@@ -1,0 +1,190 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import HeroSVG from '../components/HeroSVG.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import { defaultTitle } from '../lib/seo';
+
+const pageTitle = defaultTitle('Home Improvement Contractor Orlando, FL');
+const description =
+	'Owner-operated home improvement contractor serving Orlando & Central Florida. 15+ years, painting, pressure washing, TV mounts, and more. Get a free quote today.';
+
+const services = await getCollection('services');
+// Get 9 services
+const featuredServices = services.slice(0, 9);
+
+// We will fetch projects when we have them
+const projects = await getCollection('projects');
+const featuredProjects = projects.slice(0, 3);
+
+const faq = [
+	{
+		question: "Are you licensed and insured?",
+		answer: "Yes, Go Pro Home Improvements is fully licensed and insured to operate across Central Florida. We carry comprehensive liability coverage to protect your property during every project."
+	},
+	{
+		question: "Do you offer free estimates?",
+		answer: "Absolutely. We provide free, scope-clear estimates. We walk the property with you, discuss exactly what the job requires, and give you a detailed quote with no hidden fees."
+	},
+	{
+		question: "How long have you been in business?",
+		answer: "We have over 15 years of experience in the home improvement industry, serving thousands of satisfied homeowners across Orlando and the surrounding areas."
+	},
+	{
+		question: "Who will actually be doing the work?",
+		answer: "We are an owner-operated company. That means the owner is your single point of contact and is present on every job site, ensuring our high standards of quality are always met."
+	}
+];
+
+const cities = [
+	"Orlando", "Kissimmee", "Winter Park", "Altamonte Springs", "Sanford", 
+	"Clermont", "Lake Mary", "Oviedo", "Winter Garden", "Windermere"
+];
+---
+
+<Base
+	title={pageTitle}
+	description={description}
+	path="/"
+>
+	<Hero
+		title="Central Florida's owner-operated home improvement specialist."
+		subtitle="Painting, pressure washing, TV mounts, home theaters, drywall, and more — across Orlando, Kissimmee, and greater Central Florida. Scope-clear quotes, no surprises."
+	>
+		<HeroSVG slot="visual" />
+	</Hero>
+
+	<section class="px-4 py-16 md:px-6 md:py-24 lg:px-8">
+		<div class="mx-auto max-w-content">
+			<div class="text-center max-w-2xl mx-auto mb-12">
+				<h2 class="font-display text-3xl font-semibold md:text-4xl">Our Services</h2>
+				<p class="mt-4 text-slate">From a single room refresh to a complete exterior transformation, we handle it all with precision and care.</p>
+			</div>
+			
+			<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+				{featuredServices.map((service) => (
+					<ServiceCard
+						title={service.data.shortTitle}
+						slug={service.id}
+						excerpt={service.data.excerpt}
+						image={service.data.heroImage}
+						imageAlt={service.data.heroAlt}
+					/>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-ink text-paper px-4 py-16 md:px-6 md:py-24 lg:px-8 border-y border-ink/20">
+		<div class="mx-auto max-w-content grid md:grid-cols-2 gap-12 items-center">
+			<div>
+				<p class="text-orange text-sm font-medium uppercase tracking-wider mb-2">Our Process</p>
+				<h2 class="font-display text-3xl font-semibold md:text-4xl">How we work</h2>
+				<p class="mt-6 text-paper/80 leading-relaxed text-lg">
+					We don't do vague bids or surprise change orders. Our process is designed to give you complete clarity from day one to the final walkthrough.
+				</p>
+			</div>
+			<div class="space-y-8">
+				<div class="flex gap-4">
+					<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange font-semibold text-white">1</div>
+					<div>
+						<h3 class="text-xl font-semibold">Site Walk</h3>
+						<p class="mt-2 text-paper/70">We walk your property to understand the exact scope and spot any needed prep work early.</p>
+					</div>
+				</div>
+				<div class="flex gap-4">
+					<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange font-semibold text-white">2</div>
+					<div>
+						<h3 class="text-xl font-semibold">Scope & Quote</h3>
+						<p class="mt-2 text-paper/70">You receive a clear, detailed estimate. What's included, what's not, and what it costs.</p>
+					</div>
+				</div>
+				<div class="flex gap-4">
+					<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange font-semibold text-white">3</div>
+					<div>
+						<h3 class="text-xl font-semibold">Schedule</h3>
+						<p class="mt-2 text-paper/70">We pick a date and stick to it. We show up on time, fully prepared to work.</p>
+					</div>
+				</div>
+				<div class="flex gap-4">
+					<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange font-semibold text-white">4</div>
+					<div>
+						<h3 class="text-xl font-semibold">Build & Walkthrough</h3>
+						<p class="mt-2 text-paper/70">We execute the job flawlessly. Finally, we walk the finished project with you to ensure 100% satisfaction.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="px-4 py-16 md:px-6 md:py-24 lg:px-8">
+		<div class="mx-auto max-w-content">
+			<div class="flex items-end justify-between mb-12">
+				<div class="max-w-2xl">
+					<h2 class="font-display text-3xl font-semibold md:text-4xl">Featured Projects</h2>
+					<p class="mt-4 text-slate">Real results from homes around Central Florida.</p>
+				</div>
+				<a href="/projects/" class="hidden md:inline-flex text-orange font-semibold hover:text-orange-deep transition-colors">
+					View all projects →
+				</a>
+			</div>
+			
+			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				{featuredProjects.length > 0 ? featuredProjects.map((project) => (
+					<ProjectCard
+						title={project.data.title}
+						location={project.data.location}
+						slug={project.id}
+						image={project.data.heroImage}
+					/>
+				)) : (
+					<div class="col-span-3 text-center py-12 text-slate bg-cream border border-line rounded-sm">
+						<p>Project case studies coming soon.</p>
+					</div>
+				)}
+			</div>
+			
+			<div class="mt-8 text-center md:hidden">
+				<a href="/projects/" class="inline-flex text-orange font-semibold hover:text-orange-deep transition-colors">
+					View all projects →
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<Testimonials reviews={[]} />
+
+	<section class="px-4 py-16 md:px-6 md:py-24 lg:px-8 bg-paper">
+		<div class="mx-auto max-w-content text-center">
+			<h2 class="font-display text-3xl font-semibold md:text-4xl">Proudly Serving Central Florida</h2>
+			<p class="mt-4 text-slate mb-12 max-w-2xl mx-auto">We provide expert home improvement services to homeowners and businesses throughout the greater Orlando area.</p>
+			
+			<div class="flex flex-wrap justify-center gap-3">
+				{cities.map(city => (
+					<a href={`/service-areas/${city.toLowerCase().replace(/\s+/g, '-')}/`} class="px-4 py-2 bg-cream text-ink rounded-sm border border-line hover:border-orange hover:text-orange transition-colors text-sm font-medium">
+						{city}, FL
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<FAQ items={faq} title="Common Questions" />
+
+	<section class="bg-orange px-4 py-16 md:px-6 md:py-24 lg:px-8 text-center text-white">
+		<div class="mx-auto max-w-2xl">
+			<h2 class="font-display text-3xl font-semibold md:text-4xl">Your next project starts with one conversation.</h2>
+			<p class="mt-4 text-white/90 text-lg">Fifteen years of experience. One point of contact. Let's build something great.</p>
+			<a
+				href="/quote/"
+				class="mt-8 inline-flex items-center justify-center rounded-sm bg-white px-8 py-4 text-sm font-semibold text-orange transition-colors hover:bg-cream"
+			>
+				Get a Free Quote →
+			</a>
+		</div>
+	</section>
+</Base>

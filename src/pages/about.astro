@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import { defaultTitle } from '../lib/seo';
+import { Image } from 'astro:assets';
+
+const title = defaultTitle('About Us | Go Pro Home Improvements');
+const description = 'Learn more about Go Pro Home Improvements. An owner-operated home improvement contractor serving Orlando and Central Florida for over 15 years.';
+---
+
+<Base title={title} description={description} path="/about/">
+	<section class="bg-cream/40 px-4 py-16 md:px-6 md:py-24 lg:px-8 border-b border-line">
+		<div class="mx-auto max-w-content text-center">
+			<h1 class="font-display text-4xl font-semibold text-ink md:text-5xl">About Go Pro</h1>
+			<p class="mt-4 text-lg text-slate max-w-2xl mx-auto">
+				15 years. One point of contact. Every job.
+			</p>
+		</div>
+	</section>
+
+	<section class="px-4 py-16 md:px-6 md:py-24 lg:px-8">
+		<div class="mx-auto max-w-content grid lg:grid-cols-2 gap-12 items-center">
+			<div class="prose prose-lg prose-slate prose-headings:font-display prose-headings:font-semibold">
+				<h2>The Go Pro Difference</h2>
+				<p>
+					Go Pro Home Improvements was founded on a simple premise: homeowners in Central Florida deserve a contractor who shows up on time, provides clear pricing, and does the job right the first time.
+				</p>
+				<p>
+					For over 15 years, we have provided expert painting, pressure washing, trim carpentry, and specialized installations like home theaters and custom murals. But what truly sets us apart isn't just the variety of services we offer—it's how we deliver them.
+				</p>
+				
+				<h3>Owner-Operated Quality</h3>
+				<p>
+					When you hire Go Pro, you are dealing directly with the owner. I am present on every single job site, ensuring that our high standards of quality are met. There are no miscommunications between a salesperson and a subcontractor because there are no subcontractors. 
+				</p>
+				
+				<h3>Our Mission & Vision</h3>
+				<p>
+					Our mission is to understand the exact needs of our clients and share our expertise to bring about the best improvements for their homes. Our vision is to be set apart in the industry by the excellence and quality of our services, growing our clientele through a trusted, rock-solid reputation.
+				</p>
+			</div>
+			
+			<div class="relative aspect-[4/3] w-full rounded-sm overflow-hidden bg-cream border border-line">
+				<!-- TODO(nico): replace van with owner headshot or on-job photo if available -->
+				<Image
+					src="/images/about/van.png"
+					alt="Go Pro Home Improvements Work Van"
+					width={800}
+					height={600}
+					class="absolute inset-0 h-full w-full object-cover"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-orange px-4 py-16 md:px-6 md:py-24 lg:px-8 text-center text-white">
+		<div class="mx-auto max-w-2xl">
+			<h2 class="font-display text-3xl font-semibold md:text-4xl">Let's discuss your project.</h2>
+			<p class="mt-4 text-white/90 text-lg">Contact us today for a free, scope-clear estimate.</p>
+			<a
+				href="/quote/"
+				class="mt-8 inline-flex items-center justify-center rounded-sm bg-white px-8 py-4 text-sm font-semibold text-orange transition-colors hover:bg-cream"
+			>
+				Get a Free Quote
+			</a>
+		</div>
+	</section>
+</Base>

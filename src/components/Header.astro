@@ -1,0 +1,42 @@
+---
+import TrustBar from './TrustBar.astro';
+
+const nav = [
+	{ href: '/services/', label: 'Services' },
+	{ href: '/projects/', label: 'Projects' },
+	{ href: '/service-areas/', label: 'Service areas' },
+	{ href: '/about/', label: 'About' },
+	{ href: '/blog/', label: 'Blog' },
+	{ href: '/contact/', label: 'Contact' },
+] as const;
+---
+
+<header class="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
+	<div
+		class="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 md:px-6 lg:px-8"
+	>
+		<a href="/" class="flex items-center">
+			<!-- Using the PNG fallback for now; replace with logo-wordmark.svg when available -->
+			<img src="/logo.png" alt="Go Pro Home Improvements" class="h-10 w-auto" />
+			<span class="sr-only">Go Pro Home Improvements</span>
+		</a>
+		<nav class="hidden items-center gap-6 text-sm font-medium text-slate md:flex">
+			{nav.map((item) => (
+				<a
+					href={item.href}
+					class="transition-colors hover:text-ink"
+				>
+					{item.label}
+				</a>
+			))}
+		</nav>
+		<a
+			href="/quote/"
+			class="rounded-sm bg-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-deep"
+		>
+			Get a Free Quote
+		</a>
+	</div>
+	<TrustBar />
+</header>
+

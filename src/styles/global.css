@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource/fraunces/latin-400.css";
+@import "@fontsource/fraunces/latin-600.css";
+@import "@fontsource/fraunces/latin-700.css";
+
+@theme {
+	--color-ink: #0f1419;
+	--color-paper: #faf9f6;
+	--color-orange: #e85d1f;
+	--color-orange-deep: #c94a15;
+	--color-slate: #5a6470;
+	--color-line: #e5e2dc;
+	--color-cream: #f3efe6;
+
+	--font-display: "Fraunces", Georgia, ui-serif, serif;
+	--font-sans: "Inter Variable", system-ui, sans-serif;
+
+	--max-w-content: 75rem; /* 1200px */
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth text-ink antialiased;
+	}
+
+	body {
+		@apply bg-paper font-sans text-ink;
+	}
+}
