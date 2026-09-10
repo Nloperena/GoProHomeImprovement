@@ -1,40 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource/fraunces/latin-400.css";
+@import "@fontsource/fraunces/latin-600.css";
+@import "@fontsource/fraunces/latin-700.css";
+
+@theme {
+	--color-ink: #0f1419;
+	--color-paper: #faf9f6;
+	--color-orange: #e85d1f;
+	--color-orange-deep: #c94a15;
+	--color-slate: #5a6470;
+	--color-line: #e5e2dc;
+	--color-cream: #f3efe6;
+
+	/* Legacy gopro colors for backward compatibility with existing pages */
+	--color-gopro-orange: #FF5C28;
+	--color-gopro-charcoal: #2B2B2B;
+	--color-gopro-black: #1A1A1A;
+	--color-gopro-gray: #6B7280;
+
+	--font-display: "Fraunces", Georgia, ui-serif, serif;
+	--font-sans: "Inter Variable", system-ui, sans-serif;
+
+	--max-w-content: 75rem; /* 1200px */
+}
 
 @layer base {
-  html {
-    @apply scroll-smooth;
-  }
-  
-  body {
-    @apply bg-white text-gray-900 antialiased;
-    /* Add bottom padding on mobile to prevent sticky call bar from covering form buttons and CTAs */
-    padding-bottom: env(safe-area-inset-bottom, 0);
-  }
-  
-  /* Extra bottom spacing on mobile for sticky call bar (shown only on mobile) */
-  @media (max-width: 1023px) {
-    body {
-      padding-bottom: calc(80px + env(safe-area-inset-bottom, 0));
-    }
-  }
+	html {
+		@apply scroll-smooth text-ink antialiased;
+	}
+
+	body {
+		@apply bg-paper font-sans text-ink;
+		/* Add bottom padding on mobile to prevent sticky call bar from covering form buttons and CTAs */
+		padding-bottom: env(safe-area-inset-bottom, 0);
+	}
+
+	/* Extra bottom spacing on mobile for sticky call bar (shown only on mobile) */
+	@media (max-width: 1023px) {
+		body {
+			padding-bottom: calc(80px + env(safe-area-inset-bottom, 0));
+		}
+	}
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
-  }
-  
-  .btn-secondary {
-    @apply bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
-  }
-  
-  .section-padding {
-    @apply py-16 md:py-24;
-  }
-  
-  .container-custom {
-    @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
-  }
+	.btn-primary {
+		@apply bg-orange hover:bg-orange-deep text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
+	}
+
+	.btn-secondary {
+		@apply bg-ink hover:bg-gopro-black text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
+	}
+
+	.section-padding {
+		@apply py-16 md:py-24;
+	}
+
+	.container-custom {
+		@apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
+	}
 }
