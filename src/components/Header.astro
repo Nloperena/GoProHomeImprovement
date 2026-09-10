@@ -31,12 +31,24 @@ const nav = [
 			))}
 		</nav>
 		<a
-			href="/quote/"
+			href="/estimate/"
 			class="rounded-sm bg-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-deep"
 		>
-			Get a Free Quote
+			Free Estimate
 		</a>
 	</div>
 	<TrustBar />
 </header>
+
+<!-- Sticky Mobile CTAs - Dual buttons for Call and Estimate -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-ink shadow-2xl z-40 border-t-2 border-orange" style="padding-bottom: env(safe-area-inset-bottom, 0);">
+	<div class="grid grid-cols-2 gap-2 p-2">
+		<a href="tel:4072446873" class="bg-orange text-white hover:bg-orange-deep font-display font-bold uppercase py-3 text-center rounded-sm transition-colors text-sm tracking-wide">
+			Call (407) 244-6873
+		</a>
+		<a href="/estimate/" class="bg-paper text-orange hover:bg-cream font-display font-bold uppercase py-3 text-center rounded-sm transition-colors text-sm tracking-wide border-2 border-orange">
+			Get Estimate
+		</a>
+	</div>
+</div>
 

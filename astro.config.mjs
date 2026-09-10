@@ -28,7 +28,6 @@ const redirects = Object.fromEntries(
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://goprohomeimprovements.com',
-	output: 'static',
 	adapter: vercel(),
 
 	vite: {
