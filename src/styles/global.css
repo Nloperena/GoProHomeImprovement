@@ -9,6 +9,15 @@
   
   body {
     @apply bg-white text-gray-900 antialiased;
+    /* Add bottom padding on mobile to prevent sticky call bar from covering form buttons and CTAs */
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  
+  /* Extra bottom spacing on mobile for sticky call bar (shown only on mobile) */
+  @media (max-width: 1023px) {
+    body {
+      padding-bottom: calc(80px + env(safe-area-inset-bottom, 0));
+    }
   }
 }
 

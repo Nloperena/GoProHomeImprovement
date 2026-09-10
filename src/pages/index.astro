@@ -6,14 +6,24 @@ import CTASection from '../components/CTASection.astro';
 
 const services = [
   {
-    name: 'Power Washing',
-    href: '/services/power-washing',
-    description: 'Professional pressure washing for homes, driveways, and commercial properties.'
-  },
-  {
     name: 'Interior & Exterior Painting',
     href: '/services/interior-exterior-painting',
     description: 'Expert painting services to refresh and protect your property.'
+  },
+  {
+    name: 'Movie Rooms',
+    href: '/services/movie-rooms',
+    description: 'Complete home theater design and installation.'
+  },
+  {
+    name: 'Drywall',
+    href: '/services/drywall',
+    description: 'Drywall installation, repair, and texture services.'
+  },
+  {
+    name: 'Power Washing',
+    href: '/services/power-washing',
+    description: 'Professional pressure washing for homes, driveways, and commercial properties.'
   },
   {
     name: 'Demolition',
@@ -39,16 +49,6 @@ const services = [
     name: 'TV Mounting',
     href: '/services/tv-mounting',
     description: 'Professional TV mounting and wire concealment.'
-  },
-  {
-    name: 'Movie Rooms',
-    href: '/services/movie-rooms',
-    description: 'Complete home theater design and installation.'
-  },
-  {
-    name: 'Drywall',
-    href: '/services/drywall',
-    description: 'Drywall installation, repair, and texture services.'
   }
 ];
 
@@ -137,30 +137,12 @@ const whyChooseUs = [
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <a href="/services/power-washing" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-          <img src="/images/power-washing.jpg" alt="Power Washing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Power Washing</h3>
-            <p class="text-white/90 text-sm font-sans">Driveways, pool decks, siding</p>
-          </div>
-        </a>
-        
         <a href="/services/interior-exterior-painting" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
           <img src="/images/bedroom-paint.jpg" alt="Interior & Exterior Painting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Painting</h3>
             <p class="text-white/90 text-sm font-sans">Interior & exterior</p>
-          </div>
-        </a>
-        
-        <a href="/services/trim-crown-molding" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-          <img src="/images/trim-navy-wall.jpg" alt="Trim & Crown Molding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Trim & Molding</h3>
-            <p class="text-white/90 text-sm font-sans">Crown, baseboards, paneling</p>
           </div>
         </a>
         
@@ -173,21 +155,39 @@ const whyChooseUs = [
           </div>
         </a>
         
-        <a href="/services/murals" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-          <img src="/images/nemo-mural.jpg" alt="Custom Murals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Custom Murals</h3>
-            <p class="text-white/90 text-sm font-sans">Kids rooms, feature walls</p>
-          </div>
-        </a>
-        
         <a href="/services/drywall" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
           <img src="/images/drywall.jpg" alt="Drywall Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Drywall</h3>
             <p class="text-white/90 text-sm font-sans">Repair, install, texture match</p>
+          </div>
+        </a>
+        
+        <a href="/services/power-washing" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/power-washing.jpg" alt="Power Washing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Power Washing</h3>
+            <p class="text-white/90 text-sm font-sans">Driveways, pool decks, siding</p>
+          </div>
+        </a>
+        
+        <a href="/services/trim-crown-molding" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/trim-navy-wall.jpg" alt="Trim & Crown Molding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Trim & Molding</h3>
+            <p class="text-white/90 text-sm font-sans">Crown, baseboards, paneling</p>
+          </div>
+        </a>
+        
+        <a href="/services/murals" class="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+          <img src="/images/nemo-mural.jpg" alt="Custom Murals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Custom Murals</h3>
+            <p class="text-white/90 text-sm font-sans">Kids rooms, feature walls</p>
           </div>
         </a>
       </div>

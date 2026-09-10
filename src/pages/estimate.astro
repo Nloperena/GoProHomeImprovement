@@ -6,16 +6,24 @@ import Footer from '../components/Footer.astro';
 
 <BaseLayout
   title="Get Free Estimate | Go Pro Home Improvements"
-  description="Request a free, no-obligation estimate for your home improvement project. We'll contact you to discuss your needs and provide an accurate quote."
+  description="Request a free estimate for painting, home theaters, drywall & more. Owner-operated, 15+ years serving Kissimmee, Orlando & Central Florida."
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
-    <div class="container-custom text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Get Your Free Estimate</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        Tell us about your project and we'll get back to you with a detailed, accurate estimate.
-      </p>
+  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-12">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Get Your Free Estimate</h1>
+        <p class="text-xl text-gray-300 mb-6 font-sans">
+          Owner-operated. 15+ years serving Kissimmee, Orlando, St. Cloud, Celebration & Poinciana.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <p class="text-gray-400 font-sans">Prefer to call?</p>
+          <a href="tel:4072446873" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded text-lg transition-colors inline-block shadow-lg tracking-wide">
+            (407) 244-6873
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -80,15 +88,15 @@ import Footer from '../components/Footer.astro';
                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
                 >
                   <option value="">Select a service...</option>
+                  <option value="interior-exterior-painting">Painting (Interior & Exterior)</option>
+                  <option value="movie-rooms">Home Theater / Movie Room</option>
+                  <option value="drywall">Drywall (Repair & Installation)</option>
                   <option value="power-washing">Power Washing</option>
-                  <option value="interior-exterior-painting">Interior & Exterior Painting</option>
-                  <option value="demolition">Demolition</option>
                   <option value="trim-crown-molding">Trim & Crown Molding</option>
-                  <option value="wallpaper">Wallpaper</option>
-                  <option value="murals">Murals</option>
+                  <option value="murals">Custom Murals</option>
                   <option value="tv-mounting">TV Mounting</option>
-                  <option value="movie-rooms">Movie Rooms</option>
-                  <option value="drywall">Drywall</option>
+                  <option value="wallpaper">Wallpaper</option>
+                  <option value="demolition">Demolition</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -144,6 +152,12 @@ import Footer from '../components/Footer.astro';
               >
                 Submit Estimate Request
               </button>
+            </div>
+            
+            <div class="text-center mt-6 pt-6 border-t border-gray-200">
+              <p class="text-sm text-gray-600 font-sans">
+                Owner-operated • Serving Kissimmee, Orlando, St. Cloud, Celebration & Poinciana • 15+ years experience
+              </p>
             </div>
           </form>
 

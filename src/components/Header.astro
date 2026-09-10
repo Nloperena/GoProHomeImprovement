@@ -83,11 +83,16 @@ const navItems = [
   </div>
 </header>
 
-<!-- Sticky Mobile CTA -->
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-orange shadow-2xl z-40 p-3 border-t-2 border-gopro-black">
-  <a href="tel:4072446873" class="bg-gopro-black text-white hover:bg-gopro-charcoal font-display font-bold uppercase py-4 text-center block rounded transition-colors text-lg tracking-wide">
-    Call (407) 244-6873
-  </a>
+<!-- Sticky Mobile CTAs - Dual buttons for Call and Estimate -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-charcoal shadow-2xl z-40 border-t-2 border-gopro-orange" style="padding-bottom: env(safe-area-inset-bottom, 0);">
+  <div class="grid grid-cols-2 gap-2 p-2">
+    <a href="tel:4072446873" class="bg-gopro-orange text-white hover:bg-orange-600 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide">
+      Call (407) 244-6873
+    </a>
+    <a href="/estimate" class="bg-white text-gopro-orange hover:bg-gray-100 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange">
+      Get Estimate
+    </a>
+  </div>
 </div>
 
 <script>
