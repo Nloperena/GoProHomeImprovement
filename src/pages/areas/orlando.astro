@@ -6,23 +6,72 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Home Improvement Services in Orlando, FL | Go Pro"
-  description="Professional home improvement contractor serving Orlando and Orange County. Painting, power washing, remodeling, and more. 15+ years experience in Central Florida."
+  title="Orlando Home Improvement | Painting, Theaters, Drywall | Go Pro"
+  description="Owner-operated painting, home theaters, and drywall in Orlando, FL. Free estimates. Call (407) 244-6873."
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://goprohomeimprovements.com/#business",
+        "name": "Go Pro Home Improvements",
+        "url": "https://goprohomeimprovements.com",
+        "telephone": "(407) 244-6873",
+        "email": "gopro4good@gmail.com",
+        "image": "https://goprohomeimprovements.com/images/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://goprohomeimprovements.com/images/logo.png"
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Orlando", "containedIn": "Florida" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gopro4good/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/areas/orlando/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://goprohomeimprovements.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Service Areas",
+            "item": "https://goprohomeimprovements.com/areas"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Orlando",
+            "item": "https://goprohomeimprovements.com/areas/orlando"
+          }
+        ]
+      }
+    ]
+  }}
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6">
-        <a href="/" class="text-gray-400 hover:text-white">Home</a>
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <a href="/areas" class="text-gray-400 hover:text-white">Service Areas</a>
+        <a href="/areas" class="text-gray-400 hover:text-gopro-orange transition-colors">Service Areas</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span>Orlando</span>
+        <span class="text-white">Orlando</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Home Improvement Services in Orlando</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Professional home improvement services throughout Orlando and Orange County. Over 15 years of trusted local experience.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Home improvement in Orlando</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Owner-operated contractor serving Orlando and Orange County. 15+ years serving Central Florida with painting, home theaters, drywall & more.
       </p>
     </div>
   </section>
@@ -32,80 +81,51 @@ import CTASection from '../../components/CTASection.astro';
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
           <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            Go Pro Home Improvements proudly serves Orlando and Orange County with comprehensive home improvement services. From downtown Orlando to the surrounding communities, we bring over 15 years of professional experience to residential and commercial properties.
+            Go Pro Home Improvements proudly serves Orlando and Orange County with comprehensive home improvement services. From downtown Orlando to Winter Park, College Park to the Dr. Phillips area, we bring over 15 years of professional experience to residential and commercial properties throughout Orange County.
           </p>
           <p class="text-lg text-gray-600 mb-8">
-            Whether you own a home in a historic Orlando neighborhood, a modern property near the attractions, or a commercial space anywhere in Orange County, we provide the same quality workmanship and reliable service that has built our reputation across Central Florida.
+            Whether you own a home in one of Orlando's historic neighborhoods, a modern property near the attractions, or a commercial space anywhere in Orange County, we provide the same owner-operated quality and reliable service. Based nearby in Kissimmee, we've served hundreds of Orlando homeowners and businesses with painting, home theater installations, drywall repair, and more.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
-          <h2 class="text-2xl font-bold mb-6">Services in Orlando</h2>
-          <div class="grid md:grid-cols-2 gap-4">
-            <a href="/services/power-washing" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Power Washing
-            </a>
-            <a href="/services/interior-exterior-painting" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Interior & Exterior Painting
-            </a>
-            <a href="/services/demolition" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Demolition
-            </a>
-            <a href="/services/drywall" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Drywall
-            </a>
-            <a href="/services/trim-crown-molding" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Trim & Crown Molding
-            </a>
-            <a href="/services/wallpaper" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Wallpaper & Murals
-            </a>
-            <a href="/services/movie-rooms" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Home Theater Design
-            </a>
-            <a href="/services" class="text-gray-700 hover:text-gopro-orange transition-colors flex items-center font-semibold">
-              <svg class="w-5 h-5 mr-2 text-gopro-orange" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              View All Services
-            </a>
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Our Services in Orlando</h2>
+          <p class="text-gray-700 mb-6">
+            We specialize in three core services that homeowners and property managers in Orlando trust us for:
+          </p>
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg border-l-4 border-gopro-orange">
+              <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Interior & Exterior Painting</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Quality painting for homes and businesses. From historic Orlando neighborhoods to modern properties, we prep right and use paint rated for Florida's climate.
+              </p>
+              <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline font-semibold text-sm">Learn more →</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg border-l-4 border-gopro-orange">
+              <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Home Theater Installation</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Full custom home theater builds throughout Orlando and Orange County—paint, trim, acoustic panels, AV coordination, and themed rooms.
+              </p>
+              <a href="/services/movie-rooms" class="text-gopro-orange hover:underline font-semibold text-sm">Learn more →</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg border-l-4 border-gopro-orange">
+              <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Drywall Repair & Installation</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Water damage repair, texture matching, full room drywall, and invisible patches. Professional drywall work for Orlando homes and businesses.
+              </p>
+              <a href="/services/drywall" class="text-gopro-orange hover:underline font-semibold text-sm">Learn more →</a>
+            </div>
           </div>
+          <p class="text-center">
+            <a href="/services" class="text-gray-700 hover:text-gopro-orange transition-colors font-semibold">View all our services →</a>
+          </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6">
-            <h3 class="text-xl font-bold mb-3">Residential Services</h3>
-            <p class="text-gray-700">
-              From single-family homes to condos and townhomes, we handle projects of all sizes throughout Orlando. Interior remodels, exterior maintenance, and everything in between.
-            </p>
-          </div>
-          <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6">
-            <h3 class="text-xl font-bold mb-3">Commercial Services</h3>
-            <p class="text-gray-700">
-              We also serve commercial properties including offices, retail spaces, and rental properties. Professional results with minimal disruption to your business.
-            </p>
-          </div>
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h3 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Serving Orlando & Orange County</h3>
+          <p class="text-gray-700">
+            We work throughout Orlando and Orange County, including downtown Orlando, Winter Park, College Park, Dr. Phillips, Baldwin Park, and surrounding communities. Whether residential or commercial, we bring the same owner-operated care and professional results to every project.
+          </p>
         </div>
 
         <div class="text-center">

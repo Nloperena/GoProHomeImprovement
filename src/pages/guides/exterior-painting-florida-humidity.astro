@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
 ---
 
 <BaseLayout
@@ -216,6 +217,12 @@ import CTASection from '../../components/CTASection.astro';
             <li><strong>Monitor weather:</strong> We watch forecasts and adjust schedules to avoid rain</li>
             <li><strong>Two coats minimum:</strong> One coat doesn't hold up in Florida sun and humidity</li>
           </ul>
+
+          <RelatedServices
+            services={[
+              { name: "Interior & Exterior Painting", url: "/services/interior-exterior-painting" }
+            ]}
+          />
 
           <div class="text-center mt-12">
             <p class="text-lg text-gray-600 mb-6 font-sans">Ready to paint your Central Florida home's exterior?</p>
