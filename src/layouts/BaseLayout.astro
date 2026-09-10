@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { Analytics } from '@vercel/analytics/astro';
 
 interface Props {
   title: string;
@@ -108,8 +107,6 @@ const defaultSchema = {
   
   <!-- Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchema)} />
-  
-  <Analytics />
 </head>
 <body>
   <slot />
