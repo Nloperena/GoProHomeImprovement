@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { localBusinessSchema } from '../lib/schema';
+
+type Props = {
+	title: string;
+	description: string;
+	path?: string;
+	ogImage?: string;
+	extraSchema?: object | object[];
+	ogType?: 'website' | 'article';
+};
+
+const { title, description, path = '/', ogImage, extraSchema = [], ogType = 'website' } = Astro.props;
+const site = Astro.site ?? new URL('https://goprohomeimprovements.com');
+const siteStr = site.toString();
+const business = localBusinessSchema(siteStr);
+const extra = Array.isArray(extraSchema) ? extraSchema : [extraSchema].filter(Boolean);
+const schema = [business, ...extra];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<SEO title={title} description={description} path={path} ogImage={ogImage} schema={schema} ogType={ogType} />
+	</head>
+	<body class="min-h-dvh flex flex-col">
+		<Header />
+		<main class="flex-1">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+
+type Props = {
+	title: string;
+	subtitle: string;
+	image?: string;
+	imageAlt?: string;
+	primaryCta?: { label: string; href: string };
+	secondaryCta?: { label: string; href: string };
+};
+
+const {
+	title,
+	subtitle,
+	image,
+	imageAlt,
+	primaryCta = { label: 'Get Free Estimate', href: '/estimate' },
+	secondaryCta = { label: 'See Our Work', href: '/work' },
+} = Astro.props;
+---
+
+<section class="border-b border-line bg-gradient-to-b from-cream/40 to-paper">
+	<div class="mx-auto grid max-w-content gap-12 px-4 py-12 md:grid-cols-2 md:items-center md:px-6 md:py-20 lg:px-8">
+		<div class="max-w-xl">
+			<h1 class="font-display text-4xl font-semibold leading-tight text-ink md:text-5xl lg:text-[72px]">
+				{title}
+			</h1>
+			<p class="mt-6 text-lg leading-relaxed text-slate md:text-xl">
+				{subtitle}
+			</p>
+			<div class="mt-8 flex flex-wrap gap-4">
+				{primaryCta && (
+					<a
+						href={primaryCta.href}
+						class="inline-flex items-center justify-center rounded-sm bg-orange px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-deep"
+					>
+						{primaryCta.label}
+					</a>
+				)}
+				{secondaryCta && (
+					<a
+						href={secondaryCta.href}
+						class="inline-flex items-center justify-center rounded-sm border border-ink/15 bg-paper px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink/30"
+					>
+						{secondaryCta.label}
+					</a>
+				)}
+			</div>
+		</div>
+		<div class="relative h-64 w-full md:h-auto md:aspect-square lg:aspect-[4/3] rounded-sm overflow-hidden bg-cream border border-line flex items-center justify-center">
+			{image ? (
+				<Image
+					src={image}
+					alt={imageAlt || ''}
+					width={1000}
+					height={750}
+					loading="eager"
+					fetchpriority="high"
+					class="absolute inset-0 h-full w-full object-cover"
+				/>
+			) : (
+				<slot name="visual" />
+			)}
+		</div>
+	</div>
+</section>

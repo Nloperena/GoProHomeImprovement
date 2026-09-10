@@ -1,105 +1,39 @@
 ---
-const currentPath = Astro.url.pathname;
+import TrustBar from './TrustBar.astro';
 
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/work', label: 'Our Work' },
-  { href: '/about', label: 'About' },
-  { href: '/areas', label: 'Areas' },
-  { href: '/reviews', label: 'Reviews' },
-];
+const nav = [
+	{ href: '/services/', label: 'Services' },
+	{ href: '/work/', label: 'Work' },
+	{ href: '/areas/', label: 'Areas' },
+	{ href: '/guides/', label: 'Guides' },
+	{ href: '/reviews/', label: 'Reviews' },
+] as const;
 ---
 
-<header class="bg-gopro-charcoal sticky top-0 z-50 border-b-4 border-gopro-orange shadow-lg">
-  <div class="container-custom">
-    <div class="flex items-center justify-between py-3">
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <img src="/images/logo.png" alt="Go Pro Home Improvements" class="h-14 md:h-16 w-auto" />
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-6">
-        {navItems.map((item) => (
-          <a
-            href={item.href}
-            class={`font-display font-bold uppercase text-sm tracking-wide transition-colors ${
-              currentPath === item.href || currentPath.startsWith(item.href + '/')
-                ? 'text-gopro-orange'
-                : 'text-white hover:text-gopro-orange'
-            }`}
-          >
-            {item.label}
-          </a>
-        ))}
-        <a href="tel:4072446873" class="text-white hover:text-gopro-orange transition-colors font-sans font-semibold border-l-2 border-white/20 pl-6">
-          (407) 244-6873
-        </a>
-      </nav>
-
-      <!-- CTA Button -->
-      <div class="hidden lg:block">
-        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
-          Free Estimate
-        </a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button
-        id="mobile-menu-button"
-        class="lg:hidden p-2 text-white hover:text-gopro-orange"
-        aria-label="Toggle menu"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20 bg-gopro-black">
-    <nav class="container-custom py-4 flex flex-col space-y-4">
-      {navItems.map((item) => (
-        <a
-          href={item.href}
-          class={`font-display font-bold uppercase text-sm tracking-wide ${
-            currentPath === item.href || currentPath.startsWith(item.href + '/')
-              ? 'text-gopro-orange'
-              : 'text-white'
-          }`}
-        >
-          {item.label}
-        </a>
-      ))}
-      <a href="tel:4072446873" class="text-white font-sans font-semibold">
-        (407) 244-6873
-      </a>
-      <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors text-center tracking-wide">
-        Free Estimate
-      </a>
-    </nav>
-  </div>
+<header class="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur">
+	<div
+		class="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 md:px-6 lg:px-8"
+	>
+		<a href="/" class="flex items-center">
+			<img src="/images/logo.png" alt="Go Pro Home Improvements" class="h-10 w-auto" />
+			<span class="sr-only">Go Pro Home Improvements</span>
+		</a>
+		<nav class="hidden items-center gap-6 text-sm font-medium text-slate md:flex">
+			{nav.map((item) => (
+				<a
+					href={item.href}
+					class="transition-colors hover:text-ink"
+				>
+					{item.label}
+				</a>
+			))}
+		</nav>
+		<a
+			href="/estimate"
+			class="rounded-sm bg-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-deep"
+		>
+			Get Free Estimate
+		</a>
+	</div>
+	<TrustBar />
 </header>
-
-<!-- Sticky Mobile CTAs - Dual buttons for Call and Estimate -->
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-charcoal shadow-2xl z-40 border-t-2 border-gopro-orange" style="padding-bottom: env(safe-area-inset-bottom, 0);">
-  <div class="grid grid-cols-2 gap-2 p-2">
-    <a href="tel:4072446873" class="bg-gopro-orange text-white hover:bg-orange-600 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide">
-      Call (407) 244-6873
-    </a>
-    <a href="/estimate" class="bg-white text-gopro-orange hover:bg-gray-100 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange">
-      Get Estimate
-    </a>
-  </div>
-</div>
-
-<script>
-  const menuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
-  });
-</script>
