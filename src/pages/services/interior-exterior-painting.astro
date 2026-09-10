@@ -6,7 +6,7 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Interior & Exterior Painting in Kissimmee & Orlando"
+  title="Interior & Exterior Painting in Kissimmee & Orlando | Go Pro"
   description="Professional painting in Kissimmee, Orlando & Central Florida. Interior rooms, exterior siding, cabinets, trim. 15+ years. Owner-operated."
   ogImage="/images/bedroom-paint.jpg"
   schema={{
@@ -127,25 +127,44 @@ import CTASection from '../../components/CTASection.astro';
 >
   <Header />
 
-  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
-    <div class="container-custom">
-      <nav class="text-sm mb-6 font-sans">
-        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
-        <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
-        <span class="mx-2 text-gray-500">/</span>
-        <span class="text-white">Painting</span>
-      </nav>
-      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Interior & Exterior Painting in Kissimmee & Orlando</h1>
-      <p class="text-xl text-gray-300 max-w-3xl font-sans">
-        Rooms, siding, cabinets, trim. Quality prep, quality paint. Serving Central Florida homes for 15+ years.
-      </p>
+  <!-- Hero Section -->
+  <section class="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+    <img 
+      src="/images/bedroom-paint.jpg" 
+      alt="Professional interior painting in Central Florida" 
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
+    <div class="relative h-full container-custom flex items-center">
+      <div class="max-w-3xl">
+        <nav class="text-sm mb-6 font-sans">
+          <a href="/" class="text-white/70 hover:text-gopro-orange transition-colors">Home</a>
+          <span class="mx-2 text-white/50">/</span>
+          <a href="/services" class="text-white/70 hover:text-gopro-orange transition-colors">Services</a>
+          <span class="mx-2 text-white/50">/</span>
+          <span class="text-white">Painting</span>
+        </nav>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black mb-6 text-white leading-[0.95] tracking-tight" style="font-weight: 900;">
+          Interior & exterior painting.
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 font-sans leading-relaxed">
+          Prep that lasts in Florida sun and humidity.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/estimate" class="bg-green-600 hover:bg-green-700 text-white font-display font-bold uppercase px-10 py-5 rounded-lg text-lg transition-all inline-block text-center shadow-xl tracking-wide flex items-center justify-center gap-2">
+            Get free estimate
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a href="tel:4072446873" class="bg-transparent hover:bg-white/10 text-white font-display font-bold uppercase px-10 py-5 rounded-lg text-lg transition-all inline-block text-center border-2 border-white tracking-wide">
+            Call (407) 244-6873
+          </a>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <section class="relative h-96 overflow-hidden">
-    <img src="/images/bedroom-paint.jpg" alt="Professional interior painting in Central Florida" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
   </section>
 
   <section class="section-padding">
@@ -156,7 +175,26 @@ import CTASection from '../../components/CTASection.astro';
             Painting is one of the fastest ways to refresh a home—and one of the easiest to mess up if you rush the prep. We <a href="/services/power-washing" class="text-gopro-orange hover:underline">power wash</a> exteriors before painting, patch and sand drywall, prime stains, and use quality paint that holds up in Florida's sun and humidity.
           </p>
           <p class="text-lg text-gray-600 mb-8 font-sans">
-            Whether you're repainting a bedroom, freshening curb appeal before selling, or updating kitchen cabinets, we work clean, on schedule, and stand behind the finished job. Based in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, serving <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>, and Central Florida.
+            Whether you're repainting a bedroom, freshening curb appeal before selling, or updating kitchen cabinets, we work clean, on schedule, and stand behind the finished job. Based in Kissimmee, serving Orlando and Central Florida.
+          </p>
+        </div>
+        
+        <!-- Work Examples -->
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Recent Painting Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <img src="/images/bedroom-paint.jpg" alt="Professional bedroom painting" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <img src="/images/trim-navy-wall.jpg" alt="Navy painted accent wall with trim" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <img src="/images/wood-accent-wall.jpg" alt="Accent wall with painted trim" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <p class="text-center">
+            <a href="/work" class="text-gopro-orange hover:underline font-semibold">View our full portfolio →</a>
           </p>
         </div>
 
@@ -255,6 +293,28 @@ import CTASection from '../../components/CTASection.astro';
               </p>
             </div>
           </div>
+        </div>
+        
+        <!-- Related Guides -->
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h3 class="text-xl font-display font-bold uppercase mb-4 tracking-wide">Helpful Painting Guides</h3>
+          <ul class="space-y-2 font-sans">
+            <li>
+              <a href="/guides/how-much-does-painting-cost-kissimmee" class="text-gopro-orange hover:underline">
+                How Much Does Painting Cost in Kissimmee?
+              </a>
+            </li>
+            <li>
+              <a href="/guides/exterior-paint-colors-florida-sun" class="text-gopro-orange hover:underline">
+                Choosing Exterior Paint Colors for Florida Sun
+              </a>
+            </li>
+            <li>
+              <a href="/guides/power-washing-before-painting-florida" class="text-gopro-orange hover:underline">
+                Power Washing Before Painting in Florida
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div class="text-center">

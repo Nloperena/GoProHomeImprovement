@@ -119,25 +119,54 @@ import CTASection from '../../components/CTASection.astro';
 >
   <Header />
 
-  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
-    <div class="container-custom">
-      <nav class="text-sm mb-6 font-sans">
-        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
-        <span class="mx-2 text-gray-500">/</span>
-        <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
-        <span class="mx-2 text-gray-500">/</span>
-        <span class="text-white">Home Theaters</span>
-      </nav>
-      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Home Theater Installation in Central Florida</h1>
-      <p class="text-xl text-gray-300 max-w-3xl font-sans">
-        Full room builds—paint, trim, acoustic panels, AV setup, themed decor. Turn a spare room into a real theater.
-      </p>
+  <!-- Hero Section -->
+  <section class="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+    <img 
+      src="/images/movie-room.jpg" 
+      alt="Custom home theater installation in Central Florida" 
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40"></div>
+    <div class="relative h-full container-custom flex items-center">
+      <div class="max-w-3xl">
+        <nav class="text-sm mb-6 font-sans">
+          <a href="/" class="text-white/70 hover:text-gopro-orange transition-colors">Home</a>
+          <span class="mx-2 text-white/50">/</span>
+          <a href="/services" class="text-white/70 hover:text-gopro-orange transition-colors">Services</a>
+          <span class="mx-2 text-white/50">/</span>
+          <span class="text-white">Home Theaters</span>
+        </nav>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black mb-4 text-white leading-[0.95] tracking-tight" style="font-weight: 900;">
+          Home theaters built in.
+        </h1>
+        <div class="h-1 w-24 bg-gopro-orange mb-6"></div>
+        <p class="text-xl md:text-2xl mb-3 text-white/90 font-sans uppercase tracking-wider" style="letter-spacing: 0.15em;">
+          Paint, trim, acoustics, AV —
+        </p>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 font-sans uppercase tracking-wider" style="letter-spacing: 0.15em;">
+          A real room, not just a TV.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-black font-display font-bold uppercase px-10 py-5 rounded-lg text-lg transition-all inline-block text-center shadow-xl tracking-wide flex items-center justify-center gap-2">
+            Get free estimate
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a href="tel:4072446873" class="bg-transparent hover:bg-white/10 text-white font-display font-bold uppercase px-10 py-5 rounded-lg text-lg transition-all inline-block text-center border-2 border-white tracking-wide flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            Call (407) 244-6873
+          </a>
+        </div>
+        <p class="text-sm text-white/70 font-sans uppercase tracking-widest">
+          Premium cinematic. Owner-operated <span class="text-gopro-orange">Central Florida.</span>
+        </p>
+      </div>
     </div>
-  </section>
-
-  <section class="relative h-96 overflow-hidden">
-    <img src="/images/movie-room.jpg" alt="Custom home theater installation in Central Florida" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
   </section>
 
   <section class="section-padding">
@@ -145,17 +174,36 @@ import CTASection from '../../components/CTASection.astro';
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
           <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
-            A real home theater isn't just a TV on the wall—it's dark walls, controlled lighting, good acoustics, comfortable seating, and AV equipment that actually works together. We've built dozens of home theaters across <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>, from simple bonus-room setups to full custom installs with tiered floors and themed trim.
+            A real home theater isn't just a TV on the wall—it's dark walls, controlled lighting, good acoustics, comfortable seating, and AV equipment that actually works together. We've built dozens of home theaters across Kissimmee, Orlando, and Celebration, from simple bonus-room setups to full custom installs with tiered floors and themed trim.
           </p>
           <p class="text-lg text-gray-600 mb-8 font-sans">
             Whether you want a Star Wars-themed media room for the kids or a clean, modern theater for movie nights, we handle the full build—<a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a>, <a href="/services/trim-crown-molding" class="text-gopro-orange hover:underline">trim work</a>, acoustic panels, lighting, wiring, and AV coordination. You get one point of contact and a finished room ready to use.
           </p>
         </div>
+        
+        <!-- Work Examples -->
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Home Theater Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <img src="/images/movie-room.jpg" alt="Complete home theater installation" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <img src="/images/star-wars-theater.jpg" alt="Star Wars themed home theater" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <img src="/images/trim-navy-wall.jpg" alt="Custom trim and paneling for theater" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <p class="text-center">
+            <a href="/work" class="text-gopro-orange hover:underline font-semibold">View our full portfolio →</a>
+          </p>
+        </div>
 
         <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Why Build a Home Theater in Florida?</h2>
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">TV Mount or Full Theater?</h2>
           <p class="text-gray-700 font-sans">
-            Central Florida's year-round heat makes indoor entertainment valuable. A dedicated theater gives your family a comfortable escape from summer sun, adds resale value, and creates a space that actually gets used—especially during hurricane season when you're stuck inside.
+            Not every project needs a full theater build. If you just want a clean <a href="/services/tv-mounting" class="text-gopro-orange hover:underline">TV mount</a> with hidden wires and a soundbar, we do that too. Full home theaters are for dedicated spaces where you want theater seating, acoustic treatment, and a true cinematic experience.
           </p>
         </div>
 
@@ -241,6 +289,19 @@ import CTASection from '../../components/CTASection.astro';
               </p>
             </div>
           </div>
+        </div>
+        
+        <!-- Related Guide -->
+        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
+          <h3 class="text-xl font-display font-bold uppercase mb-4 tracking-wide">Planning Your Theater?</h3>
+          <p class="font-sans mb-3">
+            <a href="/guides/movie-room-setup-cost-orlando" class="text-gopro-orange hover:underline font-semibold">
+              Home Theater Setup Cost in Orlando – What to Expect
+            </a>
+          </p>
+          <p class="text-gray-700 font-sans text-sm">
+            Budget breakdown for equipment, room build, and labor. Real Central Florida pricing from actual jobs.
+          </p>
         </div>
 
         <div class="text-center">
