@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { defaultTitle } from '../../lib/seo';
+
+const services = await getCollection('services');
+
+// Sort alphabetically or based on a specific order
+services.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const title = defaultTitle('Home Improvement Services in Central Florida');
+const description = 'Professional home improvement services in Orlando and Central Florida. From painting and pressure washing to TV mounting and home theaters. Get a free quote.';
+---
+
+<Base title={title} description={description} path="/services/">
+	<section class="bg-cream/40 px-4 py-16 md:px-6 md:py-24 lg:px-8 border-b border-line">
+		<div class="mx-auto max-w-content text-center">
+			<h1 class="font-display text-4xl font-semibold text-ink md:text-5xl">Our Services</h1>
+			<p class="mt-4 text-lg text-slate max-w-2xl mx-auto">
+				Expert home improvement solutions for Central Florida homeowners. Scope-clear estimates and the owner on every job.
+			</p>
+		</div>
+	</section>
+
+	<section class="px-4 py-16 md:px-6 md:py-24 lg:px-8">
+		<div class="mx-auto max-w-content">
+			<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+				{services.map((service) => (
+					<ServiceCard
+						title={service.data.shortTitle}
+						slug={service.id}
+						excerpt={service.data.excerpt}
+						image={service.data.heroImage}
+						imageAlt={service.data.heroAlt}
+					/>
+				))}
+			</div>
+		</div>
+	</section>
+</Base>

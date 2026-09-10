@@ -1,0 +1,115 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+	const projects = await getCollection('projects');
+	return projects.map((project) => ({
+		params: { slug: project.id },
+		props: { project },
+	}));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { data } = project;
+---
+
+<Base
+	title={data.metaTitle}
+	description={data.metaDescription}
+	path={`/projects/${project.id}/`}
+	ogImage={data.heroImage}
+>
+	<article class="bg-paper">
+		<div class="px-4 py-8 md:px-6 lg:px-8 bg-cream/40 border-b border-line">
+			<div class="mx-auto max-w-content">
+				<Breadcrumbs
+					crumbs={[
+						{ label: 'Projects', href: '/projects/' },
+						{ label: data.title },
+					]}
+				/>
+				<div class="mt-8 mb-12">
+					<p class="text-sm font-medium uppercase tracking-wide text-orange mb-2">📍 {data.location}</p>
+					<h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-tight max-w-4xl">
+						{data.title}
+					</h1>
+					<p class="mt-6 text-xl text-slate max-w-3xl">
+						{data.excerpt}
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="px-4 py-12 md:px-6 lg:px-8">
+			<div class="mx-auto max-w-content relative aspect-video w-full rounded-sm overflow-hidden bg-cream border border-line shadow-sm mb-16">
+				<Image
+					src={data.heroImage}
+					alt={data.title}
+					width={1200}
+					height={675}
+					loading="eager"
+					class="w-full h-full object-cover"
+				/>
+			</div>
+
+			<div class="mx-auto max-w-content grid lg:grid-cols-3 gap-12 lg:gap-16">
+				<div class="lg:col-span-2 prose prose-lg prose-slate prose-headings:font-display prose-headings:font-semibold prose-a:text-orange">
+					<Content />
+					
+					{data.gallery && data.gallery.length > 0 && (
+						<div class="mt-12 not-prose grid sm:grid-cols-2 gap-4">
+							{data.gallery.map((img) => (
+								<div class="aspect-video w-full rounded-sm overflow-hidden border border-line bg-cream">
+									<Image
+										src={img}
+										alt="Project gallery image"
+										width={600}
+										height={338}
+										class="w-full h-full object-cover"
+									/>
+								</div>
+							))}
+						</div>
+					)}
+				</div>
+				
+				<div class="lg:col-span-1 space-y-8">
+					{(data.challenge || data.approach || data.outcome) && (
+						<div class="bg-cream border border-line p-6 md:p-8 rounded-sm space-y-6">
+							{data.challenge && (
+								<div>
+									<h3 class="font-display text-xl font-semibold text-ink mb-2">The Challenge</h3>
+									<p class="text-slate text-sm leading-relaxed">{data.challenge}</p>
+								</div>
+							)}
+							{data.approach && (
+								<div>
+									<h3 class="font-display text-xl font-semibold text-ink mb-2">Our Approach</h3>
+									<p class="text-slate text-sm leading-relaxed">{data.approach}</p>
+								</div>
+							)}
+							{data.outcome && (
+								<div>
+									<h3 class="font-display text-xl font-semibold text-ink mb-2">The Outcome</h3>
+									<p class="text-slate text-sm leading-relaxed">{data.outcome}</p>
+								</div>
+							)}
+						</div>
+					)}
+					
+					<div class="bg-ink text-paper p-6 md:p-8 rounded-sm">
+						<h3 class="font-display text-2xl font-semibold mb-4">Start a similar project</h3>
+						<p class="text-paper/80 text-sm mb-6">Want results like this for your own home? Reach out for a free, scope-clear estimate.</p>
+						<a href="/quote/" class="block w-full text-center rounded-sm bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-deep">
+							Get a Free Quote
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</Base>

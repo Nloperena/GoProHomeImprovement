@@ -1,0 +1,116 @@
+---
+// HeroSVG.astro
+// A heroic, animated SVG scene representing home improvements (painting, building)
+---
+<svg viewBox="0 0 800 600" class="w-full h-full object-cover" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE" />
+      <stop offset="100%" stop-color="#BAE6FD" />
+    </linearGradient>
+
+    <!-- Paint Mask - animates height to reveal the painted house -->
+    <clipPath id="paintMask">
+      <rect x="250" y="250" width="300" height="250">
+        <animate attributeName="height" values="0; 250; 250; 0" keyTimes="0; 0.4; 0.8; 1" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="y" values="500; 250; 250; 500" keyTimes="0; 0.4; 0.8; 1" dur="6s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Sun rays -->
+    <g id="sun">
+      <circle cx="0" cy="0" r="40" fill="#FDBA74" />
+      <path d="M 0 -55 L 0 -70 M 0 55 L 0 70 M -55 0 L -70 0 M 55 0 L 70 0 M -38 -38 L -48 -48 M 38 38 L 48 48 M -38 38 L -48 48 M 38 -38 L 48 -48" stroke="#FDBA74" stroke-width="6" stroke-linecap="round" />
+    </g>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="100%" height="100%" fill="url(#skyGrad)" />
+
+  <!-- Sun animated -->
+  <g transform="translate(150, 150)">
+    <use href="#sun" class="origin-center animate-[spin_10s_linear_infinite]" />
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="500" width="800" height="100" fill="#86EFAC" />
+
+  <!-- Base House (Unpainted / Before) -->
+  <g transform="translate(250, 250)">
+    <!-- Main walls -->
+    <rect width="300" height="250" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="4" />
+    <!-- Door -->
+    <rect x="120" y="100" width="60" height="150" fill="#D1D5DB" stroke="#9CA3AF" stroke-width="4" />
+    <circle cx="170" cy="180" r="4" fill="#9CA3AF" />
+    <!-- Window 1 -->
+    <rect x="40" y="50" width="60" height="60" fill="#93C5FD" stroke="#9CA3AF" stroke-width="4" />
+    <line x1="70" y1="50" x2="70" y2="110" stroke="#9CA3AF" stroke-width="4" />
+    <line x1="40" y1="80" x2="100" y2="80" stroke="#9CA3AF" stroke-width="4" />
+    <!-- Window 2 -->
+    <rect x="200" y="50" width="60" height="60" fill="#93C5FD" stroke="#9CA3AF" stroke-width="4" />
+    <line x1="230" y1="50" x2="230" y2="110" stroke="#9CA3AF" stroke-width="4" />
+    <line x1="200" y1="80" x2="260" y2="80" stroke="#9CA3AF" stroke-width="4" />
+  </g>
+
+  <!-- Painted House (Masked / After) -->
+  <g clip-path="url(#paintMask)">
+    <g transform="translate(250, 250)">
+      <!-- Main walls painted orange -->
+      <rect width="300" height="250" fill="#FED7AA" stroke="#EA580C" stroke-width="4" />
+      <!-- Door painted -->
+      <rect x="120" y="100" width="60" height="150" fill="#FDBA74" stroke="#EA580C" stroke-width="4" />
+      <circle cx="170" cy="180" r="4" fill="#EA580C" />
+      <!-- Window painted borders -->
+      <rect x="40" y="50" width="60" height="60" fill="#E0F2FE" stroke="#EA580C" stroke-width="4" />
+      <line x1="70" y1="50" x2="70" y2="110" stroke="#EA580C" stroke-width="4" />
+      <line x1="40" y1="80" x2="100" y2="80" stroke="#EA580C" stroke-width="4" />
+      <!-- Window 2 painted borders -->
+      <rect x="200" y="50" width="60" height="60" fill="#E0F2FE" stroke="#EA580C" stroke-width="4" />
+      <line x1="230" y1="50" x2="230" y2="110" stroke="#EA580C" stroke-width="4" />
+      <line x1="200" y1="80" x2="260" y2="80" stroke="#EA580C" stroke-width="4" />
+    </g>
+  </g>
+
+  <!-- Roof -->
+  <polygon points="220,250 400,100 580,250" fill="#4B5563" stroke="#374151" stroke-width="4" stroke-linejoin="round" />
+  <polygon points="220,250 400,100 580,250" fill="none" stroke="#1F2937" stroke-width="8" stroke-linejoin="round" />
+
+  <!-- Paint Roller Animated -->
+  <g>
+    <!-- Animate the roller moving up and down the house walls -->
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-250; 0,-250; 0,0; 0,0"
+      keyTimes="0; 0.4; 0.5; 0.9; 1"
+      dur="6s" repeatCount="indefinite" />
+    
+    <!-- Roller brush -->
+    <g transform="translate(200, 480)">
+      <!-- handle -->
+      <rect x="45" y="40" width="10" height="60" rx="5" fill="#FCA5A5" stroke="#B91C1C" stroke-width="3" />
+      <!-- metal rod -->
+      <path d="M 50 40 L 50 20 L 100 20 L 100 -10" fill="none" stroke="#9CA3AF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+      <!-- roller pad -->
+      <rect x="70" y="-30" width="60" height="40" rx="10" fill="#FDBA74" stroke="#EA580C" stroke-width="3" />
+    </g>
+  </g>
+
+  <!-- Floating / pulsing home improvement elements -->
+  <!-- Hammer -->
+  <g class="animate-bounce" style="animation-duration: 3s;" transform="translate(650, 300)">
+    <path d="M 0 0 C -10 -10, -30 0, -20 20 L -40 40 C -45 45, -45 55, -40 60 C -35 65, -25 65, -20 60 L 0 40 C 20 50, 10 30, 0 0 Z" fill="#9CA3AF" stroke="#4B5563" stroke-width="3" />
+    <circle cx="-10" cy="10" r="5" fill="#E5E7EB" />
+  </g>
+  
+  <!-- Floating Sparkles representing quality/cleanliness -->
+  <g class="animate-pulse" transform="translate(180, 200)">
+    <path d="M0 -15 L3 -5 L15 0 L3 5 L0 15 L-3 5 L-15 0 L-3 -5 Z" fill="#FBBF24" />
+  </g>
+  <g class="animate-pulse" style="animation-delay: 1.5s;" transform="translate(620, 150) scale(0.8)">
+    <path d="M0 -15 L3 -5 L15 0 L3 5 L0 15 L-3 5 L-15 0 L-3 -5 Z" fill="#FBBF24" />
+  </g>
+  <g class="animate-pulse" style="animation-delay: 0.7s;" transform="translate(300, 120) scale(0.5)">
+    <path d="M0 -15 L3 -5 L15 0 L3 5 L0 15 L-3 5 L-15 0 L-3 -5 Z" fill="#FBBF24" />
+  </g>
+
+</svg>

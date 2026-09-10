@@ -1,0 +1,48 @@
+---
+import { absoluteUrl, SITE_NAME } from '../lib/seo';
+
+type Props = {
+	title: string;
+	description: string;
+	/** Path only, e.g. /about/ */
+	path?: string;
+	ogImage?: string;
+	schema?: object | object[];
+	/** @default 'website' */
+	ogType?: 'website' | 'article';
+};
+
+const {
+	title,
+	description,
+	path = '/',
+	ogImage = '/favicon.svg',
+	schema = [],
+	ogType = 'website',
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://goprohomeimprovements.com');
+const canonical = new URL(path, site).href;
+const og = absoluteUrl(ogImage, site);
+const schemaNodes = Array.isArray(schema) ? schema : [schema].filter(Boolean);
+---
+
+<title>{title}</title>
+<link rel="canonical" href={canonical} />
+<meta name="description" content={description} />
+
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={og} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={og} />
+
+{schemaNodes.map((node) => (
+	<script type="application/ld+json" is:inline set:html={JSON.stringify(node)} />
+))}

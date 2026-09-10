@@ -1,0 +1,83 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+
+export async function getStaticPaths() {
+	const areas = await getCollection('service-areas');
+	return areas.map((area) => ({
+		params: { slug: area.id },
+		props: { area },
+	}));
+}
+
+const { area } = Astro.props;
+const { Content } = await render(area);
+const { data } = area;
+
+// Fetch services to display what we offer in this area
+const services = await getCollection('services');
+---
+
+<Base
+	title={data.metaTitle}
+	description={data.metaDescription}
+	path={`/service-areas/${area.id}/`}
+>
+	<div class="bg-cream/40 border-b border-line px-4 py-8 md:px-6 lg:px-8">
+		<div class="mx-auto max-w-content">
+			<Breadcrumbs
+				crumbs={[
+					{ label: 'Service Areas', href: '/service-areas/' },
+					{ label: data.city },
+				]}
+			/>
+			<div class="mt-8 pb-12 max-w-3xl">
+				<h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-tight">
+					{data.title}
+				</h1>
+			</div>
+		</div>
+	</div>
+
+	<section class="px-4 py-16 md:px-6 lg:px-8 bg-paper">
+		<div class="mx-auto max-w-content grid lg:grid-cols-3 gap-12 lg:gap-16">
+			<div class="lg:col-span-2 prose prose-lg prose-slate prose-headings:font-display prose-headings:font-semibold prose-a:text-orange">
+				<Content />
+			</div>
+			<div class="lg:col-span-1">
+				<div class="sticky top-24 bg-cream border border-line p-6 md:p-8 rounded-sm text-center">
+					<h3 class="font-display text-2xl font-semibold mb-4 text-ink">Need a pro in {data.city}?</h3>
+					<p class="text-slate text-sm mb-6">Owner-operated, 15+ years experience, and scope-clear estimates.</p>
+					<a href="/quote/" class="block w-full rounded-sm bg-orange px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-deep">
+						Get a Free Quote
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-ink px-4 py-16 md:px-6 lg:px-8 border-t border-line">
+		<div class="mx-auto max-w-content">
+			<h2 class="font-display text-3xl font-semibold text-paper mb-8 text-center md:text-left">
+				Services we offer in {data.city}
+			</h2>
+			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				{services.slice(0, 6).map(service => (
+					<ServiceCard
+						title={service.data.shortTitle}
+						slug={service.id}
+						excerpt={service.data.excerpt}
+						image={service.data.heroImage}
+					/>
+				))}
+			</div>
+			<div class="mt-8 text-center md:text-left">
+				<a href="/services/" class="inline-flex text-orange font-semibold hover:text-orange-deep transition-colors">
+					View all services →
+				</a>
+			</div>
+		</div>
+	</section>
+</Base>

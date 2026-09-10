@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { defaultTitle } from '../lib/seo';
+
+const title = defaultTitle('Page Not Found');
+const description = 'The page you are looking for does not exist.';
+---
+
+<Base title={title} description={description}>
+	<section class="flex flex-1 flex-col items-center justify-center px-4 py-24 text-center">
+		<h1 class="font-display text-8xl font-bold text-orange">404</h1>
+		<p class="mt-4 text-xl font-semibold text-ink md:text-2xl">Page Not Found</p>
+		<p class="mt-4 text-slate">The page you're looking for doesn't exist or has been moved.</p>
+		<a
+			href="/"
+			class="mt-8 inline-flex items-center justify-center rounded-sm bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-deep"
+		>
+			Return Home
+		</a>
+	</section>
+</Base>

@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import { defaultTitle } from '../lib/seo';
+
+const title = defaultTitle('Contact Us | Go Pro Home Improvements');
+const description = 'Contact Go Pro Home Improvements for your next home project in Central Florida. Call us at (407) 244-6873 or send a message.';
+---
+
+<Base title={title} description={description} path="/contact/">
+	<section class="bg-cream/40 px-4 py-16 md:px-6 md:py-24 lg:px-8 border-b border-line">
+		<div class="mx-auto max-w-content text-center">
+			<h1 class="font-display text-4xl font-semibold text-ink md:text-5xl">Contact Us</h1>
+			<p class="mt-4 text-lg text-slate max-w-2xl mx-auto">
+				We usually reply within 1 business day. Let us know how we can help.
+			</p>
+		</div>
+	</section>
+
+	<section class="px-4 py-16 md:px-6 md:py-24 lg:px-8">
+		<div class="mx-auto max-w-content grid lg:grid-cols-2 gap-12">
+			<div>
+				<h2 class="font-display text-3xl font-semibold mb-6">Get in Touch</h2>
+				<div class="space-y-6 text-lg">
+					<div>
+						<h3 class="font-semibold text-ink">Phone</h3>
+						<p class="mt-1 text-slate"><a href="tel:4072446873" class="hover:text-orange hover:underline">(407) 244-6873</a></p>
+					</div>
+					<div>
+						<h3 class="font-semibold text-ink">Email</h3>
+						<p class="mt-1 text-slate"><a href="mailto:gopro4good@gmail.com" class="hover:text-orange hover:underline">gopro4good@gmail.com</a></p>
+					</div>
+					<div>
+						<h3 class="font-semibold text-ink">Service Area</h3>
+						<p class="mt-1 text-slate">Serving all of Central Florida including Orlando, Kissimmee, and Winter Park.</p>
+					</div>
+				</div>
+
+				<div class="mt-12 bg-cream p-6 border border-line rounded-sm">
+					<h3 class="font-display text-xl font-semibold mb-2">Ready for an estimate?</h3>
+					<p class="text-slate text-sm mb-4">Provide project details via our quote form for a faster, more accurate response.</p>
+					<a href="/quote/" class="inline-flex items-center justify-center rounded-sm bg-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-deep">
+						Go to Quote Form →
+					</a>
+				</div>
+			</div>
+
+			<div class="bg-paper border border-line rounded-sm p-6 md:p-8">
+				<form action="https://formspree.io/f/placeholder" method="POST" class="space-y-6">
+					<!-- TODO: Add proper formspree endpoint via env var -->
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<label for="name" class="block text-sm font-medium text-ink mb-2">Name</label>
+							<input type="text" id="name" name="name" required class="w-full rounded-sm border border-line bg-white px-4 py-2.5 text-sm focus:border-orange focus:outline-none focus:ring-1 focus:ring-orange" />
+						</div>
+						<div>
+							<label for="phone" class="block text-sm font-medium text-ink mb-2">Phone</label>
+							<input type="tel" id="phone" name="phone" class="w-full rounded-sm border border-line bg-white px-4 py-2.5 text-sm focus:border-orange focus:outline-none focus:ring-1 focus:ring-orange" />
+						</div>
+					</div>
+					<div>
+						<label for="email" class="block text-sm font-medium text-ink mb-2">Email</label>
+						<input type="email" id="email" name="email" required class="w-full rounded-sm border border-line bg-white px-4 py-2.5 text-sm focus:border-orange focus:outline-none focus:ring-1 focus:ring-orange" />
+					</div>
+					<div>
+						<label for="message" class="block text-sm font-medium text-ink mb-2">Message</label>
+						<textarea id="message" name="message" rows="5" required class="w-full rounded-sm border border-line bg-white px-4 py-2.5 text-sm focus:border-orange focus:outline-none focus:ring-1 focus:ring-orange"></textarea>
+					</div>
+					<button type="submit" class="w-full rounded-sm bg-orange px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-deep">
+						Send Message
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
+</Base>
