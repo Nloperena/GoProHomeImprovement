@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
 ---
 
 <BaseLayout
@@ -212,6 +213,12 @@ import CTASection from '../../components/CTASection.astro';
             <li><strong>Mid-range theater (projector, surround sound, seating):</strong> 1-2 weeks</li>
             <li><strong>Luxury build (construction, sound isolation, tiered seating):</strong> 3-6 weeks</li>
           </ul>
+
+          <RelatedServices
+            services={[
+              { name: "Home Theater Installation", url: "/services/movie-rooms" }
+            ]}
+          />
 
           <div class="text-center mt-12">
             <p class="text-lg text-gray-600 mb-6 font-sans">Ready to build a movie room in your Orlando home?</p>

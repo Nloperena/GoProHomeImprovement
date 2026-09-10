@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
 ---
 
 <BaseLayout
@@ -189,6 +190,12 @@ import CTASection from '../../components/CTASection.astro';
             <strong>Avoid:</strong> Dark colors on full siding (use for trim only), bright saturated colors (fade fast).<br />
             <strong>Critical:</strong> Use quality paint with UV protection and mildewcide. Paint quality matters more than color choice.
           </p>
+
+          <RelatedServices
+            services={[
+              { name: "Interior & Exterior Painting", url: "/services/interior-exterior-painting" }
+            ]}
+          />
 
           <div class="bg-gray-50 rounded-lg p-8 my-8">
             <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide">Need Exterior Painting?</h3>

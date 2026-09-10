@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
 ---
 
 <BaseLayout
@@ -216,6 +217,12 @@ import CTASection from '../../components/CTASection.astro';
             <li><strong>Trim trees:</strong> Keep branches away from roof to prevent wind damage</li>
             <li><strong>Check attic ventilation:</strong> Proper airflow helps dry out moisture after leaks</li>
           </ul>
+
+          <RelatedServices
+            services={[
+              { name: "Drywall Repair & Installation", url: "/services/drywall" }
+            ]}
+          />
 
           <div class="text-center mt-12">
             <p class="text-lg text-gray-600 mb-6 font-sans">Need storm-damaged drywall repaired in Central Florida?</p>
