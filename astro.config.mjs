@@ -11,8 +11,4 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  redirects: {
-    '/quote': '/estimate',
-    '/quote/': '/estimate',
-  },
 });
