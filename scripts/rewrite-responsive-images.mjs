@@ -58,14 +58,6 @@ function buildPicture(img, entry, sizes) {
   return body.childNodes.find((node) => node.nodeName === 'picture');
 }
 
-function preloadLink(entry, sizes) {
-  const html = `<link rel="preload" as="image" href="${entry.variants[0].avif}" imagesrcset="${srcset(entry.variants, 'avif')}" imagesizes="${sizes}" type="image/avif" fetchpriority="high">`;
-  const fragment = parse(html);
-  const htmlNode = fragment.childNodes.find((node) => node.nodeName === 'html');
-  const head = htmlNode.childNodes.find((node) => node.nodeName === 'head');
-  return head.childNodes.find((node) => node.nodeName === 'link');
-}
-
 function rewriteTree(node, state) {
   if (!node.childNodes) return;
   for (const child of [...node.childNodes]) {
@@ -90,7 +82,6 @@ function rewriteTree(node, state) {
     const isLcp = !isLogo && !state.lcpChosen;
     if (isLcp) {
       state.lcpChosen = true;
-      state.lcp = { entry, sizes: sizesFor(imgClass, parentClass) };
       setAttr(child, 'loading', 'eager');
       setAttr(child, 'fetchpriority', 'high');
     } else if (attr(child, 'fetchpriority') !== 'high') {
@@ -98,7 +89,7 @@ function rewriteTree(node, state) {
       setAttr(child, 'fetchpriority', 'low');
     }
 
-    const picture = buildPicture(child, entry, isLcp ? state.lcp.sizes : sizesFor(imgClass, parentClass));
+    const picture = buildPicture(child, entry, sizesFor(imgClass, parentClass));
     const index = node.childNodes.indexOf(child);
     node.childNodes[index] = picture;
     picture.parentNode = node;
@@ -107,17 +98,7 @@ function rewriteTree(node, state) {
 
 function rewriteHtml(html) {
   const document = parse(html);
-  const state = { lcpChosen: false, lcp: null };
-  rewriteTree(document, state);
-  if (state.lcp) {
-    const htmlNode = document.childNodes.find((node) => node.nodeName === 'html');
-    const head = htmlNode?.childNodes.find((node) => node.nodeName === 'head');
-    if (head) {
-      const link = preloadLink(state.lcp.entry, state.lcp.sizes);
-      head.childNodes.unshift(link);
-      link.parentNode = head;
-    }
-  }
+  rewriteTree(document, { lcpChosen: false });
   return serialize(document);
 }
 
