@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout
-  title="Free Estimate | Painting, Theaters, Drywall | Kissimmee & Orlando | Go Pro"
+  title="Free Home Improvement Estimate | Go Pro"
   description="Request a free estimate for painting, home theaters, drywall & more. Owner-operated, 15+ years serving Kissimmee, Orlando & Central Florida."
 >
   <Header />
@@ -13,7 +14,8 @@ import Footer from '../components/Footer.astro';
   <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-12">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Get Your Free Estimate</h1>
+        <Breadcrumbs />
+        <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Free Home Improvement Estimate</h1>
         <p class="text-xl text-gray-300 mb-6 font-sans">
           Owner-operated. 15+ years serving Kissimmee, Orlando, St. Cloud, Celebration & Poinciana.
         </p>

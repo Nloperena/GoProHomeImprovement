@@ -2,18 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CTASection from '../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Our Work | Go Pro Home Improvements"
+  title="Home Improvement Projects in Central Florida"
   description="View our portfolio of completed home improvement projects in Central Florida. Real photos from actual job sites showcasing our quality workmanship."
 >
   <Header />
 
   <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
     <div class="container-custom text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Work</h1>
+      <Breadcrumbs />
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Home Improvement Projects in Central Florida</h1>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">
         See the quality and craftsmanship we bring to every project. These are real photos from actual job sites across Central Florida.
       </p>
@@ -23,6 +25,7 @@ import CTASection from '../components/CTASection.astro';
   <section class="section-padding">
     <div class="container-custom">
       <div class="mb-12 text-center">
+        <h2 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide">Project Gallery</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
           We stand behind our work with a portfolio of completed projects. Every photo represents a satisfied customer and a job done right.
         </p>
@@ -79,7 +82,7 @@ import CTASection from '../components/CTASection.astro';
           </div>
         </div>
         <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-          <img src="/images/power-washing.jpg" alt="Power washing services" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <img src="/images/power-washing.jpg" alt="Power washing a Central Florida driveway" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <span class="text-white font-semibold">Power Washing</span>
           </div>
@@ -91,19 +94,19 @@ import CTASection from '../components/CTASection.astro';
           </div>
         </div>
         <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-          <img src="/images/drywall.jpg" alt="Professional drywall work" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <img src="/images/drywall.jpg" alt="Drywall repair in a Central Florida home" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <span class="text-white font-semibold">Drywall</span>
           </div>
         </div>
         <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-          <img src="/images/wall-mount.jpg" alt="Professional TV wall mounting" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <img src="/images/wall-mount.jpg" alt="Wall-mounted TV with concealed wires in Central Florida" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <span class="text-white font-semibold">TV Mounting</span>
           </div>
         </div>
         <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-          <img src="/images/wallpaper.jpg" alt="Wallpaper installation" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <img src="/images/wallpaper.jpg" alt="Wallpaper installation in a Central Florida room" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <span class="text-white font-semibold">Wallpaper</span>
           </div>
@@ -121,7 +124,7 @@ import CTASection from '../components/CTASection.astro';
           </div>
         </div>
         <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-          <img src="/images/demolition.jpg" alt="Professional demolition work" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          <img src="/images/demolition.jpg" alt="Interior demolition on a Central Florida remodel" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <span class="text-white font-semibold">Demolition</span>
           </div>

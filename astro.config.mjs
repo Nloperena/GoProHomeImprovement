@@ -6,6 +6,7 @@ import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
   integrations: [react(), tailwind()],
   site: 'https://goprohomeimprovements.com',
+  trailingSlash: 'never',
   output: 'hybrid',
   adapter: vercel(),
 });

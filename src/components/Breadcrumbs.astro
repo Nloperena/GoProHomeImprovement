@@ -1,0 +1,20 @@
+---
+import { breadcrumbsFor } from '../lib/seo/breadcrumbs';
+
+const crumbs = breadcrumbsFor(Astro.url.pathname);
+---
+
+{crumbs.length > 1 && (
+  <nav aria-label="Breadcrumb" class="text-sm mb-6 font-sans flex flex-wrap items-center justify-center">
+    {crumbs.map((crumb, index) => (
+      <span class="inline-flex items-center">
+        {index > 0 && <span class="mx-2 text-gray-500">/</span>}
+        {index === crumbs.length - 1 ? (
+          <span class="text-white">{crumb.name}</span>
+        ) : (
+          <a href={crumb.path} class="text-gray-400 hover:text-gopro-orange transition-colors">{crumb.name}</a>
+        )}
+      </span>
+    ))}
+  </nav>
+)}
