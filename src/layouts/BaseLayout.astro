@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { SITE_ORIGIN, canonicalUrl } from '../lib/seo/site';
 
 interface Props {
   title: string;
@@ -10,7 +11,8 @@ interface Props {
 }
 
 const { title, description, canonical, ogImage, schema } = Astro.props;
-const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = canonicalUrl(canonical || Astro.url.pathname);
+const sitemapURL = `${SITE_ORIGIN}/sitemap-index.xml`;
 const defaultOgImage = new URL('/images/trim-navy-wall.jpg', Astro.site);
 const ogImageURL = ogImage ? new URL(ogImage, Astro.site) : defaultOgImage;
 
@@ -82,6 +84,7 @@ const defaultSchema = {
   <title>{title}</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={canonicalURL}>
+  <link rel="sitemap" type="application/xml" title="Sitemap" href={sitemapURL}>
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
