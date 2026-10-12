@@ -101,7 +101,7 @@ const onEstimatePage = currentPath === '/estimate';
           </svg>
           <span>(407) 244-6873</span>
         </a>
-        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
+        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-gopro-black font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
           Free Estimate
         </a>
       </div>
@@ -162,7 +162,7 @@ const onEstimatePage = currentPath === '/estimate';
           {item.label}
         </a>
       ))}
-      <a href="tel:4072446873" class="mt-4 bg-gopro-orange text-white font-display font-bold uppercase py-4 text-center rounded tracking-wide">
+      <a href="tel:4072446873" class="mt-4 bg-gopro-orange text-gopro-black font-display font-bold uppercase py-4 text-center rounded tracking-wide">
         Call (407) 244-6873
       </a>
       <a href="/estimate" class="mt-3 mb-2 bg-white text-gopro-charcoal font-display font-bold uppercase py-4 text-center rounded tracking-wide">
@@ -179,7 +179,7 @@ const onEstimatePage = currentPath === '/estimate';
     <a
       href="tel:4072446873"
       class:list={[
-        'bg-gopro-orange text-white hover:bg-orange-600 font-display font-bold uppercase py-2 px-2 text-center rounded transition-colors leading-tight flex flex-col items-center justify-center min-h-14',
+        'bg-gopro-orange text-gopro-black hover:bg-orange-600 font-display font-bold uppercase py-2 px-2 text-center rounded transition-colors leading-tight flex flex-col items-center justify-center min-h-14',
         onEstimatePage && 'col-span-2',
       ]}
       aria-label="Call (407) 244-6873"
@@ -190,7 +190,7 @@ const onEstimatePage = currentPath === '/estimate';
     {!onEstimatePage && (
       <a
         href="/estimate"
-        class="bg-white text-gopro-orange hover:bg-gray-100 font-display font-bold uppercase py-2 px-2 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange flex items-center justify-center min-h-14"
+        class="bg-white text-gopro-charcoal hover:bg-gray-100 font-display font-bold uppercase py-2 px-2 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange flex items-center justify-center min-h-14"
       >
         Free Estimate
       </a>

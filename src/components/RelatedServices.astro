@@ -1,4 +1,6 @@
 ---
+import { estimateHrefFromPath } from '../lib/estimate-url';
+
 interface Props {
   services: Array<{
     name: string;
@@ -8,6 +10,7 @@ interface Props {
 }
 
 const { services, includeEstimate = true } = Astro.props;
+const estimateHref = estimateHrefFromPath(Astro.url.pathname);
 ---
 
 <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 my-12">
@@ -22,7 +25,7 @@ const { services, includeEstimate = true } = Astro.props;
     ))}
     {includeEstimate && (
       <div class="mt-4 pt-4 border-t border-gopro-orange/30">
-        <a href="/estimate" class="text-gopro-orange hover:underline font-semibold text-lg">
+        <a href={estimateHref} class="text-gopro-orange hover:underline font-semibold text-lg">
           Get Free Estimate →
         </a>
       </div>
