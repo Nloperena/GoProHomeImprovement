@@ -1,3 +1,4 @@
+import { breadcrumbListNode } from './breadcrumbs';
 import { cities, counties, services } from './catalog';
 import { EMAIL, PHONE_DISPLAY, SITE_NAME, SITE_ORIGIN, canonicalUrl } from './site';
 
@@ -32,6 +33,10 @@ export function buildStructuredData(input: {
   const list = collectionList(input.pathname);
   if (list) graph.push(list);
   graph.push(...extras);
+  if (!extras.some((node) => typesOf(node).includes('BreadcrumbList'))) {
+    const crumbs = breadcrumbListNode(input.pathname);
+    if (crumbs) graph.push(crumbs);
+  }
 
   return {
     '@context': 'https://schema.org',
@@ -213,6 +218,10 @@ function walk(value: unknown, pageUrl: string): unknown {
   for (const [key, child] of Object.entries(source)) {
     if (key === 'containedIn' && typeof child === 'string') {
       next.containedInPlace = { '@type': 'State', name: child };
+      continue;
+    }
+    if (key === 'item' && child === SITE_ORIGIN) {
+      next[key] = `${SITE_ORIGIN}/`;
       continue;
     }
     next[key] = walk(child, pageUrl);

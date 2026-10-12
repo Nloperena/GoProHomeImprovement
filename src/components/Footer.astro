@@ -1,4 +1,6 @@
 ---
+import RelatedLinks from './RelatedLinks.astro';
+
 const currentYear = new Date().getFullYear();
 
 const services = [
@@ -31,6 +33,7 @@ const company = [
 ];
 ---
 
+<RelatedLinks />
 <footer class="bg-gopro-charcoal text-white border-t-4 border-gopro-orange">
   <div class="container-custom py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">

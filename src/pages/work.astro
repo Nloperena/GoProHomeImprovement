@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CTASection from '../components/CTASection.astro';
 ---
 
@@ -13,6 +14,7 @@ import CTASection from '../components/CTASection.astro';
 
   <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
     <div class="container-custom text-center">
+      <Breadcrumbs />
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Home Improvement Projects in Central Florida</h1>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">
         See the quality and craftsmanship we bring to every project. These are real photos from actual job sites across Central Florida.
