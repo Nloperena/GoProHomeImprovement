@@ -29,3 +29,7 @@ Thumbs.db
 
 # Local development
 .vercel
+
+# Generated responsive images (built by scripts/optimize-images.mjs)
+public/images/opt/
+.cache/

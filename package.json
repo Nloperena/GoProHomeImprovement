@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/patch-vercel-runtime.js",
+    "build": "node scripts/optimize-images.mjs && astro build && node scripts/patch-vercel-runtime.js && node scripts/rewrite-responsive-images.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
@@ -20,6 +20,8 @@
   "devDependencies": {
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "parse5": "^8.0.1",
+    "sharp": "^0.35.5",
     "typescript": "^5.6.3"
   }
 }
