@@ -2,39 +2,188 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Fraunces;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/fraunces-roman.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Fraunces;
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/fraunces-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/outfit.woff2') format('woff2');
+}
+
+:root {
+  --ink: #1a1612;
+  --ink-soft: #4a433c;
+  --plaster: #f3eee6;
+  --paper: #f8f5ef;
+  --stone: #e6dfd4;
+  --line: rgba(26, 22, 18, 0.16);
+  --copper: #c4622d;
+  --copper-deep: #8c3b16;
+  --copper-soft: #e0a07a;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 @layer base {
   html {
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-white text-gray-900 antialiased;
-    /* Add bottom padding on mobile to prevent sticky call bar from covering form buttons and CTAs */
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -0.011em;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
     padding-bottom: env(safe-area-inset-bottom, 0);
   }
-  
-  /* Extra bottom spacing on mobile for sticky call bar (shown only on mobile) */
+
   @media (max-width: 1023px) {
     body {
-      padding-bottom: calc(80px + env(safe-area-inset-bottom, 0));
+      padding-bottom: calc(76px + env(safe-area-inset-bottom, 0));
     }
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Fraunces, Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 560;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--copper-deep);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: #e7cbb8;
+    color: var(--ink);
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
-  }
-  
-  .btn-secondary {
-    @apply bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
-  }
-  
-  .section-padding {
-    @apply py-16 md:py-24;
-  }
-  
   .container-custom {
-    @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
   }
+
+  @media (min-width: 768px) {
+    .container-custom { padding-inline: 2.5rem; }
+  }
+
+  @media (min-width: 1280px) {
+    .container-custom { padding-inline: 3.5rem; }
+  }
+
+  .section-padding { padding-block: 4.5rem; }
+
+  @media (min-width: 768px) {
+    .section-padding { padding-block: 7rem; }
+  }
+
+  .kicker {
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--copper-deep);
+    line-height: 1.4;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.35rem;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+  }
+
+  .btn-primary {
+    background: var(--copper-deep);
+    color: var(--paper);
+    border: 1px solid var(--copper-deep);
+  }
+
+  .btn-primary:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+  }
+
+  .btn-secondary {
+    background: var(--ink);
+    color: var(--paper);
+    border: 1px solid var(--ink);
+  }
+
+  .btn-secondary:hover {
+    background: var(--copper-deep);
+    border-color: var(--copper-deep);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+
+  .btn-ghost:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--ink);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--copper);
+    padding-bottom: 0.15rem;
+  }
+
+  .text-link:hover { color: var(--copper-deep); }
 }
+

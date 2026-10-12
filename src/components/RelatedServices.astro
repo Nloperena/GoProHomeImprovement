@@ -10,22 +10,18 @@ interface Props {
 const { services, includeEstimate = true } = Astro.props;
 ---
 
-<div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 my-12">
-  <h3 class="text-xl font-display font-bold uppercase mb-4 tracking-wide">Related Services</h3>
-  <div class="space-y-3">
-    {services.map(service => (
-      <div>
-        <a href={service.url} class="text-gopro-orange hover:underline font-semibold text-lg">
-          {service.name} →
-        </a>
-      </div>
-    ))}
-    {includeEstimate && (
-      <div class="mt-4 pt-4 border-t border-gopro-orange/30">
-        <a href="/estimate" class="text-gopro-orange hover:underline font-semibold text-lg">
-          Request a free estimate →
-        </a>
-      </div>
-    )}
-  </div>
-</div>
+<aside class="related">
+  <h3>Related services</h3>
+  {services.map((service) => (
+    <a href={service.url}>
+      <span>{service.name}</span>
+      <span aria-hidden="true">→</span>
+    </a>
+  ))}
+  {includeEstimate && (
+    <a href="/estimate">
+      <span>Request a free estimate</span>
+      <span aria-hidden="true">→</span>
+    </a>
+  )}
+</aside>

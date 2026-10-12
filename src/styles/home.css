@@ -1,0 +1,210 @@
+/* Index rail and homepage sections */
+.index-rail {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.index-rail ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.35rem;
+  margin: 0;
+  padding: 0.95rem 0;
+}
+
+.index-rail a {
+  color: rgba(248, 245, 239, 0.86);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.index-rail a span { color: var(--copper-soft); margin-right: 0.35rem; }
+.index-rail a:hover { color: white; }
+
+.section-head { max-width: 40rem; margin-bottom: 2.5rem; }
+
+.section-head h2,
+.page-intro h1 {
+  font-size: clamp(2.4rem, 4vw, 4.25rem);
+  margin: 0.4rem 0 0;
+}
+
+.section-head .lede,
+.page-intro .lede {
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1.125rem;
+  max-width: 38rem;
+}
+
+.work-grid {
+  display: grid;
+  gap: 1.25rem 1rem;
+}
+
+.work-card { margin: 0; }
+.work-card a { display: block; overflow: hidden; background: var(--stone); }
+.work-card img { aspect-ratio: 4 / 3; height: auto; transition: transform 0.7s var(--ease); }
+.work-card a:hover img { transform: scale(1.04); }
+
+@media (min-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1.35fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem 1.15rem;
+  }
+
+  .work-card-lead { grid-row: span 2; }
+  .work-card-lead img { aspect-ratio: 3 / 4; height: auto; }
+}
+
+.why-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.why-grid article { border-top: 1px solid var(--line); padding-top: 1.1rem; }
+
+.why-grid .num {
+  display: block;
+  font-family: Fraunces, Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: var(--copper);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.why-grid h3 {
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.45rem;
+}
+
+.why-grid p { margin: 0; color: var(--ink-soft); font-size: 1rem; }
+
+@media (min-width: 800px) {
+  .why-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+}
+
+.service-layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.service-rows { list-style: none; margin: 0; padding: 0; }
+
+.service-rows a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-rows li:last-child a { border-bottom: 1px solid var(--line); }
+
+.service-rows .num {
+  font-family: Fraunces, Georgia, serif;
+  font-style: italic;
+  color: var(--copper);
+  font-size: 1.15rem;
+  width: 2rem;
+}
+
+.service-rows strong {
+  display: block;
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 560;
+  font-size: 1.55rem;
+  letter-spacing: -0.03em;
+}
+
+.service-rows em {
+  display: block;
+  margin-top: 0.2rem;
+  font-style: normal;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.service-rows img {
+  width: 5.5rem;
+  height: 4.25rem;
+  object-fit: cover;
+  object-position: center;
+  background: var(--stone);
+}
+
+.service-rows a:hover strong { color: var(--copper-deep); }
+
+.svc-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--copper-deep);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+@media (min-width: 980px) {
+  .service-layout {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .service-layout .section-head { position: sticky; top: 6.5rem; }
+  .service-rows img { width: 7.25rem; height: 5.25rem; }
+}
+
+.band-stone { background: var(--plaster); }
+.band-paper { background: var(--paper); }
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.steps li { border-top: 1px solid var(--line); padding-top: 1rem; }
+
+.steps .num {
+  font-family: Fraunces, Georgia, serif;
+  font-style: italic;
+  color: var(--copper);
+  font-size: 1.6rem;
+}
+
+.steps p { margin: 0.45rem 0 0; font-size: 1.05rem; }
+
+@media (min-width: 800px) {
+  .steps { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .steps.stack { grid-template-columns: 1fr; max-width: 40rem; }
+}
+
+.faq { display: grid; gap: 0; }
+
+.faq article {
+  border-top: 1px solid var(--line);
+  padding: 1.35rem 0;
+}
+
+.faq h3 {
+  font-size: 1.45rem;
+  margin: 0 0 0.4rem;
+}
+
+.faq p { margin: 0; color: var(--ink-soft); }
+

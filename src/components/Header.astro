@@ -9,97 +9,88 @@ const navItems = [
   { href: '/areas', label: 'Areas' },
   { href: '/reviews', label: 'Reviews' },
 ];
+
+const isCurrent = (href: string) =>
+  href === '/'
+    ? currentPath === '/'
+    : currentPath === href || currentPath.startsWith(href + '/');
 ---
 
-<header class="bg-gopro-charcoal sticky top-0 z-50 border-b-4 border-gopro-orange shadow-lg">
-  <div class="container-custom">
-    <div class="flex items-center justify-between py-3">
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <img src="/images/logo.png" alt="Go Pro Home Improvements" class="h-14 md:h-16 w-auto" />
-      </a>
+<header class="site-header">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="container-custom header-bar">
+    <a href="/" class="logo-link">
+      <img src="/images/logo.png" alt="Go Pro Home Improvements" width="290" height="97" />
+    </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-6">
-        {navItems.map((item) => (
-          <a
-            href={item.href}
-            class={`font-display font-bold uppercase text-sm tracking-wide transition-colors ${
-              currentPath === item.href || currentPath.startsWith(item.href + '/')
-                ? 'text-gopro-orange'
-                : 'text-white hover:text-gopro-orange'
-            }`}
-          >
-            {item.label}
-          </a>
-        ))}
-        <a href="tel:4072446873" class="text-white hover:text-gopro-orange transition-colors font-sans font-semibold border-l-2 border-white/20 pl-6">
-          (407) 244-6873
-        </a>
-      </nav>
-
-      <!-- CTA Button -->
-      <div class="hidden lg:block">
-        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
-          Free Estimate
-        </a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button
-        id="mobile-menu-button"
-        class="lg:hidden p-2 text-white hover:text-gopro-orange"
-        aria-label="Toggle menu"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20 bg-gopro-black">
-    <nav class="container-custom py-4 flex flex-col space-y-4">
+    <nav class="desktop-nav" aria-label="Primary">
       {navItems.map((item) => (
-        <a
-          href={item.href}
-          class={`font-display font-bold uppercase text-sm tracking-wide ${
-            currentPath === item.href || currentPath.startsWith(item.href + '/')
-              ? 'text-gopro-orange'
-              : 'text-white'
-          }`}
-        >
+        <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
           {item.label}
         </a>
       ))}
-      <a href="tel:4072446873" class="text-white font-sans font-semibold">
-        (407) 244-6873
-      </a>
-      <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors text-center tracking-wide">
-        Free Estimate
-      </a>
+    </nav>
+
+    <a class="header-phone" href="tel:4072446873">(407) 244-6873</a>
+    <a class="btn-primary header-cta" href="/estimate">Free estimate</a>
+
+    <button
+      id="mobile-menu-button"
+      class="menu-btn"
+      type="button"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <nav class="container-custom" aria-label="Mobile">
+      {navItems.map((item) => (
+        <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+          {item.label}
+        </a>
+      ))}
+      <div class="menu-meta">
+        <a href="tel:4072446873">(407) 244-6873</a>
+        <a href="/estimate">Request a free estimate</a>
+      </div>
     </nav>
   </div>
 </header>
 
-<!-- Sticky Mobile CTAs - Dual buttons for Call and Estimate -->
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-charcoal shadow-2xl z-40 border-t-2 border-gopro-orange" style="padding-bottom: env(safe-area-inset-bottom, 0);">
-  <div class="grid grid-cols-2 gap-2 p-2">
-    <a href="tel:4072446873" class="bg-gopro-orange text-white hover:bg-orange-600 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide">
-      Call (407) 244-6873
-    </a>
-    <a href="/estimate" class="bg-white text-gopro-orange hover:bg-gray-100 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange">
-      Free Estimate
-    </a>
-  </div>
+  <div class="mobile-dock" role="navigation" aria-label="Call or estimate">
+  <a class="btn-ghost" href="tel:4072446873">Call (407) 244-6873</a>
+  <a class="btn-primary" href="/estimate">Free estimate</a>
 </div>
 
 <script>
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
 
+  document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('main')) return;
+    let node = document.querySelector('header')?.nextElementSibling ?? null;
+    while (node && (node.tagName === 'SCRIPT' || node.classList.contains('mobile-dock'))) {
+      node = node.nextElementSibling;
+    }
+    if (node) node.id = 'main';
+  });
+
+  const setOpen = (open: boolean) => {
+    if (!mobileMenu || !menuButton) return;
+    mobileMenu.hidden = !open;
+    menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+  };
+
   menuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
+    setOpen(mobileMenu?.hidden !== false);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
   });
 </script>

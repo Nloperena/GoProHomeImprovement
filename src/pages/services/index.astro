@@ -8,47 +8,74 @@ const services = [
   {
     name: 'Power Washing',
     href: '/services/power-washing',
-    description: 'Algae, mildew, and dirt off the house, driveway, sidewalk, and pool deck, so the outside is usable again.'
+    description: 'Algae, mildew, and dirt off the house, driveway, sidewalk, and pool deck, so the outside is usable again.',
+    image: '/images/power-washing.jpg',
+    icon: 'wash',
+    alt: 'Power washing'
   },
   {
     name: 'Interior & Exterior Painting',
     href: '/services/interior-exterior-painting',
-    description: 'A room that looks finished, or an exterior that holds up in the Florida sun. One room or the whole house.'
+    description: 'A room that looks finished, or an exterior that holds up in the Florida sun. One room or the whole house.',
+    image: '/images/bedroom-paint.jpg',
+    icon: 'paint',
+    alt: 'Interior painting'
   },
   {
     name: 'Demolition',
     href: '/services/demolition',
-    description: 'Kitchens, bathrooms, and walls torn out and hauled away so the remodel can start.'
+    description: 'Kitchens, bathrooms, and walls torn out and hauled away so the remodel can start.',
+    image: '/images/demolition.jpg',
+    icon: 'demo',
+    alt: 'Interior demolition'
   },
   {
     name: 'Trim & Crown Molding',
     href: '/services/trim-crown-molding',
-    description: 'Crown, baseboards, and paneling installed and painted so the room looks finished.'
+    description: 'Crown, baseboards, and paneling installed and painted so the room looks finished.',
+    image: '/images/trim-navy-wall.jpg',
+    icon: 'trim',
+    alt: 'Trim and crown molding'
   },
   {
     name: 'Wallpaper',
     href: '/services/wallpaper',
-    description: 'Paper hung with seams that sit flat, or old paper stripped and the wall prepped for paint.'
+    description: 'Paper hung with seams that sit flat, or old paper stripped and the wall prepped for paint.',
+    image: '/images/wallpaper.jpg',
+    icon: 'wallpaper',
+    alt: 'Wallpaper installation'
   },
   {
     name: 'Murals',
     href: '/services/murals',
-    description: 'A hand-painted wall for a kid\'s room, a nursery, or a feature wall.'
+    description: "A hand-painted wall for a kid's room, a nursery, or a feature wall.",
+    image: '/images/nemo-mural.jpg',
+    icon: 'mural',
+    alt: 'Custom mural'
   },
   {
     name: 'TV Mounting',
     href: '/services/tv-mounting',
-    description: 'The TV on the wall, level, with the wires out of sight.'
+    description: 'The TV on the wall, level, with the wires out of sight.',
+    image: '/images/wall-mount.jpg',
+    icon: 'tv',
+    alt: 'Wall-mounted television'
   },
   {
     name: 'Movie Rooms',
     href: '/services/movie-rooms',
-    description: 'A spare room turned into a place to watch movies: dark walls, seating, sound, and the screen in the right spot.'
+    description: 'A spare room turned into a place to watch movies: dark walls, seating, sound, and the screen in the right spot.',
+    image: '/images/movie-room.jpg',
+    icon: 'theater',
+    alt: 'Home theater'
   },
   {
     name: 'Drywall',
     href: '/services/drywall',
-    description: 'New walls hung, or holes and water stains patched and textured so they disappear under paint.'
+    description: 'New walls hung, or holes and water stains patched and textured so they disappear under paint.',
+    image: '/images/drywall.jpg',
+    icon: 'drywall',
+    alt: 'Drywall repair'
   }
 ];
 ---
@@ -58,56 +85,46 @@ const services = [
   description="Professional home improvement services in Central Florida: painting, power washing, demolition, trim & molding, wallpaper, murals, TV mounting, home theaters, and drywall."
 >
   <Header />
-
-  <!-- Services Hero -->
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-16">
-    <div class="container-custom text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        Painting, drywall, washing, trim, theaters, and the rest. Kissimmee and nearby. Free estimates.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services List -->
-  <section class="section-padding">
-    <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service) => (
-          <a
-            href={service.href}
-            class="group bg-white border-2 border-gray-200 hover:border-gopro-orange p-8 rounded-lg transition-all hover:shadow-xl"
-          >
-            <h2 class="text-2xl font-bold mb-4 group-hover:text-gopro-orange transition-colors">
-              {service.name}
-            </h2>
-            <p class="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-            <span class="text-gopro-orange font-semibold group-hover:underline inline-flex items-center">
-              Learn More
-              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </span>
-          </a>
-        ))}
+  <main id="main">
+    <header class="page-intro">
+      <div class="container-custom">
+        <p class="kicker">03 / What we do</p>
+        <h1>Our services</h1>
+        <p class="lede">Painting, drywall, washing, trim, theaters, and the rest. Kissimmee and nearby. Free estimates.</p>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Additional Services Note -->
-  <section class="section-padding bg-gray-50">
-    <div class="container-custom text-center">
-      <h2 class="text-3xl font-bold mb-4">Not sure if we do it?</h2>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-        These are the jobs we take. If yours is on the list, call. If you're not sure, call and ask. We'll tell you yes or no.
-      </p>
-      <a href="/estimate" class="btn-primary">
-        Request a Free Estimate
-      </a>
-    </div>
-  </section>
+    <section class="section-padding" style="padding-top: 1.5rem;">
+      <div class="container-custom">
+        <ol class="service-index">
+          {services.map((service, i) => (
+            <li>
+              <a href={service.href}>
+                <span class="idx">{String(i + 1).padStart(2, '0')}</span>
+                <img src={service.image} alt={service.alt} width="240" height="180" loading="lazy" decoding="async" />
+                <span>
+                  <h2>{service.name}</h2>
+                  <p>{service.description}</p>
+                </span>
+                <span class="more-link">Learn more</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
 
-  <CTASection />
+    <section class="section-padding band-stone">
+      <div class="container-custom">
+        <div class="section-head">
+          <h2>Not sure if we do it?</h2>
+          <p class="lede">These are the jobs we take. If yours is on the list, call. If you're not sure, call and ask. We'll tell you yes or no.</p>
+        </div>
+        <a href="/estimate" class="btn-primary">Request a free estimate</a>
+      </div>
+    </section>
 
+    <CTASection />
+  </main>
   <Footer />
 </BaseLayout>
