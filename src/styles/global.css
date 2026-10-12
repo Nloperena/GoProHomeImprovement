@@ -21,6 +21,11 @@
   }
 }
 
+/* Wrapper keeps <picture> from changing image layout. */
+picture.opt-picture {
+  display: contents;
+}
+
 @layer components {
   .btn-primary {
     @apply bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
