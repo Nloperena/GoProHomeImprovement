@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/optimize-images.mjs && astro build && node scripts/patch-vercel-runtime.js && node scripts/rewrite-responsive-images.mjs",
+    "build": "node scripts/optimize-images.mjs && astro build && node scripts/patch-vercel-runtime.js && node scripts/rewrite-responsive-images.mjs && node scripts/inline-css.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
