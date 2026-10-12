@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { buildStructuredData, jsonLdScript } from '../lib/seo/schema';
 import { SITE_ORIGIN, canonicalUrl } from '../lib/seo/site';
 
 interface Props {
@@ -15,65 +16,13 @@ const canonicalURL = canonicalUrl(canonical || Astro.url.pathname);
 const sitemapURL = `${SITE_ORIGIN}/sitemap-index.xml`;
 const defaultOgImage = new URL('/images/trim-navy-wall.jpg', Astro.site);
 const ogImageURL = ogImage ? new URL(ogImage, Astro.site) : defaultOgImage;
-
-const defaultSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "HomeAndConstructionBusiness",
-      "@id": "https://goprohomeimprovements.com/#business",
-      "name": "Go Pro Home Improvements",
-      "legalName": "GO PRO HOME IMPROVEMENTS INC.",
-      "url": "https://goprohomeimprovements.com",
-      "telephone": "(407) 244-6873",
-      "email": "gopro4good@gmail.com",
-      "foundingDate": "2014",
-      "image": "https://goprohomeimprovements.com/images/logo.png",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://goprohomeimprovements.com/images/logo.png"
-      },
-      "priceRange": "$$",
-      "areaServed": [
-        { "@type": "City", "name": "Kissimmee" },
-        { "@type": "City", "name": "Orlando" },
-        { "@type": "City", "name": "St. Cloud" },
-        { "@type": "City", "name": "Celebration" },
-        { "@type": "City", "name": "Poinciana" },
-        { "@type": "City", "name": "Davenport" },
-        { "@type": "AdministrativeArea", "name": "Osceola County" },
-        { "@type": "AdministrativeArea", "name": "Orange County" }
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "07:00",
-          "closes": "17:00"
-        }
-      ],
-      "knowsAbout": [
-        "Power Washing",
-        "Interior Painting",
-        "Exterior Painting",
-        "Demolition",
-        "Trim Installation",
-        "Crown Molding",
-        "Wallpaper Installation",
-        "Custom Murals",
-        "TV Mounting",
-        "Home Theater Installation",
-        "Drywall Installation",
-        "Drywall Repair"
-      ],
-      "sameAs": [
-        "https://www.instagram.com/gopro4good/",
-        "https://share.google/mxf7aR650uFCQUTab",
-        "https://www.google.com/maps?cid=11832173553199565594"
-      ]
-    }
-  ]
-};
+const structuredData = jsonLdScript(buildStructuredData({
+  pathname: Astro.url.pathname,
+  title,
+  description,
+  image: ogImageURL.href,
+  extra: schema,
+}));
 ---
 
 <!DOCTYPE html>
@@ -86,6 +35,8 @@ const defaultSchema = {
   <link rel="canonical" href={canonicalURL}>
   <link rel="sitemap" type="application/xml" title="Sitemap" href={sitemapURL}>
   <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="US-FL">
+  <meta name="geo.placename" content="Kissimmee">
   
   <!-- Open Graph -->
   <meta property="og:title" content={title}>
@@ -109,7 +60,7 @@ const defaultSchema = {
   <meta name="theme-color" content="#FF5C28">
   
   <!-- Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchema)} />
+  <script type="application/ld+json" set:html={structuredData} />
 </head>
 <body>
   <slot />
