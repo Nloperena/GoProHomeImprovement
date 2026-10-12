@@ -47,7 +47,7 @@ The old `#FF5C28` stays in the logo file. On screen it becomes this deeper coppe
 CSS only, transform and opacity, so a mobile Lighthouse score in the 90s stays realistic. No animation library.
 
 - Headline lines rise into their crop, staggered.
-- The hero photograph settles from a slight scale.
+- The hero photograph does not move. It is the largest paint on the page, and a scale on it held the picture unpainted.
 - The dimension rule draws once.
 - Crop marks fade in.
 - Hovers are a short image scale or a color change.
@@ -58,7 +58,7 @@ CSS only, transform and opacity, so a mobile Lighthouse score in the 90s stays r
 
 Real job photos already on the site. The hero is the navy paneled wall because it is the most finished room we have; a movie-room inset shows the other end of the work. Low-resolution files (the van, small wash and drywall shots) stay small. No stock, no generated rooms, no fake before-and-afters.
 
-Grain is a tiny tiled SVG on the hero only, low opacity, so the plaster does not look like flat software gray.
+No live noise filter on the hero. A turbulence overlay shared a paint with the photograph, so the plaster is a flat warm field and the picture does the work.
 
 ## What we will not add
 

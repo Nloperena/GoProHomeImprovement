@@ -7,17 +7,6 @@
   padding: 0;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.05;
-  background-image: url('/graphics/grain.svg');
-  background-size: 180px;
-  mix-blend-mode: multiply;
-}
-
 .hero-grid {
   position: relative;
   display: grid;
@@ -121,13 +110,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.plate-frame img { animation: hero-settle 1.7s var(--ease) both; }
-
-@keyframes hero-settle {
-  from { transform: scale(1.07); }
-  to { transform: scale(1); }
 }
 
 .crop-marks {

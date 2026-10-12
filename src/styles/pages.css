@@ -103,7 +103,7 @@
   grid-area: num;
   font-family: Fraunces, Georgia, serif;
   font-style: italic;
-  color: var(--copper);
+  color: var(--copper-deep);
   font-size: 1.25rem;
 }
 

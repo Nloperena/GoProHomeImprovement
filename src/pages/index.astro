@@ -40,7 +40,7 @@ const services = [
     name: 'Painting',
     href: '/services/interior-exterior-painting',
     description: 'Rooms that look finished. Exteriors that hold up in the sun.',
-    image: '/images/bedroom-paint.jpg',
+    image: '/images/bedroom-paint-480.jpg',
     icon: 'paint',
     alt: 'Painted bedroom with a striped accent wall'
   },
@@ -48,7 +48,7 @@ const services = [
     name: 'Home Theaters',
     href: '/services/movie-rooms',
     description: 'A room set up for movies, not a TV on a stand.',
-    image: '/images/movie-room.jpg',
+    image: '/images/movie-room-480.jpg',
     icon: 'theater',
     alt: 'Home theater seating'
   },
@@ -72,7 +72,7 @@ const services = [
     name: 'Trim & Molding',
     href: '/services/trim-crown-molding',
     description: 'Crown and baseboards that finish the room.',
-    image: '/images/trim-navy-wall.jpg',
+    image: '/images/trim-navy-wall-480.jpg',
     icon: 'trim',
     alt: 'White trim on a navy wall'
   },
@@ -80,18 +80,18 @@ const services = [
     name: 'Custom Murals',
     href: '/services/murals',
     description: "A hand-painted wall for a kid's room or a feature wall.",
-    image: '/images/nemo-mural.jpg',
+    image: '/images/nemo-mural-480.jpg',
     icon: 'mural',
     alt: 'Hand-painted mural'
   }
 ];
 
 const work = [
-  { src: '/images/nemo-mural.jpg', alt: 'Finding Nemo custom mural', caption: 'Custom mural', wide: true },
-  { src: '/images/star-wars-theater.jpg', alt: 'Star Wars home theater', caption: 'Home theater' },
-  { src: '/images/bedroom-paint.jpg', alt: 'Painted bedroom', caption: 'Interior painting' },
-  { src: '/images/wood-floor.jpg', alt: 'Wood-look floor with border trim', caption: 'Flooring' },
-  { src: '/images/movie-room.jpg', alt: 'Home theater with tiered seating', caption: 'Movie room' },
+  { src: '/images/nemo-mural-1100.jpg', alt: 'Finding Nemo custom mural', caption: 'Custom mural', wide: true },
+  { src: '/images/star-wars-theater-1100.jpg', alt: 'Star Wars home theater', caption: 'Home theater' },
+  { src: '/images/bedroom-paint-1100.jpg', alt: 'Painted bedroom', caption: 'Interior painting' },
+  { src: '/images/wood-floor-1100.jpg', alt: 'Wood-look floor with border trim', caption: 'Flooring' },
+  { src: '/images/movie-room-1100.jpg', alt: 'Home theater with tiered seating', caption: 'Movie room' },
 ];
 
 const steps = [
@@ -113,6 +113,7 @@ const questions = [
 <BaseLayout
   title="Home Improvement in Kissimmee & Central Florida | Go Pro"
   description="Owner-operated contractor serving Kissimmee, Orlando & Central Florida for 15+ years. Home theaters, murals, painting, power washing, trim, drywall & more."
+  preloadImage="/images/trim-navy-wall-1400.jpg"
 >
   <Header />
   <main id="main">
@@ -144,7 +145,7 @@ const questions = [
           {work.map((item, i) => (
             <figure class:list={['work-card', item.wide && 'work-card-lead']}>
               <a href="/work">
-                <img src={item.src} alt={item.alt} width="1920" height="1440" loading="lazy" decoding="async" />
+                <img src={item.src} alt={item.alt} width="1100" height="826" loading="lazy" decoding="async" />
               </a>
               <figcaption>
                 <span>{String(i + 1).padStart(2, '0')}</span>
@@ -193,7 +194,7 @@ const questions = [
                   <strong>{service.name}</strong>
                   <em>{service.description}</em>
                 </span>
-                <img src={service.image} alt="" width="160" height="120" decoding="async" />
+                <img src={service.image} alt="" width="160" height="120" loading="lazy" decoding="async" />
               </a>
             </li>
           ))}
