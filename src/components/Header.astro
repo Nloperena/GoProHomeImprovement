@@ -9,23 +9,29 @@ const navItems = [
   { href: '/areas', label: 'Areas' },
   { href: '/reviews', label: 'Reviews' },
 ];
+
+function isCurrent(href: string) {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(href + '/');
+}
 ---
+
+<a href="#page-content" class="skip-link">Skip to content</a>
 
 <header class="bg-gopro-charcoal sticky top-0 z-50 border-b-4 border-gopro-orange shadow-lg">
   <div class="container-custom">
-    <div class="flex items-center justify-between py-3">
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
+    <div class="flex items-center justify-between gap-4 py-3">
+      <a href="/" class="flex items-center shrink-0 rounded-sm">
         <img src="/images/logo.png" alt="Go Pro Home Improvements" class="h-14 md:h-16 w-auto" />
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-6">
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Primary">
         {navItems.map((item) => (
           <a
             href={item.href}
+            aria-current={isCurrent(item.href) ? 'page' : undefined}
             class={`font-display font-bold uppercase text-sm tracking-wide transition-colors ${
-              currentPath === item.href || currentPath.startsWith(item.href + '/')
+              isCurrent(item.href)
                 ? 'text-gopro-orange'
                 : 'text-white hover:text-gopro-orange'
             }`}
@@ -33,64 +39,81 @@ const navItems = [
             {item.label}
           </a>
         ))}
-        <a href="tel:4072446873" class="text-white hover:text-gopro-orange transition-colors font-sans font-semibold border-l-2 border-white/20 pl-6">
-          (407) 244-6873
-        </a>
       </nav>
 
-      <!-- CTA Button -->
-      <div class="hidden lg:block">
+      <div class="hidden lg:flex items-center gap-3 shrink-0">
+        <a
+          href="tel:4072446873"
+          class="inline-flex items-center gap-2 text-white hover:text-gopro-orange border border-white/40 hover:border-gopro-orange rounded px-3 py-2 font-sans font-semibold transition-colors"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+          </svg>
+          <span>(407) 244-6873</span>
+        </a>
         <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
           Free Estimate
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="lg:hidden p-2 text-white hover:text-gopro-orange"
-        aria-label="Toggle menu"
+        type="button"
+        class="lg:hidden p-3 -mr-1 text-white hover:text-gopro-orange rounded"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-6 h-6 menu-icon-close hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20 bg-gopro-black">
-    <nav class="container-custom py-4 flex flex-col space-y-4">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20 bg-gopro-black" hidden>
+    <nav class="container-custom py-2 flex flex-col" aria-label="Mobile">
       {navItems.map((item) => (
         <a
           href={item.href}
-          class={`font-display font-bold uppercase text-sm tracking-wide ${
-            currentPath === item.href || currentPath.startsWith(item.href + '/')
-              ? 'text-gopro-orange'
-              : 'text-white'
+          aria-current={isCurrent(item.href) ? 'page' : undefined}
+          class={`font-display font-bold uppercase text-base tracking-wide py-3 border-b border-white/10 ${
+            isCurrent(item.href) ? 'text-gopro-orange' : 'text-white'
           }`}
         >
           {item.label}
         </a>
       ))}
-      <a href="tel:4072446873" class="text-white font-sans font-semibold">
-        (407) 244-6873
+      <a href="tel:4072446873" class="mt-4 bg-gopro-orange text-white font-display font-bold uppercase py-4 text-center rounded tracking-wide">
+        Call (407) 244-6873
       </a>
-      <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors text-center tracking-wide">
+      <a href="/estimate" class="mt-3 mb-2 bg-white text-gopro-charcoal font-display font-bold uppercase py-4 text-center rounded tracking-wide">
         Free Estimate
       </a>
     </nav>
   </div>
 </header>
 
-<!-- Sticky Mobile CTAs - Dual buttons for Call and Estimate -->
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-charcoal shadow-2xl z-40 border-t-2 border-gopro-orange" style="padding-bottom: env(safe-area-inset-bottom, 0);">
+<div id="page-content" tabindex="-1"></div>
+
+<div class="site-call-bar lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-charcoal shadow-2xl z-40 border-t-2 border-gopro-orange" style="padding-bottom: env(safe-area-inset-bottom, 0);">
   <div class="grid grid-cols-2 gap-2 p-2">
-    <a href="tel:4072446873" class="bg-gopro-orange text-white hover:bg-orange-600 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide">
-      Call (407) 244-6873
+    <a
+      href="tel:4072446873"
+      class="bg-gopro-orange text-white hover:bg-orange-600 font-display font-bold uppercase py-2 px-2 text-center rounded transition-colors leading-tight flex flex-col items-center justify-center min-h-14"
+      aria-label="Call (407) 244-6873"
+    >
+      <span class="text-[11px] tracking-wide">Call now</span>
+      <span class="text-sm tracking-normal normal-case font-sans">(407) 244-6873</span>
     </a>
-    <a href="/estimate" class="bg-white text-gopro-orange hover:bg-gray-100 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange">
-      Get Estimate
+    <a
+      href="/estimate"
+      class="bg-white text-gopro-orange hover:bg-gray-100 font-display font-bold uppercase py-2 px-2 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange flex items-center justify-center min-h-14"
+    >
+      Free Estimate
     </a>
   </div>
 </div>
@@ -98,8 +121,52 @@ const navItems = [
 <script>
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
+  const openIcon = menuButton?.querySelector('.menu-icon-open');
+  const closeIcon = menuButton?.querySelector('.menu-icon-close');
+
+  function setMenuOpen(open: boolean) {
+    if (!mobileMenu || !menuButton) return;
+    mobileMenu.classList.toggle('hidden', !open);
+    mobileMenu.toggleAttribute('hidden', !open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    openIcon?.classList.toggle('hidden', open);
+    closeIcon?.classList.toggle('hidden', !open);
+    document.body.classList.toggle('nav-open', open);
+  }
 
   menuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
+    const open = menuButton.getAttribute('aria-expanded') === 'true';
+    setMenuOpen(!open);
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMenuOpen(false);
   });
 </script>
+
+<style>
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 80;
+    background: #fff;
+    color: #1a1a1a;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .skip-link:focus {
+    top: 0.75rem;
+  }
+
+  :global(body.nav-open) .site-call-bar {
+    visibility: hidden;
+  }
+</style>
