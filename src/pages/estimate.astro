@@ -2,6 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const nextSteps = [
+  'You send this form, or you call.',
+  'The owner calls you to go over the job.',
+  'If we need to see the house, we set a time. Someone needs to be there.',
+  'You get a written estimate. There is no charge for it.',
+  'If you say yes, we schedule the work.',
+];
+
+const before = [
+  ['Is the estimate free?', "Yes. The form and the phone call don't cost anything."],
+  ['Who calls me back?', 'The owner. Not a salesperson.'],
+  ['What if the job is small?', 'Call anyway. One room, a drywall patch, a TV mount, and a driveway wash are all jobs we do.'],
+  ['Do I have to be home?', 'For a visit, yes. Someone needs to let us see the work. If photos are enough, text them to (407) 244-6873.'],
+  ['Where do you work?', 'Kissimmee, Orlando, St. Cloud, Celebration, Poinciana, and nearby Central Florida.'],
+];
 ---
 
 <BaseLayout
@@ -9,84 +25,52 @@ import Footer from '../components/Footer.astro';
   description="Request a free estimate for painting, home theaters, drywall & more. Owner-operated, 15+ years serving Kissimmee, Orlando & Central Florida."
 >
   <Header />
-
-  <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-12">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Request a free estimate</h1>
-        <p class="text-xl text-gray-300 mb-6 font-sans">
-          Tell us the job and the city. The owner calls you back. Monday through Friday, 7 AM to 5 PM.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <p class="text-gray-400 font-sans">Prefer to call?</p>
-          <a href="tel:4072446873" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded text-lg transition-colors inline-block shadow-lg tracking-wide">
-            (407) 244-6873
-          </a>
-        </div>
+  <main id="main">
+    <header class="page-intro">
+      <div class="container-custom">
+        <p class="kicker">04 / The price</p>
+        <h1>Request a free estimate</h1>
+        <p class="lede">Tell us the job and the city. The owner calls you back. Monday through Friday, 7 AM to 5 PM.</p>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="section-padding">
-    <div class="container-custom">
-      <div class="max-w-3xl mx-auto">
-        <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
-          <form id="estimate-form" class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
+    <section class="section-padding" style="padding-top: 1.5rem;">
+      <div class="container-custom estimate-layout">
+        <aside class="estimate-aside">
+          <p class="kicker">Prefer to call?</p>
+          <p class="mt-4 text-[1.35rem] leading-snug">
+            <a href="tel:4072446873" class="text-link">(407) 244-6873</a>
+          </p>
+          <p class="mt-6 text-[var(--ink-soft)]">
+            Call Monday through Friday, 7 AM to 5 PM. If we're on a job, leave a message and we'll call back.
+          </p>
+          <p class="mt-4 text-sm text-[var(--ink-soft)]">
+            Email <a href="mailto:gopro4good@gmail.com" class="underline">gopro4good@gmail.com</a>
+          </p>
+        </aside>
+
+        <div class="form-panel">
+          <form id="estimate-form" class="space-y-7">
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-7">
               <div>
-                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Full Name <span class="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                  placeholder="John Smith"
-                />
+                <label for="name" class="field-label">Full name <span class="req">*</span></label>
+                <input class="field" type="text" id="name" name="name" required autocomplete="name" placeholder="John Smith" />
               </div>
-
               <div>
-                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Phone Number <span class="text-red-500">*</span>
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                  placeholder="(407) 555-1234"
-                />
+                <label for="phone" class="field-label">Phone number <span class="req">*</span></label>
+                <input class="field" type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(407) 555-1234" />
               </div>
             </div>
 
             <div>
-              <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                Email Address <span class="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                placeholder="john@example.com"
-              />
+              <label for="email" class="field-label">Email address <span class="req">*</span></label>
+              <input class="field" type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com" />
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-7">
               <div>
-                <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Service Type <span class="text-red-500">*</span>
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                >
+                <label for="service" class="field-label">Service type <span class="req">*</span></label>
+                <select class="field" id="service" name="service" required>
                   <option value="">Select a service...</option>
                   <option value="interior-exterior-painting">Painting (Interior & Exterior)</option>
                   <option value="movie-rooms">Home Theater / Movie Room</option>
@@ -100,167 +84,81 @@ import Footer from '../components/Footer.astro';
                   <option value="other">Other</option>
                 </select>
               </div>
-
               <div>
-                <label for="city" class="block text-sm font-semibold text-gray-700 mb-2">
-                  City <span class="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                  placeholder="Kissimmee"
-                />
+                <label for="city" class="field-label">City <span class="req">*</span></label>
+                <input class="field" type="text" id="city" name="city" required autocomplete="address-level2" placeholder="Kissimmee" />
               </div>
             </div>
 
             <div>
-              <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-                Project Details <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows="6"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                placeholder="What needs to be done, and roughly how big is it?"
-              ></textarea>
-              <p class="text-sm text-gray-500 mt-2">
-                Optional: You can also text photos of the project area to <a href="tel:4072446873" class="text-gopro-orange hover:underline">(407) 244-6873</a>
+              <label for="message" class="field-label">Project details <span class="req">*</span></label>
+              <textarea class="field" id="message" name="message" required rows="6" placeholder="What needs to be done, and roughly how big is it?"></textarea>
+              <p class="text-sm text-[var(--ink-soft)] mt-3">
+                Optional: You can also text photos of the project area to <a href="tel:4072446873" class="underline">(407) 244-6873</a>
               </p>
             </div>
 
-            <!-- Honeypot field - hidden from humans, visible to bots -->
             <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
               <label for="website">Website</label>
-              <input
-                type="text"
-                id="website"
-                name="website"
-                tabindex="-1"
-                autocomplete="off"
-              />
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
             </div>
 
-            <div class="pt-4">
-              <button
-                type="submit"
-                class="w-full btn-primary text-lg py-4 hover:shadow-lg"
-              >
-                Request my free estimate
-              </button>
+            <div>
+              <button type="submit" class="btn-primary">Request my free estimate</button>
             </div>
-            
-            <div class="text-center mt-6 pt-6 border-t border-gray-200">
-              <p class="text-sm text-gray-600 font-sans">
-                The estimate is free. You talk to the owner. Monday through Friday, 7 AM to 5 PM.
-              </p>
-            </div>
+
+            <p class="text-sm text-[var(--ink-soft)] border-t border-[var(--line)] pt-5">
+              The estimate is free. You talk to the owner. Monday through Friday, 7 AM to 5 PM.
+            </p>
           </form>
 
           <div id="form-success" class="hidden">
-            <div class="text-center py-12">
-              <svg class="w-20 h-20 text-green-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <h2 class="text-3xl font-bold text-gray-900 mb-4">We got it.</h2>
-              <p class="text-lg text-gray-600 mb-8">
+            <div class="py-8">
+              <p class="kicker">Sent</p>
+              <h2 class="text-4xl mt-3 mb-4">We got it.</h2>
+              <p class="text-[var(--ink-soft)] mb-6">
                 The owner will call you during business hours, Monday through Friday, 7 AM to 5 PM.
               </p>
-              <div class="space-y-3 text-gray-600">
-                <p>Questions in the meantime?</p>
-                <p class="font-semibold">
-                  Call us at <a href="tel:4072446873" class="text-gopro-orange hover:underline">(407) 244-6873</a>
-                </p>
-              </div>
+              <p class="text-[var(--ink-soft)]">
+                Questions in the meantime? Call <a href="tel:4072446873" class="underline">(407) 244-6873</a>
+              </p>
             </div>
           </div>
 
           <div id="form-error" class="hidden">
-            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded">
-              <p class="text-red-800 font-semibold mb-2">Submission Error</p>
-              <p class="text-red-600">
-                There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="text-red-800 underline">(407) 244-6873</a>.
+            <div class="border-l-4 border-red-700 pl-4 py-2" role="alert">
+              <p class="font-semibold mb-1">Submission error</p>
+              <p class="text-red-800">
+                There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="underline">(407) 244-6873</a>.
               </p>
             </div>
           </div>
-        </div>
 
-        <div class="mt-12 grid md:grid-cols-2 gap-8">
-          <div class="bg-gray-50 rounded-lg p-8">
-            <h3 class="text-xl font-bold mb-4">What happens next</h3>
-            <ol class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <span class="font-bold text-gopro-orange mr-3">1.</span>
-                <span>You send this form, or you call.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="font-bold text-gopro-orange mr-3">2.</span>
-                <span>The owner calls you to go over the job.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="font-bold text-gopro-orange mr-3">3.</span>
-                <span>If we need to see the house, we set a time. Someone needs to be there.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="font-bold text-gopro-orange mr-3">4.</span>
-                <span>You get a written estimate. There is no charge for it.</span>
-              </li>
-              <li class="flex items-start">
-                <span class="font-bold text-gopro-orange mr-3">5.</span>
-                <span>If you say yes, we schedule the work.</span>
-              </li>
+          <div class="mt-16">
+            <h2 class="text-3xl mb-6">What happens next</h2>
+            <ol class="steps stack">
+              {nextSteps.map((step, i) => (
+                <li>
+                  <span class="num">{String(i + 1).padStart(2, '0')}</span>
+                  <p>{step}</p>
+                </li>
+              ))}
             </ol>
           </div>
 
-          <div class="bg-gopro-orange text-white rounded-lg p-8">
-            <h3 class="text-xl font-bold mb-4">Prefer to call?</h3>
-            <p class="mb-6">
-              Call Monday through Friday, 7 AM to 5 PM. If we're on a job, leave a message and we'll call back.
-            </p>
-            <a href="tel:4072446873" class="bg-white text-gopro-orange hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 inline-block">
-              Call (407) 244-6873
-            </a>
-            <div class="mt-6 pt-6 border-t border-white/20">
-              <p class="text-sm text-white/90">
-                Email: <a href="mailto:gopro4good@gmail.com" class="underline">gopro4good@gmail.com</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 bg-gray-50 rounded-lg p-8">
-          <h3 class="text-xl font-bold mb-6">Before you send it</h3>
-          <div class="space-y-5 text-gray-700">
-            <div>
-              <p class="font-semibold text-gray-900">Is the estimate free?</p>
-              <p>Yes. The form and the phone call don't cost anything.</p>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-900">Who calls me back?</p>
-              <p>The owner. Not a salesperson.</p>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-900">What if the job is small?</p>
-              <p>Call anyway. One room, a drywall patch, a TV mount, and a driveway wash are all jobs we do.</p>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-900">Do I have to be home?</p>
-              <p>For a visit, yes. Someone needs to let us see the work. If photos are enough, text them to (407) 244-6873.</p>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-900">Where do you work?</p>
-              <p>Kissimmee, Orlando, St. Cloud, Celebration, Poinciana, and nearby Central Florida.</p>
-            </div>
+          <div class="faq mt-16">
+            <h2 class="text-3xl mb-2">Before you send it</h2>
+            {before.map(([q, a]) => (
+              <article>
+                <h3>{q}</h3>
+                <p>{a}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
+    </section>
+  </main>
   <Footer />
 
   <script>
@@ -268,16 +166,14 @@ import Footer from '../components/Footer.astro';
     const formSuccess = document.getElementById('form-success');
     const formError = document.getElementById('form-error');
 
-    // Record when the form loaded (timing gate)
     const formStartedAt = Date.now();
 
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
 
-      // Add timing gate and honeypot data
       (data as any).formStartedAt = formStartedAt;
       (data as any).website = (data as any).website || '';
 
@@ -290,24 +186,22 @@ import Footer from '../components/Footer.astro';
           body: JSON.stringify(data),
         });
 
-        // Treat 200 as success (even if silent-dropped)
         if (response.ok) {
           form.classList.add('hidden');
           formSuccess?.classList.remove('hidden');
           formError?.classList.add('hidden');
         } else {
-          // Try to get error message from response
-          let errorMessage = 'There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="text-red-800 underline">(407) 244-6873</a>.';
+          let errorMessage = 'There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="underline">(407) 244-6873</a>.';
           try {
             const errorData = await response.json();
             if (errorData.error) {
               errorMessage = errorData.error;
             }
           } catch {
-            // Use default message if JSON parsing fails
+            // Use the default message if JSON parsing fails
           }
-          
-          const errorElement = formError?.querySelector('.text-red-600');
+
+          const errorElement = formError?.querySelector('.text-red-800');
           if (errorElement) {
             errorElement.innerHTML = errorMessage;
           }

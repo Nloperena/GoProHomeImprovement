@@ -3,6 +3,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CTASection from '../components/CTASection.astro';
+
+const facts = [
+  ['Who you talk to', 'The owner answers. No salesperson quotes the job and then sends someone else to do it.'],
+  ['What the price covers', 'You get a written estimate before work starts. If the job changes, we talk about it before we add anything.'],
+  ['When we work', 'Monday through Friday, 7 AM to 5 PM. Call or send the estimate form.'],
+];
+
+const reasons = [
+  ['The owner is on the job', 'You can call the same person who wrote the estimate.'],
+  ['Local jobs', 'Based in Kissimmee. We work in Orlando, St. Cloud, Celebration, Poinciana, and the rest of Central Florida.'],
+  ['A price before we start', 'The estimate is free. You see the number before you say yes.'],
+  ['The house is left clean', 'We treat the house with care and clean up when the job is done.'],
+];
+
+const commitments = [
+  'You get a written estimate before work starts',
+  'We work Monday through Friday, 7 AM to 5 PM',
+  'We treat the house with care and clean up when we leave',
+  'You talk to the owner, not a call center',
+];
 ---
 
 <BaseLayout
@@ -10,121 +30,83 @@ import CTASection from '../components/CTASection.astro';
   description="Learn about Go Pro Home Improvements, an owner-operated home improvement contractor with 15+ years of experience serving Central Florida."
 >
   <Header />
+  <main id="main">
+    <header class="page-intro">
+      <div class="container-custom">
+        <p class="kicker">02 / The company</p>
+        <h1>About Go Pro</h1>
+        <p class="lede">Owner-operated in Kissimmee since 2014. Monday through Friday, 7 AM to 5 PM.</p>
+      </div>
+    </header>
 
-  <section class="bg-gradient-to-br from-gopro-charcoal to-gopro-black text-white py-16 border-b-4 border-gopro-orange">
-    <div class="container-custom text-center">
-      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">About Go Pro</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto font-sans">
-        Owner-operated in Kissimmee since 2014. Monday through Friday, 7 AM to 5 PM.
-      </p>
-    </div>
-  </section>
-
-  <section class="section-padding">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <div class="mb-12 max-w-4xl mx-auto">
-          <img src="/images/van.png" alt="Go Pro Home Improvements service van" class="w-full rounded-lg shadow-2xl mb-12" />
-          
-          <div class="prose prose-lg max-w-none">
-            <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+    <section class="section-padding" style="padding-top: 2rem;">
+      <div class="container-custom">
+        <div class="split">
+          <figure class="about-frame">
+            <div class="plate-photo">
+              <img
+                src="/images/crew-branded-shirt.jpg"
+                alt="Go Pro crew installing flooring on a Central Florida job"
+                width="1920"
+                height="1440"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              <span>On the job</span>
+              <span>Kissimmee</span>
+            </figcaption>
+          </figure>
+          <div class="prose-block">
+            <p>
               Go Pro Home Improvements is an owner-operated Florida corporation, established in 2014 and based in Kissimmee. We paint inside and out, patch drywall, power wash, hang trim and wallpaper, mount TVs, build movie rooms, and paint murals.
             </p>
-            <p class="text-lg text-gray-600 mb-8 font-sans">
+            <p>
               We're not a franchise. When you call, you talk to the owner. When we quote the job, that is the price we mean. When we show up, we finish the work. We do that in Kissimmee, Orlando, St. Cloud, Celebration, and Poinciana.
             </p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-          <div class="bg-gray-50 rounded-lg p-8 border-t-4 border-gopro-orange">
-            <h2 class="text-xl font-display font-bold uppercase mb-4 text-gopro-charcoal tracking-wide">Who you talk to</h2>
-            <p class="text-gray-700">
-              The owner answers. No salesperson quotes the job and then sends someone else to do it.
-            </p>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-8 border-t-4 border-gopro-orange">
-            <h2 class="text-xl font-display font-bold uppercase mb-4 text-gopro-charcoal tracking-wide">What the price covers</h2>
-            <p class="text-gray-700">
-              You get a written estimate before work starts. If the job changes, we talk about it before we add anything.
-            </p>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-8 border-t-4 border-gopro-orange">
-            <h2 class="text-xl font-display font-bold uppercase mb-4 text-gopro-charcoal tracking-wide">When we work</h2>
-            <p class="text-gray-700">
-              Monday through Friday, 7 AM to 5 PM. Call or send the estimate form.
+            <p class="mt-8">
+              <a class="btn-primary" href="/estimate">Get free estimate</a>
             </p>
           </div>
         </div>
 
-        <div class="bg-gopro-charcoal text-white rounded-lg p-12 mb-16 border-4 border-gopro-orange">
-          <h2 class="text-3xl font-display font-black uppercase mb-6 text-center tracking-tight">Why Go Pro</h2>
-          <p class="text-xl text-center mb-8 text-white/90">
-            You want the work done, and you want to know who is doing it.
-          </p>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white/10 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-3">The owner is on the job</h3>
-              <p class="text-white/90">
-                You can call the same person who wrote the estimate.
-              </p>
-            </div>
-            <div class="bg-white/10 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-3">Local jobs</h3>
-              <p class="text-white/90">
-                Based in Kissimmee. We work in Orlando, St. Cloud, Celebration, Poinciana, and the rest of Central Florida.
-              </p>
-            </div>
-            <div class="bg-white/10 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-3">A price before we start</h3>
-              <p class="text-white/90">
-                The estimate is free. You see the number before you say yes.
-              </p>
-            </div>
-            <div class="bg-white/10 rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-3">The house is left clean</h3>
-              <p class="text-white/90">
-                We treat the house with care and clean up when the job is done.
-              </p>
-            </div>
-          </div>
+        <div class="spec-grid">
+          {facts.map(([title, copy]) => (
+            <article>
+              <h2>{title}</h2>
+              <p>{copy}</p>
+            </article>
+          ))}
         </div>
 
-        <div class="border-l-4 border-gopro-orange pl-6 mb-12">
-          <h2 class="text-2xl font-bold mb-4">Our Commitment</h2>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              You get a written estimate before work starts
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              We work Monday through Friday, 7 AM to 5 PM
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              We treat the house with care and clean up when we leave
-            </li>
-            <li class="flex items-start">
-              <span class="text-gopro-orange mr-2">•</span>
-              You talk to the owner, not a call center
-            </li>
-          </ul>
+        <div class="section-head" style="margin-top: 5rem;">
+          <p class="kicker">Why Go Pro</p>
+          <h2>You want the work done, and you want to know who is doing it.</h2>
+        </div>
+        <div class="why-grid">
+          {reasons.map(([title, copy], i) => (
+            <article>
+              <span class="num">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
         </div>
 
-        <div class="text-center">
-          <p class="text-lg text-gray-600 mb-6">
-            Call or request an estimate when you know the job.
-          </p>
-          <a href="/estimate" class="btn-primary">
-            Get Free Estimate
-          </a>
+        <div class="section-head" style="margin-top: 5rem;">
+          <h2>Our commitment</h2>
         </div>
+        <ul class="commit-list" style="max-width: 40rem;">
+          {commitments.map((item) => <li>{item}</li>)}
+        </ul>
+
+        <p class="mt-10 text-[var(--ink-soft)]">
+          Call or request an estimate when you know the job.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <CTASection />
-
+    <CTASection />
+  </main>
   <Footer />
 </BaseLayout>

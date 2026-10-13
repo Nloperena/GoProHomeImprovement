@@ -1,0 +1,8 @@
+Place the owner's spray-painting clip at this exact path:
+
+  public/video/hero.mp4
+
+H.264 video. No audio track is required (the page mutes it).
+The homepage shows the navy trim photo first, then attaches this file
+after the page has loaded, and only if the file is actually here.
+Until then, the photograph stays on screen.
