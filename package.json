@@ -2,6 +2,9 @@
   "name": "gopro-home-improvements",
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/patch-vercel-runtime.js",
@@ -10,11 +13,11 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@astrojs/react": "^3.6.2",
+    "@astrojs/react": "^7.0.1",
     "@astrojs/sitemap": "^3.7.3",
-    "@astrojs/tailwind": "^5.1.2",
-    "@astrojs/vercel": "^7.8.2",
-    "astro": "^4.16.18",
+    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/vercel": "^11.0.14",
+    "astro": "^7.3.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.1"
