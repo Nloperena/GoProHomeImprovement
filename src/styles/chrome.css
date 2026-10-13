@@ -3,9 +3,10 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(243, 238, 230, 0.92);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
+  background: rgba(12, 11, 9, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(244, 239, 232, 0.12);
+  color: var(--bone);
 }
 
 .skip {
@@ -28,9 +29,14 @@
   min-height: 4.5rem;
 }
 
-.logo-link { display: flex; flex: none; }
+.logo-link {
+  display: flex;
+  flex: none;
+  background: var(--bone);
+  padding: 0.28rem 0.45rem 0.22rem;
+}
 
-.logo-link img { height: 2.7rem; width: auto; }
+.logo-link img { height: 2.35rem; width: auto; }
 
 .desktop-nav {
   display: none;
@@ -40,7 +46,7 @@
 }
 
 .desktop-nav a {
-  color: var(--ink);
+  color: var(--bone);
   text-decoration: none;
   font-size: 0.72rem;
   font-weight: 500;
@@ -49,17 +55,17 @@
 }
 
 .desktop-nav a[aria-current='page'],
-.desktop-nav a:hover { color: var(--copper-deep); }
+.desktop-nav a:hover { color: var(--lacquer); }
 
 .header-phone {
   display: none;
-  color: var(--ink);
+  color: var(--bone);
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 500;
   letter-spacing: 0;
   padding-left: 1.25rem;
-  border-left: 1px solid var(--line);
+  border-left: 1px solid rgba(244, 239, 232, 0.22);
 }
 
 .header-cta { display: none; }
@@ -73,7 +79,7 @@
   gap: 5px;
   background: transparent;
   border: 0;
-  color: var(--ink);
+  color: var(--bone);
 }
 
 .menu-btn span,
@@ -97,14 +103,14 @@
 .menu-btn span::after { top: 6px; }
 
 .mobile-menu {
-  border-top: 1px solid var(--line);
-  background: var(--plaster);
+  border-top: 1px solid rgba(244, 239, 232, 0.12);
+  background: var(--night);
   padding: 1.5rem 0 2rem;
 }
 
 .mobile-menu a {
   display: block;
-  color: var(--ink);
+  color: var(--bone);
   text-decoration: none;
   font-family: Fraunces, Georgia, serif;
   font-size: 2rem;
@@ -128,6 +134,23 @@
   font-size: 0.95rem;
   letter-spacing: 0;
 }
+
+.site-header.is-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+}
+
+.site-header.is-overlay.is-solid {
+  background: rgba(12, 11, 9, 0.94);
+  border-bottom-color: rgba(244, 239, 232, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+.site-header :focus-visible { outline-color: var(--bone); }
 
 @media (min-width: 1024px) {
   .desktop-nav, .header-phone, .header-cta { display: inline-flex; }

@@ -16,7 +16,7 @@ const isCurrent = (href: string) =>
     : currentPath === href || currentPath.startsWith(href + '/');
 ---
 
-<header class="site-header">
+<header class:list={['site-header', currentPath === '/' && 'is-overlay']}>
   <a class="skip" href="#main">Skip to content</a>
   <div class="container-custom header-bar">
     <a href="/" class="logo-link">
@@ -69,6 +69,7 @@ const isCurrent = (href: string) =>
 <script>
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
+  const header = document.querySelector('.site-header');
 
   document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('main')) return;
@@ -84,7 +85,19 @@ const isCurrent = (href: string) =>
     mobileMenu.hidden = !open;
     menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
     menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    if (header?.classList.contains('is-overlay')) {
+      header.classList.toggle('is-solid', open || window.scrollY > 24);
+    }
   };
+
+  if (header?.classList.contains('is-overlay')) {
+    const onScroll = () => {
+      const menuOpen = mobileMenu?.hidden === false;
+      header.classList.toggle('is-solid', menuOpen || window.scrollY > 24);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 
   menuButton?.addEventListener('click', () => {
     setOpen(mobileMenu?.hidden !== false);

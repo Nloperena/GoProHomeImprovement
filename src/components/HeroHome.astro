@@ -1,66 +1,91 @@
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <p class="kicker hero-kicker">
-        <span>01</span>
-        <span aria-hidden="true">/</span>
-        <span>Kissimmee</span>
-        <span aria-hidden="true">/</span>
-        <span>Est. 2014</span>
-      </p>
-      <h1 id="hero-title">
-        <span class="hero-line"><span>House work,</span></span>
-        <span class="hero-line"><span><em>priced before</em></span></span>
-        <span class="hero-line"><span>we start.</span></span>
-      </h1>
-      <div class="measure" aria-hidden="true">
-        <svg viewBox="0 0 360 18" fill="none">
-          <path class="measure-line" d="M1 9H359" stroke="currentColor" stroke-width="1" />
-          <path d="M1 3.5V14.5M359 3.5V14.5" stroke="currentColor" stroke-width="1" />
-        </svg>
-      </div>
-      <p class="hero-lede">
-        Painting, drywall, power washing, trim, and more. You talk to the owner. Kissimmee and nearby.
-      </p>
-      <div class="hero-actions">
-        <a href="/estimate" class="btn-primary">Request a free estimate</a>
-        <a href="tel:4072446873" class="btn-ghost">Call (407) 244-6873</a>
-      </div>
+  <div class="hero-media">
+    <div class="hero-media-inner">
+      <img
+        class="hero-poster"
+        src="/images/trim-navy-wall-1400.jpg"
+        srcset="/images/trim-navy-wall-840.jpg 840w, /images/trim-navy-wall-1400.jpg 1400w, /images/trim-navy-wall.jpg 1920w"
+        sizes="100vw"
+        alt="Finished living room with a navy wall, white raised paneling, and crown molding"
+        width="1400"
+        height="1050"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <!--
+        Hero footage slot.
+        Drop the owner's spray-painting clip at public/video/hero.mp4
+        (H.264). Do not put a src on this video in HTML.
+        The script at the bottom attaches that file after the poster
+        has painted, and only if the file exists. See docs/design-direction.md.
+      -->
+      <video
+        class="hero-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src="/video/hero.mp4"
+        aria-hidden="true"
+      ></video>
     </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-wipe" aria-hidden="true"></div>
+  </div>
 
-    <div class="hero-stage">
-      <figure class="plate">
-        <figcaption>
-          <span>Plate 01</span>
-          <span>Trim &amp; paint</span>
-        </figcaption>
-        <div class="plate-photo">
-          <div class="plate-frame">
-            <img
-              src="/images/trim-navy-wall-1400.jpg"
-              srcset="/images/trim-navy-wall-720.jpg 720w, /images/trim-navy-wall-960.jpg 960w, /images/trim-navy-wall-1400.jpg 1400w"
-              sizes="(min-width: 1024px) 48vw, 92vw"
-              alt="Finished living room with a navy wall, white raised paneling, and crown molding"
-              width="1400"
-              height="1050"
-              fetchpriority="high"
-              decoding="async"
-            />
-          </div>
-          <div class="crop-marks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        </div>
-      </figure>
-      <figure class="plate-inset">
-        <img
-          src="/images/movie-room-480.jpg"
-          alt="Home theater with tiered seating and a painted popcorn wall"
-          width="480"
-          height="360"
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>Movie room</figcaption>
-      </figure>
+  <div class="hero-copy">
+    <p class="kicker hero-kicker">
+      <span>01</span>
+      <span aria-hidden="true">/</span>
+      <span>Kissimmee</span>
+      <span aria-hidden="true">/</span>
+      <span>Est. 2014</span>
+    </p>
+    <h1 id="hero-title">
+      <span class="hero-line"><span>House work,</span></span>
+      <span class="hero-line"><span><em>priced before</em></span></span>
+      <span class="hero-line"><span>we start.</span></span>
+    </h1>
+    <p class="hero-lede">
+      Painting, drywall, power washing, trim, and more. You talk to the owner. Kissimmee and nearby.
+    </p>
+    <div class="hero-actions">
+      <a href="/estimate" class="btn-primary">Request a free estimate</a>
+      <a href="tel:4072446873" class="btn-ghost">Call (407) 244-6873</a>
     </div>
   </div>
 </section>
+
+<script>
+  const video = document.querySelector('.hero-video');
+  if (video instanceof HTMLVideoElement) {
+    const arm = async () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const src = video.dataset.src;
+      if (!src) return;
+      try {
+        const head = await fetch(src, { method: 'HEAD' });
+        if (!head.ok) return;
+      } catch {
+        return;
+      }
+      const source = document.createElement('source');
+      source.src = src;
+      source.type = 'video/mp4';
+      video.append(source);
+      video.addEventListener('playing', () => video.classList.add('is-ready'), { once: true });
+      try {
+        video.load();
+        await video.play();
+      } catch {
+        /* The poster photograph stays in place. */
+      }
+    };
+    const start = () => {
+      if ('requestIdleCallback' in window) requestIdleCallback(() => arm(), { timeout: 2500 });
+      else window.setTimeout(arm, 1500);
+    };
+    if (document.readyState === 'complete') start();
+    else window.addEventListener('load', start, { once: true });
+  }
+</script>

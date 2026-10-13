@@ -5,17 +5,6 @@ import Footer from '../components/Footer.astro';
 import CTASection from '../components/CTASection.astro';
 import HeroHome from '../components/HeroHome.astro';
 
-const rail = [
-  { href: '/services/interior-exterior-painting', label: 'Painting' },
-  { href: '/services/drywall', label: 'Drywall' },
-  { href: '/services/power-washing', label: 'Power washing' },
-  { href: '/services/trim-crown-molding', label: 'Trim' },
-  { href: '/services/movie-rooms', label: 'Theaters' },
-  { href: '/services/murals', label: 'Murals' },
-  { href: '/services/wallpaper', label: 'Wallpaper' },
-  { href: '/services/tv-mounting', label: 'TV mounting' },
-];
-
 const whyChooseUs = [
   {
     title: 'You talk to the owner',
@@ -119,53 +108,10 @@ const questions = [
   <main id="main">
     <HeroHome />
 
-    <nav class="index-rail" aria-label="Services">
+    <section class="section-padding band-bone why-band">
       <div class="container-custom">
-        <ol>
-          {rail.map((item, i) => (
-            <li>
-              <a href={item.href}>
-                <span>{String(i + 1).padStart(2, '0')}</span>
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </nav>
-
-    <section class="section-padding band-paper">
-      <div class="container-custom">
-        <div class="section-head">
-          <p class="kicker">Recent projects</p>
-          <h2>Our work</h2>
-          <p class="lede">Real jobs across Central Florida: painting, home theaters, drywall, and more. Photos from jobs for Central Florida homeowners.</p>
-        </div>
-        <div class="work-grid">
-          {work.map((item, i) => (
-            <figure class:list={['work-card', item.wide && 'work-card-lead']}>
-              <a href="/work">
-                <img src={item.src} alt={item.alt} width="1100" height="826" loading="lazy" decoding="async" />
-              </a>
-              <figcaption>
-                <span>{String(i + 1).padStart(2, '0')}</span>
-                <span>{item.caption}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <p class="mt-10">
-          <a class="text-link" href="/work">View full gallery</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="section-padding band-stone">
-      <div class="container-custom">
-        <div class="section-head">
-          <p class="kicker">Why Go Pro</p>
-          <h2>You call. The owner answers. You get a price before we start.</h2>
-        </div>
+        <p class="kicker">Why Go Pro</p>
+        <h2>You call. The owner answers. You get a price before we start.</h2>
         <div class="why-grid">
           {whyChooseUs.map((item, i) => (
             <article>
@@ -178,7 +124,31 @@ const questions = [
       </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding reel-section band-night">
+      <div class="container-custom section-head">
+        <p class="kicker">Recent projects</p>
+        <h2>Our work</h2>
+        <p class="lede">Real jobs across Central Florida: painting, home theaters, drywall, and more. Photos from jobs for Central Florida homeowners.</p>
+      </div>
+      <div class="reel" tabindex="0" aria-label="Project photos">
+        {work.map((item, i) => (
+          <figure>
+            <a href="/work">
+              <img src={item.src} alt={item.alt} width="1100" height="826" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>
+              <span>{String(i + 1).padStart(2, '0')}</span>
+              <span>{item.caption}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="container-custom">
+        <a class="text-link reel-more" href="/work">View full gallery</a>
+      </div>
+    </section>
+
+    <section class="section-padding band-paper">
       <div class="container-custom service-layout">
         <div class="section-head">
           <p class="kicker">Our services</p>
@@ -202,12 +172,10 @@ const questions = [
       </div>
     </section>
 
-    <section class="section-padding band-stone">
+    <section class="section-padding process band-night">
       <div class="container-custom">
-        <div class="section-head">
-          <h2>How a job starts</h2>
-        </div>
-        <ol class="steps">
+        <h2>How a job starts</h2>
+        <ol>
           {steps.map((step, i) => (
             <li>
               <span class="num">{String(i + 1).padStart(2, '0')}</span>
@@ -218,12 +186,12 @@ const questions = [
       </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding band-bone">
       <div class="container-custom">
         <div class="section-head">
           <h2>Questions homeowners ask</h2>
         </div>
-        <div class="faq" style="max-width: 46rem;">
+        <div class="faq" style="max-width: 52rem;">
           {questions.map(([q, a]) => (
             <article>
               <h3>{q}</h3>

@@ -1,64 +1,68 @@
 # Design direction
 
-Go Pro Home Improvements, Kissimmee. Owner-operated painting, drywall, power washing, trim, and the jobs around them. The marketing copy stays plain and specific. The design has to feel as considered as the finished rooms, without pretending the company is a design studio or inventing reviews, stats, awards, or licenses.
+Go Pro Home Improvements, Kissimmee. Owner-operated painting, drywall, power washing, trim, and the jobs around them. The marketing copy stays plain and specific. The design has to be noticed in the first second, without inventing reviews, stats, awards, or licenses.
 
 ## What the research pointed to
 
-Award-level architecture and home sites in 2026 (Awwwards write-ups on Telha Clarke and MERSI, Codrops on motion systems, Godly and Land-book editorial portfolios, plus luxury-service case studies) keep landing on the same ideas:
+Award-level architecture and home sites in 2026 (Awwwards Site of the Day, Godly, Land-book, and studio case studies such as Telha Clarke and MERSI) are not quiet templates. The ones that win are cinematic:
 
-- One visual idea, carried with discipline. Generic dark heroes, card grids, and loud buttons read as a template.
-- Editorial type. A high-contrast or soft serif at display size, a quiet grotesque for text, letterspaced labels instead of bold condensed shouting.
-- Warm, limited color. Plaster, ink, and one accent. Cool gray SaaS palettes and primary orange are fading on premium home brands.
-- Photography is the material. Full frames, real crops, almost no interface on top of the picture.
-- Motion is pacing. Slow settles and reveals, not bounce. It has to still look finished when it does not move.
-- Print artifacts are showing up again: crop marks, baseline rules, plate numbers. Used once, they feel authored. Used everywhere, they feel like a kit.
+- A full-bleed first screen. The photograph or film is the page, edge to edge, at least one viewport tall.
+- Display type at a size that overlaps the picture. Tight leading. One italic or one color does the remembering.
+- Motion you can name: a staggered reveal, a wipe, a slow scroll scale. It still has to look finished when it does not move.
+- The rest of the page changes temperature. Night, then bone, then night again. Large photographs, not card grids.
+- A horizontal reel or a bento for the work, oversized numerals for a process, and a closing band that is as loud as the hero.
 
-Glassmorphism, gradient orbs, and autoplay carousels are the things these sites are leaving behind.
+The earlier measured-rooms pass (crop marks, a split hero, plaster and a quiet copper) read as a refined brochure. It was too close to the old site to feel like a break.
 
-## The idea: measured rooms
+## The idea: one spray pass
 
-The line we already say is “priced before we start.” The site behaves like a field book laid out as a magazine: the room is photographed, then marked the way a job is marked before a price is written. Plate numbers, a dimension rule, and crop marks sit on the hero only, plus one portrait on About. Everywhere else the system is type, hairlines, and the photographs.
+The line we already say is “priced before we start.” The hero is the finished room, full bleed, with the sentence set on top of it at display size. A lacquer bar wipes across once, the way a spray pass crosses a wall, then leaves. When Nico has footage of the owner painting, that film replaces the still. Until then the navy trim photograph holds the frame.
 
-That fits a premium local contractor better than a cold architecture clone. The work is physical and the promise is a written price. The marks make that promise visible without a new claim.
+That fits a painting contractor better than another split layout. The work is physical, the first screen is a room, and the promise stays the sentence we already use.
 
 ## Type
 
-- Display: Fraunces, self-hosted, optical size on. Sentence case. Weight about 560. One italic in copper for the words we want remembered (`priced before`).
-- Text: Outfit, self-hosted. 17px body, generous line height.
-- Labels: Outfit, 12px, weight 500, tracking about 0.16em, uppercase. Used for plate numbers, kickers, and nav. Never for headlines.
-
-Old pages still using uppercase utilities inherit Fraunces, so they sit in the same family until they are rewritten.
+- Display: Fraunces, self-hosted. On the hero, `clamp(3.15rem, 12.4vw, 11.4rem)`, line-height 0.82, tracking about -0.055em. The words `priced before` are italic lacquer.
+- Elsewhere, headlines stay in Fraunces but come down from that peak. Section titles are still large enough to change the page.
+- Text: Outfit, self-hosted.
+- Labels: Outfit, 12px, weight 500, tracking about 0.16em, uppercase.
 
 ## Color
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| Ink | `#1A1612` | Text, footer, index rail |
-| Plaster | `#F3EEE6` | Hero and quiet sections |
-| Paper | `#F8F5EF` | Page background |
-| Stone | `#E6DFD4` | Rules, process band |
-| Copper | `#C4622D` | Large italic, dimension rule. Large text only (about 3.5:1 on plaster) |
-| Copper deep | `#8C3B16` | Buttons, small labels, links. About 7:1 on plaster with paper text |
+| Night | `#0C0B09` | Hero scrim, gallery, process, header, footer |
+| Bone | `#E6DED2` | Light sections, logo plate |
+| Paper | `#F4EFE8` | Forms and quiet copy blocks |
+| Lacquer | `#FF4D1A` | Hero italic, giant numerals, buttons, the wipe. About 5.9:1 on night |
+| Lacquer deep | `#9A2E0E` | Small labels and numerals on bone. About 5.7:1 |
 
-The old `#FF5C28` stays in the logo file. On screen it becomes this deeper copper so white and plaster text stay readable. No second accent.
+Lacquer is not used for small text on bone. The logo file still contains the old orange; it sits on a bone plate so the black wordmark reads on night photography.
 
 ## Motion
 
-CSS only, transform and opacity, so a mobile Lighthouse score in the 90s stays realistic. No animation library.
+CSS only. No animation library.
 
 - Headline lines rise into their crop, staggered.
-- The hero photograph does not move. It is the largest paint on the page, and a scale on it held the picture unpainted.
-- The dimension rule draws once.
-- Crop marks fade in.
-- Hovers are a short image scale or a color change.
+- A lacquer wipe crosses the hero once and ends off-screen. It does not cover the poster at rest, so the photograph can paint immediately.
+- The headline drifts up slightly as the page scrolls (`animation-timeline: scroll()`), where the browser supports it. The photograph itself does not animate, so it can paint as the first image.
+- The hero video, once a file is present, fades in over the poster. It does not load during the first paint.
 
-`prefers-reduced-motion: reduce` collapses those to a near-instant end state. Nothing loops.
+`prefers-reduced-motion: reduce` finishes the type reveal immediately, skips the wipe and the scroll scale, and does not start the video.
+
+## Hero video
+
+The poster is the existing navy trim photograph (`public/images/trim-navy-wall.jpg` and the 840 / 1400 derivatives).
+
+To run footage of the owner spray painting, put one file here:
+
+`public/video/hero.mp4`
+
+H.264. Audio is optional; the page sets `muted`, `loop`, and `playsinline`. The `<video>` has no `src` in the HTML. After the window loads, the homepage checks that path and attaches it only if the file is there. A note with the same path is in `public/video/PUT-HERO-MP4-HERE.txt`, and the comment sits on the video element in `src/components/HeroHome.astro`.
 
 ## Imagery
 
-Real job photos already on the site. The hero is the navy paneled wall because it is the most finished room we have; a movie-room inset shows the other end of the work. Low-resolution files (the van, small wash and drywall shots) stay small. No stock, no generated rooms, no fake before-and-afters.
-
-No live noise filter on the hero. A turbulence overlay shared a paint with the photograph, so the plaster is a flat warm field and the picture does the work.
+Real job photos already on the site. The hero poster is the navy paneled wall. The project reel and the closing band use the mural, theaters, bedroom, and floor photographs. Low-resolution files stay small. No stock, no generated rooms, no fake before-and-afters.
 
 ## What we will not add
 

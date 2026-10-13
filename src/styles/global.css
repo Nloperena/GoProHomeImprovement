@@ -27,21 +27,26 @@
 }
 
 :root {
-  --ink: #1a1612;
-  --ink-soft: #4a433c;
-  --plaster: #f3eee6;
-  --paper: #f8f5ef;
-  --stone: #e6dfd4;
-  --line: rgba(26, 22, 18, 0.16);
-  --copper: #c4622d;
-  --copper-deep: #8c3b16;
-  --copper-soft: #e0a07a;
+  --night: #0c0b09;
+  --ink: #0c0b09;
+  --ink-soft: #3f3832;
+  --bone: #e6ded2;
+  --plaster: #e6ded2;
+  --paper: #f4efe8;
+  --stone: #d9d0c4;
+  --line: rgba(12, 11, 9, 0.16);
+  --lacquer: #ff4d1a;
+  --lacquer-deep: #9a2e0e;
+  --copper: #ff4d1a;
+  --copper-deep: #9a2e0e;
+  --copper-soft: #ffb199;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
@@ -78,8 +83,8 @@
   }
 
   ::selection {
-    background: #e7cbb8;
-    color: var(--ink);
+    background: var(--lacquer);
+    color: var(--night);
   }
 }
 
@@ -137,15 +142,15 @@
   }
 
   .btn-primary {
-    background: var(--copper-deep);
-    color: var(--paper);
-    border: 1px solid var(--copper-deep);
+    background: var(--lacquer);
+    color: var(--night);
+    border: 1px solid var(--lacquer);
   }
 
   .btn-primary:hover {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: var(--paper);
+    background: var(--night);
+    border-color: var(--night);
+    color: var(--bone);
   }
 
   .btn-secondary {

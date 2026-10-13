@@ -112,12 +112,12 @@ const defaultSchema = {
       rel="preload"
       as="image"
       href={preloadImage}
-      imagesrcset="/images/trim-navy-wall-720.jpg 720w, /images/trim-navy-wall-960.jpg 960w, /images/trim-navy-wall-1400.jpg 1400w"
-      imagesizes="(min-width: 1024px) 48vw, 92vw"
+      imagesrcset="/images/trim-navy-wall-840.jpg 840w, /images/trim-navy-wall-1400.jpg 1400w, /images/trim-navy-wall.jpg 1920w"
+      imagesizes="100vw"
       fetchpriority="high"
     />
   )}
-  <meta name="theme-color" content="#F3EEE6">
+  <meta name="theme-color" content="#0C0B09">
   
   <!-- Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchema)} />
