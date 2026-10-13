@@ -1,8 +1,5 @@
 import type { APIRoute } from 'astro';
 import {
-  checkSpam,
-  logSpamRejection,
-  silentDrop,
   validateName,
   validateEmail,
   validatePhone,
@@ -10,6 +7,12 @@ import {
   validateMessage,
   validateService,
 } from '../../lib/spam-protection';
+import {
+  performSecurityCheck,
+  createGenericErrorResponse,
+  createSuccessResponse,
+  logSecurityRejection,
+} from '../../lib/security-enhanced';
 
 export const prerender = false;
 
@@ -34,11 +37,12 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
     
-    // === SPAM PROTECTION CHECKS ===
-    const spamCheck = checkSpam(data, request);
-    if (spamCheck.isSpam) {
-      logSpamRejection(spamCheck, 'estimate');
-      return silentDrop('Estimate');
+    // === ENHANCED SECURITY CHECKS ===
+    const securityCheck = await performSecurityCheck(data, request);
+    if (!securityCheck.passed) {
+      logSecurityRejection(securityCheck, 'estimate');
+      // Return generic error to avoid leaking security details
+      return createGenericErrorResponse();
     }
     
     // === FIELD VALIDATION ===
