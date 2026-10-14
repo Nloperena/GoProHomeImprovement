@@ -6,6 +6,34 @@
   html {
     @apply scroll-smooth;
   }
+
+  :focus-visible {
+    outline: 3px solid #1a1a1a;
+    outline-offset: 3px;
+  }
+
+  header :focus-visible,
+  .site-call-bar :focus-visible {
+    outline-color: #ffffff;
+  }
+
+  [aria-invalid='true'] {
+    border-color: #b91c1c;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
   
   body {
     @apply bg-white text-gray-900 antialiased;
@@ -13,17 +41,17 @@
     padding-bottom: env(safe-area-inset-bottom, 0);
   }
   
-  /* Extra bottom spacing on mobile for sticky call bar (shown only on mobile) */
+  /* Extra bottom spacing on mobile for the two-line sticky call bar */
   @media (max-width: 1023px) {
     body {
-      padding-bottom: calc(80px + env(safe-area-inset-bottom, 0));
+      padding-bottom: calc(96px + env(safe-area-inset-bottom, 0));
     }
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
+    @apply bg-gopro-orange hover:bg-orange-600 text-gopro-black font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 inline-block shadow-lg hover:shadow-xl tracking-wide;
   }
   
   .btn-secondary {

@@ -19,7 +19,7 @@ import Footer from '../components/Footer.astro';
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <p class="text-gray-400 font-sans">Prefer to call?</p>
-          <a href="tel:4072446873" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded text-lg transition-colors inline-block shadow-lg tracking-wide">
+          <a href="tel:4072446873" class="bg-gopro-orange hover:bg-orange-600 text-gopro-black font-display font-bold uppercase px-8 py-4 rounded text-lg transition-colors inline-block shadow-lg tracking-wide">
             (407) 244-6873
           </a>
         </div>
@@ -31,7 +31,7 @@ import Footer from '../components/Footer.astro';
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
-          <form id="estimate-form" class="space-y-6">
+          <form id="estimate-form" class="space-y-6" novalidate>
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
@@ -42,9 +42,14 @@ import Footer from '../components/Footer.astro';
                   id="name"
                   name="name"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                  autocomplete="name"
+                  minlength="2"
+                  maxlength="80"
+                  aria-describedby="name-error"
+                  class="w-full min-h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
                   placeholder="John Smith"
                 />
+                <p id="name-error" class="hidden text-sm text-red-700 mt-1"></p>
               </div>
 
               <div>
@@ -56,9 +61,13 @@ import Footer from '../components/Footer.astro';
                   id="phone"
                   name="phone"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  aria-describedby="phone-error"
+                  class="w-full min-h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
                   placeholder="(407) 555-1234"
                 />
+                <p id="phone-error" class="hidden text-sm text-red-700 mt-1"></p>
               </div>
             </div>
 
@@ -71,9 +80,13 @@ import Footer from '../components/Footer.astro';
                 id="email"
                 name="email"
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                autocomplete="email"
+                inputmode="email"
+                aria-describedby="email-error"
+                class="w-full min-h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
                 placeholder="john@example.com"
               />
+              <p id="email-error" class="hidden text-sm text-red-700 mt-1"></p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
@@ -85,7 +98,8 @@ import Footer from '../components/Footer.astro';
                   id="service"
                   name="service"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                  aria-describedby="service-error"
+                  class="w-full min-h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
                 >
                   <option value="">Select a service...</option>
                   <option value="interior-exterior-painting">Painting (Interior & Exterior)</option>
@@ -99,6 +113,7 @@ import Footer from '../components/Footer.astro';
                   <option value="demolition">Demolition</option>
                   <option value="other">Other</option>
                 </select>
+                <p id="service-error" class="hidden text-sm text-red-700 mt-1"></p>
               </div>
 
               <div>
@@ -110,9 +125,14 @@ import Footer from '../components/Footer.astro';
                   id="city"
                   name="city"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
+                  autocomplete="address-level2"
+                  minlength="2"
+                  maxlength="60"
+                  aria-describedby="city-error"
+                  class="w-full min-h-12 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
                   placeholder="Kissimmee"
                 />
+                <p id="city-error" class="hidden text-sm text-red-700 mt-1"></p>
               </div>
             </div>
 
@@ -124,10 +144,14 @@ import Footer from '../components/Footer.astro';
                 id="message"
                 name="message"
                 required
-                rows="6"
+                rows="5"
+                minlength="12"
+                aria-describedby="message-hint message-error"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                placeholder="Please describe your project in detail..."
+                placeholder="Room or area, and what you want done"
               ></textarea>
+              <p id="message-hint" class="text-sm text-gray-500 mt-2">A sentence is enough for us to call you back.</p>
+              <p id="message-error" class="hidden text-sm text-red-700 mt-1"></p>
               <p class="text-sm text-gray-500 mt-2">
                 Optional: You can also text photos of the project area to <a href="tel:4072446873" class="text-gopro-orange hover:underline">(407) 244-6873</a>
               </p>
@@ -145,13 +169,17 @@ import Footer from '../components/Footer.astro';
               />
             </div>
 
-            <div class="pt-4">
+            <div class="pt-4 scroll-mb-28">
               <button
                 type="submit"
-                class="w-full btn-primary text-lg py-4 hover:shadow-lg"
+                class="w-full btn-primary text-lg py-4 hover:shadow-lg disabled:opacity-70 disabled:cursor-wait"
               >
                 Submit Estimate Request
               </button>
+              <p class="text-sm text-gray-600 text-center mt-3 font-sans">
+                We'll call you to discuss the project. Prefer to talk now?
+                <a href="tel:4072446873" class="text-gopro-orange font-semibold hover:underline">(407) 244-6873</a>
+              </p>
             </div>
             
             <div class="text-center mt-6 pt-6 border-t border-gray-200">
@@ -163,7 +191,7 @@ import Footer from '../components/Footer.astro';
 
           <div id="form-success" class="hidden">
             <div class="text-center py-12">
-              <svg class="w-20 h-20 text-green-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-20 h-20 text-green-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <h2 class="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
@@ -179,11 +207,14 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
 
-          <div id="form-error" class="hidden">
+          <div id="form-error" class="hidden mt-6" tabindex="-1" role="alert">
             <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded">
               <p class="text-red-800 font-semibold mb-2">Submission Error</p>
-              <p class="text-red-600">
-                There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="text-red-800 underline">(407) 244-6873</a>.
+              <p id="form-error-message" class="text-red-700">
+                There was a problem submitting your request. Please try again.
+              </p>
+              <p class="text-red-700 mt-2">
+                Or call <a href="tel:4072446873" class="text-red-800 underline">(407) 244-6873</a>.
               </p>
             </div>
           </div>
@@ -212,16 +243,16 @@ import Footer from '../components/Footer.astro';
             </ol>
           </div>
 
-          <div class="bg-gopro-orange text-white rounded-lg p-8">
+          <div class="bg-gopro-orange text-gopro-black rounded-lg p-8">
             <h3 class="text-xl font-bold mb-4">Prefer to Call?</h3>
             <p class="mb-6">
               We're always available to discuss your project over the phone. Call us directly for immediate assistance.
             </p>
-            <a href="tel:4072446873" class="bg-white text-gopro-orange hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 inline-block">
+            <a href="tel:4072446873" class="bg-gopro-charcoal text-white hover:bg-gopro-black font-semibold px-6 py-3 rounded-lg transition-colors duration-200 inline-block">
               Call (407) 244-6873
             </a>
-            <div class="mt-6 pt-6 border-t border-white/20">
-              <p class="text-sm text-white/90">
+            <div class="mt-6 pt-6 border-t border-black/20">
+              <p class="text-sm">
                 Email: <a href="mailto:gopro4good@gmail.com" class="underline">gopro4good@gmail.com</a>
               </p>
             </div>
@@ -234,59 +265,7 @@ import Footer from '../components/Footer.astro';
   <Footer />
 
   <script>
-    const form = document.getElementById('estimate-form') as HTMLFormElement;
-    const formSuccess = document.getElementById('form-success');
-    const formError = document.getElementById('form-error');
-
-    // Record when the form loaded (timing gate)
-    const formStartedAt = Date.now();
-
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
-
-      // Add timing gate and honeypot data
-      (data as any).formStartedAt = formStartedAt;
-      (data as any).website = (data as any).website || '';
-
-      try {
-        const response = await fetch('/api/estimate', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
-
-        // Treat 200 as success (even if silent-dropped)
-        if (response.ok) {
-          form.classList.add('hidden');
-          formSuccess?.classList.remove('hidden');
-          formError?.classList.add('hidden');
-        } else {
-          // Try to get error message from response
-          let errorMessage = 'There was a problem submitting your request. Please try again or call us directly at <a href="tel:4072446873" class="text-red-800 underline">(407) 244-6873</a>.';
-          try {
-            const errorData = await response.json();
-            if (errorData.error) {
-              errorMessage = errorData.error;
-            }
-          } catch {
-            // Use default message if JSON parsing fails
-          }
-          
-          const errorElement = formError?.querySelector('.text-red-600');
-          if (errorElement) {
-            errorElement.innerHTML = errorMessage;
-          }
-          formError?.classList.remove('hidden');
-        }
-      } catch (error) {
-        console.error('Form submission error:', error);
-        formError?.classList.remove('hidden');
-      }
-    });
+    import { initEstimateForm } from '../scripts/estimate-form';
+    initEstimateForm();
   </script>
 </BaseLayout>

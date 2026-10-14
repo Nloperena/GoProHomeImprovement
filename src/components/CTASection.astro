@@ -1,4 +1,6 @@
 ---
+import { estimateHrefFromPath } from '../lib/estimate-url';
+
 interface Props {
   title?: string;
   description?: string;
@@ -10,11 +12,11 @@ const {
   title = "Ready to Transform Your Home?",
   description = "Get a free, no-obligation estimate today. Our team is ready to bring your vision to life.",
   buttonText = "Get Free Estimate",
-  buttonHref = "/estimate"
+  buttonHref = estimateHrefFromPath(Astro.url.pathname)
 } = Astro.props;
 ---
 
-<section class="bg-gopro-orange text-white section-padding relative overflow-hidden border-y-4 border-gopro-black">
+<section class="bg-gopro-orange text-gopro-black section-padding relative overflow-hidden border-y-4 border-gopro-black">
   <div class="container-custom text-center relative">
     <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-6 tracking-tight">{title}</h2>
     <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-sans">{description}</p>
