@@ -4,70 +4,22 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CTASection from '../components/CTASection.astro';
 
-const services = [
-  {
-    name: 'Interior & Exterior Painting',
-    href: '/services/interior-exterior-painting',
-    description: 'Expert painting services to refresh and protect your property.'
-  },
-  {
-    name: 'Movie Rooms',
-    href: '/services/movie-rooms',
-    description: 'Complete home theater design and installation.'
-  },
-  {
-    name: 'Drywall',
-    href: '/services/drywall',
-    description: 'Drywall installation, repair, and texture services.'
-  },
-  {
-    name: 'Power Washing',
-    href: '/services/power-washing',
-    description: 'Professional pressure washing for homes, driveways, and commercial properties.'
-  },
-  {
-    name: 'Demolition',
-    href: '/services/demolition',
-    description: 'Safe and efficient demolition for remodeling projects.'
-  },
-  {
-    name: 'Trim & Crown Molding',
-    href: '/services/trim-crown-molding',
-    description: 'Custom trim work and crown molding installation for elegant finishes.'
-  },
-  {
-    name: 'Wallpaper',
-    href: '/services/wallpaper',
-    description: 'Professional wallpaper installation and removal services.'
-  },
-  {
-    name: 'Murals',
-    href: '/services/murals',
-    description: 'Custom mural design and installation for unique spaces.'
-  },
-  {
-    name: 'TV Mounting',
-    href: '/services/tv-mounting',
-    description: 'Professional TV mounting and wire concealment.'
-  }
-];
-
 const whyChooseUs = [
   {
-    title: 'Owner-Operated',
-    description: 'Direct communication with the owner ensures quality control and personalized service on every project.'
+    title: 'You talk to the owner',
+    description: 'The person who quotes the job is the person responsible for it. No salesperson in the middle.'
   },
   {
-    title: '15+ Years Experience',
-    description: 'Over a decade and a half of proven expertise in home improvement across Central Florida.'
+    title: 'Here since 2014',
+    description: 'A Florida corporation based in Kissimmee. We work homes in Orlando, St. Cloud, Celebration, and Poinciana.'
   },
   {
-    title: 'Quality Workmanship',
-    description: 'We stand behind our work with attention to detail and a commitment to excellence.'
+    title: 'Price in writing',
+    description: 'You get an estimate before any work starts. If the scope changes, we talk about it first.'
   },
   {
-    title: 'Fair Pricing',
-    description: 'Transparent, competitive pricing with no hidden fees. You get quality without overpaying.'
+    title: 'We finish the work',
+    description: 'Prep, the job itself, and a cleanup when we leave. Monday through Friday, 7 AM to 5 PM.'
   }
 ];
 ---
@@ -91,14 +43,14 @@ const whyChooseUs = [
     <div class="relative h-full container-custom flex items-center">
       <div class="max-w-3xl">
         <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-black mb-6 text-white leading-[0.95] tracking-tight" style="font-weight: 900;">
-          Home improvement, done right.
+          House work, priced before we start.
         </h1>
         <p class="text-xl md:text-2xl mb-10 text-white/90 font-sans leading-relaxed">
-          Owner-operated in Kissimmee & Central Florida for 15+ years.
+          Painting, drywall, power washing, trim, and more. You talk to the owner. Kissimmee and nearby.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-10 py-5 rounded-lg text-lg transition-all inline-block text-center shadow-xl tracking-wide">
-            Get free estimate
+            Request a free estimate
           </a>
           <a href="tel:4072446873" class="bg-transparent hover:bg-white/10 text-white font-display font-bold uppercase px-10 py-5 rounded-lg text-lg transition-all inline-block text-center border-2 border-white tracking-wide">
             Call (407) 244-6873
@@ -114,7 +66,7 @@ const whyChooseUs = [
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-display font-black uppercase mb-4 tracking-tight">Recent Projects</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto font-sans">
-          Real jobs across Central Florida—painting, home theaters, drywall & more
+          Real jobs across Central Florida: painting, home theaters, drywall, and more
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -151,7 +103,7 @@ const whyChooseUs = [
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-6 tracking-tight">Why Go Pro</h2>
         <p class="text-2xl text-gopro-charcoal max-w-3xl mx-auto font-sans font-semibold">
-          Owner-operated. No salespeople. Fair prices. Quality work.
+          You call. The owner answers. You get a price before we start.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -171,7 +123,7 @@ const whyChooseUs = [
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Our Services</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto font-sans">
-          15+ years doing it all—painting, remodeling, theaters, power washing & more
+          Painting, drywall, washing, trim, theaters, and the jobs in between.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -180,7 +132,7 @@ const whyChooseUs = [
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Painting</h3>
-            <p class="text-white/90 text-sm font-sans">Interior & exterior</p>
+            <p class="text-white/90 text-sm font-sans">Rooms that look finished. Exteriors that hold up in the sun.</p>
           </div>
         </a>
         
@@ -189,7 +141,7 @@ const whyChooseUs = [
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Home Theaters</h3>
-            <p class="text-white/90 text-sm font-sans">Full room designs & installs</p>
+            <p class="text-white/90 text-sm font-sans">A room set up for movies, not a TV on a stand.</p>
           </div>
         </a>
         
@@ -198,7 +150,7 @@ const whyChooseUs = [
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Drywall</h3>
-            <p class="text-white/90 text-sm font-sans">Repair, install, texture match</p>
+            <p class="text-white/90 text-sm font-sans">Holes and water stains patched so the wall matches.</p>
           </div>
         </a>
         
@@ -207,7 +159,7 @@ const whyChooseUs = [
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Power Washing</h3>
-            <p class="text-white/90 text-sm font-sans">Driveways, pool decks, siding</p>
+            <p class="text-white/90 text-sm font-sans">Algae and dirt off the house, driveway, and pool deck.</p>
           </div>
         </a>
         
@@ -216,7 +168,7 @@ const whyChooseUs = [
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Trim & Molding</h3>
-            <p class="text-white/90 text-sm font-sans">Crown, baseboards, paneling</p>
+            <p class="text-white/90 text-sm font-sans">Crown and baseboards that finish the room.</p>
           </div>
         </a>
         
@@ -225,7 +177,7 @@ const whyChooseUs = [
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
             <h3 class="text-2xl font-display font-bold uppercase mb-2 tracking-wide">Custom Murals</h3>
-            <p class="text-white/90 text-sm font-sans">Kids rooms, feature walls</p>
+            <p class="text-white/90 text-sm font-sans">A hand-painted wall for a kid's room or a feature wall.</p>
           </div>
         </a>
       </div>
@@ -243,7 +195,7 @@ const whyChooseUs = [
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Our Work</h2>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto font-sans">
-          Real jobs, real results—see what we've built for Central Florida homeowners
+          Photos from jobs for Central Florida homeowners.
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
@@ -270,6 +222,44 @@ const whyChooseUs = [
         <a href="/work" class="bg-gopro-charcoal hover:bg-gopro-black text-white font-display font-bold uppercase px-10 py-5 rounded text-lg transition-colors inline-block shadow-lg tracking-wide border-2 border-gopro-orange">
           View Full Gallery
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-8 tracking-tight">How a job starts</h2>
+        <ol class="space-y-4 text-lg text-gray-700 font-sans mb-16">
+          <li><span class="font-bold text-gopro-orange mr-2">1.</span> Call (407) 244-6873 or request a free estimate.</li>
+          <li><span class="font-bold text-gopro-orange mr-2">2.</span> The owner talks through the job with you.</li>
+          <li><span class="font-bold text-gopro-orange mr-2">3.</span> You get a written price before any work starts.</li>
+          <li><span class="font-bold text-gopro-orange mr-2">4.</span> If you say yes, we schedule the work. Monday through Friday, 7 AM to 5 PM.</li>
+        </ol>
+
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-8 tracking-tight">Questions homeowners ask</h2>
+        <div class="space-y-6 font-sans">
+          <div class="border-l-4 border-gopro-orange pl-6">
+            <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">What work do you do?</h3>
+            <p class="text-gray-700">Painting, drywall, power washing, trim, wallpaper, murals, TV mounting, movie rooms, and interior demolition.</p>
+          </div>
+          <div class="border-l-4 border-gopro-orange pl-6">
+            <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Who do I talk to?</h3>
+            <p class="text-gray-700">The owner. Not a salesperson.</p>
+          </div>
+          <div class="border-l-4 border-gopro-orange pl-6">
+            <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Is the estimate free?</h3>
+            <p class="text-gray-700">Yes. The call and the form don't cost anything.</p>
+          </div>
+          <div class="border-l-4 border-gopro-orange pl-6">
+            <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">When can I reach you?</h3>
+            <p class="text-gray-700">Monday through Friday, 7 AM to 5 PM, at (407) 244-6873.</p>
+          </div>
+          <div class="border-l-4 border-gopro-orange pl-6">
+            <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Where do you work?</h3>
+            <p class="text-gray-700">Kissimmee, Orlando, St. Cloud, Celebration, Poinciana, and nearby Central Florida.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -13,9 +13,9 @@ import Footer from '../components/Footer.astro';
   <section class="bg-gradient-to-br from-gopro-black to-gray-900 text-white py-12">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Get Your Free Estimate</h1>
+        <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Request a free estimate</h1>
         <p class="text-xl text-gray-300 mb-6 font-sans">
-          Owner-operated. 15+ years serving Kissimmee, Orlando, St. Cloud, Celebration & Poinciana.
+          Tell us the job and the city. The owner calls you back. Monday through Friday, 7 AM to 5 PM.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <p class="text-gray-400 font-sans">Prefer to call?</p>
@@ -126,7 +126,7 @@ import Footer from '../components/Footer.astro';
                 required
                 rows="6"
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gopro-orange focus:border-transparent transition-colors"
-                placeholder="Please describe your project in detail..."
+                placeholder="What needs to be done, and roughly how big is it?"
               ></textarea>
               <p class="text-sm text-gray-500 mt-2">
                 Optional: You can also text photos of the project area to <a href="tel:4072446873" class="text-gopro-orange hover:underline">(407) 244-6873</a>
@@ -150,13 +150,13 @@ import Footer from '../components/Footer.astro';
                 type="submit"
                 class="w-full btn-primary text-lg py-4 hover:shadow-lg"
               >
-                Submit Estimate Request
+                Request my free estimate
               </button>
             </div>
             
             <div class="text-center mt-6 pt-6 border-t border-gray-200">
               <p class="text-sm text-gray-600 font-sans">
-                Owner-operated • Serving Kissimmee, Orlando, St. Cloud, Celebration & Poinciana • 15+ years experience
+                The estimate is free. You talk to the owner. Monday through Friday, 7 AM to 5 PM.
               </p>
             </div>
           </form>
@@ -166,9 +166,9 @@ import Footer from '../components/Footer.astro';
               <svg class="w-20 h-20 text-green-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <h2 class="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">We got it.</h2>
               <p class="text-lg text-gray-600 mb-8">
-                We've received your estimate request and will contact you shortly to discuss your project.
+                The owner will call you during business hours, Monday through Friday, 7 AM to 5 PM.
               </p>
               <div class="space-y-3 text-gray-600">
                 <p>Questions in the meantime?</p>
@@ -191,31 +191,35 @@ import Footer from '../components/Footer.astro';
 
         <div class="mt-12 grid md:grid-cols-2 gap-8">
           <div class="bg-gray-50 rounded-lg p-8">
-            <h3 class="text-xl font-bold mb-4">What Happens Next?</h3>
+            <h3 class="text-xl font-bold mb-4">What happens next</h3>
             <ol class="space-y-3 text-gray-700">
               <li class="flex items-start">
                 <span class="font-bold text-gopro-orange mr-3">1.</span>
-                <span>We'll review your project details</span>
+                <span>You send this form, or you call.</span>
               </li>
               <li class="flex items-start">
                 <span class="font-bold text-gopro-orange mr-3">2.</span>
-                <span>We'll call you to discuss specifics and schedule a site visit if needed</span>
+                <span>The owner calls you to go over the job.</span>
               </li>
               <li class="flex items-start">
                 <span class="font-bold text-gopro-orange mr-3">3.</span>
-                <span>You'll receive a detailed, accurate estimate</span>
+                <span>If we need to see the house, we set a time. Someone needs to be there.</span>
               </li>
               <li class="flex items-start">
                 <span class="font-bold text-gopro-orange mr-3">4.</span>
-                <span>Once approved, we'll schedule your project</span>
+                <span>You get a written estimate. There is no charge for it.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-bold text-gopro-orange mr-3">5.</span>
+                <span>If you say yes, we schedule the work.</span>
               </li>
             </ol>
           </div>
 
           <div class="bg-gopro-orange text-white rounded-lg p-8">
-            <h3 class="text-xl font-bold mb-4">Prefer to Call?</h3>
+            <h3 class="text-xl font-bold mb-4">Prefer to call?</h3>
             <p class="mb-6">
-              We're always available to discuss your project over the phone. Call us directly for immediate assistance.
+              Call Monday through Friday, 7 AM to 5 PM. If we're on a job, leave a message and we'll call back.
             </p>
             <a href="tel:4072446873" class="bg-white text-gopro-orange hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 inline-block">
               Call (407) 244-6873
@@ -224,6 +228,32 @@ import Footer from '../components/Footer.astro';
               <p class="text-sm text-white/90">
                 Email: <a href="mailto:gopro4good@gmail.com" class="underline">gopro4good@gmail.com</a>
               </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-gray-50 rounded-lg p-8">
+          <h3 class="text-xl font-bold mb-6">Before you send it</h3>
+          <div class="space-y-5 text-gray-700">
+            <div>
+              <p class="font-semibold text-gray-900">Is the estimate free?</p>
+              <p>Yes. The form and the phone call don't cost anything.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Who calls me back?</p>
+              <p>The owner. Not a salesperson.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">What if the job is small?</p>
+              <p>Call anyway. One room, a drywall patch, a TV mount, and a driveway wash are all jobs we do.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Do I have to be home?</p>
+              <p>For a visit, yes. Someone needs to let us see the work. If photos are enough, text them to (407) 244-6873.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Where do you work?</p>
+              <p>Kissimmee, Orlando, St. Cloud, Celebration, Poinciana, and nearby Central Florida.</p>
             </div>
           </div>
         </div>
