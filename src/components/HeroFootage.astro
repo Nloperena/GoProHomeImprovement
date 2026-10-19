@@ -1,0 +1,72 @@
+---
+interface Props {
+  class?: string;
+  priority?: boolean;
+  alt?: string;
+}
+
+const { class: className, priority = false, alt = '' } = Astro.props;
+---
+
+<div class:list={['footage', className]}>
+  <img
+    src="/images/trim-navy-wall-1400.jpg"
+    srcset="/images/trim-navy-wall-840.jpg 840w, /images/trim-navy-wall-1400.jpg 1400w, /images/trim-navy-wall.jpg 1920w"
+    sizes="(max-width: 800px) 100vw, 70vw"
+    alt={alt}
+    width="1400"
+    height="1050"
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    decoding="async"
+  />
+  <!--
+    Hero footage slot. Drop the clip at public/video/hero.mp4 (H.264).
+    Do not put a src on this video in HTML. The script attaches the file
+    after idle, and only if a HEAD request succeeds. Reduced motion skips it.
+  -->
+  <video
+    class="concept-video"
+    muted
+    loop
+    playsinline
+    preload="none"
+    data-src="/video/hero.mp4"
+    aria-hidden="true"
+  ></video>
+</div>
+
+<script>
+  const armFootage = () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.concept-video').forEach(async (node) => {
+      if (!(node instanceof HTMLVideoElement) || node.dataset.armed === '1') return;
+      const src = node.dataset.src;
+      if (!src) return;
+      node.dataset.armed = '1';
+      try {
+        const head = await fetch(src, { method: 'HEAD' });
+        if (!head.ok) return;
+      } catch {
+        return;
+      }
+      const source = document.createElement('source');
+      source.src = src;
+      source.type = 'video/mp4';
+      node.append(source);
+      node.addEventListener('playing', () => node.classList.add('is-ready'), { once: true });
+      try {
+        node.load();
+        await node.play();
+      } catch {
+        /* Poster stays. Autoplay can be blocked. */
+      }
+    });
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => armFootage());
+  } else {
+    window.addEventListener('load', () => armFootage(), { once: true });
+  }
+</script>

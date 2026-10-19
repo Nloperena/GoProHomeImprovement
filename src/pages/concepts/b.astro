@@ -1,0 +1,108 @@
+---
+import ConceptFrame from '../../components/ConceptFrame.astro';
+import HeroFootage from '../../components/HeroFootage.astro';
+import ReviewsSpot from '../../components/ReviewsSpot.astro';
+
+const chips = [
+  'Owner answers',
+  'Price in writing',
+  'Since 2014',
+  'Kissimmee',
+];
+
+const cards = [
+  {
+    href: '/services/interior-exterior-painting',
+    name: 'Painting',
+    line: 'Rooms that look finished. Exteriors that hold up in the sun.',
+    src: '/images/bedroom-paint-1100.jpg',
+    alt: 'Painted bedroom with a striped accent wall',
+  },
+  {
+    href: '/services/murals',
+    name: 'Murals',
+    line: 'Sprayer and airbrush finishes, including murals.',
+    src: '/images/nemo-mural-1100.jpg',
+    alt: 'Hand-painted Finding Nemo mural',
+  },
+  {
+    href: '/services/movie-rooms',
+    name: 'Movie rooms',
+    line: 'A room set up for movies, not a TV on a stand.',
+    src: '/images/star-wars-theater-1100.jpg',
+    alt: 'Star Wars home theater',
+  },
+];
+---
+
+<ConceptFrame
+  id="b"
+  name="The bid on the room"
+  idea="The finished room stays full-bleed, and the offer sits on it like a job card you can act on."
+  title="Concept B — The bid on the room | Go Pro Home Improvements"
+  description="Preview concept. A finished room fills the screen, with the phone, estimate, and guarantee on a solid job card."
+  preloadImage="/images/trim-navy-wall-1400.jpg"
+>
+  <section class="b-hero" aria-labelledby="b-title">
+    <HeroFootage
+      class="b-footage"
+      priority
+      alt="Finished living room with a navy wall, white raised paneling, and crown molding"
+    />
+    <div class="b-card">
+      <p class="b-card-label">Job card · Kissimmee</p>
+      <h1 id="b-title">House work, priced before we start.</h1>
+      <p class="b-lede">
+        Painting, drywall, power washing, trim, and more. You talk to the owner.
+      </p>
+      <a class="b-phone" href="tel:4072446873">(407) 244-6873</a>
+      <div class="b-actions">
+        <a class="btn-primary" href="/estimate">Request a free estimate</a>
+      </div>
+      <ul class="chip-row">
+        {chips.map((chip) => <li>{chip}</li>)}
+      </ul>
+      <p class="guarantee">
+        <strong>Workmanship satisfaction guarantee.</strong>
+        Ask what it covers when the owner calls you back.
+      </p>
+    </div>
+  </section>
+
+  <section class="b-work" aria-labelledby="b-work-title">
+    <div class="container-custom">
+      <div class="b-work-head">
+        <p class="kicker">From the jobs</p>
+        <h2 id="b-work-title">Three rooms. The same offer on each.</h2>
+      </div>
+      <ul>
+        {cards.map((card) => (
+          <li>
+            <a href={card.href}>
+              <img src={card.src} alt={card.alt} width="1100" height="826" loading="lazy" decoding="async" />
+              <span>
+                <strong>{card.name}</strong>
+                <em>{card.line}</em>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="b-more"><a class="text-link" href="/work">View full gallery</a></p>
+    </div>
+  </section>
+
+  <section class="b-steps" aria-labelledby="b-steps-title">
+    <div class="container-custom">
+      <h2 id="b-steps-title">How a job starts</h2>
+      <ol>
+        <li><span>01</span><p>Call (407) 244-6873 or request a free estimate.</p></li>
+        <li><span>02</span><p>The owner talks through the job with you.</p></li>
+        <li><span>03</span><p>You get a written price before any work starts.</p></li>
+        <li><span>04</span><p>If you say yes, we schedule the work. Monday through Friday, 7 AM to 5 PM.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <ReviewsSpot tone="paper" />
+</ConceptFrame>

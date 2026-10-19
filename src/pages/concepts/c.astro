@@ -1,0 +1,90 @@
+---
+import ConceptFrame from '../../components/ConceptFrame.astro';
+import HeroFootage from '../../components/HeroFootage.astro';
+import ReviewsSpot from '../../components/ReviewsSpot.astro';
+
+const chips = [
+  'You talk to the owner',
+  'Price in writing',
+  'Since 2014',
+  'Kissimmee and nearby',
+];
+
+const tiles = [
+  { src: '/images/nemo-mural-1100.jpg', alt: 'Hand-painted Finding Nemo mural', caption: 'Custom mural' },
+  { src: '/images/bedroom-paint-1100.jpg', alt: 'Painted bedroom with a striped accent wall', caption: 'Interior painting' },
+  { src: '/images/star-wars-theater-1100.jpg', alt: 'Star Wars home theater', caption: 'Home theater' },
+  { src: '/images/wood-floor-1100.jpg', alt: 'Wood-look floor with border trim', caption: 'Flooring' },
+];
+
+const services = [
+  ['Painting', '/services/interior-exterior-painting'],
+  ['Drywall', '/services/drywall'],
+  ['Power washing', '/services/power-washing'],
+  ['Trim', '/services/trim-crown-molding'],
+  ['Wallpaper', '/services/wallpaper'],
+  ['Murals', '/services/murals'],
+  ['TV mounting', '/services/tv-mounting'],
+  ['Movie rooms', '/services/movie-rooms'],
+];
+---
+
+<ConceptFrame
+  id="c"
+  name="Proof, then the price"
+  idea="The jobs fill the first screen. The offer is a rail beside them."
+  title="Concept C — Proof, then the price | Go Pro Home Improvements"
+  description="Preview concept. Finished jobs fill the first screen, with the phone and estimate on a side rail."
+  preloadImage="/images/trim-navy-wall-1400.jpg"
+>
+  <section class="c-stage" aria-labelledby="c-title">
+    <div class="c-bento">
+      <figure class="c-lead">
+        <HeroFootage priority alt="Finished living room with a navy wall, white raised paneling, and crown molding" />
+        <figcaption><span>Trim &amp; paint</span></figcaption>
+      </figure>
+      {tiles.map((tile) => (
+        <figure>
+          <img src={tile.src} alt={tile.alt} width="1100" height="826" loading="lazy" decoding="async" />
+          <figcaption><span>{tile.caption}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <aside class="c-rail">
+      <p class="kicker">Kissimmee · Est. 2014</p>
+      <h1 id="c-title">See the job. Then get the price.</h1>
+      <p class="c-lede">
+        Painting, drywall, power washing, trim, murals, and movie rooms. Photos are from finished work.
+      </p>
+      <a class="c-phone" href="tel:4072446873">(407) 244-6873</a>
+      <a class="btn-primary" href="/estimate">Request a free estimate</a>
+      <ul class="chip-row">
+        {chips.map((chip) => <li>{chip}</li>)}
+      </ul>
+      <p class="guarantee">
+        <strong>Workmanship satisfaction guarantee.</strong>
+        Ask what it covers when the owner calls you back.
+      </p>
+      <p class="c-method">Sprayer and airbrush finishes, including murals.</p>
+    </aside>
+  </section>
+
+  <section class="c-services" aria-labelledby="c-services-title">
+    <div class="container-custom c-services-grid">
+      <div>
+        <p class="kicker">Services</p>
+        <h2 id="c-services-title">What the photos are of.</h2>
+        <p>The owner quotes the job. You get the price in writing before any work starts. Monday through Friday, 7 AM to 5 PM.</p>
+        <a class="text-link" href="/services">All services</a>
+      </div>
+      <ul>
+        {services.map(([name, href]) => (
+          <li><a href={href}>{name}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <ReviewsSpot tone="night" />
+</ConceptFrame>

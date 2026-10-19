@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import '../styles/concepts.css';
+
+interface Props {
+  id: 'a' | 'b' | 'c';
+  name: string;
+  idea: string;
+  title: string;
+  description: string;
+  preloadImage?: string;
+}
+
+const { id, name, idea, title, description, preloadImage } = Astro.props;
+
+const concepts = [
+  { id: 'a', href: '/concepts/a', name: 'Call first' },
+  { id: 'b', href: '/concepts/b', name: 'The bid on the room' },
+  { id: 'c', href: '/concepts/c', name: 'Proof, then the price' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  noindex
+  preloadImage={preloadImage}
+>
+  <Header />
+  <main id="main" class:list={['concept', `concept-${id}`]}>
+    <div class="concept-switch">
+      <p class="concept-id">
+        <span>Concept {id.toUpperCase()}</span>
+        <strong>{name}</strong>
+      </p>
+      <p class="concept-idea">{idea}</p>
+      <nav aria-label="Design concepts">
+        {concepts.map((item) => (
+          <a href={item.href} aria-current={item.id === id ? 'page' : undefined}>
+            {item.id.toUpperCase()}
+          </a>
+        ))}
+      </nav>
+    </div>
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>
