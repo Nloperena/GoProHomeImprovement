@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
+import FinishMethod from '../../components/FinishMethod.astro';
+import ProjectShots from '../../components/ProjectShots.astro';
 ---
 
 <BaseLayout
@@ -85,7 +87,7 @@ import CTASection from '../../components/CTASection.astro';
             "name": "How much does a custom mural cost in Kissimmee?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Cost depends on size, design complexity, and surface condition. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or detailed character scenes cost more. We provide free quotes after seeing the space and design."
+              "text": "A mural estimate in Kissimmee comes from the wall size, how detailed the design is, and how much prep the surface needs. Rental kids rooms are often one wall that has to photograph clearly and can be painted over later. We itemize the work after we see the space. We do not lock a price from a photo."
             }
           },
           {
@@ -111,6 +113,14 @@ import CTASection from '../../components/CTASection.astro';
               "@type": "Answer",
               "text": "Yes. Murals are regular wall paint, so they cover the same as any other painted surface. When your kid outgrows the Finding Nemo theme, we can repaint it solid or start a new design."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "How are the murals painted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The wall is primed first. Large areas of color go on with a sprayer. Faces, lettering, and soft blends are done with an airbrush. The design is sketched on the wall before the detail goes in."
+            }
           }
         ]
       }
@@ -121,7 +131,7 @@ import CTASection from '../../components/CTASection.astro';
 
   <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
     <div class="container-custom">
-      <nav class="text-sm mb-6 font-sans">
+      <nav aria-label="Breadcrumb" class="text-sm mb-6 font-sans">
         <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
         <span class="mx-2 text-gray-500">/</span>
         <a href="/services" class="text-gray-400 hover:text-gopro-orange transition-colors">Services</a>
@@ -148,14 +158,36 @@ import CTASection from '../../components/CTASection.astro';
             A custom mural turns a plain bedroom into a themed space your kid will love. We've painted Finding Nemo ocean scenes, Star Wars battles, Disney princess castles, Marvel heroes, and jungle animals across <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a> homes.
           </p>
           <p class="text-lg text-gray-600 mb-8 font-sans">
-            Whether it's a nursery accent wall, a full kids room wrap, or a themed <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we sketch the design, paint by hand, and seal it so it lasts years. You bring the theme, we bring the skill and the steady hand.
+            Whether it's a nursery accent wall, a full kids room wrap, or a themed <a href="/services/movie-rooms" class="text-gopro-orange hover:underline">home theater</a>, we sketch the design on the wall first, then paint it. You bring the theme. We handle prep, the background color, and the detail.
           </p>
         </div>
+
+        <FinishMethod heading="How a mural is painted" />
+
+        <ProjectShots
+          heading="Mural work from the gallery"
+          shots={[
+            {
+              src: '/images/nemo-mural.jpg',
+              alt: 'Finding Nemo themed mural',
+              caption: 'Finding Nemo wall from the project gallery. Character detail like this is airbrushed after the background color is on the wall.',
+              width: 1920,
+              height: 1440,
+            },
+            {
+              src: '/images/harry-potter-room.jpg',
+              alt: 'Harry Potter themed kids room',
+              caption: 'Harry Potter themed kids room from the project gallery. Theme, layout, and how much of the room gets painted are set before the first coat.',
+              width: 624,
+              height: 454,
+            },
+          ]}
+        />
 
         <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
           <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Popular in Central Florida Homes</h2>
           <p class="text-gray-700 font-sans">
-            Many Disney-area families (<a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>) choose Disney or Pixar themes. Others go with sports teams, jungle scenes, outer space, or princess castles. We've done them all.
+            Many Disney-area families (<a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>) choose Disney or Pixar themes. Others go with sports teams, jungle scenes, outer space, or princess castles. City pages: <a href="/services/murals-kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/services/murals-orlando" class="text-gopro-orange hover:underline">Orlando</a>, <a href="/services/murals-st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a>, <a href="/services/murals-celebration" class="text-gopro-orange hover:underline">Celebration</a>, and <a href="/services/murals-poinciana" class="text-gopro-orange hover:underline">Poinciana</a>.
           </p>
         </div>
 
@@ -206,9 +238,7 @@ import CTASection from '../../components/CTASection.astro';
           <div class="space-y-6">
             <div class="bg-white border-l-4 border-gopro-orange p-6">
               <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does a custom mural cost in Kissimmee?</h3>
-              <p class="text-gray-700 font-sans">
-                Cost depends on size, design complexity, and surface condition. A simple kids room mural (one wall) typically runs $400-$1,200. Full room wraps or detailed character scenes cost more. We provide free quotes after seeing the space and design.
-              </p>
+              <p class="text-gray-700 font-sans">A mural estimate in Kissimmee comes from the wall size, how detailed the design is, and how much prep the surface needs. Rental kids rooms are often one wall that has to photograph clearly and can be painted over later. We itemize the work after we see the space. <a href="/estimate" class="text-gopro-orange hover:underline">Request an estimate</a>. Related reading: <a href="/guides/mural-prep-textured-drywall-florida" class="text-gopro-orange hover:underline">this guide</a>.</p>
             </div>
             <div class="bg-white border-l-4 border-gopro-orange p-6">
               <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can you paint Disney characters or licensed themes?</h3>
@@ -226,6 +256,12 @@ import CTASection from '../../components/CTASection.astro';
               <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Can I paint over a mural later?</h3>
               <p class="text-gray-700 font-sans">
                 Yes. Murals are regular wall paint, so they cover the same as any other painted surface. When your kid outgrows the Finding Nemo theme, we can <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">repaint it solid</a> or start a new design.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How are the murals painted?</h3>
+              <p class="text-gray-700 font-sans">
+                The wall is primed first. Large areas of color go on with a sprayer. Faces, lettering, and soft blends are done with an airbrush. The design is sketched on the wall before the detail goes in.
               </p>
             </div>
           </div>

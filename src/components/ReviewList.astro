@@ -1,0 +1,31 @@
+---
+import { publishedReviews, publishedSummary } from '../data/reviews';
+
+const items = publishedReviews();
+const summary = publishedSummary();
+---
+
+{ (items.length > 0 || summary) && (
+  <section class="mb-12" aria-label="Customer reviews">
+    <h2 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide">Customer reviews</h2>
+    { summary && (
+      <p class="text-gray-700 font-sans mb-6">
+        {summary.ratingValue} out of 5, based on {summary.reviewCount} reviews.
+      </p>
+    )}
+    { items.length > 0 && (
+      <div class="space-y-6">
+        { items.map((review) => (
+          <blockquote class="border-l-4 border-gopro-orange pl-6">
+            <p class="text-gray-800 font-sans">{review.body}</p>
+            <footer class="mt-2 text-sm text-gray-600 font-sans">
+              {review.author}
+              {review.rating ? ` · ${review.rating} out of 5` : ''}
+              {review.datePublished ? ` · ${review.datePublished}` : ''}
+            </footer>
+          </blockquote>
+        ))}
+      </div>
+    )}
+  </section>
+)}

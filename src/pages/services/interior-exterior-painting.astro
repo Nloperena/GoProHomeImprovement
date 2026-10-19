@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
+import FinishMethod from '../../components/FinishMethod.astro';
 ---
 
 <BaseLayout
@@ -85,7 +86,7 @@ import CTASection from '../../components/CTASection.astro';
             "name": "How much does interior painting cost in Kissimmee?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Interior painting costs depend on square footage, ceiling height, and surface condition. A typical bedroom ranges $300-$600, living rooms $400-$900. We provide free estimates so you know the exact cost upfront."
+              "text": "A painting estimate in Kissimmee comes from room size, ceiling height, repairs, and whether the work is interior or exterior. Vacation rentals along the parks corridor usually need washable walls and a color that still looks right in listing photos. We itemize the work after we see the space. We do not lock a price from a photo."
             }
           },
           {
@@ -119,6 +120,14 @@ import CTASection from '../../components/CTASection.astro';
               "@type": "Answer",
               "text": "Yes. We paint kitchen cabinets, bathroom vanities, baseboards, and crown molding. Cabinet painting requires careful prep and the right primer—we've done hundreds in Central Florida."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you spray paint or roll it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The owner uses a paint sprayer for an even film on walls, doors, cabinets, and trim, and an airbrush when a mural needs soft blends or fine detail. Masking and prep still come first. Open walls are often back-rolled so the paint bonds to the drywall."
+            }
           }
         ]
       }
@@ -139,7 +148,7 @@ import CTASection from '../../components/CTASection.astro';
     <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
     <div class="relative h-full container-custom flex items-center">
       <div class="max-w-3xl">
-        <nav class="text-sm mb-6 font-sans">
+        <nav aria-label="Breadcrumb" class="text-sm mb-6 font-sans">
           <a href="/" class="text-white/70 hover:text-gopro-orange transition-colors">Home</a>
           <span class="mx-2 text-white/50">/</span>
           <a href="/services" class="text-white/70 hover:text-gopro-orange transition-colors">Services</a>
@@ -176,6 +185,8 @@ import CTASection from '../../components/CTASection.astro';
             Whether you're repainting a bedroom, freshening curb appeal before selling, or updating kitchen cabinets, we work clean, on schedule, and stand behind the finished job. Based in Kissimmee, serving Orlando and Central Florida.
           </p>
         </div>
+
+        <FinishMethod />
         
         <!-- Work Examples -->
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
@@ -262,9 +273,7 @@ import CTASection from '../../components/CTASection.astro';
           <div class="space-y-6">
             <div class="bg-white border-l-4 border-gopro-orange p-6">
               <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How much does interior painting cost in Kissimmee?</h3>
-              <p class="text-gray-700 font-sans">
-                Interior painting costs depend on square footage, ceiling height, and surface condition. A typical bedroom ranges $300-$600, living rooms $400-$900. We provide free estimates so you know the exact cost upfront.
-              </p>
+              <p class="text-gray-700 font-sans">A painting estimate in Kissimmee comes from room size, ceiling height, repairs, and whether the work is interior or exterior. Vacation rentals along the parks corridor usually need washable walls and a color that still looks right in listing photos. We itemize the work after we see the space. <a href="/estimate" class="text-gopro-orange hover:underline">Request an estimate</a>. Related reading: <a href="/guides/how-much-does-painting-cost-kissimmee" class="text-gopro-orange hover:underline">this guide</a>.</p>
             </div>
             <div class="bg-white border-l-4 border-gopro-orange p-6">
               <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How long does exterior paint last in Florida?</h3>
@@ -288,6 +297,12 @@ import CTASection from '../../components/CTASection.astro';
               <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you paint cabinets and trim?</h3>
               <p class="text-gray-700 font-sans">
                 Yes. We paint kitchen cabinets, bathroom vanities, baseboards, and crown molding. Cabinet painting requires careful prep and the right primer—we've done hundreds in Central Florida.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you spray paint or roll it?</h3>
+              <p class="text-gray-700 font-sans">
+                The owner uses a paint sprayer for an even film on walls, doors, cabinets, and trim, and an airbrush when a mural needs soft blends or fine detail. Masking and prep still come first. Open walls are often back-rolled so the paint bonds to the drywall.
               </p>
             </div>
           </div>

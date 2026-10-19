@@ -1,0 +1,17 @@
+---
+interface Props {
+  heading?: string;
+}
+
+const { heading = 'Sprayer and airbrush finish' } = Astro.props;
+---
+
+<div class="bg-gray-50 border-l-4 border-gopro-orange p-6 mb-12">
+  <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">{heading}</h2>
+  <p class="text-gray-700 font-sans mb-3">
+    The owner applies paint with a sprayer and an airbrush. The sprayer lays down an even film on walls, doors, cabinets, and trim. The airbrush handles soft blends and fine detail, which is how custom murals get faces, lettering, and gradients.
+  </p>
+  <p class="text-gray-700 font-sans">
+    Masking and surface prep still come first. On open walls the sprayer coat is often back-rolled so the paint bonds to the drywall. The tool is chosen for the finish the room needs.
+  </p>
+</div>

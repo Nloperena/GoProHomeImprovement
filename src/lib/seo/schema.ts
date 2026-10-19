@@ -1,3 +1,4 @@
+import { publishedReviews, publishedSummary } from '../../data/reviews';
 import { breadcrumbListNode } from './breadcrumbs';
 import { cities, counties, services } from './catalog';
 import { EMAIL, PHONE_DISPLAY, SITE_NAME, SITE_ORIGIN, canonicalUrl } from './site';
@@ -49,7 +50,7 @@ export function jsonLdScript(data: JsonLd): string {
 }
 
 function businessNode(): JsonLd {
-  return {
+  const node: JsonLd = {
     '@type': ['HomeAndConstructionBusiness', 'LocalBusiness'],
     '@id': BUSINESS_ID,
     name: SITE_NAME,
@@ -64,6 +65,9 @@ function businessNode(): JsonLd {
       url: `${SITE_ORIGIN}/images/logo.png`,
     },
     priceRange: '$$',
+    // TODO(nico): Davenport is not a confirmed service area. It is absent from
+    // `cities`, the footer, and every page. Add it to areaServed only after
+    // Go Pro confirms the city and a real /areas/davenport page exists.
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Kissimmee',
@@ -111,6 +115,33 @@ function businessNode(): JsonLd {
       'https://www.google.com/maps?cid=11832173553199565594',
     ],
   };
+
+  const summary = publishedSummary();
+  if (summary) {
+    node.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: summary.ratingValue,
+      reviewCount: summary.reviewCount,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
+
+  const reviewNodes = publishedReviews().map((review) => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: review.author },
+    reviewBody: review.body,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    ...(review.datePublished ? { datePublished: review.datePublished } : {}),
+  }));
+  if (reviewNodes.length > 0) node.review = reviewNodes;
+
+  return node;
 }
 
 function websiteNode(): JsonLd {

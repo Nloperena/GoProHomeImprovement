@@ -4,6 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CTASection from '../components/CTASection.astro';
+import ReviewList from '../components/ReviewList.astro';
+import { GOOGLE_REVIEW_URL } from '../data/reviews';
 ---
 
 <BaseLayout
@@ -108,6 +110,8 @@ import CTASection from '../components/CTASection.astro';
           </ul>
         </div>
 
+        <ReviewList />
+
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
           <h2 class="text-2xl font-display font-bold uppercase mb-4 text-center tracking-wide">Google Reviews</h2>
           <p class="text-gray-600 text-center mb-6 font-sans">
@@ -115,7 +119,7 @@ import CTASection from '../components/CTASection.astro';
           </p>
           <div class="text-center">
             <a 
-              href="https://share.google/mxf7aR650uFCQUTab" 
+              href={GOOGLE_REVIEW_URL} 
               target="_blank" 
               rel="noopener noreferrer"
               class="inline-flex items-center bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-8 py-4 rounded transition-all duration-200 shadow-lg hover:shadow-xl tracking-wide"
@@ -128,6 +132,9 @@ import CTASection from '../components/CTASection.astro';
               </svg>
               Read & Write Reviews on Google
             </a>
+            <p class="text-sm text-gray-500 mt-4 font-sans">
+              Short link: <a href="/review" class="text-gopro-orange hover:underline">goprohomeimprovements.com/review</a>
+            </p>
           </div>
         </div>
 

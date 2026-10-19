@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/review",
+      "destination": "https://share.google/mxf7aR650uFCQUTab",
+      "permanent": false
+    },
+    {
       "source": "/about/:path*",
       "destination": "/about",
       "permanent": true

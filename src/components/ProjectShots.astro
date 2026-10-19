@@ -1,0 +1,35 @@
+---
+interface Shot {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+}
+
+interface Props {
+  heading: string;
+  shots: Shot[];
+}
+
+const { heading, shots } = Astro.props;
+---
+
+<div class="mb-12">
+  <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">{heading}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    { shots.map((shot) => (
+      <figure>
+        <img
+          src={shot.src}
+          alt={shot.alt}
+          width={shot.width}
+          height={shot.height}
+          loading="lazy"
+          class="w-full h-64 object-cover rounded-lg shadow-lg"
+        />
+        <figcaption class="mt-2 text-sm text-gray-600 font-sans">{shot.caption}</figcaption>
+      </figure>
+    ))}
+  </div>
+</div>
