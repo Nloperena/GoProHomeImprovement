@@ -1,0 +1,125 @@
+---
+interface Props {
+  prefix: string;
+}
+
+const { prefix } = Astro.props;
+
+const services = [
+  ['interior-exterior-painting', 'Painting'],
+  ['drywall', 'Drywall'],
+  ['power-washing', 'Power washing'],
+  ['trim-crown-molding', 'Trim and crown molding'],
+  ['murals', 'Murals'],
+  ['movie-rooms', 'Movie rooms'],
+  ['wallpaper', 'Wallpaper'],
+  ['tv-mounting', 'TV mounting'],
+  ['demolition', 'Interior demolition'],
+  ['other', 'Something else'],
+];
+---
+
+<div class="estimate-card" data-estimate-root>
+  <p class="estimate-card-kicker">Free estimate</p>
+  <h2>Tell us the job. The owner calls you back.</h2>
+  <form id={`${prefix}-form`} class="estimate-card-form">
+    <div class="estimate-grid">
+      <div>
+        <label for={`${prefix}-name`}>Full name</label>
+        <input id={`${prefix}-name`} name="name" type="text" required autocomplete="name" placeholder="Your name" />
+      </div>
+      <div>
+        <label for={`${prefix}-phone`}>Phone</label>
+        <input id={`${prefix}-phone`} name="phone" type="tel" required autocomplete="tel" placeholder="(407) 555-0100" />
+      </div>
+    </div>
+    <div>
+      <label for={`${prefix}-email`}>Email</label>
+      <input id={`${prefix}-email`} name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
+    </div>
+    <div class="estimate-grid">
+      <div>
+        <label for={`${prefix}-service`}>Service</label>
+        <select id={`${prefix}-service`} name="service" required>
+          <option value="">Select a service</option>
+          {services.map(([value, label]) => <option value={value}>{label}</option>)}
+        </select>
+      </div>
+      <div>
+        <label for={`${prefix}-city`}>City</label>
+        <input id={`${prefix}-city`} name="city" type="text" required autocomplete="address-level2" placeholder="Kissimmee" />
+      </div>
+    </div>
+    <div>
+      <label for={`${prefix}-message`}>What needs doing?</label>
+      <textarea id={`${prefix}-message`} name="message" required rows="2" placeholder="Room, rough size, and what you want done."></textarea>
+    </div>
+    <div class="estimate-honeypot" aria-hidden="true">
+      <label for={`${prefix}-website`}>Website</label>
+      <input id={`${prefix}-website`} name="website" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+    <button class="btn-primary" type="submit">Request a free estimate</button>
+    <p class="estimate-note">Free. You talk to the owner. Monday through Friday, 7 AM to 5 PM.</p>
+  </form>
+  <div id={`${prefix}-success`} class="estimate-success" hidden>
+    <p class="estimate-card-kicker">Sent</p>
+    <h2>We got it.</h2>
+    <p>The owner will call you Monday through Friday, 7 AM to 5 PM. If you need to reach us sooner, call <a href="tel:4072446873">(407) 244-6873</a>.</p>
+  </div>
+  <p id={`${prefix}-error`} class="estimate-error" hidden role="alert"></p>
+</div>
+
+<script>
+  const roots = document.querySelectorAll('[data-estimate-root]');
+  roots.forEach((root) => {
+    const form = root.querySelector('form');
+    if (!(form instanceof HTMLFormElement) || form.dataset.bound === '1') return;
+    form.dataset.bound = '1';
+    const started = Date.now();
+    const success = root.querySelector('.estimate-success');
+    const error = root.querySelector('.estimate-error');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (error instanceof HTMLElement) {
+        error.hidden = true;
+        error.textContent = '';
+      }
+      const data = Object.fromEntries(new FormData(form));
+      data.formStartedAt = String(started);
+      data.website = typeof data.website === 'string' ? data.website : '';
+      const button = form.querySelector('button');
+      if (button instanceof HTMLButtonElement) button.disabled = true;
+      try {
+        const response = await fetch('/api/estimate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        if (response.ok) {
+          form.hidden = true;
+          if (success instanceof HTMLElement) success.hidden = false;
+          return;
+        }
+        let message = 'There was a problem submitting your request. Call (407) 244-6873.';
+        try {
+          const payload = await response.json();
+          if (payload && typeof payload.error === 'string') message = payload.error;
+        } catch {
+          /* keep the default */
+        }
+        if (error instanceof HTMLElement) {
+          error.textContent = message;
+          error.hidden = false;
+        }
+      } catch {
+        if (error instanceof HTMLElement) {
+          error.textContent = 'There was a problem submitting your request. Call (407) 244-6873.';
+          error.hidden = false;
+        }
+      } finally {
+        if (button instanceof HTMLButtonElement) button.disabled = false;
+      }
+    });
+  });
+</script>

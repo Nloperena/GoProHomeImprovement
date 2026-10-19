@@ -1,0 +1,182 @@
+---
+import '../../styles/firm.css';
+import ConceptFrame from '../../components/ConceptFrame.astro';
+import EstimateCard from '../../components/EstimateCard.astro';
+import ReviewsSpot from '../../components/ReviewsSpot.astro';
+
+const services = [
+  { name: 'Painting', href: '/services/interior-exterior-painting', line: 'Rooms that look finished. Exteriors that hold up in the sun.', src: '/images/bedroom-paint-1100.jpg', alt: 'Painted bedroom with a striped accent wall' },
+  { name: 'Trim & molding', href: '/services/trim-crown-molding', line: 'Crown and baseboards that finish the room.', src: '/images/trim-navy-wall-840.jpg', alt: 'Finished living room with a navy wall, white raised paneling, and crown molding' },
+  { name: 'Murals', href: '/services/murals', line: 'Sprayer and airbrush finishes, including murals.', src: '/images/nemo-mural-1100.jpg', alt: 'Hand-painted Finding Nemo mural' },
+  { name: 'Movie rooms', href: '/services/movie-rooms', line: 'A room set up for movies, not a TV on a stand.', src: '/images/star-wars-theater-1100.jpg', alt: 'Star Wars home theater' },
+  { name: 'Drywall', href: '/services/drywall', line: 'Holes and water stains patched so the wall matches.', src: '/images/drywall.jpg', alt: 'Drywall taped and mudded, ready for paint' },
+  { name: 'Power washing', href: '/services/power-washing', line: 'Algae and dirt off the house, driveway, and pool deck.', src: '/images/power-washing.jpg', alt: 'Power washing a paver surface' },
+];
+
+const jobs = [
+  { src: '/images/trim-navy-wall-1400.jpg', alt: 'Finished living room with a navy wall, white raised paneling, and crown molding', caption: 'Trim and paint' },
+  { src: '/images/nemo-mural-1100.jpg', alt: 'Hand-painted Finding Nemo mural', caption: 'Custom mural' },
+  { src: '/images/movie-room-1100.jpg', alt: 'Home theater with tiered seating', caption: 'Movie room' },
+  { src: '/images/wood-floor-1100.jpg', alt: 'Wood-look floor with a dark border', caption: 'Finished floor' },
+  { src: '/images/bedroom-paint-1100.jpg', alt: 'Painted bedroom with a striped accent wall', caption: 'Interior painting' },
+  { src: '/images/plank-tv-wall.jpg', alt: 'Wood-look accent wall with a mounted TV', caption: 'TV wall' },
+];
+
+const steps = [
+  ['Call or send the form', 'You reach the owner, not a salesperson.'],
+  ['Walk the job', 'If we need to see the house, someone is there to let us in.'],
+  ['Price in writing', 'You get the estimate before any work starts. It is free.'],
+  ['Schedule the work', 'Monday through Friday, 7 AM to 5 PM.'],
+];
+
+const areas = [
+  ['Kissimmee', '/areas/kissimmee'],
+  ['Orlando', '/areas/orlando'],
+  ['St. Cloud', '/areas/st-cloud'],
+  ['Celebration', '/areas/celebration'],
+  ['Poinciana', '/areas/poinciana'],
+  ['Nearby Central Florida', '/areas/central-florida'],
+];
+---
+
+<ConceptFrame
+  id="d"
+  name="The estimate desk"
+  idea="A finished Kissimmee contractor page: the estimate form is in the first screen, beside a real room."
+  title="Concept D — The estimate desk | Go Pro Home Improvements"
+  description="Preview concept. Estimate form, trust badges, services, finished jobs, and service areas. The live homepage is unchanged."
+  preloadImage="/images/trim-navy-wall-1400.jpg"
+>
+  <section class="d-hero" aria-labelledby="d-title">
+    <div class="container-custom d-hero-grid">
+      <div class="d-copy">
+        <p class="kicker">Kissimmee · Florida corporation since 2014</p>
+        <h1 id="d-title">Home improvement in Kissimmee, with the price in writing first.</h1>
+        <p class="d-lede">Painting, drywall, power washing, trim, murals, and movie rooms. You talk to the owner.</p>
+        <ul class="trust-row">
+          <li>Workmanship satisfaction guarantee</li>
+          <li>Est. 2014</li>
+          <li>Local to Kissimmee</li>
+        </ul>
+        <a class="d-phone" href="tel:4072446873">(407) 244-6873</a>
+        <p class="d-hours">Monday through Friday, 7 AM to 5 PM.</p>
+        <figure class="d-hero-photo">
+          <img
+            src="/images/trim-navy-wall-1400.jpg"
+            srcset="/images/trim-navy-wall-840.jpg 840w, /images/trim-navy-wall-1400.jpg 1400w, /images/trim-navy-wall.jpg 1920w"
+            sizes="(max-width: 900px) 100vw, 46vw"
+            alt="Finished living room with a navy wall, white raised paneling, and crown molding"
+            width="1400"
+            height="1050"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <figcaption>Finished trim and paint</figcaption>
+        </figure>
+      </div>
+      <EstimateCard prefix="d" />
+    </div>
+  </section>
+
+  <section class="d-services" aria-labelledby="d-services-title">
+    <div class="container-custom">
+      <div class="section-intro">
+        <p class="kicker">Services</p>
+        <h2 id="d-services-title">The work we quote.</h2>
+        <a class="text-link" href="/services">All services</a>
+      </div>
+      <ul class="d-service-grid">
+        {services.map((service) => (
+          <li>
+            <a href={service.href}>
+              <img src={service.src} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
+              <span>
+                <strong>{service.name}</strong>
+                <em>{service.line}</em>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="d-jobs" aria-labelledby="d-jobs-title">
+    <div class="container-custom">
+      <div class="section-intro">
+        <p class="kicker">Before and after</p>
+        <h2 id="d-jobs-title">Finished jobs. A before photo only when it is the same room.</h2>
+      </div>
+      <p class="jobs-note">We don't pair two different rooms and call it a before and after. These are finished jobs from Central Florida homes.</p>
+      <ul class="d-job-grid">
+        {jobs.map((job) => (
+          <li>
+            <figure>
+              <img src={job.src} alt={job.alt} width="1100" height="825" loading="lazy" decoding="async" />
+              <figcaption>{job.caption}</figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+      <p class="jobs-more"><a class="text-link" href="/work">View the gallery</a></p>
+    </div>
+  </section>
+
+  <section class="d-crew">
+    <div class="container-custom d-crew-grid">
+      <figure>
+        <img src="/images/crew-branded-shirt.jpg" alt="Go Pro crew member in a branded shirt installing a wood-look floor" width="1200" height="900" loading="lazy" decoding="async" />
+      </figure>
+      <div>
+        <p class="kicker">On the job</p>
+        <h2>You talk to the owner. The crew wears the name.</h2>
+        <p>The person who quotes the job is the person responsible for it. If the scope changes, we talk about it before the price changes. We leave the place cleaned up.</p>
+        <p class="guarantee-line"><strong>Workmanship satisfaction guarantee.</strong> Ask what it covers when the owner calls you back.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="d-process" aria-labelledby="d-process-title">
+    <div class="container-custom">
+      <p class="kicker">How a job starts</p>
+      <h2 id="d-process-title">Four steps. Then a written price.</h2>
+      <ol>
+        {steps.map(([title, line], i) => (
+          <li>
+            <span>{String(i + 1).padStart(2, '0')}</span>
+            <strong>{title}</strong>
+            <em>{line}</em>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <ReviewsSpot tone="paper" />
+
+  <section class="d-areas" aria-labelledby="d-areas-title">
+    <div class="container-custom">
+      <p class="kicker">Service area</p>
+      <h2 id="d-areas-title">Kissimmee, and the cities next to it.</h2>
+      <ul>
+        {areas.map(([name, href]) => (
+          <li><a href={href}>{name}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="firm-cta">
+    <div class="container-custom firm-cta-inner">
+      <div>
+        <p class="kicker">The price</p>
+        <h2>Want a price for the job?</h2>
+        <p>Call the owner or send the form. Monday through Friday, 7 AM to 5 PM.</p>
+      </div>
+      <div class="firm-cta-actions">
+        <a class="firm-phone" href="tel:4072446873">(407) 244-6873</a>
+        <a class="btn-primary" href="/estimate">Request a free estimate</a>
+      </div>
+    </div>
+  </section>
+</ConceptFrame>

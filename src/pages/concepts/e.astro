@@ -1,0 +1,163 @@
+---
+import '../../styles/firm.css';
+import ConceptFrame from '../../components/ConceptFrame.astro';
+import EstimateCard from '../../components/EstimateCard.astro';
+import HeroFootage from '../../components/HeroFootage.astro';
+import ReviewsSpot from '../../components/ReviewsSpot.astro';
+
+const services = [
+  { name: 'Painting', href: '/services/interior-exterior-painting', line: 'Interior and exterior.', src: '/images/bedroom-paint-480.jpg', alt: 'Painted bedroom with a striped accent wall' },
+  { name: 'Trim', href: '/services/trim-crown-molding', line: 'Crown and baseboards.', src: '/images/trim-navy-wall-480.jpg', alt: 'White trim on a navy wall' },
+  { name: 'Murals', href: '/services/murals', line: 'Sprayer and airbrush.', src: '/images/nemo-mural-480.jpg', alt: 'Hand-painted mural' },
+  { name: 'Movie rooms', href: '/services/movie-rooms', line: 'Seating, screen, and the room around it.', src: '/images/movie-room-480.jpg', alt: 'Home theater seating' },
+  { name: 'Drywall', href: '/services/drywall', line: 'Patches that match the wall.', src: '/images/drywall.jpg', alt: 'Drywall taped and mudded' },
+  { name: 'Power washing', href: '/services/power-washing', line: 'House, driveway, pool deck.', src: '/images/power-washing.jpg', alt: 'Power washing a paver surface' },
+  { name: 'Wallpaper', href: '/services/wallpaper', line: 'Hung, and the old paper taken off.', src: '/images/wallpaper.jpg', alt: 'Wallpaper accent wall behind a television' },
+  { name: 'TV mounting', href: '/services/tv-mounting', line: 'Mounted, with the wires handled.', src: '/images/plank-tv-wall.jpg', alt: 'Television mounted on a wood-look accent wall' },
+];
+
+const jobs = [
+  { src: '/images/nemo-mural-1100.jpg', alt: 'Hand-painted Finding Nemo mural', caption: 'Custom mural', lead: true },
+  { src: '/images/bedroom-paint-1100.jpg', alt: 'Painted bedroom with a striped accent wall', caption: 'Interior painting' },
+  { src: '/images/movie-room-1100.jpg', alt: 'Home theater with tiered seating', caption: 'Movie room' },
+  { src: '/images/wood-floor-1100.jpg', alt: 'Wood-look floor with a dark border', caption: 'Finished floor' },
+  { src: '/images/wallpaper.jpg', alt: 'Wallpaper accent wall behind a television', caption: 'Wallpaper' },
+];
+
+const steps = [
+  'Call (407) 244-6873 or send the form.',
+  'The owner talks through the job with you.',
+  'You get a written price before any work starts.',
+  'If you say yes, we schedule it. Monday through Friday, 7 AM to 5 PM.',
+];
+
+const areas = [
+  ['Kissimmee', '/areas/kissimmee'],
+  ['Orlando', '/areas/orlando'],
+  ['St. Cloud', '/areas/st-cloud'],
+  ['Celebration', '/areas/celebration'],
+  ['Poinciana', '/areas/poinciana'],
+  ['Central Florida', '/areas/central-florida'],
+];
+---
+
+<ConceptFrame
+  id="e"
+  name="The showroom"
+  idea="The finished room fills the screen, and the estimate, services, and jobs sit on it like a company, not a poster."
+  title="Concept E — The showroom | Go Pro Home Improvements"
+  description="Preview concept. Full-bleed finished room, estimate card, services, jobs, and service areas. The live homepage is unchanged."
+  preloadImage="/images/trim-navy-wall-1400.jpg"
+>
+  <section class="e-hero" aria-labelledby="e-title">
+    <HeroFootage class="e-footage" priority alt="Finished living room with a navy wall, white raised paneling, and crown molding" />
+    <div class="container-custom e-hero-grid">
+      <div class="e-panel">
+        <p class="kicker">Kissimmee · Est. 2014</p>
+        <h1 id="e-title">Painting, trim, drywall, and theaters for Kissimmee homes.</h1>
+        <p class="e-lede">You talk to the owner. The price is in writing before we start.</p>
+        <ul class="trust-row">
+          <li>Workmanship satisfaction guarantee</li>
+          <li>Est. 2014</li>
+          <li>Local to Kissimmee</li>
+        </ul>
+        <a class="e-phone" href="tel:4072446873">(407) 244-6873</a>
+        <EstimateCard prefix="e" />
+      </div>
+    </div>
+  </section>
+
+  <section class="e-services" aria-labelledby="e-services-title">
+    <div class="container-custom">
+      <div class="section-intro">
+        <p class="kicker">Services</p>
+        <h2 id="e-services-title">Eight ways the house gets finished.</h2>
+        <a class="text-link" href="/services">All services</a>
+      </div>
+      <ul class="e-service-list">
+        {services.map((service) => (
+          <li>
+            <a href={service.href}>
+              <img src={service.src} alt="" width="480" height="360" loading="lazy" decoding="async" />
+              <span>
+                <strong>{service.name}</strong>
+                <em>{service.line}</em>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="e-jobs" aria-labelledby="e-jobs-title">
+    <div class="container-custom">
+      <div class="section-intro">
+        <p class="kicker">Before and after</p>
+        <h2 id="e-jobs-title">The finished room is the proof we actually have.</h2>
+      </div>
+      <p class="jobs-note">A before photo is added only when it is the same room. These pictures are finished work, not a made-up pair.</p>
+      <div class="e-mosaic">
+        {jobs.map((job) => (
+          <figure class:list={[job.lead && 'is-lead']}>
+            <img src={job.src} alt={job.alt} width="1100" height="825" loading="lazy" decoding="async" />
+            <figcaption>{job.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <p class="jobs-more"><a class="text-link" href="/work">View the gallery</a></p>
+    </div>
+  </section>
+
+  <section class="e-process" aria-labelledby="e-process-title">
+    <div class="container-custom">
+      <h2 id="e-process-title">How a job starts</h2>
+      <ol>
+        {steps.map((step, i) => (
+          <li>
+            <span>{String(i + 1).padStart(2, '0')}</span>
+            <p>{step}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="e-crew">
+    <div class="container-custom e-crew-grid">
+      <img src="/images/crew-branded-shirt.jpg" alt="Go Pro crew member in a branded shirt installing a wood-look floor" width="900" height="680" loading="lazy" decoding="async" />
+      <div>
+        <p class="kicker">Who shows up</p>
+        <h2>The owner quotes it. The crew does the work in a Go Pro shirt.</h2>
+        <p class="guarantee-line"><strong>Workmanship satisfaction guarantee.</strong> Ask what it covers when the owner calls you back. We don't publish a term we haven't written down.</p>
+      </div>
+    </div>
+  </section>
+
+  <ReviewsSpot tone="bone" />
+
+  <section class="e-areas" aria-labelledby="e-areas-title">
+    <div class="container-custom">
+      <p class="kicker">Service area</p>
+      <h2 id="e-areas-title">Based in Kissimmee.</h2>
+      <ul>
+        {areas.map(([name, href]) => (
+          <li><a href={href}>{name}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="firm-cta firm-cta-night">
+    <div class="container-custom firm-cta-inner">
+      <div>
+        <p class="kicker">Call the owner</p>
+        <h2>Get the price before we start.</h2>
+      </div>
+      <div class="firm-cta-actions">
+        <a class="firm-phone" href="tel:4072446873">(407) 244-6873</a>
+        <a class="btn-primary" href="/estimate">Request a free estimate</a>
+      </div>
+    </div>
+  </section>
+</ConceptFrame>
