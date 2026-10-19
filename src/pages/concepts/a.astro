@@ -1,0 +1,116 @@
+---
+import ConceptFrame from '../../components/ConceptFrame.astro';
+import HeroFootage from '../../components/HeroFootage.astro';
+import ReviewsSpot from '../../components/ReviewsSpot.astro';
+
+const chips = [
+  'You talk to the owner',
+  'Price in writing before we start',
+  'Florida corporation since 2014',
+  'Kissimmee and nearby',
+];
+
+const services = [
+  ['Painting', 'Rooms that look finished. Exteriors that hold up in the sun.', '/services/interior-exterior-painting'],
+  ['Drywall', 'Holes and water stains patched so the wall matches.', '/services/drywall'],
+  ['Power washing', 'Algae and dirt off the house, driveway, and pool deck.', '/services/power-washing'],
+  ['Trim & molding', 'Crown and baseboards that finish the room.', '/services/trim-crown-molding'],
+  ['Murals', 'Sprayer and airbrush finishes, including murals.', '/services/murals'],
+  ['Movie rooms', 'A room set up for movies, not a TV on a stand.', '/services/movie-rooms'],
+];
+
+const strip = [
+  { src: '/images/nemo-mural-480.jpg', alt: 'Hand-painted Finding Nemo mural' },
+  { src: '/images/bedroom-paint-480.jpg', alt: 'Painted bedroom with a striped accent wall' },
+  { src: '/images/movie-room-480.jpg', alt: 'Home theater seating' },
+  { src: '/images/wood-floor-1100.jpg', alt: 'Wood-look floor with border trim' },
+];
+---
+
+<ConceptFrame
+  id="a"
+  name="Call first"
+  idea="The phone number is the headline. The room is proof underneath, not the point."
+  title="Concept A — Call first | Go Pro Home Improvements"
+  description="Preview concept. The phone number is the headline, with a written price and the owner on the line."
+  preloadImage="/images/trim-navy-wall-840.jpg"
+>
+  <section class="a-hero" aria-labelledby="a-title">
+    <div class="container-custom a-split">
+      <div>
+        <p class="kicker">Kissimmee · Mon–Fri 7 AM–5 PM</p>
+        <h1 id="a-title">
+          <a class="a-phone" href="tel:4072446873">
+            <span class="area">(407)</span>
+            <span>244-6873</span>
+          </a>
+        </h1>
+        <p class="a-answer">The owner answers.</p>
+      </div>
+      <div class="a-offer">
+        <h2>A written price before we start.</h2>
+        <p>
+          Painting, drywall, power washing, trim, and more. You talk to the owner. Kissimmee, Orlando, St. Cloud, Celebration, Poinciana, and nearby.
+        </p>
+        <div class="a-actions">
+          <a class="btn-primary" href="/estimate">Request a free estimate</a>
+          <a class="btn-ghost" href="tel:4072446873">Call now</a>
+        </div>
+        <ul class="chip-row">
+          {chips.map((chip) => <li>{chip}</li>)}
+        </ul>
+        <p class="guarantee">
+          <strong>Workmanship satisfaction guarantee.</strong>
+          Ask what it covers when the owner calls you back.
+        </p>
+      </div>
+    </div>
+    <div class="a-strip" aria-label="Finished jobs">
+      <figure class="a-lead">
+        <HeroFootage priority alt="Finished living room with a navy wall, white raised paneling, and crown molding" />
+        <figcaption>Trim &amp; paint</figcaption>
+      </figure>
+      {strip.map((shot) => (
+        <figure>
+          <img src={shot.src} alt={shot.alt} width="480" height="360" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">{shot.alt}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="a-services" aria-labelledby="a-services-title">
+    <div class="container-custom">
+      <div class="a-services-head">
+        <p class="kicker">Services</p>
+        <h2 id="a-services-title">The work, in one list.</h2>
+        <a class="text-link" href="/services">All services</a>
+      </div>
+      <ol>
+        {services.map(([name, line, href], i) => (
+          <li>
+            <a href={href}>
+              <span>{String(i + 1).padStart(2, '0')}</span>
+              <strong>{name}</strong>
+              <em>{line}</em>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <ReviewsSpot tone="bone" />
+
+  <section class="a-close">
+    <div class="container-custom">
+      <p class="kicker">How a job starts</p>
+        <ol>
+        <li><span>01</span>Call or send the estimate form.</li>
+        <li><span>02</span>The owner talks through the job.</li>
+        <li><span>03</span>You get a written price before any work starts.</li>
+        <li><span>04</span>If you say yes, we schedule it. Monday through Friday, 7 AM to 5 PM.</li>
+      </ol>
+    </div>
+  </section>
+</ConceptFrame>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/concepts.css';
+
+const concepts = [
+  {
+    href: '/concepts/a',
+    mark: 'A',
+    name: 'Call first',
+    idea: 'The phone number is the headline. The room is proof underneath, not the point.',
+  },
+  {
+    href: '/concepts/b',
+    mark: 'B',
+    name: 'The bid on the room',
+    idea: 'The finished room stays full-bleed, and the offer sits on it like a job card you can act on.',
+  },
+  {
+    href: '/concepts/c',
+    mark: 'C',
+    name: 'Proof, then the price',
+    idea: 'The jobs fill the first screen. The offer is a rail beside them.',
+  },
+  {
+    href: '/concepts/d',
+    mark: 'D',
+    name: 'The estimate desk',
+    idea: 'A finished Kissimmee contractor page: the estimate form is in the first screen, beside a real room.',
+  },
+  {
+    href: '/concepts/e',
+    mark: 'E',
+    name: 'The showroom',
+    idea: 'The finished room fills the screen, and the estimate, services, and jobs sit on it like a company, not a poster.',
+  },
+];
+---
+
+<BaseLayout
+  noindex
+  title="Homepage concepts | Go Pro Home Improvements"
+  description="Three preview directions for the Go Pro homepage. The live homepage is unchanged."
+>
+  <Header />
+  <main id="main" class="concept-index">
+    <div class="container-custom">
+      <p class="kicker">Previews</p>
+      <h1>Homepage directions.</h1>
+      <p class="concept-index-lede">The live homepage is unchanged. D and E are the finished contractor pages.</p>
+      <ol>
+        {concepts.map((item) => (
+          <li>
+            <a href={item.href}>
+              <span>{item.mark}</span>
+              <strong>{item.name}</strong>
+              <em>{item.idea}</em>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

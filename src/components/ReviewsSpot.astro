@@ -1,0 +1,35 @@
+---
+import { reviews } from '../data/reviews';
+
+interface Props {
+  tone?: 'paper' | 'bone' | 'night';
+}
+
+const { tone = 'paper' } = Astro.props;
+---
+
+<section class:list={['reviews-spot', `tone-${tone}`]} aria-labelledby="reviews-title">
+  <div class="container-custom">
+    <p class="kicker">Reviews</p>
+    <h2 id="reviews-title">What homeowners say</h2>
+    {reviews.length === 0 ? (
+      <p class="reviews-empty">
+        Homeowner reviews will be listed here when we have them. We don't write them ourselves.
+        Finished jobs are in the <a href="/work">gallery</a>.
+      </p>
+    ) : (
+      <ul class="reviews-list">
+        {reviews.map((review) => (
+          <li>
+            <blockquote>
+              <p>{review.quote}</p>
+            </blockquote>
+            <p class="reviews-by">
+              {review.name}{review.place ? <span> · {review.place}</span> : null}
+            </p>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</section>
