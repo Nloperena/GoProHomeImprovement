@@ -1,110 +1,44 @@
 ---
-import Frame from './Frame.astro';
+import GeneratedImage from './GeneratedImage.astro';
 import { GOOGLE_REVIEWS_URL } from '../../data/reviews';
 ---
 
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-copy">
-    <p class="tape-label">Kissimmee</p>
-    <h1 id="hero-title">
-      He sprays<br />the <em>finish</em><br />himself.
-    </h1>
-    <p class="hero-deck">
-      Mike paints with an airbrush and a sprayer. You talk to the owner.
-      The estimate is free.
-    </p>
-    <ul class="trust">
-      <li>Satisfaction guarantee</li>
-      <li>Est. 2014</li>
-      <li><a href={GOOGLE_REVIEWS_URL} rel="noopener noreferrer">5.0 on Google</a></li>
-      <li>Owner on every job</li>
-    </ul>
-    <div class="hero-actions">
-      <a class="btn-ink" href="#estimate">Free estimate</a>
-      <a class="phone-link" href="tel:4072446873">Call (407) 244-6873</a>
-    </div>
-  </div>
-  <div class="hero-stage">
-    <div class="hero-reveal">
-      <Frame
-        src="/images/reviews/bb8-1400.webp"
-        small="/images/reviews/bb8-960.webp"
-        sizes="(max-width: 899px) 100vw, 46vw"
-        width="1400"
-        height="1050"
-        alt="Bunk room with a night-sky ceiling and a BB-8 bunk structure"
+  <div class="hero-media">
+    <div class="hero-parallax">
+      <GeneratedImage
+        class="hero-img"
+        name="hero"
+        widths={[480, 768, 1280]}
+        width={1280}
+        height={720}
+        sizes="100vw"
+        alt="Painter on a ladder spraying the eave of a white Florida house with an orange front door"
         loading="eager"
         fetchpriority="high"
       />
-      <video
-        data-hero-video
-        poster="/images/reviews/bb8-960.webp"
-        muted
-        playsinline
-        loop
-        preload="none"
-        aria-hidden="true"
-      ></video>
-      <span class="wet-sweep" aria-hidden="true"></span>
-      <span class="wet-hover" aria-hidden="true"></span>
     </div>
-    <svg class="wet-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="wet-sheen" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#ffd0c2"></stop>
-          <stop offset="0.28" stop-color="#e23b12"></stop>
-          <stop offset="1" stop-color="#7a220c"></stop>
-        </linearGradient>
-      </defs>
-      <line x1="13" y1="0" x2="0" y2="100" stroke="url(#wet-sheen)" stroke-width="4" vector-effect="non-scaling-stroke"></line>
-    </svg>
-    <svg class="mist" viewBox="0 0 160 640" aria-hidden="true">
-      <g fill="#E23B12">
-        <circle cx="78" cy="40" r="7" opacity="0.85"></circle>
-        <circle cx="108" cy="78" r="3" opacity="0.55"></circle>
-        <circle cx="64" cy="120" r="5" opacity="0.7"></circle>
-        <circle cx="124" cy="150" r="2.5" opacity="0.45"></circle>
-        <circle cx="90" cy="190" r="8" opacity="0.35"></circle>
-        <circle cx="52" cy="230" r="3" opacity="0.6"></circle>
-        <circle cx="116" cy="270" r="4" opacity="0.5"></circle>
-        <circle cx="74" cy="320" r="6" opacity="0.75"></circle>
-        <circle cx="130" cy="360" r="2" opacity="0.4"></circle>
-        <circle cx="58" cy="410" r="4" opacity="0.55"></circle>
-        <circle cx="100" cy="460" r="7" opacity="0.4"></circle>
-        <circle cx="80" cy="520" r="3" opacity="0.65"></circle>
-        <circle cx="122" cy="560" r="5" opacity="0.5"></circle>
-        <circle cx="48" cy="600" r="2.5" opacity="0.45"></circle>
-      </g>
-    </svg>
-    <p class="hero-tape tape">Bunk room</p>
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <ul class="chips">
+      <li><a href={GOOGLE_REVIEWS_URL} rel="noopener noreferrer">5.0 on Google</a></li>
+      <li>Est. 2014</li>
+      <li>Workmanship satisfaction guarantee</li>
+    </ul>
+    <h1 id="hero-title">
+      <span class="line"><span class="line-inner">House Painting,</span></span>
+      <span class="line"><span class="line-inner">Pressure Washing &amp;</span></span>
+      <span class="line"><span class="line-inner">Handyman Work</span></span>
+      <span class="line"><span class="line-inner">in Kissimmee, FL</span></span>
+    </h1>
+    <span class="hero-rule" aria-hidden="true"></span>
+    <p class="hero-deck">
+      Interior and exterior painting for homes in Kissimmee, St. Cloud, Celebration, and Poinciana. You deal with Mike, the owner, from estimate to cleanup.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-orange" href="#estimate"><span>Free Estimate</span></a>
+      <a class="btn btn-line" href="tel:4072446873"><span>Call (407) 244-6873</span></a>
+    </div>
   </div>
 </section>
-<div class="overspray" aria-hidden="true"></div>
-<div class="wet-band">
-  <p>Workmanship satisfaction guarantee</p>
-  <p>Monday–Friday · 7 AM–5 PM</p>
-</div>
-
-<script>
-  const video = document.querySelector<HTMLVideoElement>('[data-hero-video]');
-  if (video) {
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const narrow = window.matchMedia('(max-width: 899px)').matches;
-    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
-    const saveData = connection?.saveData === true;
-    if (!reduce && !narrow && !saveData) {
-      const source = document.createElement('source');
-      source.src = '/video/hero.mp4';
-      source.type = 'video/mp4';
-      video.appendChild(source);
-      const show = () => video.classList.add('is-ready');
-      video.addEventListener('loadeddata', show);
-      video.addEventListener('error', () => {
-        video.remove();
-      });
-      video.play().catch(() => {
-        video.remove();
-      });
-    }
-  }
-</script>

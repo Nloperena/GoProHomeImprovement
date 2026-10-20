@@ -1,0 +1,65 @@
+---
+import GeneratedImage from './GeneratedImage.astro';
+---
+
+<section class="band split" aria-labelledby="exterior-title">
+  <div class="split-copy">
+    <p class="kicker">Exterior</p>
+    <h2 id="exterior-title">Exterior House Painting &amp; Stucco Repair in Kissimmee</h2>
+    <p>
+      Cracked, stained stucco, then the sprayed finish. Drag the handle, or focus it and use the arrow keys.
+    </p>
+  </div>
+  <div class="compare-frame" data-compare style="--pos: 54%">
+    <GeneratedImage
+      name="before"
+      widths={[480, 640]}
+      width={640}
+      height={720}
+      sizes="(max-width: 900px) 100vw, 36rem"
+      alt="Cracked and stained stucco wall beside a dark window, before painting"
+    />
+    <div class="compare-after">
+      <GeneratedImage
+        name="after"
+        widths={[480, 640]}
+        width={640}
+        height={720}
+        sizes="(max-width: 900px) 100vw, 36rem"
+        alt="The same stucco wall after painting, smooth and white"
+      />
+    </div>
+    <span class="compare-tag compare-tag-before">Before</span>
+    <span class="compare-tag compare-tag-after">After</span>
+    <span class="compare-handle" aria-hidden="true"></span>
+    <input
+      class="compare-range"
+      type="range"
+      min="0"
+      max="100"
+      value="54"
+      aria-label="Compare the stucco before painting and after painting"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="54"
+      aria-valuetext="54% after painting"
+    />
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-compare]').forEach((frame) => {
+    const input = frame.querySelector<HTMLInputElement>('.compare-range');
+    if (!input) return;
+
+    const sync = () => {
+      const value = input.value;
+      frame.style.setProperty('--pos', `${value}%`);
+      input.setAttribute('aria-valuenow', value);
+      input.setAttribute('aria-valuetext', `${value}% after painting`);
+    };
+
+    input.addEventListener('input', sync);
+    sync();
+  });
+</script>

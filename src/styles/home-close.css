@@ -1,284 +1,158 @@
-.ticket {
+.areas {
+  display: grid;
+  gap: 1.25rem;
+  background: var(--ink-2);
+}
+
+.areas-media img,
+.areas-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.areas-media img {
+  object-fit: cover;
+  min-height: 16rem;
+}
+
+.city-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.1rem 0 1.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.city-chips a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.85rem;
+  background: var(--ink);
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.city-chips a:hover,
+.city-chips a:focus-visible {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+.areas h3 {
+  margin: 0 0 0.45rem;
+  font-size: 2rem;
+}
+
+.estimate {
   display: grid;
   gap: 1.5rem;
-  padding: 5rem 1.25rem 5rem;
-  max-width: 86rem;
-  margin: 0 auto;
-  box-shadow: inset 0 0.28rem 0 var(--lacquer);
-}
-
-.ticket-form,
-.ticket-success,
-.ticket-error {
-  position: relative;
-  background: var(--primer);
-  border-left: 0.7rem solid var(--lacquer-deep);
-  padding: 1.5rem 1.1rem 1.6rem;
-  box-shadow: 0 16px 40px rgba(28, 22, 18, 0.06);
-}
-
-.ticket-form::before,
-.ticket-form::after,
-.ticket-success::before {
-  content: "";
-  position: absolute;
-  width: 4.6rem;
-  height: 1.15rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.38), transparent 46%),
-    var(--tape);
-  box-shadow: 0 1px 0 rgba(28, 22, 18, 0.12);
-  pointer-events: none;
-}
-
-.ticket-form::before,
-.ticket-success::before {
-  top: -0.45rem;
-  left: 1.1rem;
-  transform: rotate(-2deg);
-}
-
-.ticket-form::after {
-  right: 1.3rem;
-  bottom: -0.45rem;
-  transform: rotate(2deg);
-}
-
-.ticket-lead,
-.ticket-form h2,
-.ticket-success h2 {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
-  margin: 0.8rem 0 1rem;
+  background: var(--panel);
 }
 
 .fields {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.85rem;
 }
 
 .fields label {
   display: grid;
   gap: 0.35rem;
   font-size: 0.92rem;
-  font-weight: 500;
+  font-weight: 600;
 }
+
+.req { color: var(--orange); }
 
 .fields input,
 .fields select,
 .fields textarea {
   width: 100%;
   min-height: 3rem;
-  border: 1px solid rgba(28, 22, 18, 0.35);
-  background: #fffdf9;
-  color: var(--ink);
-  font: inherit;
-  padding: 0.65rem 0.75rem;
+  padding: 0.7rem 0.75rem;
+  border: 0;
   border-radius: 0;
+  background: #fff;
+  color: var(--ink);
+  color-scheme: light;
+  font: inherit;
+  font-size: 1rem;
 }
 
-.fields textarea {
-  min-height: 8rem;
-  resize: vertical;
-}
-
-.req {
-  color: var(--lacquer-deep);
-}
-
-.ticket-note,
-.fine {
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-}
-
-.ticket-error {
-  border-left-color: #8a1c14;
-  margin-top: 0.8rem;
-}
-
-.ticket-error p {
-  margin: 0;
-}
+.fields textarea { min-height: 8rem; resize: vertical; }
 
 .hp {
   position: absolute;
   left: -9999px;
-  width: 1px;
-  height: 1px;
+  height: 0;
   overflow: hidden;
 }
 
+.estimate-note { color: var(--muted); }
+.estimate-note a { color: #fff; }
+
+.estimate-form .btn { margin-top: 0.4rem; }
+
+.estimate-success,
+.estimate-error {
+  margin-top: 1rem;
+}
+
+.estimate-error { color: #ffb4a2; }
+
 .site-footer {
+  padding: 3rem 1.15rem 6rem;
   background: var(--ink);
-  color: var(--cream);
-  padding: 3.5rem 1.25rem 2rem;
-  box-shadow: inset 0 0.28rem 0 var(--lacquer);
+  border-top: 0.35rem solid var(--orange);
 }
 
 .footer-phone {
   display: block;
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(3rem, 12vw, 6.5rem);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  color: #fff;
+  font-size: clamp(2.8rem, 10vw, 5rem);
   text-decoration: none;
-  color: var(--cream);
 }
 
 .footer-mail {
-  display: inline-block;
-  margin-top: 0.6rem;
-  color: var(--cream);
+  color: var(--muted);
 }
 
 .footer-grid {
   display: grid;
   gap: 1.5rem;
-  margin-top: 2.4rem;
+  margin-top: 2rem;
 }
 
-.site-footer h2 {
-  margin: 0 0 0.55rem;
-  font-family: Outfit, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+.footer-label {
+  margin: 0 0 0.45rem;
+  color: var(--orange);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .site-footer ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.site-footer li + li {
-  margin-top: 0.3rem;
-}
+.site-footer li { margin: 0.25rem 0; }
 
-.site-footer a {
-  color: var(--cream);
-  text-underline-offset: 0.2em;
-}
+.site-footer a { color: #fff; }
 
 .footer-base {
-  margin-top: 2.2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(246, 241, 232, 0.18);
-  color: rgba(246, 241, 232, 0.72);
-  font-size: 0.9rem;
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
-.footer-base p {
-  margin: 0.2rem 0;
-}
+.footer-base p { margin: 0.2rem 0; }
 
-.mobile-bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 45;
-  padding-bottom: env(safe-area-inset-bottom);
-  background: var(--ink);
-}
-
-.mobile-bar a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3.5rem;
-  text-decoration: none;
-  color: var(--cream);
-  font-weight: 500;
-}
-
-.mobile-bar a:last-child {
-  background: var(--lacquer-deep);
-}
-
-@media (max-width: 1023px) {
-  .site-footer {
-    padding-bottom: calc(4.6rem + env(safe-area-inset-bottom));
-  }
-}
-
-@media (min-width: 800px) {
-  .pull {
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 2rem;
-    align-items: end;
-    padding-inline: 4vw;
-  }
-
-  .pull:nth-child(even) .pull-copy {
-    order: -1;
-  }
-
-  .more-work {
-    grid-template-columns: repeat(4, 1fr);
-    padding-inline: 4vw;
-  }
-
-  .more-work img {
-    height: 16rem;
-  }
-
-  .steps {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .process,
-  .guarantee,
-  .reviews,
-  .ticket {
-    padding-inline: 4vw;
-  }
-
-  .review {
-    grid-template-columns: 14rem 1fr;
-    gap: 2rem;
-  }
-
-  .ticket {
-    grid-template-columns: 0.8fr 1.2fr;
-    align-items: start;
-    gap: 3rem;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1.2fr 1fr 1fr;
-  }
-
-  .work-link {
-    margin-left: 4vw;
-  }
-}
-
-@media (min-width: 1024px) {
-  .mobile-bar {
-    display: none;
-  }
-}
-
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .pull-mask {
-      animation: unmask linear forwards;
-      animation-timeline: view();
-      animation-range: entry 0% entry 12%;
-    }
-  }
-}
-
-@keyframes unmask {
-  from { transform: scaleX(1); }
-  to { transform: scaleX(0); }
-}

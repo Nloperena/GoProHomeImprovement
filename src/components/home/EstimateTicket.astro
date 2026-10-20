@@ -13,35 +13,32 @@ const serviceOptions = [
 ];
 ---
 
-<section class="ticket" id="estimate" aria-labelledby="ticket-title">
-  <div class="ticket-copy">
-    <p class="kicker">03 — The estimate</p>
-    <h2 id="ticket-title">A free <em>estimate.</em></h2>
-    <p class="lede">
-      Tell Mike the room, the rough size, and what you want done. He calls you back.
-      Monday through Friday, 7 AM to 5 PM. Free.
+<section class="estimate" id="estimate" aria-labelledby="estimate-title">
+  <div class="estimate-copy">
+    <p class="kicker">Free</p>
+    <h2 id="estimate-title">Get a Free Painting Estimate in Kissimmee</h2>
+    <p>
+      Tell Mike the room, the rough size, and what you want done. He calls you back. Monday through Friday, 7 AM to 5 PM.
     </p>
   </div>
   <div>
-    <form id="estimate-form" class="ticket-form" novalidate>
-      <p class="tape-label">Free estimate</p>
-      <p class="display ticket-lead">Tell Mike the job.</p>
+    <form id="estimate-form" class="estimate-form" novalidate>
       <div class="fields">
         <label>
           Full name <span class="req">*</span>
-          <input id="ticket-name" name="name" type="text" autocomplete="name" required maxlength="80" />
+          <input id="est-name" name="name" type="text" autocomplete="name" required maxlength="80" />
         </label>
         <label>
           Phone <span class="req">*</span>
-          <input id="ticket-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(407) 555-0100" />
+          <input id="est-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(407) 555-0100" />
         </label>
         <label>
           Email <span class="req">*</span>
-          <input id="ticket-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+          <input id="est-email" name="email" type="email" autocomplete="email" inputmode="email" required />
         </label>
         <label>
           Service <span class="req">*</span>
-          <select id="ticket-service" name="service" required>
+          <select id="est-service" name="service" required>
             <option value="">Select a service</option>
             {serviceOptions.map(([value, label]) => (
               <option value={value}>{label}</option>
@@ -50,11 +47,11 @@ const serviceOptions = [
         </label>
         <label>
           City <span class="req">*</span>
-          <input id="ticket-city" name="city" type="text" autocomplete="address-level2" required maxlength="60" />
+          <input id="est-city" name="city" type="text" autocomplete="address-level2" required maxlength="60" />
         </label>
-        <label>
+        <label class="field-wide">
           What needs doing? <span class="req">*</span>
-          <textarea id="ticket-message" name="message" required rows="5" placeholder="Room, rough size, and what you want done."></textarea>
+          <textarea id="est-message" name="message" required rows="5" placeholder="Room, rough size, and what you want done."></textarea>
         </label>
       </div>
       <div class="hp" aria-hidden="true">
@@ -63,15 +60,15 @@ const serviceOptions = [
           <input type="text" name="website" tabindex="-1" autocomplete="off" />
         </label>
       </div>
-      <p class="ticket-note">You can also text photos to <a href="tel:4072446873">(407) 244-6873</a>.</p>
-      <button class="btn-deep" type="submit">Request the estimate</button>
+      <p class="estimate-note">You can also text photos to <a href="tel:4072446873">(407) 244-6873</a>.</p>
+      <button class="btn btn-orange" type="submit"><span>Get a Free Estimate</span></button>
     </form>
-    <div id="form-success" class="ticket-success" hidden>
-      <h2 tabindex="-1">It’s in.</h2>
+    <div id="form-success" class="estimate-success" hidden>
+      <h3 tabindex="-1">It’s in.</h3>
       <p>Mike has the request and will call you about the job.</p>
       <p>If you’d rather not wait: <a href="tel:4072446873">(407) 244-6873</a>.</p>
     </div>
-    <p id="form-error" class="ticket-error" hidden role="alert"></p>
+    <p id="form-error" class="estimate-error" hidden role="alert"></p>
   </div>
 </section>
 
@@ -134,7 +131,7 @@ const serviceOptions = [
       if (response.ok) {
         form.hidden = true;
         success.hidden = false;
-        success.querySelector('h2')?.focus();
+        success.querySelector('h3')?.focus();
         return;
       }
 
