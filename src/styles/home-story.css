@@ -12,6 +12,7 @@
 .review {
   padding: 1.25rem;
   background: var(--panel);
+  box-shadow: inset 4px 0 0 var(--orange);
 }
 
 .review h3 {
@@ -25,7 +26,7 @@
   color: var(--muted);
 }
 
-.stars { color: var(--orange); letter-spacing: 0.12em; }
+.stars { color: #fff; letter-spacing: 0.12em; }
 
 .review blockquote {
   margin: 0.8rem 0 0;
@@ -67,7 +68,8 @@
 }
 
 .owner-media {
-  min-height: 22rem;
+  min-height: 16rem;
+  max-height: 22rem;
   overflow: hidden;
   background: var(--ink);
 }

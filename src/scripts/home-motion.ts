@@ -15,8 +15,6 @@ export async function startHomeMotion(): Promise<void> {
       ease: 'power4.out',
     });
 
-    gsap.fromTo('.hero-img', { scale: 1.08 }, { scale: 1, duration: 1.4, ease: 'power2.out' });
-
     gsap.fromTo('.hero-rule', { scaleX: 0 }, { scaleX: 1, duration: 0.7, delay: 0.45, ease: 'power3.out' });
 
     const reveals = gsap.utils.toArray<HTMLElement>('.reveal');

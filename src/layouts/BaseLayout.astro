@@ -111,8 +111,14 @@ const defaultSchema = {
   <meta name="theme-color" content="#0F0F0F" />
   {variant === 'home' && (
     <>
-      <link rel="preload" as="image" type="image/avif" href="/images/generated/hero-768.avif" media="(max-width: 900px)" fetchpriority="high" />
-      <link rel="preload" as="image" type="image/avif" href="/images/generated/hero-1280.avif" media="(min-width: 901px)" fetchpriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        imagesrcset="/images/generated/hero-480.avif 480w, /images/generated/hero-768.avif 768w, /images/generated/hero-960.avif 960w, /images/generated/hero-1280.avif 1280w"
+        imagesizes="100vw"
+        fetchpriority="high"
+      />
     </>
   )}
   

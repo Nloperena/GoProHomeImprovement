@@ -32,7 +32,7 @@ function portrait(src: string) {
               </blockquote>
             )}
             {review.photos && review.photos.length > 0 && (
-              <ul class="review-photos">
+              <ul class="review-photos" tabindex="0" aria-label={`Photos from ${review.author}'s review`}>
                 {review.photos.map((src, index) => (
                   <li>
                     <Frame

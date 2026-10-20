@@ -7,6 +7,7 @@ interface Props {
   sizes: string;
   alt: string;
   loading?: 'eager' | 'lazy';
+  decoding?: 'sync' | 'async' | 'auto';
   fetchpriority?: 'high' | 'low' | 'auto';
   class?: string;
 }
@@ -19,6 +20,7 @@ const {
   sizes,
   alt,
   loading = 'lazy',
+  decoding = 'async',
   fetchpriority = 'auto',
   class: className,
 } = Astro.props;
@@ -38,7 +40,7 @@ const fallback = `/images/generated/${name}-${widths[widths.length - 1]}.webp`;
     height={height}
     sizes={sizes}
     loading={loading}
-    decoding="async"
+    decoding={decoding}
     fetchpriority={fetchpriority}
   />
 </picture>

@@ -47,19 +47,20 @@ import GeneratedImage from './GeneratedImage.astro';
   </div>
 </section>
 
-<script>
-  document.querySelectorAll<HTMLElement>('[data-compare]').forEach((frame) => {
-    const input = frame.querySelector<HTMLInputElement>('.compare-range');
+<script is:inline>
+  document.querySelectorAll('[data-compare]').forEach(function (frame) {
+    var input = frame.querySelector('.compare-range');
     if (!input) return;
 
-    const sync = () => {
-      const value = input.value;
-      frame.style.setProperty('--pos', `${value}%`);
+    var sync = function () {
+      var value = input.value;
+      frame.style.setProperty('--pos', value + '%');
       input.setAttribute('aria-valuenow', value);
-      input.setAttribute('aria-valuetext', `${value}% after painting`);
+      input.setAttribute('aria-valuetext', value + '% after painting');
     };
 
     input.addEventListener('input', sync);
+    input.addEventListener('change', sync);
     sync();
   });
 </script>

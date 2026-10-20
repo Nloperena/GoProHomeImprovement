@@ -8,11 +8,15 @@
 .compare-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 640 / 720;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--ink-2);
   --pos: 54%;
   touch-action: pan-y;
+}
+
+@media (min-width: 900px) {
+  .compare-frame { aspect-ratio: 640 / 720; }
 }
 
 .compare-frame picture,

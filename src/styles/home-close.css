@@ -68,7 +68,15 @@
   font-weight: 600;
 }
 
-.req { color: var(--orange); }
+.req { color: #fff; }
+
+.estimate .kicker { color: #fff; }
+
+.fields input::placeholder,
+.fields textarea::placeholder {
+  color: #3f3f3f;
+  opacity: 1;
+}
 
 .fields input,
 .fields select,
@@ -95,7 +103,11 @@
 }
 
 .estimate-note { color: var(--muted); }
-.estimate-note a { color: #fff; }
+.estimate-note a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
 
 .estimate-form .btn { margin-top: 0.4rem; }
 

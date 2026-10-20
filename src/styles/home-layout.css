@@ -1,5 +1,10 @@
 @media (max-width: 899px) {
   .service-grid .tile:last-child { grid-column: span 2; }
+  .owner-media,
+  .owner-media img {
+    min-height: 14rem;
+    max-height: 16rem;
+  }
 }
 
 @media (min-width: 800px) {
@@ -44,4 +49,5 @@
 
 @media (min-width: 1024px) {
   .site-footer { padding-bottom: 3rem; }
+  .call-bar { display: none; }
 }
