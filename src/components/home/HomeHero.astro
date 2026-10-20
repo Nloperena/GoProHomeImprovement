@@ -1,20 +1,26 @@
 ---
 import Frame from './Frame.astro';
+import { GOOGLE_REVIEWS_URL } from '../../data/reviews';
 ---
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="tape-label">Kissimmee · Est. 2014</p>
+    <p class="tape-label">Kissimmee</p>
     <h1 id="hero-title">
       He sprays<br />the <em>finish</em><br />himself.
     </h1>
     <p class="hero-deck">
       Mike paints with an airbrush and a sprayer. You talk to the owner.
-      The price is written before the first coat.
+      The estimate is free.
     </p>
-    <p class="coat"><i aria-hidden="true"></i> The coat</p>
+    <ul class="trust">
+      <li>Satisfaction guarantee</li>
+      <li>Est. 2014</li>
+      <li><a href={GOOGLE_REVIEWS_URL} rel="noopener noreferrer">5.0 on Google</a></li>
+      <li>Owner on every job</li>
+    </ul>
     <div class="hero-actions">
-      <a class="btn-ink" href="#estimate">Write the estimate</a>
+      <a class="btn-ink" href="#estimate">Free estimate</a>
       <a class="phone-link" href="tel:4072446873">Call (407) 244-6873</a>
     </div>
   </div>
@@ -39,6 +45,8 @@ import Frame from './Frame.astro';
         preload="none"
         aria-hidden="true"
       ></video>
+      <span class="wet-sweep" aria-hidden="true"></span>
+      <span class="wet-hover" aria-hidden="true"></span>
     </div>
     <svg class="wet-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
       <defs>

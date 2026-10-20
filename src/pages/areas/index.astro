@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
+import PageBand from '../../components/PageBand.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
 ---
@@ -11,14 +12,7 @@ import CTASection from '../../components/CTASection.astro';
 >
   <Header />
 
-  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
-    <div class="container-custom text-center">
-      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Where We Work</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto font-sans">
-        Based in Kissimmee, serving Central Florida with owner-operated home improvement.
-      </p>
-    </div>
-  </section>
+  <PageBand title="Where we work" lede="Based in Kissimmee, serving Central Florida with owner-operated home improvement." />
 
   <section class="section-padding">
     <div class="container-custom">
