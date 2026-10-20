@@ -1,0 +1,71 @@
+---
+import { formatReviewMonth, GOOGLE_REVIEWS_URL, reviews } from '../../data/reviews';
+import Frame from './Frame.astro';
+
+function portrait(src: string) {
+  return /\/(bath|shower|vanity|gazebo)-/.test(src);
+}
+
+const featured = reviews[0];
+const excerpt = featured
+  ? 'He did a lot of careful prep beforehand and it turned out great. … Will definitely use his services again.'
+  : '';
+---
+
+{reviews.length > 0 && (
+  <section class="reviews" id="words" aria-labelledby="reviews-title">
+    <div class="reviews-top">
+      <div>
+        <p class="kicker">02 — In their words</p>
+        <h2 id="reviews-title">What they <em>wrote.</em></h2>
+      </div>
+      <p class="stamp">
+        <strong>5.0</strong>
+        <span>on Google</span>
+      </p>
+    </div>
+    <blockquote class="pullquote">
+      <p>{excerpt}</p>
+      <footer>— {featured.author}, {featured.source}, {formatReviewMonth(featured.date)}</footer>
+    </blockquote>
+    <ul class="review-list">
+      {reviews.map((review) => (
+        <li class="review">
+          <header>
+            <strong>{review.author}</strong>
+            <p>{formatReviewMonth(review.date)} · {review.source}</p>
+            <p class="stars">
+              <span aria-hidden="true">{'★'.repeat(review.rating)}</span>
+              <span class="sr-only">{review.rating} out of 5</span>
+            </p>
+          </header>
+          <blockquote>
+            <p>{review.text}</p>
+          </blockquote>
+          {review.photos && review.photos.length > 0 && (
+            <>
+            <p class="tape review-tape">With the review</p>
+            <ul class="review-photos">
+              {review.photos.map((src, index) => (
+                <li>
+                  <Frame
+                    src={src}
+                    small={src.replace(/-960\.webp$/, '-480.webp')}
+                    sizes="176px"
+                    width={portrait(src) ? 960 : 960}
+                    height={portrait(src) ? 1280 : 720}
+                    alt={`Photo ${index + 1} from ${review.author}'s Google review`}
+                  />
+                </li>
+              ))}
+            </ul>
+            </>
+          )}
+        </li>
+      ))}
+    </ul>
+    <a class="reviews-out" href={GOOGLE_REVIEWS_URL} rel="noopener noreferrer">
+      Read all reviews on Google
+    </a>
+  </section>
+)}

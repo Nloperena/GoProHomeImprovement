@@ -1,0 +1,35 @@
+<nav class="path" aria-label="On this page">
+  <a href="#work" data-path="work">01 <span>Work</span></a>
+  <a href="#words" data-path="words">02 <span>Words</span></a>
+  <a href="#estimate" data-path="estimate">03 <span>Estimate</span></a>
+</nav>
+
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-path]')];
+  const sections = links
+    .map((link) => document.querySelector<HTMLElement>(link.getAttribute('href') || ''))
+    .filter((section): section is HTMLElement => section instanceof HTMLElement);
+
+  if (!links.length || !sections.length || !('IntersectionObserver' in window)) {
+    /* The links still jump. Highlighting is progressive. */
+  } else {
+    const mark = (id: string) => {
+      for (const link of links) {
+        if (link.dataset.path === id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const hit = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (hit?.target instanceof HTMLElement && hit.target.id) mark(hit.target.id);
+      },
+      { rootMargin: '-12% 0px -78% 0px', threshold: [0, 0.01, 0.05] },
+    );
+
+    for (const section of sections) observer.observe(section);
+  }
+</script>

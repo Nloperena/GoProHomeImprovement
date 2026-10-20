@@ -1,0 +1,53 @@
+---
+import { moreProjects, projects } from '../../data/home';
+import Frame from './Frame.astro';
+---
+
+<section class="section work" id="work" aria-labelledby="work-title">
+  <div class="section-head">
+    <p class="kicker">01 — The work</p>
+    <h2 id="work-title">Cloth <em>off.</em></h2>
+    <p class="lede">
+      Real rooms. As you scroll, the cloth pulls back. Then the words. Then the price.
+    </p>
+  </div>
+  {projects.map((project) => (
+    <article class="pull">
+      <figure>
+        <Frame
+          src={project.image}
+          small={project.small}
+          sizes="(max-width: 799px) 92vw, 58vw"
+          width={project.width}
+          height={project.height}
+          alt={project.alt}
+        />
+        <span class="pull-mask" aria-hidden="true"></span>
+        <figcaption class="tape">{project.tape}</figcaption>
+      </figure>
+      <div class="pull-copy">
+        <p class="num">{project.num}</p>
+        <h3>{project.title}</h3>
+        <p>{project.detail}</p>
+        <a href={project.href}>{project.link}</a>
+      </div>
+    </article>
+  ))}
+  <ul class="more-work">
+    {moreProjects.map((project) => (
+      <li>
+        <a href={project.href}>
+          <Frame
+            src={project.small}
+            sizes="(max-width: 799px) 46vw, 22vw"
+            width={project.width}
+            height={project.height}
+            alt={project.alt}
+          />
+          <span>{project.tape}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <a class="btn-ink work-link" href="/work">All the work</a>
+</section>

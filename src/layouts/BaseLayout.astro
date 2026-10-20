@@ -7,9 +7,11 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   schema?: object;
+  /** Homepage loads its own self-hosted type instead of the sitewide Google fonts. */
+  variant?: 'default' | 'editorial';
 }
 
-const { title, description, canonical, ogImage, schema } = Astro.props;
+const { title, description, canonical, ogImage, schema, variant = 'default' } = Astro.props;
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 const defaultOgImage = new URL('/images/trim-navy-wall.jpg', Astro.site);
 const ogImageURL = ogImage ? new URL(ogImage, Astro.site) : defaultOgImage;
@@ -100,15 +102,25 @@ const defaultSchema = {
   <meta name="twitter:image" content={ogImageURL}>
   
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#FF5C28">
+  {variant === 'editorial' ? (
+    <>
+      <link rel="preload" as="image" type="image/avif" href="/images/reviews/bb8-960.avif" media="(max-width: 899px)" fetchpriority="high" />
+      <link rel="preload" as="image" type="image/avif" href="/images/reviews/bb8-1400.avif" media="(min-width: 900px)" fetchpriority="high" />
+      <meta name="theme-color" content="#E7E0D2" />
+    </>
+  ) : (
+    <>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+      <meta name="theme-color" content="#FF5C28" />
+    </>
+  )}
   
   <!-- Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(schema || defaultSchema)} />
 </head>
-<body>
+<body class={variant === 'editorial' ? 'home' : undefined}>
   <slot />
 </body>
 </html>

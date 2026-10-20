@@ -1,0 +1,43 @@
+---
+interface Props {
+  src: string;
+  small?: string;
+  alt: string;
+  width: number;
+  height: number;
+  sizes: string;
+  loading?: 'eager' | 'lazy';
+  fetchpriority?: 'high' | 'auto';
+}
+
+const { src, small, alt, width, height, sizes, loading = 'lazy', fetchpriority } = Astro.props;
+
+function pixels(path: string) {
+  const match = path.match(/-(\d+)\.webp$/);
+  return match ? match[1] : '800';
+}
+
+function avif(path: string) {
+  return path.replace(/\.webp$/, '.avif');
+}
+
+const files = small && small !== src ? [small, src] : [src];
+const webpSet = files.map((path) => `${path} ${pixels(path)}w`).join(', ');
+const avifSet = files.map((path) => `${avif(path)} ${pixels(path)}w`).join(', ');
+const useAvif = src.includes('/images/reviews/');
+---
+
+<picture>
+  {useAvif && <source type="image/avif" srcset={avifSet} sizes={sizes} />}
+  <img
+    src={small || src}
+    srcset={webpSet}
+    sizes={sizes}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+  />
+</picture>

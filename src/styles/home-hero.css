@@ -1,0 +1,207 @@
+.hero {
+  display: grid;
+  align-content: start;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.hero-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.2rem 1.25rem 1.5rem;
+}
+
+.rail {
+  display: none;
+}
+
+.tape-label,
+.tape {
+  display: inline-block;
+  align-self: flex-start;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38), transparent 46%),
+    var(--tape);
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.65rem;
+  box-shadow: 0 1px 0 rgba(28, 22, 18, 0.12);
+  transform: rotate(-1.5deg);
+}
+
+.hero h1 {
+  margin: 1rem 0 0;
+  font-size: clamp(4rem, 16vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+}
+
+.hero h1 em,
+.home h2 em,
+.ticket-lead em {
+  font-style: italic;
+  color: var(--lacquer);
+}
+
+.home .guarantee h2 em {
+  color: #ffd0c2;
+}
+
+.hero-copy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/images/home/grain.webp");
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+.hero-copy > * {
+  position: relative;
+  z-index: 1;
+}
+
+.coat {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.35rem 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.coat i {
+  width: 1.45rem;
+  height: 1.45rem;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.45), transparent 42%),
+    var(--lacquer);
+  box-shadow: inset 0 -6px 8px rgba(122, 34, 12, 0.35);
+}
+
+.hero-deck {
+  max-width: 36rem;
+  margin: 1.25rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.25rem;
+  margin-top: 1.6rem;
+}
+
+.hero-actions .phone-link {
+  text-decoration: underline;
+  text-underline-offset: 0.28em;
+}
+
+.hero-stage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--cloth);
+}
+
+.hero-reveal {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-reveal picture,
+.hero-reveal img,
+.hero-reveal video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 46%;
+}
+
+.hero-reveal picture {
+  display: block;
+}
+
+.hero-reveal video {
+  opacity: 0;
+}
+
+.hero-reveal video.is-ready {
+  opacity: 1;
+}
+
+.hero-stage::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0.45rem;
+  z-index: 3;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4), transparent 55%),
+    var(--lacquer);
+}
+
+.wet-line,
+.mist {
+  display: none;
+}
+
+.hero-tape {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.9rem;
+  z-index: 2;
+  transform: rotate(-2deg);
+}
+
+.wet-band {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1.5rem;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 46%),
+    var(--lacquer-deep);
+  color: var(--cream);
+  padding: 1.15rem 1.25rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+.wet-band p {
+  margin: 0;
+}
+
+.overspray {
+  height: 2.2rem;
+  background:
+    radial-gradient(circle at 8% 80%, rgba(226, 59, 18, 0.85) 0 3px, transparent 4px),
+    radial-gradient(circle at 14% 40%, rgba(226, 59, 18, 0.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 22% 70%, rgba(226, 59, 18, 0.7) 0 4px, transparent 5px),
+    radial-gradient(circle at 31% 30%, rgba(226, 59, 18, 0.4) 0 2px, transparent 3px),
+    radial-gradient(circle at 40% 75%, rgba(226, 59, 18, 0.6) 0 3px, transparent 4px),
+    radial-gradient(circle at 52% 45%, rgba(226, 59, 18, 0.45) 0 2px, transparent 3px),
+    radial-gradient(circle at 63% 80%, rgba(226, 59, 18, 0.75) 0 4px, transparent 5px),
+    radial-gradient(circle at 74% 35%, rgba(226, 59, 18, 0.4) 0 2px, transparent 3px),
+    radial-gradient(circle at 86% 70%, rgba(226, 59, 18, 0.65) 0 3px, transparent 4px),
+    radial-gradient(circle at 94% 40%, rgba(226, 59, 18, 0.5) 0 2px, transparent 3px),
+    linear-gradient(to top, rgba(122, 34, 12, 0.55), transparent);
+}
+
