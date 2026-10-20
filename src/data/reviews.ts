@@ -14,6 +14,19 @@ export const GOOGLE_REVIEWS_URL = 'https://maps.app.goo.gl/1BKoCYktMNgEymU27';
 /** Display label for the homepage stamp. Not structured data. */
 export const GOOGLE_RATING_LABEL = '5.0 on Google';
 
+/** Process-step copy that was stored on Nicholas Loperena's review by mistake. */
+const PROCESS_LEAK = /call and you get mike/i;
+
+/**
+ * Verbatim review text, or null when the stored string is empty or is process copy.
+ * Callers show photos and stars without inventing a replacement paragraph.
+ */
+export function reviewBody(text: string | undefined | null): string | null {
+  const trimmed = text?.trim() ?? '';
+  if (!trimmed || PROCESS_LEAK.test(trimmed)) return null;
+  return trimmed;
+}
+
 const MONTHS = [
   'January',
   'February',

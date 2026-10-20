@@ -1,0 +1,26 @@
+---
+import GeneratedImage from './GeneratedImage.astro';
+---
+
+<section class="owner" aria-labelledby="owner-title">
+  <div class="owner-media">
+    <div class="owner-parallax">
+      <GeneratedImage
+        name="owner"
+        widths={[576, 864, 1152]}
+        width={1152}
+        height={864}
+        sizes="(max-width: 959px) 100vw, 52vw"
+        alt="Hands holding a paintbrush beside a spray gun and tape in a truck bed"
+      />
+    </div>
+  </div>
+  <div class="owner-copy">
+    <p class="kicker">Owner-run</p>
+    <h2 id="owner-title">Owner-Run Since 2014: You Talk to Mike, Not a Call Center</h2>
+    <p>
+      You call this number and Mike picks up. He writes the estimate, runs the prep, sprays the finish, and walks the house with you when it’s done. Monday through Friday, 7 AM to 5 PM.
+    </p>
+    <a class="btn btn-orange" href="tel:4072446873"><span>Call (407) 244-6873</span></a>
+  </div>
+</section>

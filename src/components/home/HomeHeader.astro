@@ -20,14 +20,14 @@ function current(href: string) {
   </a>
   <nav class="desk-nav" aria-label="Primary">
     {links.map((link) => (
-      <a href={link.href} aria-current={current(link.href) ? 'page' : undefined}>
+      <a class="wipe" href={link.href} aria-current={current(link.href) ? 'page' : undefined}>
         {link.label}
       </a>
     ))}
   </nav>
   <div class="header-actions">
-    <a class="phone-link" href="tel:4072446873">(407) 244-6873</a>
-    <a class="btn-ink" href="#estimate">Estimate</a>
+    <a class="header-phone wipe" href="tel:4072446873">(407) 244-6873</a>
+    <a class="btn btn-orange" href="#estimate"><span>Free Estimate</span></a>
   </div>
   <button
     class="menu-button"
@@ -45,8 +45,8 @@ function current(href: string) {
     {links.map((link) => (
       <a href={link.href}>{link.label}</a>
     ))}
-    <a href="#estimate">Estimate</a>
-    <a class="menu-phone" href="tel:4072446873">(407) 244-6873</a>
+    <a href="#estimate">Free Estimate</a>
+    <a href="tel:4072446873">(407) 244-6873</a>
   </nav>
 </div>
 
@@ -66,15 +66,10 @@ function current(href: string) {
       menu.hidden = !open;
       button.setAttribute('aria-expanded', open ? 'true' : 'false');
       document.body.classList.toggle('menu-open', open);
-      if (open) {
-        menu.querySelector('a')?.focus();
-      }
+      if (open) menu.querySelector('a')?.focus();
     });
 
-    menu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', close);
-    });
-
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') close();
     });

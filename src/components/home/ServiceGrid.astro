@@ -1,0 +1,120 @@
+---
+import GeneratedImage from './GeneratedImage.astro';
+
+const tiles = [
+  {
+    name: 'Interior & exterior painting',
+    text: 'Sprayed walls, ceilings, doors, and the outside of the house.',
+    href: '/services/interior-exterior-painting',
+    wide: true,
+    generated: 'interior',
+    widths: [576, 864, 1152],
+    width: 1152,
+    height: 864,
+    alt: 'Hands rolling white paint onto an interior wall',
+  },
+  {
+    name: 'Power washing',
+    text: 'Driveways, pavers, and stucco, washed before paint.',
+    href: '/services/power-washing',
+    wide: true,
+    generated: 'powerwash',
+    widths: [480, 768, 1280],
+    width: 1280,
+    height: 720,
+    alt: 'Pressure washer cleaning a paver driveway',
+  },
+  {
+    name: 'Drywall',
+    text: 'Hang, patch, tape, and finish so paint has a true surface.',
+    href: '/services/drywall',
+    src: '/images/home/drywall-800.webp',
+    width: 800,
+    height: 533,
+    alt: 'Unfinished room with drywall hung and joint compound on the seams',
+  },
+  {
+    name: 'Trim & crown molding',
+    text: 'Crown, base, and built-up trim, cut and painted.',
+    href: '/services/trim-crown-molding',
+    src: '/images/home/trim-960.webp',
+    width: 960,
+    height: 720,
+    alt: 'Living room with a navy wall, white wainscot, and a trimmed television niche',
+  },
+  {
+    name: 'Wallpaper',
+    text: 'Hung straight, including the feature wall behind a television.',
+    href: '/services/wallpaper',
+    src: '/images/home/wallpaper-800.webp',
+    width: 800,
+    height: 645,
+    alt: 'Gray horizontal plank accent wall with a mounted television',
+  },
+  {
+    name: 'Murals',
+    text: 'Airbrushed walls, drawn for the room they live in.',
+    href: '/services/murals',
+    src: '/images/reviews/bb8-960.webp',
+    width: 960,
+    height: 720,
+    alt: 'Bunk room with a night-sky ceiling and a BB-8 bunk structure',
+  },
+  {
+    name: 'TV mounting',
+    text: 'The set on the wall, with the cables dealt with.',
+    href: '/services/tv-mounting',
+    src: '/images/home/tvwall-800.webp',
+    width: 800,
+    height: 600,
+    alt: 'Wall-mounted television centered on a gray wood-look plank wall',
+  },
+  {
+    name: 'Movie rooms',
+    text: 'The room around the screen: paint, walls, and the install.',
+    href: '/services/movie-rooms',
+    src: '/images/home/theater-800.webp',
+    width: 800,
+    height: 600,
+    alt: 'Home theater with black walls, a popcorn mural, and rows of black recliners',
+  },
+  {
+    name: 'Demolition',
+    text: 'The careful tear-out that comes before the new finish.',
+    href: '/services/demolition',
+    src: '/images/home/demo-640.webp',
+    width: 640,
+    height: 505,
+    alt: 'A worker in a mask and goggles removing plaster from a wall',
+  },
+];
+---
+
+<section class="band services" aria-labelledby="services-title">
+  <div class="band-head">
+    <p class="kicker">What Mike does</p>
+    <h2 id="services-title">Interior Painting, Exterior Painting, Pressure Washing &amp; Handyman Services</h2>
+  </div>
+  <div class="service-grid">
+    {tiles.map((tile) => (
+      <a class:list={['tile', 'reveal', tile.wide && 'tile-wide']} href={tile.href}>
+        {tile.generated ? (
+          <GeneratedImage
+            name={tile.generated}
+            widths={tile.widths ?? []}
+            width={tile.width}
+            height={tile.height}
+            sizes={tile.wide ? '(max-width: 899px) 100vw, 50vw' : '(max-width: 899px) 50vw, 25vw'}
+            alt=""
+          />
+        ) : (
+          <img src={tile.src} alt="" width={tile.width} height={tile.height} loading="lazy" decoding="async" />
+        )}
+        <span class="tile-copy">
+          <h3>{tile.name}</h3>
+          <p>{tile.text}</p>
+        </span>
+      </a>
+    ))}
+  </div>
+</section>

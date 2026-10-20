@@ -1,44 +1,59 @@
 ---
-import '@fontsource/instrument-serif/latin-400.css';
-import '@fontsource/instrument-serif/latin-400-italic.css';
-import '@fontsource/outfit/latin-400.css';
-import '@fontsource/outfit/latin-500.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HomeHeader from '../components/home/HomeHeader.astro';
-import ScrollPath from '../components/home/ScrollPath.astro';
 import HomeHero from '../components/home/HomeHero.astro';
-import ServiceDeck from '../components/home/ServiceDeck.astro';
-import WorkReel from '../components/home/WorkReel.astro';
-import ProcessStrip from '../components/home/ProcessStrip.astro';
-import GuaranteeBand from '../components/home/GuaranteeBand.astro';
+import ProofBand from '../components/home/ProofBand.astro';
+import BeforeAfter from '../components/home/BeforeAfter.astro';
+import ServiceGrid from '../components/home/ServiceGrid.astro';
+import PressureWash from '../components/home/PressureWash.astro';
 import Reviews from '../components/home/Reviews.astro';
+import OwnerSplit from '../components/home/OwnerSplit.astro';
+import ProcessSteps from '../components/home/ProcessSteps.astro';
+import AreasBand from '../components/home/AreasBand.astro';
 import EstimateTicket from '../components/home/EstimateTicket.astro';
 import HomeFooter from '../components/home/HomeFooter.astro';
-import '../styles/home.css';
+import '../styles/home-base.css';
 import '../styles/home-hero.css';
-import '../styles/home-deck.css';
-import '../styles/home-motion.css';
 import '../styles/home-work.css';
-import '../styles/home-reviews.css';
+import '../styles/home-story.css';
 import '../styles/home-close.css';
+import '../styles/home-layout.css';
 ---
 
 <BaseLayout
-  variant="editorial"
-  title="Go Pro Home Improvements | Sprayed finishes in Kissimmee"
-  description="Mike sprays the finish with an airbrush and a sprayer. Painting, murals, trim, drywall, power washing, wallpaper, movie rooms, TV mounting, and demolition. Kissimmee, established 2014. (407) 244-6873."
-  ogImage="/images/trim-navy-wall.jpg"
+  variant="home"
+  title="House Painting & Pressure Washing in Kissimmee, FL | Go Pro Home Improvements"
+  description="Interior and exterior house painting, pressure washing, and handyman work in Kissimmee, St. Cloud, Celebration, Poinciana, and Orlando. Owner-run since 2014, 5.0 on Google. Free estimates: (407) 244-6873."
+  ogImage="/images/generated/hero-1280.webp"
 >
   <HomeHeader />
-  <ScrollPath />
   <main id="main">
     <HomeHero />
-    <ServiceDeck />
-    <WorkReel />
-    <ProcessStrip />
-    <GuaranteeBand />
+    <ProofBand />
+    <BeforeAfter />
+    <ServiceGrid />
+    <PressureWash />
     <Reviews />
+    <OwnerSplit />
+    <ProcessSteps />
+    <AreasBand />
     <EstimateTicket />
   </main>
   <HomeFooter />
 </BaseLayout>
+
+<script>
+  const boot = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        import('../scripts/home-motion').then((mod) => mod.startHomeMotion());
+      });
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+</script>
