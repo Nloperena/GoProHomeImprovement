@@ -16,6 +16,12 @@ export function bindReviewExpand(root: ParentNode = document): void {
       const open = card.classList.toggle('is-expanded');
       button.setAttribute('aria-expanded', String(open));
       button.textContent = open ? 'Read less' : 'Read more';
+      if (!open) return;
+      const bar = 96;
+      const bottom = button.getBoundingClientRect().bottom;
+      if (bottom > window.innerHeight - bar) {
+        window.scrollBy({ top: bottom - (window.innerHeight - bar) });
+      }
     });
   });
 }
