@@ -15,6 +15,7 @@ import HomeFooter from '../components/home/HomeFooter.astro';
 import '../styles/home-base.css';
 import '../styles/home-hero.css';
 import '../styles/home-work.css';
+import '../styles/reviews.css';
 import '../styles/home-story.css';
 import '../styles/home-close.css';
 import '../styles/home-layout.css';
@@ -43,10 +44,16 @@ import '../styles/home-layout.css';
 </BaseLayout>
 
 <script>
+  const showReveals = () => {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-in'));
+  };
+
   const boot = () => {
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        import('../scripts/home-motion').then((mod) => mod.startHomeMotion());
+        import('../scripts/home-motion')
+          .then((mod) => mod.startHomeMotion())
+          .catch(showReveals);
       });
     });
   };

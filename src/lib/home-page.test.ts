@@ -14,6 +14,7 @@ describe('homepage contract', () => {
     'src/components/home/ServiceGrid.astro',
     'src/components/home/PressureWash.astro',
     'src/components/home/Reviews.astro',
+    'src/components/home/ReviewList.astro',
     'src/components/home/OwnerSplit.astro',
     'src/components/home/ProcessSteps.astro',
     'src/components/home/AreasBand.astro',

@@ -1,0 +1,63 @@
+---
+import Frame from './Frame.astro';
+import { formatReviewMonth, reviewBody, reviews } from '../../data/reviews';
+
+function portrait(src: string) {
+  return /\/(bath|shower|vanity|gazebo)-/.test(src);
+}
+---
+
+<ul class="review-list">
+  {reviews.map((review) => {
+    const body = reviewBody(review.text);
+    return (
+      <li class="review reveal">
+        <header>
+          <h3>{review.author}</h3>
+          <p>{formatReviewMonth(review.date)} · {review.source}</p>
+          <p class="stars">
+            <span aria-hidden="true">{'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}</span>
+            <span class="sr-only">{review.rating} out of 5</span>
+          </p>
+        </header>
+        {body && (
+          <>
+            <blockquote>
+              <p class="review-text" data-review-text>{body}</p>
+            </blockquote>
+            <button type="button" class="review-more" data-review-more hidden aria-expanded="false">
+              Read more
+            </button>
+          </>
+        )}
+        {review.photos && review.photos.length > 0 && (
+          <ul class="review-photos" tabindex="0" aria-label={`Photos from ${review.author}'s review`}>
+            {review.photos.map((src, index) => (
+              <li>
+                <Frame
+                  src={src}
+                  small={src.replace(/-960\.webp$/, '-480.webp')}
+                  sizes="176px"
+                  width={960}
+                  height={portrait(src) ? 1280 : 720}
+                  alt={`Photo ${index + 1} from ${review.author}'s Google review`}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    );
+  })}
+</ul>
+
+<script>
+  import { bindReviewExpand } from '../../scripts/review-expand';
+
+  const bind = () => bindReviewExpand();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bind, { once: true });
+  } else {
+    bind();
+  }
+</script>

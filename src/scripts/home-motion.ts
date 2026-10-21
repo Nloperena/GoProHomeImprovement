@@ -1,5 +1,10 @@
+import { refreshAfterLayout, revealWithScroll } from './reveal-motion';
+
 export async function startHomeMotion(): Promise<void> {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-in'));
+    return;
+  }
 
   const { default: gsap } = await import('gsap');
   const { ScrollTrigger } = await import('gsap/ScrollTrigger');
@@ -17,27 +22,7 @@ export async function startHomeMotion(): Promise<void> {
 
     gsap.fromTo('.hero-rule', { scaleX: 0 }, { scaleX: 1, duration: 0.7, delay: 0.45, ease: 'power3.out' });
 
-    const reveals = gsap.utils.toArray<HTMLElement>('.reveal');
-    if (reveals.length) {
-      gsap.set(reveals, { opacity: 0, y: 28 });
-      ScrollTrigger.batch(reveals, {
-        start: 'top 88%',
-        once: true,
-        interval: 0.1,
-        batchMax: 4,
-        onEnter: (batch) => {
-          gsap.to(batch, {
-            opacity: 1,
-            y: 0,
-            stagger: 0.1,
-            duration: 0.7,
-            ease: 'power3.out',
-            overwrite: true,
-            onComplete: () => gsap.set(batch, { clearProps: 'opacity,transform' }),
-          });
-        },
-      });
-    }
+    revealWithScroll(gsap, ScrollTrigger);
 
     document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => {
       const target = Number(el.dataset.count);
@@ -110,5 +95,7 @@ export async function startHomeMotion(): Promise<void> {
         anticipatePin: 1,
       },
     });
+
+    refreshAfterLayout(ScrollTrigger);
   });
 }
