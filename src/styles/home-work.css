@@ -59,6 +59,22 @@
 .compare-tag-before { left: 0.75rem; }
 .compare-tag-after { right: 0.75rem; }
 
+.compare-note {
+  position: absolute;
+  left: 0.65rem;
+  bottom: 0.55rem;
+  z-index: 2;
+  margin: 0;
+  padding: 0.12rem 0.32rem;
+  pointer-events: none;
+  background: rgba(15, 15, 15, 0.82);
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
 .compare-handle {
   top: 0;
   bottom: 0;

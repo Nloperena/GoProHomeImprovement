@@ -43,4 +43,13 @@ describe('homepage contract', () => {
   it('posts the estimate form to the existing endpoint', () => {
     expect(source('src/components/home/EstimateTicket.astro')).toContain("fetch('/api/estimate'");
   });
+
+  it('labels the generated stucco slider as an illustration, not a real job', () => {
+    const slider = source('src/components/home/BeforeAfter.astro');
+    expect(slider).toContain('Example illustration');
+    expect(slider).toMatch(/illustrative example/i);
+    expect(slider).toMatch(/not a real job/i);
+    expect(slider.toLowerCase()).not.toContain('real gopro');
+    expect(slider.toLowerCase()).not.toContain('customer home');
+  });
 });

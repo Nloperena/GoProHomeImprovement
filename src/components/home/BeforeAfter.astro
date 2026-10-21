@@ -7,7 +7,7 @@ import GeneratedImage from './GeneratedImage.astro';
     <p class="kicker">Exterior</p>
     <h2 id="exterior-title">Exterior House Painting &amp; Stucco Repair in Kissimmee</h2>
     <p>
-      Cracked, stained stucco, then the sprayed finish. Drag the handle, or focus it and use the arrow keys.
+      An illustrative example of cracked, stained stucco next to a sprayed finish — not a real job photo. Drag the handle, or focus it and use the arrow keys.
     </p>
   </div>
   <div class="compare-frame" data-compare style="--pos: 54%">
@@ -17,7 +17,7 @@ import GeneratedImage from './GeneratedImage.astro';
       width={640}
       height={720}
       sizes="(max-width: 900px) 100vw, 36rem"
-      alt="Cracked and stained stucco wall beside a dark window, before painting"
+      alt="Illustrative example of a cracked and stained stucco wall beside a dark window, not a real job photo"
     />
     <div class="compare-after">
       <GeneratedImage
@@ -26,11 +26,12 @@ import GeneratedImage from './GeneratedImage.astro';
         width={640}
         height={720}
         sizes="(max-width: 900px) 100vw, 36rem"
-        alt="The same stucco wall after painting, smooth and white"
+        alt="Illustrative example of the same stucco wall with a smooth white painted finish, not a real job photo"
       />
     </div>
     <span class="compare-tag compare-tag-before">Before</span>
     <span class="compare-tag compare-tag-after">After</span>
+    <p class="compare-note">Example illustration</p>
     <span class="compare-handle" aria-hidden="true"></span>
     <input
       class="compare-range"
@@ -38,11 +39,11 @@ import GeneratedImage from './GeneratedImage.astro';
       min="0"
       max="100"
       value="54"
-      aria-label="Compare the stucco before painting and after painting"
+      aria-label="Compare an illustrative before-and-after example of stucco painting, not a real job"
       aria-valuemin="0"
       aria-valuemax="100"
       aria-valuenow="54"
-      aria-valuetext="54% after painting"
+      aria-valuetext="54% of the illustrative after example"
     />
   </div>
 </section>
@@ -56,7 +57,7 @@ import GeneratedImage from './GeneratedImage.astro';
       var value = input.value;
       frame.style.setProperty('--pos', value + '%');
       input.setAttribute('aria-valuenow', value);
-      input.setAttribute('aria-valuetext', value + '% after painting');
+      input.setAttribute('aria-valuetext', value + '% of the illustrative after example');
     };
 
     input.addEventListener('input', sync);
