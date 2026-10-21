@@ -11,6 +11,18 @@
     html {
       scroll-behavior: auto;
     }
+
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .reveal:not(.is-in) {
+      opacity: 0;
+      transform: translateY(28px);
+    }
   }
   
   body {

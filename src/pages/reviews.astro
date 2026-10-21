@@ -4,6 +4,9 @@ import Header from '../components/Header.astro';
 import PageBand from '../components/PageBand.astro';
 import Footer from '../components/Footer.astro';
 import CTASection from '../components/CTASection.astro';
+import ReviewList from '../components/home/ReviewList.astro';
+import { GOOGLE_REVIEWS_URL } from '../data/reviews';
+import '../styles/reviews.css';
 ---
 
 <BaseLayout
@@ -14,14 +17,22 @@ import CTASection from '../components/CTASection.astro';
 
   <PageBand title="Reviews" lede="Building trust through quality workmanship and reliable service." />
 
+  <section class="reviews page-reviews" id="google-reviews" aria-labelledby="google-reviews-title">
+    <div class="reviews-inner">
+      <div class="band-head">
+        <p class="kicker">Google</p>
+        <h2 id="google-reviews-title">What Kissimmee &amp; St. Cloud Homeowners Say About Mike</h2>
+      </div>
+      <ReviewList />
+      <a class="reviews-out wipe" href={GOOGLE_REVIEWS_URL} rel="noopener noreferrer">
+        Read them on Google
+      </a>
+    </div>
+  </section>
+
   <section class="section-padding">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <div class="prose prose-lg max-w-none mb-12">
-          <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            At Go Pro Home Improvements, we believe our work speaks for itself. For over 15 years, we've built our reputation on quality craftsmanship, honest communication, and delivering on our promises.
-          </p>
-        </div>
 
         <div class="grid md:grid-cols-3 gap-8 mb-16">
           <div class="text-center p-6 bg-gray-50 rounded-lg">
@@ -139,3 +150,31 @@ import CTASection from '../components/CTASection.astro';
 
   <Footer />
 </BaseLayout>
+
+<script>
+  const showReveals = () => {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-in'));
+  };
+
+  const boot = async () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      showReveals();
+      return;
+    }
+    try {
+      const { default: gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      const { revealWithScroll } = await import('../scripts/reveal-motion');
+      gsap.registerPlugin(ScrollTrigger);
+      revealWithScroll(gsap, ScrollTrigger);
+    } catch {
+      showReveals();
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    void boot();
+  }
+</script>
