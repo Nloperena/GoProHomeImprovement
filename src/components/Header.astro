@@ -4,102 +4,103 @@ const currentPath = Astro.url.pathname;
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '/work', label: 'Our Work' },
+  { href: '/work', label: 'Work' },
   { href: '/about', label: 'About' },
   { href: '/areas', label: 'Areas' },
   { href: '/reviews', label: 'Reviews' },
 ];
+
+function current(href: string) {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(`${href}/`);
+}
 ---
 
-<header class="bg-gopro-charcoal sticky top-0 z-50 border-b-4 border-gopro-orange shadow-lg">
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0F0F0F] text-white">
   <div class="container-custom">
     <div class="flex items-center justify-between py-3">
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <img src="/images/logo.png" alt="Go Pro Home Improvements" class="h-14 md:h-16 w-auto" />
+      <a href="/" class="inline-flex bg-white px-2 py-1" aria-label="Go Pro Home Improvements, home">
+        <img src="/images/logo.png" alt="" class="h-11 md:h-12 w-auto" />
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center space-x-6">
+      <nav class="hidden lg:flex items-center gap-6" aria-label="Primary">
         {navItems.map((item) => (
           <a
             href={item.href}
-            class={`font-display font-bold uppercase text-sm tracking-wide transition-colors ${
-              currentPath === item.href || currentPath.startsWith(item.href + '/')
-                ? 'text-gopro-orange'
-                : 'text-white hover:text-gopro-orange'
+            aria-current={current(item.href) ? 'page' : undefined}
+            class={`font-display text-lg font-bold uppercase tracking-wide ${
+              current(item.href)
+                ? 'underline decoration-[#F15723] underline-offset-4'
+                : 'hover:underline hover:decoration-[#F15723] hover:underline-offset-4'
             }`}
           >
             {item.label}
           </a>
         ))}
-        <a href="tel:4072446873" class="text-white hover:text-gopro-orange transition-colors font-sans font-semibold border-l-2 border-white/20 pl-6">
+        <a href="tel:4072446873" class="border-l border-white/20 pl-6 font-semibold tabular-nums">
           (407) 244-6873
         </a>
       </nav>
 
-      <!-- CTA Button -->
       <div class="hidden lg:block">
-        <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors inline-block tracking-wide">
-          Free Estimate
+        <a href="/estimate" class="inline-block bg-[#F15723] px-5 py-3 font-display text-lg font-bold uppercase tracking-wide text-[#0F0F0F]">
+          Free estimate
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="lg:hidden p-2 text-white hover:text-gopro-orange"
-        aria-label="Toggle menu"
+        class="lg:hidden border border-white px-3 py-2 font-display text-lg font-bold uppercase tracking-wide"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+        Menu
       </button>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-white/20 bg-gopro-black">
-    <nav class="container-custom py-4 flex flex-col space-y-4">
+  <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#0F0F0F] lg:hidden">
+    <nav class="container-custom flex flex-col gap-3 py-4" aria-label="Mobile">
       {navItems.map((item) => (
         <a
           href={item.href}
-          class={`font-display font-bold uppercase text-sm tracking-wide ${
-            currentPath === item.href || currentPath.startsWith(item.href + '/')
-              ? 'text-gopro-orange'
-              : 'text-white'
-          }`}
+          class={`font-display text-4xl font-black leading-none tracking-tight ${current(item.href) ? 'underline decoration-[#F15723] underline-offset-4' : ''}`}
         >
           {item.label}
         </a>
       ))}
-      <a href="tel:4072446873" class="text-white font-sans font-semibold">
-        (407) 244-6873
-      </a>
-      <a href="/estimate" class="bg-gopro-orange hover:bg-orange-600 text-white font-display font-bold uppercase px-6 py-3 rounded transition-colors text-center tracking-wide">
-        Free Estimate
-      </a>
+      <a href="tel:4072446873" class="mt-2 text-lg font-semibold tabular-nums">(407) 244-6873</a>
+      <a href="/estimate" class="bg-[#F15723] px-4 py-3 text-center font-display text-xl font-bold uppercase tracking-wide text-[#0F0F0F]">Free estimate</a>
     </nav>
   </div>
 </header>
 
-<!-- Sticky Mobile CTAs - Dual buttons for Call and Estimate -->
-<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-gopro-charcoal shadow-2xl z-40 border-t-2 border-gopro-orange" style="padding-bottom: env(safe-area-inset-bottom, 0);">
-  <div class="grid grid-cols-2 gap-2 p-2">
-    <a href="tel:4072446873" class="bg-gopro-orange text-white hover:bg-orange-600 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide">
-      Call (407) 244-6873
-    </a>
-    <a href="/estimate" class="bg-white text-gopro-orange hover:bg-gray-100 font-display font-bold uppercase py-3 text-center rounded transition-colors text-sm tracking-wide border-2 border-gopro-orange">
-      Get Estimate
-    </a>
-  </div>
+<div class="fixed bottom-0 left-0 right-0 z-40 grid grid-cols-2 lg:hidden" style="padding-bottom: env(safe-area-inset-bottom, 0);">
+  <a href="tel:4072446873" class="bg-[#1A1A1A] py-3.5 text-center font-display text-lg font-bold uppercase tracking-wide text-white">Call (407) 244-6873</a>
+  <a href="/estimate" class="bg-[#F15723] py-3.5 text-center font-display text-lg font-bold uppercase tracking-wide text-[#0F0F0F]">Estimate</a>
 </div>
 
 <script>
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
 
+  const closeMenu = () => {
+    mobileMenu?.classList.add('hidden');
+    menuButton?.setAttribute('aria-expanded', 'false');
+  };
+
   menuButton?.addEventListener('click', () => {
+    const open = mobileMenu?.classList.contains('hidden');
     mobileMenu?.classList.toggle('hidden');
+    menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
   });
 </script>

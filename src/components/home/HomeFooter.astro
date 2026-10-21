@@ -1,0 +1,48 @@
+---
+import { areas, company, services } from '../../data/home';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <a class="footer-phone" href="tel:4072446873">(407) 244-6873</a>
+  <a class="footer-mail wipe" href="mailto:gopro4good@gmail.com">gopro4good@gmail.com</a>
+  <div class="footer-grid">
+    <div>
+      <p class="footer-label">Services</p>
+      <ul>
+        {services.map((service) => (
+          <li><a class="wipe" href={service.href}>{service.name}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <p class="footer-label">Areas</p>
+      <ul>
+        {areas.map((area) => (
+          <li><a class="wipe" href={area.href}>{area.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <p class="footer-label">Company</p>
+      <ul>
+        {company.map((link) => (
+          <li><a class="wipe" href={link.href}>{link.label}</a></li>
+        ))}
+        <li>
+          <a class="wipe" href="https://www.instagram.com/gopro4good/" rel="noopener noreferrer">Instagram</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-base">
+    <p>Go Pro Home Improvements · Florida corporation, established 2014 · Kissimmee</p>
+    <p>Owner-run · Monday–Friday, 7 AM–5 PM · Workmanship satisfaction guarantee</p>
+    <p>© {year} Go Pro Home Improvements</p>
+  </div>
+</footer>
+<div class="call-bar">
+  <a class="call-bar-phone" href="tel:4072446873">Call (407) 244-6873</a>
+  <a class="call-bar-est" href="#estimate">Free Estimate</a>
+</div>

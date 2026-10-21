@@ -1,0 +1,77 @@
+---
+const path = Astro.url.pathname;
+const links = [
+  { href: '/services', label: 'Services' },
+  { href: '/work', label: 'Work' },
+  { href: '/about', label: 'About' },
+  { href: '/areas', label: 'Areas' },
+  { href: '/reviews', label: 'Reviews' },
+];
+
+function current(href: string) {
+  return path === href || path.startsWith(`${href}/`);
+}
+---
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="logo" href="/" aria-label="Go Pro Home Improvements, home">
+    <img src="/images/logo.png" width="143" height="48" alt="" />
+  </a>
+  <nav class="desk-nav" aria-label="Primary">
+    {links.map((link) => (
+      <a class="wipe" href={link.href} aria-current={current(link.href) ? 'page' : undefined}>
+        {link.label}
+      </a>
+    ))}
+  </nav>
+  <div class="header-actions">
+    <a class="header-phone wipe" href="tel:4072446873">(407) 244-6873</a>
+    <a class="btn btn-orange" href="#estimate"><span>Free Estimate</span></a>
+  </div>
+  <button
+    class="menu-button"
+    type="button"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    data-menu-button
+  >
+    Menu
+  </button>
+</header>
+<div id="mobile-menu" class="mobile-menu" hidden data-menu>
+  <nav aria-label="Mobile">
+    <a href="/">Home</a>
+    {links.map((link) => (
+      <a href={link.href}>{link.label}</a>
+    ))}
+    <a href="#estimate">Free Estimate</a>
+    <a href="tel:4072446873">(407) 244-6873</a>
+  </nav>
+</div>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-menu-button]');
+  const menu = document.querySelector<HTMLElement>('[data-menu]');
+
+  if (button && menu) {
+    const close = () => {
+      menu.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    };
+
+    button.addEventListener('click', () => {
+      const open = menu.hidden;
+      menu.hidden = !open;
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('menu-open', open);
+      if (open) menu.querySelector('a')?.focus();
+    });
+
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', close));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') close();
+    });
+  }
+</script>

@@ -1,0 +1,55 @@
+---
+import GeneratedImage from './GeneratedImage.astro';
+
+const steps = [
+  {
+    num: '01',
+    title: 'Free Estimate',
+    text: 'Tell Mike the job. He looks at the house, then he prices it. The estimate is free.',
+  },
+  {
+    num: '02',
+    title: 'Prep',
+    text: 'Wash, scrape, patch stucco and drywall, caulk, mask, and prime.',
+  },
+  {
+    num: '03',
+    title: 'Spray Finish',
+    text: 'Walls, ceilings, doors, and the outside of the house, sprayed.',
+  },
+  {
+    num: '04',
+    title: 'Walkthrough',
+    text: 'You and Mike walk the job before it’s called done.',
+  },
+];
+---
+
+<section class="process" aria-labelledby="process-title">
+  <div class="process-media">
+    <GeneratedImage
+      name="process"
+      widths={[640, 960, 1280]}
+      width={1280}
+      height={720}
+      sizes="(max-width: 959px) 100vw, 48vw"
+      alt="Room prepped for spray painting, furniture covered, sprayer on the floor"
+    />
+  </div>
+  <div class="process-copy">
+    <p class="kicker">The job</p>
+    <h2 id="process-title">How a Painting Job Works: Free Estimate, Prep, Spray Finish, Walkthrough</h2>
+    <div class="steps-wrap">
+      <span class="process-line" aria-hidden="true"><span data-progress></span></span>
+      <ol class="steps">
+      {steps.map((step) => (
+        <li class="reveal">
+          <span class="step-num">{step.num}</span>
+          <h3>{step.title}</h3>
+          <p>{step.text}</p>
+        </li>
+      ))}
+      </ol>
+    </div>
+  </div>
+</section>

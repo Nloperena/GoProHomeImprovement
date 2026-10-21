@@ -1,0 +1,154 @@
+---
+const serviceOptions = [
+  ['interior-exterior-painting', 'Painting (interior & exterior)'],
+  ['movie-rooms', 'Movie room'],
+  ['drywall', 'Drywall'],
+  ['power-washing', 'Power washing'],
+  ['trim-crown-molding', 'Trim & crown molding'],
+  ['murals', 'Mural'],
+  ['tv-mounting', 'TV mounting'],
+  ['wallpaper', 'Wallpaper'],
+  ['demolition', 'Demolition'],
+  ['other', 'Something else'],
+];
+---
+
+<section class="estimate" id="estimate" aria-labelledby="estimate-title">
+  <div class="estimate-copy">
+    <p class="kicker">Free</p>
+    <h2 id="estimate-title">Get a Free Painting Estimate in Kissimmee</h2>
+    <p>
+      Tell Mike the room, the rough size, and what you want done. He calls you back. Monday through Friday, 7 AM to 5 PM.
+    </p>
+  </div>
+  <div>
+    <form id="estimate-form" class="estimate-form" novalidate>
+      <div class="fields">
+        <label>
+          Full name <span class="req">*</span>
+          <input id="est-name" name="name" type="text" autocomplete="name" required maxlength="80" />
+        </label>
+        <label>
+          Phone <span class="req">*</span>
+          <input id="est-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(407) 555-0100" />
+        </label>
+        <label>
+          Email <span class="req">*</span>
+          <input id="est-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+        </label>
+        <label>
+          Service <span class="req">*</span>
+          <select id="est-service" name="service" required>
+            <option value="">Select a service</option>
+            {serviceOptions.map(([value, label]) => (
+              <option value={value}>{label}</option>
+            ))}
+          </select>
+        </label>
+        <label class="field-wide">
+          City <span class="req">*</span>
+          <input id="est-city" name="city" type="text" autocomplete="address-level2" required maxlength="60" />
+        </label>
+        <label class="field-wide">
+          What needs doing? <span class="req">*</span>
+          <textarea id="est-message" name="message" required rows="5" placeholder="Room, rough size, and what you want done."></textarea>
+        </label>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label>
+          Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </label>
+      </div>
+      <p class="estimate-note">You can also text photos to <a href="tel:4072446873">(407) 244-6873</a>.</p>
+      <button class="btn btn-orange" type="submit"><span>Get a Free Estimate</span></button>
+    </form>
+    <div id="form-success" class="estimate-success" hidden>
+      <h3 tabindex="-1">It’s in.</h3>
+      <p>Mike has the request and will call you about the job.</p>
+      <p>If you’d rather not wait: <a href="tel:4072446873">(407) 244-6873</a>.</p>
+    </div>
+    <p id="form-error" class="estimate-error" hidden role="alert"></p>
+  </div>
+</section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#estimate-form');
+  const success = document.querySelector<HTMLElement>('#form-success');
+  const errorBox = document.querySelector<HTMLElement>('#form-error');
+  const started = Date.now();
+  let token = '';
+
+  async function loadToken() {
+    const response = await fetch('/api/form-token', { headers: { Accept: 'application/json' } });
+    if (!response.ok) throw new Error('token');
+    const payload = await response.json();
+    token = payload.token || '';
+  }
+
+  loadToken().catch(() => {
+    token = '';
+  });
+
+  function showError(message: string) {
+    if (!errorBox) return;
+    errorBox.hidden = false;
+    errorBox.textContent = message;
+  }
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form || !success || !errorBox) return;
+    errorBox.hidden = true;
+
+    if (!form.reportValidity()) return;
+
+    if (!token) {
+      try {
+        await loadToken();
+      } catch {
+        showError('The form could not start. Call (407) 244-6873 and Mike will take it from there.');
+        return;
+      }
+    }
+
+    if (Date.now() - started < 2600) {
+      showError('Give it a second, then send it again.');
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form));
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    if (button) button.disabled = true;
+
+    try {
+      const response = await fetch('/api/estimate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, formToken: token, formStartedAt: started, website: data.website || '' }),
+      });
+
+      if (response.ok) {
+        form.hidden = true;
+        success.hidden = false;
+        success.querySelector('h3')?.focus();
+        return;
+      }
+
+      let message = 'Something went wrong. Call (407) 244-6873 and Mike will take the job details.';
+      try {
+        const payload = await response.json();
+        if (typeof payload.error === 'string' && payload.error.length < 240) {
+          message = payload.error;
+        }
+      } catch {
+        /* keep the spoken fallback */
+      }
+      showError(message);
+    } catch {
+      showError('Something went wrong. Call (407) 244-6873 and Mike will take the job details.');
+    } finally {
+      if (button) button.disabled = false;
+    }
+  });
+</script>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import PageBand from '../components/PageBand.astro';
 import Footer from '../components/Footer.astro';
 import CTASection from '../components/CTASection.astro';
 ---
@@ -11,14 +12,7 @@ import CTASection from '../components/CTASection.astro';
 >
   <Header />
 
-  <section class="bg-gradient-to-br from-gopro-charcoal to-gopro-black text-white py-16 border-b-4 border-gopro-orange">
-    <div class="container-custom text-center">
-      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">About Go Pro</h1>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto font-sans">
-        Owner-operated. 15+ years. Serving Central Florida. Mon–Fri 7 AM–5 PM.
-      </p>
-    </div>
-  </section>
+  <PageBand title="About Go Pro" lede="Owner-operated. 15+ years. Serving Central Florida. Mon–Fri 7 AM–5 PM." />
 
   <section class="section-padding">
     <div class="container-custom">

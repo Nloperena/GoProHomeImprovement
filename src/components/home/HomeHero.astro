@@ -1,0 +1,45 @@
+---
+import GeneratedImage from './GeneratedImage.astro';
+import { GOOGLE_REVIEWS_URL } from '../../data/reviews';
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-media">
+    <div class="hero-parallax">
+      <GeneratedImage
+        class="hero-img"
+        name="hero"
+        widths={[480, 768, 960, 1280]}
+        width={1280}
+        height={720}
+        sizes="100vw"
+        alt="Painter on a ladder spraying the eave of a white Florida house with an orange front door"
+        loading="eager"
+        decoding="sync"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <ul class="chips">
+      <li><a href={GOOGLE_REVIEWS_URL} rel="noopener noreferrer">5.0 on Google</a></li>
+      <li>Est. 2014</li>
+      <li>Workmanship satisfaction guarantee</li>
+    </ul>
+    <h1 id="hero-title">
+      <span class="line"><span class="line-inner">House Painting,</span></span>
+      <span class="line"><span class="line-inner">Pressure Washing &amp;</span></span>
+      <span class="line"><span class="line-inner">Handyman Work</span></span>
+      <span class="line"><span class="line-inner">in Kissimmee, FL</span></span>
+    </h1>
+    <span class="hero-rule" aria-hidden="true"></span>
+    <p class="hero-deck">
+      Interior and exterior painting for homes in Kissimmee, St. Cloud, Celebration, and Poinciana. You deal with Mike, the owner, from estimate to cleanup.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-orange" href="#estimate"><span>Free Estimate</span></a>
+      <a class="btn btn-line" href="tel:4072446873"><span>Call (407) 244-6873</span></a>
+    </div>
+  </div>
+</section>
