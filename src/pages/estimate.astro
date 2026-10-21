@@ -232,6 +232,8 @@ import Footer from '../components/Footer.astro';
   <Footer />
 
   <script>
+    import { getSubmitSource } from '../scripts/lead-source';
+
     const form = document.getElementById('estimate-form') as HTMLFormElement;
     const formSuccess = document.getElementById('form-success');
     const formError = document.getElementById('form-error');
@@ -245,9 +247,10 @@ import Footer from '../components/Footer.astro';
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
 
-      // Add timing gate and honeypot data
+      // Add timing gate, honeypot, and first/last-touch source
       (data as any).formStartedAt = formStartedAt;
       (data as any).website = (data as any).website || '';
+      (data as any).source = getSubmitSource();
 
       try {
         const response = await fetch('/api/estimate', {

@@ -128,5 +128,9 @@ const defaultSchema = {
 </head>
 <body class={variant === 'home' ? 'home' : undefined}>
   <slot />
+  <script>
+    import { captureLeadSource } from '../scripts/lead-source';
+    captureLeadSource();
+  </script>
 </body>
 </html>
