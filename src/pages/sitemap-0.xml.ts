@@ -3,6 +3,8 @@ export async function GET() {
     '',
     'about',
     'work',
+    'projects',
+    'projects/trailer-remodel-st-cloud-lake-toho',
     'estimate',
     'reviews',
     'services',

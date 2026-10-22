@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
+import { trailerProject } from '../../data/projects';
+import { formatReviewMonth } from '../../data/reviews';
+
+const { review, photos, relatedServices, title, location, path } = trailerProject;
+const pageUrl = `https://goprohomeimprovements.com${path}`;
+---
+
+<BaseLayout
+  title="Trailer Remodel in St. Cloud at Lake Toho | Go Pro"
+  description="A trailer remodel at Lake Toho fish camp in St. Cloud. Facts and photos from Victoria Cruz's Google review: cabinets painted white, brown wood flooring, slide panel replaced."
+  ogImage={photos[0]}
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${pageUrl}#article`,
+        "headline": title,
+        "description": "Trailer remodel in St. Cloud at Lake Toho fish camp, documented from the customer's Google review and job photos.",
+        "image": photos.map((src) => `https://goprohomeimprovements.com${src}`),
+        "author": { "@type": "Organization", "name": "GO PRO HOME IMPROVEMENTS INC." },
+        "publisher": {
+          "@type": "Organization",
+          "name": "GO PRO HOME IMPROVEMENTS INC.",
+          "logo": { "@type": "ImageObject", "url": "https://goprohomeimprovements.com/images/logo.png" }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumbs`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://goprohomeimprovements.com" },
+          { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://goprohomeimprovements.com/projects/" },
+          { "@type": "ListItem", "position": 3, "name": "Trailer Remodel, St. Cloud", "item": pageUrl }
+        ]
+      },
+      {
+        "@type": "Review",
+        "@id": `${pageUrl}#review`,
+        "author": { "@type": "Person", "name": review.author },
+        "datePublished": `${review.date}-01`,
+        "reviewRating": { "@type": "Rating", "ratingValue": review.rating, "bestRating": 5 },
+        "reviewBody": review.text,
+        "itemReviewed": { "@type": "CreativeWork", "name": title, "url": pageUrl }
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <a href="/projects" class="text-gray-400 hover:text-gopro-orange transition-colors">Projects</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Trailer Remodel, St. Cloud</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">{title}</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        {location}. Facts below are from {review.author}'s {review.source} review ({formatReviewMonth(review.date)}) and the photos she attached.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          <img src="/images/reviews/trailer-960.webp" alt="Finished trailer kitchen: white cabinets, sink island, brown wood flooring" class="w-full h-56 object-cover rounded-lg" width="960" height="720" />
+          <img src="/images/reviews/trailer-tv-960.webp" alt="Finished trailer living area with white upper cabinets and brown wood flooring" class="w-full h-56 object-cover rounded-lg" width="960" height="720" />
+          <img src="/images/reviews/trailer-sofa-960.webp" alt="Finished trailer seating area with white walls, brown sofa, and brown wood flooring" class="w-full h-56 object-cover rounded-lg" width="960" height="720" />
+        </div>
+
+        <div class="prose prose-lg max-w-none mb-12">
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
+            Go Pro remodeled this trailer in <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a> at the Lake Toho fish camp. The customer, Victoria Cruz, wrote that they took out the rugs and the cabinets she did not want, which freed up space. Remaining brown cabinets were painted white. She wrote that the trailer has really nice brown wood flooring. A rotted panel on one of the slides was replaced and, she wrote, sealed very well.
+          </p>
+          <p class="text-lg text-gray-600 mb-6 font-sans">
+            She said the trailer looks like something you would buy brand new. The photos on this page are the ones attached to that Google review.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">What the review says was done</h2>
+          <ul class="space-y-3 text-gray-700 font-sans">
+            <li>Removed rugs and cabinets they did not want, which freed up space</li>
+            <li>Painted the remaining brown cabinets white — see <a href="/services/painting-st-cloud" class="text-gopro-orange hover:underline">painting in St. Cloud</a></li>
+            <li>Brown wood flooring in the finished trailer (Victoria's words; visible in the job photos)</li>
+            <li>Replaced a rotted panel on one slide and sealed it</li>
+          </ul>
+          <p class="text-gray-600 font-sans mt-6">
+            Removing cabinets is <a href="/services/demolition-st-cloud" class="text-gopro-orange hover:underline">demolition in St. Cloud</a>. Cabinet paint is also covered on the <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">Central Florida painting</a> page.
+          </p>
+        </div>
+
+        <blockquote class="bg-white border-l-4 border-gopro-orange p-6 mb-12">
+          <p class="text-gray-700 font-sans mb-4">“{review.text}”</p>
+          <footer class="text-sm text-gray-500 font-sans">
+            {review.author}, {review.source}, {formatReviewMonth(review.date)} — <a href="/reviews" class="text-gopro-orange hover:underline">more reviews</a>
+          </footer>
+        </blockquote>
+
+        <RelatedServices services={[...relatedServices]} />
+
+        <div class="bg-gray-50 rounded-lg p-8 my-8">
+          <h2 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide">Need a similar remodel?</h2>
+          <p class="text-gray-700 font-sans mb-6">
+            Request a free estimate. We look at the space, then we price it.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/estimate" class="btn-primary">Get Free Estimate</a>
+            <a href="tel:4072446873" class="btn-secondary">Call (407) 244-6873</a>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-600 font-sans">
+          <a href="/projects" class="text-gopro-orange hover:underline">← All projects</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Request a free estimate"
+    description="Painting, demo, and remodel work in St. Cloud and nearby Central Florida."
+  />
+
+  <Footer />
+</BaseLayout>

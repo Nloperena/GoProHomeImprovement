@@ -170,8 +170,8 @@ export const projects: HomeProject[] = [
     num: '04',
     title: 'White cabinets, dark floor.',
     detail: 'A trailer interior: cabinets painted white, and wood-look flooring laid in.',
-    href: '/work',
-    link: 'All the work',
+    href: '/projects/trailer-remodel-st-cloud-lake-toho/',
+    link: 'Trailer remodel',
     image: '/images/reviews/trailer-1400.webp',
     small: '/images/reviews/trailer-960.webp',
     width: 1400,
@@ -248,6 +248,7 @@ export const areas = [
 export const company = [
   { href: '/about', label: 'About' },
   { href: '/work', label: 'Work' },
+  { href: '/projects', label: 'Projects' },
   { href: '/reviews', label: 'Reviews' },
   { href: '/guides', label: 'Guides' },
   { href: '/services', label: 'All services' },
