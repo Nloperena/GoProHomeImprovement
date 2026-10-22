@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTASection from '../../components/CTASection.astro';
+import { projects } from '../../data/projects';
+
+const trailer = projects[0];
+---
+
+<BaseLayout
+  title="Projects | Go Pro Home Improvements"
+  description="Real Go Pro jobs in Central Florida. Photos and facts from customer reviews—starting with a trailer remodel in St. Cloud at Lake Toho fish camp."
+  ogImage={trailer.photos[0]}
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://goprohomeimprovements.com/projects/#page",
+        "name": "Projects",
+        "url": "https://goprohomeimprovements.com/projects/",
+        "description": "Real Go Pro jobs documented from customer reviews and job photos."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://goprohomeimprovements.com/projects/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://goprohomeimprovements.com" },
+          { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://goprohomeimprovements.com/projects/" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://goprohomeimprovements.com/projects/#list",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": `https://goprohomeimprovements.com${trailer.path}`,
+            "name": trailer.title
+          }
+        ]
+      }
+    ]
+  }}
+>
+  <Header />
+
+  <section class="bg-gopro-charcoal text-white py-16 border-b-4 border-gopro-orange">
+    <div class="container-custom">
+      <nav class="text-sm mb-6 font-sans">
+        <a href="/" class="text-gray-400 hover:text-gopro-orange transition-colors">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-white">Projects</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Projects</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans">
+        Real jobs. The write-ups use the customer's review and the photos from that job—nothing added.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <a href={trailer.path} class="group block bg-white border-2 border-gray-200 hover:border-gopro-orange rounded-lg overflow-hidden transition-all hover:shadow-xl">
+          <img
+            src="/images/reviews/trailer-1400.webp"
+            alt="Trailer interior after remodel: white cabinets and brown wood flooring"
+            class="w-full h-64 object-cover"
+            width="1400"
+            height="1050"
+          />
+          <div class="p-6">
+            <p class="text-sm uppercase tracking-wide text-gopro-orange font-semibold mb-2">{trailer.location}</p>
+            <h2 class="text-2xl font-display font-bold uppercase mb-3 group-hover:text-gopro-orange transition-colors">{trailer.title}</h2>
+            <p class="text-gray-600 font-sans mb-4">
+              Victoria Cruz's Google review: rugs and cabinets removed, a rotted slide panel replaced, brown cabinets painted white, brown wood flooring.
+            </p>
+            <span class="text-gopro-orange font-semibold">See the project →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Have a similar job?"
+    description="Request a free estimate. We look at the space, then we price it."
+  />
+
+  <Footer />
+</BaseLayout>
