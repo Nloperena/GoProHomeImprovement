@@ -73,6 +73,8 @@ const serviceOptions = [
 </section>
 
 <script>
+  import { getSubmitSource } from '../../scripts/lead-source';
+
   const form = document.querySelector<HTMLFormElement>('#estimate-form');
   const success = document.querySelector<HTMLElement>('#form-success');
   const errorBox = document.querySelector<HTMLElement>('#form-error');
@@ -125,7 +127,13 @@ const serviceOptions = [
       const response = await fetch('/api/estimate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, formToken: token, formStartedAt: started, website: data.website || '' }),
+        body: JSON.stringify({
+          ...data,
+          formToken: token,
+          formStartedAt: started,
+          website: data.website || '',
+          source: getSubmitSource(),
+        }),
       });
 
       if (response.ok) {

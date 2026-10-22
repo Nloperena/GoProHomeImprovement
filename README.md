@@ -68,6 +68,20 @@ npm run preview
 
 - `/api/estimate` - Form submission endpoint (forwards to Nexrena portal with siteKey `gopro`)
 
+## Lead source tracking
+
+The homepage `#estimate` form and `/estimate` capture first-touch (`localStorage`) and last-touch (`sessionStorage`) on a visitor's first landing: `document.referrer`, landing URL and path, `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `gclid`, `fbclid`, `msclkid`, and a first-touch timestamp. Values survive in-site navigation to `/estimate`. No cookies or third-party scripts.
+
+On submit, `/api/estimate` adds a `source` object to the Nexrena payload (site key `gopro`) and appends a short readable line to the message, for example `Source: organic_search, google.com, landing /services/painting`. Channel labels: `google_ads` (gclid), `paid` (`utm_medium` cpc/ppc/paid), `gbp` / `google_maps`, `organic_search`, `social`, `referral`, or `direct`.
+
+### Google Business Profile website link
+
+Set the Google Business Profile website field to:
+
+`https://go-pro-home-improvements.vercel.app/?utm_source=google&utm_medium=organic&utm_campaign=gbp`
+
+`?utm_source=gbp` is also accepted and labeled `gbp`.
+
 ## Brand
 
 - **Colors:** Orange (#FF6B35) and Black (#1A1A1A)

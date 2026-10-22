@@ -13,6 +13,7 @@ import {
   createSuccessResponse,
   logSecurityRejection,
 } from '../../lib/security-enhanced';
+import { buildNexrenaPayload } from '../../lib/lead-source';
 
 export const prerender = false;
 
@@ -111,18 +112,21 @@ export const POST: APIRoute = async ({ request }) => {
     
     // Check if we're in development mode
     const isDev = import.meta.env.DEV;
+    const pageUrl = request.headers.get('referer') || 'https://goprohomeimprovements.com/estimate';
+    const nexrenaPayload = buildNexrenaPayload(data, pageUrl);
     
     if (!formSecret) {
       if (isDev) {
         // In development, log but allow the request to succeed locally
         console.log('[LOCAL DEV MODE] Estimate Request (not sent to Nexrena):', {
           timestamp: new Date().toISOString(),
-          name: data.name,
-          phone: data.phone,
-          email: data.email,
-          service: data.service,
-          city: data.city,
-          message: data.message,
+          name: nexrenaPayload.name,
+          phone: nexrenaPayload.phone,
+          email: nexrenaPayload.email,
+          service: nexrenaPayload.service,
+          city: nexrenaPayload.city,
+          message: nexrenaPayload.message,
+          source: nexrenaPayload.source,
         });
         
         return new Response(
@@ -147,19 +151,6 @@ export const POST: APIRoute = async ({ request }) => {
         );
       }
     }
-
-    // Prepare the payload for Nexrena
-    const nexrenaPayload = {
-      name: data.name,
-      email: data.email,
-      message: data.message,
-      phone: data.phone,
-      service: data.service,
-      city: data.city,
-      formName: 'estimate',
-      pageUrl: request.headers.get('referer') || 'https://goprohomeimprovements.com/estimate',
-      website: data.website || '',
-    };
 
     // Submit to Nexrena API
     const nexrenaResponse = await fetch(NEXRENA_API_URL, {
