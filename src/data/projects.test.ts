@@ -14,7 +14,8 @@ describe('trailer project page', () => {
   it('uses only the Victoria Cruz review and her job photos', () => {
     expect(trailerProject.review).toBe(victoria);
     expect(trailerProject.photos).toEqual(victoria?.photos);
-    expect(page).toContain(victoria!.text);
+    expect(page).toContain('{review.text}');
+    expect(page).toContain('Lake Toho fish camp');
     expect(page).toContain('/images/reviews/trailer-960.webp');
     expect(page).toContain('/images/reviews/trailer-tv-960.webp');
     expect(page).toContain('/images/reviews/trailer-sofa-960.webp');
