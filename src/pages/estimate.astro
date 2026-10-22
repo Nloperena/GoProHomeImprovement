@@ -241,11 +241,26 @@ import Footer from '../components/Footer.astro';
     // Record when the form loaded (timing gate)
     const formStartedAt = Date.now();
 
+    // Signed form token required by /api/estimate (security check since #22)
+    let formToken = '';
+    async function loadToken() {
+      const res = await fetch('/api/form-token', { headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error('token');
+      const payload = await res.json();
+      formToken = payload.token || '';
+    }
+    loadToken().catch(() => { formToken = ''; });
+
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
+
+      if (!formToken) {
+        try { await loadToken(); } catch { /* server will reject; error shown below */ }
+      }
+      (data as any).formToken = formToken;
 
       // Add timing gate, honeypot, and first/last-touch source
       (data as any).formStartedAt = formStartedAt;
