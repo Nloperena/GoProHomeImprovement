@@ -83,9 +83,12 @@ export const reviews: Review[] = [
     source: 'Google',
     date: '2026-10',
     photos: [
-      '/images/reviews/trailer-960.webp',
-      '/images/reviews/trailer-tv-960.webp',
-      '/images/reviews/trailer-sofa-960.webp',
+      '/images/reviews/victoria-cruz-1-960.webp',
+      '/images/reviews/victoria-cruz-2-960.webp',
+      '/images/reviews/victoria-cruz-3-960.webp',
+      '/images/reviews/victoria-cruz-4-960.webp',
+      '/images/reviews/victoria-cruz-5-960.webp',
+      '/images/reviews/victoria-cruz-6-960.webp',
     ],
     text: 'GoPro remodeled our whole bathroom here in Lakeside Kissimmee. He did amazing work and now our guest bathroom and home has beautiful new floors and tiles. He also remodeled our trailer in the st. Cloud at the lake toho fish camp. He took out all the rugs, and cabinets we did not want and freed up a lot of space. He even replaced a rotted panel in our trailer on of our slides for a cheaper cost since we used him for both our home and home away from home. I checked it and it was sealed very well. He turned all the ugly brown cabinets to a beautiful white in our trailer and we have really nice brown wood flooring. The trailer looks super nice and looks like something you would buy brand new.',
   },
@@ -94,13 +97,41 @@ export const reviews: Review[] = [
     rating: 5,
     source: 'Google',
     date: '2026-09',
+    photos: [
+      '/images/reviews/nicholas-loperena-2-960.webp',
+      '/images/reviews/nicholas-loperena-3-960.webp',
+      '/images/reviews/nicholas-loperena-4-960.webp',
+      '/images/reviews/nicholas-loperena-5-960.webp',
+    ],
     text: "Mike, with GoPro has always done amazing work for FurniturePackagesUSA for over a decade and a half. He's remodeled hundreds of homes in the vacation rental space for us. I know when GoPro is on the job, it is going to be done correctly, so we really never have to sweat all the hurdles that come from other contractors. It's a pain in the butt to baby sit a contractor but I trust Mike with GoPro 100% of the time to get the job correctly. GoPro has been super reliable, and they don't cut corners. Mike is honest man, you'd be missing out by not calling him for you home or STR!",
   },
 ];
 
+export const NO_PHOTO_REVIEWERS = [
+  'JR Wysocki',
+  'Denise Loperena',
+  'Jose Vega',
+  'Shirley De Jesus',
+  'Brian Braddock',
+] as const;
+
+const PORTRAIT_REVIEW_PHOTOS = new Set([
+  '/images/reviews/victoria-cruz-1-960.webp',
+  '/images/reviews/victoria-cruz-2-960.webp',
+  '/images/reviews/victoria-cruz-3-960.webp',
+  '/images/reviews/nicholas-loperena-3-960.webp',
+  '/images/reviews/mike-figueroa-2-960.webp',
+]);
+
+export function reviewPhotoBox(src: string): { width: number; height: number } {
+  return PORTRAIT_REVIEW_PHOTOS.has(src) ? { width: 720, height: 960 } : { width: 960, height: 720 };
+}
+
 /**
- * Review-folder photos that could not be verified to a Google writer.
- * Keep them in the work showcase; do not attach them to a review card.
+ * Review-folder photos that must not sit on a review card.
+ * Older trailer-* files are the same Lake Toho shots as victoria-cruz-4..6;
+ * keep them in the work showcase only. mike-figueroa-* are his Google photos
+ * and stay off every other card until his review text is on this list.
  */
 export const UNVERIFIED_REVIEW_PHOTOS = [
   '/images/reviews/bb8-960.webp',
@@ -110,5 +141,13 @@ export const UNVERIFIED_REVIEW_PHOTOS = [
   '/images/reviews/vanity-960.webp',
   '/images/reviews/pool-960.webp',
   '/images/reviews/gazebo-960.webp',
+  '/images/reviews/trailer-960.webp',
+  '/images/reviews/trailer-tv-960.webp',
+  '/images/reviews/trailer-sofa-960.webp',
+] as const;
+
+export const MIKE_FIGUEROA_PHOTOS = [
+  '/images/reviews/mike-figueroa-1-960.webp',
+  '/images/reviews/mike-figueroa-2-960.webp',
 ] as const;
 

@@ -27,6 +27,7 @@ describe('review visibility and layout', () => {
     expect(list).toContain('data-review-more');
     expect(list).toContain('Read more');
     expect(list).toContain('review-photos');
+    expect(list).toContain("Photo from ${review.author}'s Google review");
     expect(css).toContain('-webkit-line-clamp: 6');
     expect(css).toContain('overflow-x: auto');
     expect(css).toContain('overscroll-behavior-x: contain');

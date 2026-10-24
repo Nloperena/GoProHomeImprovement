@@ -1,4 +1,6 @@
 ---
+import { existsSync } from 'node:fs';
+
 interface Props {
   src: string;
   small?: string;
@@ -24,7 +26,7 @@ function avif(path: string) {
 const files = small && small !== src ? [small, src] : [src];
 const webpSet = files.map((path) => `${path} ${pixels(path)}w`).join(', ');
 const avifSet = files.map((path) => `${avif(path)} ${pixels(path)}w`).join(', ');
-const useAvif = src.includes('/images/reviews/');
+const useAvif = files.every((path) => existsSync(`public${avif(path)}`));
 ---
 
 <picture>
