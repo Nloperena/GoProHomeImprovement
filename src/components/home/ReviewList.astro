@@ -1,10 +1,6 @@
 ---
 import Frame from './Frame.astro';
-import { formatReviewMonth, reviewBody, reviews } from '../../data/reviews';
-
-function portrait(src: string) {
-  return /\/(bath|shower|vanity|gazebo)-/.test(src);
-}
+import { formatReviewMonth, reviewBody, reviewPhotoBox, reviews } from '../../data/reviews';
 ---
 
 <ul class="review-list">
@@ -31,19 +27,22 @@ function portrait(src: string) {
           </>
         )}
         {review.photos && review.photos.length > 0 && (
-          <ul class="review-photos" tabindex="0" aria-label={`Photos from ${review.author}'s review`}>
-            {review.photos.map((src, index) => (
-              <li>
-                <Frame
-                  src={src}
-                  small={src.replace(/-960\.webp$/, '-480.webp')}
-                  sizes="176px"
-                  width={960}
-                  height={portrait(src) ? 1280 : 720}
-                  alt={`Photo ${index + 1} from ${review.author}'s Google review`}
-                />
-              </li>
-            ))}
+          <ul class="review-photos" tabindex="0" aria-label={`Photos from ${review.author}'s Google review`}>
+            {review.photos.map((src) => {
+              const box = reviewPhotoBox(src);
+              return (
+                <li>
+                  <Frame
+                    src={src}
+                    small={src.replace(/-960\.webp$/, '-480.webp')}
+                    sizes="176px"
+                    width={box.width}
+                    height={box.height}
+                    alt={`Photo from ${review.author}'s Google review`}
+                  />
+                </li>
+              );
+            })}
           </ul>
         )}
       </li>
