@@ -6,8 +6,8 @@ import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
-  title="Kissimmee Home Improvement | Painting, Theaters, Drywall | Go Pro"
-  description="Owner-operated painting, home theaters, and drywall in Kissimmee, FL. Free estimates. Call (407) 244-6873."
+  title="Kissimmee Home Improvement | Painting & Drywall | Go Pro"
+  description="Owner-operated home improvement in Kissimmee, FL. Painting, home theaters, drywall, and power washing. Free estimates. Call (407) 244-6873."
   schema={{
     "@context": "https://schema.org",
     "@graph": [
@@ -18,6 +18,7 @@ import CTASection from '../../components/CTASection.astro';
         "url": "https://goprohomeimprovements.com",
         "telephone": "(407) 244-6873",
         "email": "gopro4good@gmail.com",
+        "foundingDate": "2014",
         "image": "https://goprohomeimprovements.com/images/logo.png",
         "logo": {
           "@type": "ImageObject",
@@ -63,6 +64,44 @@ import CTASection from '../../components/CTASection.astro';
             "item": "https://goprohomeimprovements.com/areas/kissimmee"
           }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goprohomeimprovements.com/areas/kissimmee/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What home improvement services do you offer in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Painting, drywall repair, power washing, home theaters, trim, wallpaper, murals, TV mounting, and demolition. Each service has a Kissimmee page with details and a free estimate option."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you based in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Go Pro Home Improvements is owner-operated and based in Kissimmee, Osceola County, serving nearby Central Florida cities since 2014."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get a free estimate in Kissimmee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Request an estimate online or call (407) 244-6873. We look at the job, then price it. The estimate is free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work on Kissimmee vacation rentals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We paint, repair drywall, and refresh interiors for short-term rentals near the parks corridor, scheduled around guest turnovers when needed."
+            }
+          }
+        ]
       }
     ]
   }}
@@ -78,10 +117,14 @@ import CTASection from '../../components/CTASection.astro';
         <span class="mx-2 text-gray-500">/</span>
         <span class="text-white">Kissimmee</span>
       </nav>
-      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Home improvement in Kissimmee</h1>
-      <p class="text-xl text-gray-300 max-w-3xl font-sans">
-        Owner-operated contractor based right here in Kissimmee. 15+ years serving Osceola County homes with painting, power washing, home theaters & more.
+      <h1 class="text-4xl md:text-5xl font-display font-black uppercase mb-4 tracking-tight">Home Improvement in Kissimmee</h1>
+      <p class="text-xl text-gray-300 max-w-3xl font-sans mb-8">
+        Owner-operated contractor based in Kissimmee since 2014. Painting, power washing, drywall, home theaters, and more across Osceola County.
       </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/estimate" class="btn-primary">Get Free Estimate</a>
+        <a href="tel:4072446873" class="btn-secondary">Call (407) 244-6873</a>
+      </div>
     </div>
   </section>
 
@@ -90,39 +133,46 @@ import CTASection from '../../components/CTASection.astro';
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none mb-12">
           <p class="text-xl text-gray-700 leading-relaxed mb-6">
-            Go Pro Home Improvements is proud to call Kissimmee home. Based right here in Osceola County, we've been serving our neighbors with reliable, professional home improvement services for over 15 years. From Buenaventura Lakes to Old Town, Poinciana Boulevard to the vacation rental corridors near the Disney area, we know the neighborhoods and the unique needs of Kissimmee homeowners.
+            Go Pro Home Improvements is proud to call Kissimmee home. Based in Osceola County and owner-operated since 2014, we serve neighbors from Buenaventura Lakes to Old Town, Poinciana Boulevard to the vacation rental corridors near the Disney area.
           </p>
           <p class="text-lg text-gray-600 mb-8">
-            As a local, owner-operated business, we understand Kissimmee homes—from the humid Florida climate that demands quality exterior prep to the vacation rental market's need for fast, reliable turnarounds. Whether you own a single-family home in one of Osceola County's growing neighborhoods or manage a rental property near the 192 corridor, we bring the same owner-operated care and 15+ years of experience to every job.
+            As a local, owner-operated business, we understand Kissimmee homes—from Florida humidity that demands quality exterior prep to the vacation rental market's need for reliable turnarounds. Whether you own a single-family home or manage a rental near the 192 corridor, you get the same owner-run care on every job.
           </p>
         </div>
 
         <div class="bg-gray-50 rounded-lg p-8 mb-12">
           <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">Our Services in Kissimmee</h2>
           <p class="text-gray-700 mb-6">
-            We specialize in three core services that homeowners and property managers in Kissimmee trust us for:
+            Start with the Kissimmee page for the service you need:
           </p>
-          <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
             <div class="bg-white p-6 rounded-lg border-l-4 border-gopro-orange">
               <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Interior & Exterior Painting</h3>
               <p class="text-gray-600 text-sm mb-4">
-                From vacation rental refreshes to full exterior repaints that stand up to Florida sun and humidity. We prep right and use quality paint.
+                Vacation rental refreshes, interior rooms, and exterior stucco that stands up to Florida sun and humidity.
               </p>
-              <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline font-semibold text-sm">Learn more →</a>
+              <a href="/services/painting-kissimmee" class="text-gopro-orange hover:underline font-semibold text-sm">Painting in Kissimmee →</a>
             </div>
             <div class="bg-white p-6 rounded-lg border-l-4 border-gopro-orange">
               <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Home Theater Installation</h3>
               <p class="text-gray-600 text-sm mb-4">
-                Full custom home theater builds—paint, trim, acoustic panels, AV coordination, and themed rooms. From bonus rooms to dedicated theaters.
+                Custom home theater builds—paint, trim, acoustic panels, AV coordination, and themed rooms.
               </p>
-              <a href="/services/movie-rooms" class="text-gopro-orange hover:underline font-semibold text-sm">Learn more →</a>
+              <a href="/services/movie-rooms-kissimmee" class="text-gopro-orange hover:underline font-semibold text-sm">Home theaters in Kissimmee →</a>
             </div>
             <div class="bg-white p-6 rounded-lg border-l-4 border-gopro-orange">
-              <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Drywall Repair & Installation</h3>
+              <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Drywall Repair</h3>
               <p class="text-gray-600 text-sm mb-4">
-                Water damage repair, texture matching, full room drywall, and invisible patches. We handle drying times and Florida humidity right.
+                For holes, cracks, water damage, and texture matching in Kissimmee homes and rentals, use our dedicated drywall page.
               </p>
-              <a href="/services/drywall" class="text-gopro-orange hover:underline font-semibold text-sm">Learn more →</a>
+              <a href="/services/drywall-repair-kissimmee" class="text-gopro-orange hover:underline font-semibold text-sm">Drywall repair in Kissimmee →</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg border-l-4 border-gopro-orange">
+              <h3 class="text-lg font-display font-bold uppercase mb-3 tracking-wide">Power Washing</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Soft wash and pressure washing for driveways, stucco, roofs, and pool decks around Kissimmee.
+              </p>
+              <a href="/services/power-washing-kissimmee" class="text-gopro-orange hover:underline font-semibold text-sm">Power washing in Kissimmee →</a>
             </div>
           </div>
           <p class="text-center">
@@ -130,18 +180,52 @@ import CTASection from '../../components/CTASection.astro';
           </p>
         </div>
 
-        <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Local Knowledge, Professional Results</h3>
-          <p class="text-gray-700">
-            Being based in Kissimmee means we're never far away. We know the neighborhoods, we understand local building practices, and we're invested in our community's success. When you hire Go Pro, you're hiring neighbors who care about the quality of their work because our reputation lives here.
-          </p>
+        <div class="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 class="text-2xl font-display font-bold uppercase mb-6 tracking-wide">How We Work</h2>
+          <ol class="space-y-3 list-decimal list-inside text-gray-700 font-sans">
+            <li><strong>Free estimate</strong> — Tell us the job. We look at the house, then we price it.</li>
+            <li><strong>Prep</strong> — Wash, scrape, patch drywall or stucco, caulk, mask, and prime as needed.</li>
+            <li><strong>Work</strong> — Complete the painting, repair, wash, or theater build on schedule.</li>
+            <li><strong>Walkthrough</strong> — You walk the job with us before it's called done.</li>
+          </ol>
+          <p class="mt-6 font-sans"><a href="/estimate" class="text-gopro-orange hover:underline font-semibold">Request a free estimate →</a></p>
         </div>
 
         <div class="bg-gopro-orange/10 border-l-4 border-gopro-orange p-6 mb-12">
-          <h3 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Serving Kissimmee & Osceola County Neighborhoods</h3>
+          <h2 class="text-xl font-display font-bold uppercase mb-3 tracking-wide">Service Area</h2>
           <p class="text-gray-700 mb-3">
-            We work throughout Kissimmee, including Buenaventura Lakes, Poinciana, Old Town, Celebration, and the vacation rental areas near the 192 corridor and Disney. As an owner-operated contractor based right here in Osceola County, we're never far away—and we understand the local market, building practices, and climate challenges.
+            We work throughout Kissimmee, including Buenaventura Lakes, Old Town, Celebration, Poinciana, and the vacation rental areas near the 192 corridor. Nearby cities we also serve: <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, <a href="/areas/st-cloud" class="text-gopro-orange hover:underline">St. Cloud</a>, <a href="/areas/celebration" class="text-gopro-orange hover:underline">Celebration</a>, and <a href="/areas/poinciana" class="text-gopro-orange hover:underline">Poinciana</a>.
           </p>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-display font-black uppercase mb-8 tracking-tight">Common Questions</h2>
+          <div class="space-y-6">
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">What home improvement services do you offer in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Painting, <a href="/services/drywall-repair-kissimmee" class="text-gopro-orange hover:underline">drywall repair</a>, power washing, home theaters, trim, wallpaper, murals, TV mounting, and demolition. Each has a Kissimmee service page with details.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Are you based in Kissimmee?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We are owner-operated and based in Kissimmee, Osceola County, serving nearby Central Florida since 2014.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">How do I get a free estimate?</h3>
+              <p class="text-gray-700 font-sans">
+                <a href="/estimate" class="text-gopro-orange hover:underline">Request an estimate online</a> or call (407) 244-6873. We look at the job, then price it. The estimate is free.
+              </p>
+            </div>
+            <div class="bg-white border-l-4 border-gopro-orange p-6">
+              <h3 class="text-xl font-display font-bold uppercase mb-2 tracking-wide">Do you work on Kissimmee vacation rentals?</h3>
+              <p class="text-gray-700 font-sans">
+                Yes. We paint, repair drywall, and refresh interiors for short-term rentals near the parks corridor, scheduled around guest turnovers when needed.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
@@ -161,7 +245,10 @@ import CTASection from '../../components/CTASection.astro';
     </div>
   </section>
 
-  <CTASection />
+  <CTASection
+    title="Home Improvement in Kissimmee"
+    description="Owner-operated since 2014. Painting, drywall, power washing, and more. Free estimates."
+  />
 
   <Footer />
 </BaseLayout>
