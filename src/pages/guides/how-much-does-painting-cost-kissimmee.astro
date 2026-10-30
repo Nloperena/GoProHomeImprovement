@@ -81,12 +81,16 @@ import RelatedServices from '../../components/RelatedServices.astro';
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none">
           <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
-            "How much does painting cost?" is the first question every homeowner asks. The answer is always "it depends"—but here's what it depends on, with real ranges from 15+ years of <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">painting</a> in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and Central Florida.
+            Need <a href="/services/painting-kissimmee" class="text-gopro-orange hover:underline">painting in Kissimmee</a>? The answer to "how much does it cost?" is always "it depends"—but here's what it depends on, with the ranges already published on this guide. For the service page (not this cost guide), start with <a href="/services/painting-kissimmee" class="text-gopro-orange hover:underline">painting in Kissimmee</a>. We also <a href="/services/interior-exterior-painting" class="text-gopro-orange hover:underline">paint across Central Florida</a>, including <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> and <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>.
           </p>
 
           <h2 class="text-3xl font-display font-black uppercase mb-6 tracking-tight mt-12">Interior Painting Costs</h2>
           
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">Single Room</h3>
+          {/* Mike to confirm: painting-celebration / painting-poinciana FAQs say typical bedroom $300-$600 and living rooms $400-$900. This guide keeps its current $300-$500 bedroom and $500-$900 living-room lines. */}
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $300-$900 per room
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Small bedroom (10x12):</strong> $300-$500</li>
             <li><strong>Large bedroom (12x15):</strong> $400-$650</li>
@@ -98,6 +102,9 @@ import RelatedServices from '../../components/RelatedServices.astro';
           </p>
 
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">Whole House Interior</h3>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $2,500-$10,000
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Small house (1,200-1,500 sq ft):</strong> $2,500-$4,500</li>
             <li><strong>Medium house (1,800-2,200 sq ft):</strong> $4,000-$6,500</li>
@@ -110,6 +117,9 @@ import RelatedServices from '../../components/RelatedServices.astro';
           <h2 class="text-3xl font-display font-black uppercase mb-6 tracking-tight mt-12">Exterior Painting Costs</h2>
           
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">Full Exterior</h3>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $2,500-$12,000
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Small house (1,000-1,500 sq ft):</strong> $2,500-$4,500</li>
             <li><strong>Medium house (1,500-2,500 sq ft):</strong> $4,000-$7,000</li>
@@ -120,6 +130,9 @@ import RelatedServices from '../../components/RelatedServices.astro';
           </p>
 
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">Trim, Doors & Shutters Only</h3>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $100-$1,800 depending on scope
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Trim only:</strong> $800-$1,800</li>
             <li><strong>Front door:</strong> $150-$350</li>
@@ -222,14 +235,15 @@ import RelatedServices from '../../components/RelatedServices.astro';
 
           <RelatedServices
             services={[
-              { name: "Interior & Exterior Painting", url: "/services/interior-exterior-painting" }
+              { name: "Painting in Kissimmee", url: "/services/painting-kissimmee" },
+              { name: "Interior & Exterior Painting (Central Florida)", url: "/services/interior-exterior-painting" }
             ]}
           />
 
           <div class="bg-gray-50 rounded-lg p-8 my-8">
             <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide">Need a Painting Estimate?</h3>
             <p class="text-gray-700 font-sans mb-6">
-              We provide free, detailed estimates in Kissimmee, Orlando, and Central Florida. On-site measurement, itemized quote, and no pressure. Call or request online.
+              Book <a href="/services/painting-kissimmee" class="text-gopro-orange hover:underline">painting in Kissimmee</a> with a free estimate. On-site measurement, itemized quote, and no pressure. Call or request online.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a href="/estimate" class="btn-primary">

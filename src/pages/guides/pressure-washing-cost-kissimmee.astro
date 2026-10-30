@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTASection from '../../components/CTASection.astro';
+import RelatedServices from '../../components/RelatedServices.astro';
 ---
 
 <BaseLayout
@@ -80,12 +81,16 @@ import CTASection from '../../components/CTASection.astro';
       <div class="max-w-4xl mx-auto">
         <div class="prose prose-lg max-w-none">
           <p class="text-xl text-gray-700 leading-relaxed mb-6 font-sans">
-            <a href="/services/power-washing" class="text-gopro-orange hover:underline">Pressure washing</a> costs in <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a>, <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>, and Central Florida depend on square footage, surface type, and how dirty it is. Here are real ranges from 15+ years washing Florida homes, driveways, and pool decks.
+            Need <a href="/services/power-washing-kissimmee" class="text-gopro-orange hover:underline">power washing in Kissimmee</a>? Cost depends on square footage, surface type, and how dirty it is. Here are the ranges already published on this guide. For the service page (not this cost guide), start with <a href="/services/power-washing-kissimmee" class="text-gopro-orange hover:underline">power washing in Kissimmee</a>. We also <a href="/services/power-washing" class="text-gopro-orange hover:underline">wash across Central Florida</a>, including <a href="/areas/kissimmee" class="text-gopro-orange hover:underline">Kissimmee</a> and <a href="/areas/orlando" class="text-gopro-orange hover:underline">Orlando</a>.
           </p>
 
           <h2 class="text-3xl font-display font-black uppercase mb-6 tracking-tight mt-12">Pressure Washing Cost by Surface</h2>
           
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">Driveways</h3>
+          {/* Mike to confirm: power-washing-kissimmee / celebration FAQs say driveways $75-$200; garage-driveway guide says two-car $100-$200. This guide keeps $100-$175 / $175-$275 / $250-$400. */}
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $100-$400
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Single-car driveway (200-300 sq ft):</strong> $100-$175</li>
             <li><strong>Two-car driveway (400-600 sq ft):</strong> $175-$275</li>
@@ -96,6 +101,10 @@ import CTASection from '../../components/CTASection.astro';
           </p>
 
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">House Exteriors</h3>
+          {/* Mike to confirm: power-washing-kissimmee FAQ says full house exterior $200-$500; this guide's large-house line is $450-$700 and the bottom line says $200-$600. Keeping this guide's current lines. */}
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $200-$700
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Small house (1,000-1,500 sq ft):</strong> $200-$350</li>
             <li><strong>Medium house (1,500-2,500 sq ft):</strong> $300-$500</li>
@@ -106,6 +115,10 @@ import CTASection from '../../components/CTASection.astro';
           </p>
 
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">Pool Decks & Patios</h3>
+          {/* Mike to confirm: power-washing-kissimmee FAQ says pool decks $100-$300; pool-deck guide says small $100-$200. This guide keeps $75-$150 / $150-$275 / $250-$450. */}
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $75-$450
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Small patio/deck (150-250 sq ft):</strong> $75-$150</li>
             <li><strong>Medium pool deck (300-500 sq ft):</strong> $150-$275</li>
@@ -116,6 +129,9 @@ import CTASection from '../../components/CTASection.astro';
           </p>
 
           <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide mt-8">Fences & Decks</h3>
+          <p class="text-lg text-gray-700 mb-4 font-sans">
+            <strong>Cost:</strong> $0.75-$3 per linear foot, or $150-$350 per wood deck
+          </p>
           <ul class="list-none space-y-2 mb-6 text-gray-700 font-sans">
             <li><strong>Wood fence (per linear foot):</strong> $1-$3</li>
             <li><strong>Vinyl fence (per linear foot):</strong> $0.75-$2</li>
@@ -212,10 +228,17 @@ import CTASection from '../../components/CTASection.astro';
             Pressure washing in Kissimmee costs $100-$300 for driveways, $200-$600 for house exteriors, $75-$450 for pool decks and patios. What drives price: square footage, surface type, how dirty it is, and accessibility. Bundling multiple surfaces saves 10-20%. Get an on-site estimate for accurate pricing—free in Central Florida.
           </p>
 
+          <RelatedServices
+            services={[
+              { name: "Power washing in Kissimmee", url: "/services/power-washing-kissimmee" },
+              { name: "Power Washing (Central Florida)", url: "/services/power-washing" }
+            ]}
+          />
+
           <div class="bg-gray-50 rounded-lg p-8 my-8">
             <h3 class="text-2xl font-display font-bold uppercase mb-4 tracking-wide">Need Pressure Washing in Kissimmee?</h3>
             <p class="text-gray-700 font-sans mb-6">
-              We wash driveways, house exteriors, pool decks, patios, and more. Free estimates, fair pricing, and we use the right pressure for each surface.
+              Book <a href="/services/power-washing-kissimmee" class="text-gopro-orange hover:underline">power washing in Kissimmee</a> with a free estimate. We wash driveways, house exteriors, pool decks, and patios, and we use the right pressure for each surface.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a href="/estimate" class="btn-primary">
