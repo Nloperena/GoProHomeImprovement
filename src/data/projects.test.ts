@@ -13,7 +13,14 @@ describe('trailer project page', () => {
 
   it('uses only the Victoria Cruz review and her job photos', () => {
     expect(trailerProject.review).toBe(victoria);
-    expect(trailerProject.photos).toEqual(victoria?.photos);
+    expect(trailerProject.photos).toEqual([
+      '/images/reviews/trailer-960.webp',
+      '/images/reviews/trailer-tv-960.webp',
+      '/images/reviews/trailer-sofa-960.webp',
+    ]);
+    expect(trailerProject.photos).not.toContain('/images/reviews/victoria-cruz-1-960.webp');
+    expect(trailerProject.photos).not.toContain('/images/reviews/victoria-cruz-2-960.webp');
+    expect(trailerProject.photos).not.toContain('/images/reviews/victoria-cruz-3-960.webp');
     expect(page).toContain('{review.text}');
     expect(page).toContain('Lake Toho fish camp');
     expect(page).toContain('/images/reviews/trailer-960.webp');
